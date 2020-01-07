@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="upload-server" name="daomu2" basedir="../.">
+	<description>
+		盗墓2版本自动编译打包脚本
+	</description>
+	<!-- 
+		注意：使用该脚本时，需要自行更改 的属性: 
+		1. myhost改为你的ip地址. 
+		2. local-webcontent-path改成你的本地Web项目部署根目录
+	 -->
+	<echo>start to build daomu2 account server...</echo>
+	<echo>${basedir}</echo>
+	
+	<!--发布变量设置-->
+	<property name="project-name" value="dm2"/>
+	<property name="myhost" value="127.0.0.1" />
+	<property name="inner-host" value="192.168.1.97" />
+	
+	<property name="host" value="192.168.1.97" />
+	<property name="port" value="22" />
+	<property name="resourcehost" value="192.168.1.97" />
+	<property name="user" value="root" />
+	<property name="password" value="1234567" />
+	
+	<!--web项目目录相关设置-->
+	<property name="local-webcontent-path" value="G:\project\trunk" />
+	
+	<!--定义相关编译变量-->
+	<property name="is-debug" value="on" />
+	<property name="java-version" value="1.8" />
+	<property name="app-version" value="1.0" />
+	<property name="webapp-version" value="1.0" />
+	<property name="exclude-svn" value="**/*.svn/*.*,servlet-api.jar" />
+	<property name="exclude-local" value="*.propertieslocal" />
+	
+	<!--输入变量定义-->
+	<property name="config" value="${basedir}/CommonLib/config" />
+	<property name="libs" value="${basedir}/CommonLib" />
+	<property name="util" value="${basedir}/CommonUtil" />
+	<property name="acc_dao" value="${basedir}/AccountData" />
+	<property name="game_dao" value="${basedir}/CommonData" />
+	<property name="proto" value="${basedir}/PBProtocol" />
+	
+	<property name="accountserver" value="${basedir}/AccountServer" />
+	<property name="mediaserver" value="${basedir}/MediaServer" />
+	
+	<property name="baseserver" value="${basedir}/BaseServer" />
+	<property name="gameserver" value="${basedir}/GameServer" />
+	<property name="gamelogic" value="${basedir}/GameLogic" />
+	
+	<!--定义最终文件输出路径-->
+	<property name="lib-out" value="${basedir}/deploy/lib" />
+	<property name="lib-out-min" value="${basedir}/deploy/lib-min" />
+	<property name="app-out" value="${basedir}/deploy/app" />
+	
+	<property name="accountserver-out" value="${app-out}/accountserver" />
+	<property name="accountserver-out-min" value="${app-out}/accountserver-min" />
+	
+	<property name="mediaserver-out" value="${app-out}/mediaserver" />
+	<property name="mediaserver-out-min" value="${app-out}/mediaserver-min" />
+	
+	<property name="gameserver-out" value="${app-out}/gameserver" />
+	<property name="gameserver-out-min" value="${app-out}/gameserver-min" />
+	
+	<path id="lib-out">
+		<fileset dir="${basedir}/deploy/lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- 自动上传设置 -->
+	<property name="ftpserverdir" value="/root/daomu2/servers" />
+	<property name="accountserverdir" value="${host}:${ftpserverdir}/accountserver" />
+	<property name="gameserverdir" value="${host}:${ftpserverdir}/gameserver" />
+	
+	<!-- 清除已生成的旧版本文件 -->
+	<target name="clean">
+		<delete dir="${app-out}" />
+		<delete dir="${lib-out}" />
+		<delete dir="${lib-out-min}" />
+	</target>
+	
+	<!-- 创建部署文件所需路径 -->
+	<target name="init" depends="clean">
+		<mkdir dir="${lib-out}" />
+		<mkdir dir="${lib-out-min}" />
+		<mkdir dir="${app-out}" />
+		<mkdir dir="${app-out}/config" />
+
+		<!-- GameServer -->
+		<mkdir dir="${gameserver-out}" />
+		<mkdir dir="${gameserver-out}/lib" />
+		<mkdir dir="${gameserver-out}/language"/>
+		
+		<!-- GameServer-min -->
+		<mkdir dir="${gameserver-out-min}" />
+		<mkdir dir="${gameserver-out-min}/lib" />
+		<mkdir dir="${gameserver-out-min}/language"/>
+
+	</target>
+
+	<!-- 打包基础组件 -->
+	<target name="deploy-basic" depends="init">
+		<copydir src="${libs}/config" dest="${app-out}/config" excludes="${exclude-local}" />
+		<copydir src="${libs}/lib" dest="${lib-out}" />
+		<copy file="${libs}/config/game.xml"  tofile ="${app-out}/config/game.xml" overwrite="true"/>
+		
+		<!--打包proto-->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${proto}/src" destdir="${proto}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${proto}/bin" destfile="${lib-out}/${project-name}_proto_${app-version}.jar" />
+		<jar basedir="${proto}/bin" destfile="${lib-out-min}/${project-name}_proto_${app-version}.jar" />
+		
+		<!--打包util-->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${util}/src" destdir="${util}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${util}/bin" destfile="${lib-out}/${project-name}_util_${app-version}.jar" />
+		<jar basedir="${util}/bin" destfile="${lib-out-min}/${project-name}_util_${app-version}.jar" />
+
+		<!--打包game_dao-->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${game_dao}/src" destdir="${game_dao}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${game_dao}/bin" destfile="${lib-out}/${project-name}_game_dao_${app-version}.jar" />
+		<jar basedir="${game_dao}/bin" destfile="${lib-out-min}/${project-name}_game_dao_${app-version}.jar" />
+
+		<!--打包baseserver-->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${baseserver}/src" destdir="${baseserver}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${baseserver}/bin" destfile="${lib-out}/${project-name}_baseserver_${app-version}.jar" />
+		<jar basedir="${baseserver}/bin" destfile="${lib-out-min}/${project-name}_baseserver_${app-version}.jar" />
+
+		<!--打包gamelogic-->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${gamelogic}/src" destdir="${gamelogic}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${gamelogic}/bin" destfile="${lib-out}/${project-name}_gamelogic_${app-version}.jar" />
+		<jar basedir="${gamelogic}/bin" destfile="${lib-out-min}/${project-name}_gamelogic_${app-version}.jar" />
+	</target> 
+
+	<!-- 编译AccountServer -->
+	<target name="compile-accountserver" depends="deploy-basic">
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${accountserver}/src" destdir="${accountserver}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+	</target>
+	
+	<!-- 编译MediaServer -->
+	<target name="compile-mediaserver" depends="deploy-basic">
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${mediaserver}/src" destdir="${mediaserver}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+	</target>
+
+	<!-- 编译GameServer -->
+	<target name="compile-gameserver" depends="deploy-basic">
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${gameserver}/src" destdir="${gameserver}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+	</target>
+	
+	<!-- 打包GameServer -->
+	<target name="deploy-gameserver" depends="compile-gameserver">
+		<copydir src="${lib-out}" dest="${gameserver-out}/lib" excludes="${exclude-svn}" />
+		<copy file="${app-out}/config/game.xml" todir="${gameserver-out}/" />
+		<replace file="${gameserver-out}/game.xml" token="${myhost}" value="${host}" />
+		<replace file="${gameserver-out}/game.xml" token="../CommonLib" value="." />
+		
+		<copy file="${libs}/sh/gameserver.sh" todir="${gameserver-out}/" />
+		<copydir src="${gameserver}/config" dest="${gameserver-out}/config" />
+		
+		<jar basedir="${gameserver}/bin" destfile="${gameserver-out}/${project-name}_gameserver_${app-version}.jar">
+			<manifest>
+				<attribute name="Main-Class" value="com.game.GameServer" />
+			</manifest>
+		</jar>
+	</target>
+	
+	<!-- 打包AccountServer -->
+	<target name="deploy-accountserver" depends="compile-accountserver">
+		<copydir src="${lib-out}" dest="${accountserver-out}/lib" excludes="${exclude-svn}" />
+		
+		<copy file="${app-out}/config/account.xml" todir="${accountserver-out}/" />
+		<replace file="${accountserver-out}/account.xml" token="${inner-host}" value="${host}" />
+		<replace file="${accountserver-out}/account.xml" token="${myhost}" value="${host}" />
+		<replace file="${accountserver-out}/account.xml" token="6400" value="6500" />
+		<replace file="${accountserver-out}/account.xml" token="1263" value="12000" />
+		<replace file="${accountserver-out}/account.xml" token="7300" value="12100" />
+		
+		<copy file="${libs}/sh/accountserver.sh" todir="${accountserver-out}/" />
+
+		<jar basedir="${accountserver}/bin" destfile="${accountserver-out}/${project-name}_accountserver_${app-version}.jar">
+			<manifest>
+				<attribute name="Main-Class" value="com.account.AccountServer" />
+			</manifest>
+		</jar>
+	</target>
+	
+	<!-- 打包MediaServer -->
+	<target name="deploy-mediaserver" depends="compile-mediaserver">
+		<copydir src="${lib-out}" dest="${mediaserver-out}/lib" excludes="${exclude-svn}" />
+		
+		<copy file="${mediaserver}/media.xml" todir="${mediaserver-out}/" />
+		<replace file="${mediaserver-out}/media.xml" token="${inner-host}" value="${host}" />
+		<replace file="${mediaserver-out}/media.xml" token="${myhost}" value="${host}" />
+		<replace file="${mediaserver-out}/media.xml" token="6400" value="6500" />
+		<replace file="${mediaserver-out}/media.xml" token="1263" value="12000" />
+		<replace file="${mediaserver-out}/media.xml" token="7300" value="12100" />
+		
+		<copy file="${libs}/sh/accountserver.sh" todir="${mediaserver-out}/" />
+
+		<jar basedir="${mediaserver}/bin" destfile="${mediaserver-out}/${project-name}_mediaserver_${app-version}.jar">
+			<manifest>
+				<attribute name="Main-Class" value="com.account.AccountServer" />
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="upload-server" depends="deploy-all">
+		<echo>==========================start upload==========================</echo>
+		
+		<!-- 上传AccountServer到 FTP 服务器-->
+		<mkdir dir="${accountserver-out}"/>
+		<scp port="${port}" todir="${user}:${password}@${accountserverdir}" trust="true" verbose="true">
+			<fileset dir="${accountserver-out}">
+			</fileset>
+		</scp>
+
+		<echo>==========================end upload=====================================</echo>
+	</target>
+	
+	<target name="upload-server-min" depends="deploy-all-min">
+		<echo>==========================begin upload${user}:${password}@${fightserverdir}=====================================</echo>
+		
+		<!-- 上传AccountServer-Min到 FTP 服务器-->
+		<mkdir dir="${accountserver-out-min}"/>
+		<scp port="${port}" todir="${user}:${password}@${accountserverdir}" trust="true" verbose="true">
+			<fileset dir="${accountserver-out-min}">
+			</fileset>
+		</scp>
+
+		<echo>============================end upload=====================================</echo>
+	</target>
+	
+	<!--deploy-all-->
+	<target name="deploy-all" depends="deploy-accountserver,deploy-gameserver">
+	</target>
+	
+	<!--deploy-all-min -->
+	<target name="deploy-all-min" depends="deploy-all">
+		<!-- accountserver -->
+		<copydir src="${lib-out-min}" dest="${accountserver-out-min}/lib" excludes="${exclude-svn}" />
+		<copy file="${app-out}/config/account.xml" todir="${accountserver-out-min}/" />
+		<replace file="${accountserver-out-min}/account.xml" token="${inner-host}" value="${host}" />
+		<replace file="${accountserver-out-min}/account.xml" token="${myhost}" value="${host}" />
+		<copy file="${accountserver-out}/${project-name}_accountserver_${app-version}.jar" todir="${accountserver-out-min}/" />
+		
+		<!-- gameserver -->
+		<copydir src="${lib-out-min}" dest="${gameserver-out-min}/lib" excludes="${exclude-svn}" />
+		<copy file="${gameserver-out}/${project-name}_gameserver_${app-version}.jar" todir="${gameserver-out-min}/" />
+	</target>
+
+</project>

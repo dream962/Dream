@@ -1,0 +1,52 @@
+1542630661610	Rename type 'SceneConfigData'
+1542703937171	Rename method 'getGroupID'
+1542705412987	Copy compilation unit
+1542707260678	Delete element
+1542765426114	Rename method 'getCanPass'
+1542767642150	Rename field 'groupMap'
+1542767648534	Rename field 'areaMap'
+1542769291963	Rename method 'addOpenFields'
+1542769630473	Rename method 'isOpenField'
+1542770229534	Rename method 'getOpenSet'
+1542770934517	Copy compilation unit
+1542770943818	Rename type 'ArmyMineCmd'
+1542771071030	Copy compilation unit
+1542771337115	Delete element
+1542771349975	Rename type 'PlayerClientBattleModule'
+1542771407328	Rename method 'getClientBattleModule'
+1542772019677	Rename type 'FightStartCmd'
+1542772026802	Rename package 'com.game.user.cmd.fight'
+1542772047749	Rename method 'startFight'
+1542790191483	Copy compilation unit
+1542790315967	Copy compilation unit
+1542856426065	Rename field 'SCENE_FIELD'
+1542856441271	Rename field 'KEY_SCENE_FIELD'
+1542856507832	Rename local variable 'field'
+1542856569870	Rename method 'updateSceneFieldInfo'
+1542856578324	Rename method 'getSceneFieldList'
+1542856606875	Rename field 'fieldMap'
+1542856638355	Rename field 'openSet'
+1542856754712	Rename local variable 'fields'
+1542856803277	Rename local variable 'fieldInfo'
+1542856819860	Rename method 'removeField'
+1542856825424	Rename local variable 'fieldID'
+1542856951205	Rename method 'getOwnFieldList'
+1542856986107	Rename field 'areaMap'
+1542857034884	Rename local variable 'fieldList'
+1542857355490	Rename field 'fieldInfo'
+1542857386857	Rename method 'getFieldInfo'
+1542857606402	Rename local variable 'fieldInfo'
+1542858319716	Rename local variable 'fieldInfo'
+1542881506934	Rename type 'ScenceFieldModule'
+1542881702477	Rename method 'isOwnField'
+1542881721648	Rename local variable 'fieldID'
+1542881810357	Rename enum constant 'Base_Field'
+1542881847845	Rename method 'getFieldModule'
+1542955835442	Delete element
+1542961671071	Rename type 'IMapGraph'
+1542961919353	Delete element
+1542961942925	Delete element
+1542962102594	Rename type 'AbstractMapGraph'
+1542966930987	Rename method 'getCenterPos'
+1542966961488	Rename method 'getProto'
+1543053623394	Rename compilation unit 'PingCmd.java'

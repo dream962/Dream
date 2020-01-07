@@ -1,0 +1,28 @@
+2019-12-25 13:11:29,834|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-12-25 13:11:30,608|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 192.168.1.96:6380,db0
+2019-12-25 13:11:31,814|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-25 13:11:31,814|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-12-25 13:11:31,816|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+begin reload tableList.
+2019-12-25 13:11:32,022|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+begin reload username.
+2019-12-25 13:11:32,058|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+-------------Save UserName Total =23-----------------
+2019-12-25 13:11:32,058|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-12-25 13:11:32,058|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-25 13:11:32,058|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-25 13:11:32,059|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-12-25 13:11:32,418|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-25 13:11:32,419|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-12-25 13:11:32,419|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 2591 millis.

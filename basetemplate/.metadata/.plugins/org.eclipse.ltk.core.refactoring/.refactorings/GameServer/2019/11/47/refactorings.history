@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CheatCmd.java&apos; to &apos;GameServer/src/com.game.user.cmd.player&apos;&#x0D;&#x0A;- Original project: &apos;GameServer&apos;&#x0D;&#x0A;- Destination element: &apos;GameServer/src/com.game.user.cmd.player&apos;&#x0D;&#x0A;- Original element: &apos;com.game.user.cmd.player.CheatCmd.java&apos;" description="Copy compilation unit" destination="/src&lt;com.game.user.cmd.player" element1="/src&lt;com.game.user.cmd.player{CheatCmd.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1574323415165" units="1" version="1.0"/>
+</session>

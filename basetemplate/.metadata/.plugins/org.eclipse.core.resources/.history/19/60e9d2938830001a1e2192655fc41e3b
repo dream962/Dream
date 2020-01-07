@@ -1,0 +1,250 @@
+option java_package = "com.proto.user.gen";
+option java_outer_classname = "UserOutMsg";
+
+import "CommonOut.proto";
+
+/* 登陆、注册成功 */
+message LoginInfoProtoOut
+{
+	required int32 userID=1;						//玩家ID
+	required int32 winCount = 3;					//胜利次数（联机玩法中的胜利）
+	required int32 failCount = 4;					//失败次数（联机玩法中的失败）
+	required int32 diamondCount = 7;				//玩家拥有钻石数
+	required int32 donutCount = 8;                  //玩家拥有的甜甜圈数
+	required int64 endlessTopScore = 9;             //最佳成绩(无尽模式)
+	required int32 headID = 10;						//头像ID
+	repeated RoleType unlockRoleType = 11;          //已经解锁的角色类型
+	repeated PlatformTheme unlockTheme = 12;        //已经解锁的主题类型
+	repeated ModeType unlockGameMode = 13;     		//已经解锁的游戏类型
+	required bool isRemoveAd = 14;                  //是否出广告
+	required int64 timelimitTopScore = 15;          //限时模式的最佳成绩（限时模式中跳得的最大值）
+	required int64 raceTopScore = 16;               //竞速模式的最佳成绩（竞速模式中上发的毫秒值最小的）
+	required bool isCanUnlockCoinModeByAD = 17;     //是否可以通过广告解锁金币模式
+	repeated int32 unlockHeadID = 18;               //已解锁的头像ID
+	required int64 triggerADLeftTime = 19;          //本次可触发广告的剩余时间
+	//required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
+	required int64 todayTriggerADCount = 20;        //今日已触发广告的次数
+	required int64 globalTopScore = 21;             //全局最佳成绩
+	required bool isBinded = 22;                    //是否已绑定谷歌账号
+	required int32 buyRemoveAdYear = 23;            //购买广告的时间点对应的年份
+	required int32 buyRemoveAdMonth = 24;           //购买广告的时间点对应的月份
+	required int32 buyRemoveAdDay = 25;             //购买广告的时间点对应的日
+	required int32 leftRemoveAdDay = 26;            //去广告剩余的天数
+}
+
+
+/* 服务器ping */
+message PingProtoOut
+{
+	required int64 serverTime = 1;					//服务器时间
+}
+
+message MatchPlayerDetail
+{
+	required string userName = 1;     				//敌方玩家昵称
+	required RoleType roleType = 2;      			//敌方玩家的类型(0:小红， 1：小黑  2：小绿  3：小蓝)
+	required int64 userID = 3;		  				//玩家ID
+	required int64 headID = 4;        				  //头像ID
+	required float posX = 5;                         //玩家的出生点X
+	required float posY = 6;                         //玩家的出生点Y
+	required float posZ = 7;                         //玩家的出生点Z
+	optional bool isRoomOwner = 8;                   //是否是房主
+}
+
+/*随机玩家返回*/
+message RandomMatchProtoOut
+{
+	repeated MatchPlayerDetail players = 1;			 		//玩家信息
+	required PlatformTheme platformType =2;                	 //地块主题类型(0: 木头   1：火山  2：草原  3：冰川)
+	//repeated PlatformGroupInfoProtoOut platformList = 3;  	//地块信息
+}
+
+/*随机地块列表信息*/
+message MatchMapProtoOut
+{
+	required int32 totalLength = 1;							//总长度
+    required int32 begin = 2;								//开始位置
+    required int32 end = 3;									//结束位置
+	repeated PlatformGroupInfoProtoOut platformList = 4;  	//地块信息
+}
+
+
+/*地块组的信息*/
+message PlatformGroupInfoProtoOut
+{
+	required PlatformInfoProtoOut platformInfo = 1;   		   //可通行路径上的地块信息(在第一个地块组时做为出生点)
+	optional PlatformInfoProtoOut spikeDirPlatformInfo = 2;    //钉子路径方向上的信息
+	optional int32 level = 3;                                  //组索引
+	optional PlatformInfoProtoOut platformInfoExtral = 4;      //在第一个地块组才有数据，作为其中一个出生点
+}
+
+message TestData
+{
+	repeated  PlatformGroupInfoProtoOut data = 1;
+}
+
+/*地块的信息*/
+message PlatformInfoProtoOut
+{
+	required PlatformType platformType = 1;          //地块组合类型
+	required float posX = 2;                         //地块的坐标X
+	required float posY = 3;                         //地块的坐标Y
+	required float posZ = 4;                         //地块的坐标Z
+	required int32 obstacleIndex = 5;                //障碍物索引
+	required int32 obstacleDir = 6;                  //障碍物的方向(1：左  0:右)
+	required bool hasDiamond = 7;                    //是否有钻石
+	optional float fallTime = 8;                     //掉落延迟时间(单机玩法有效)
+}
+
+/*下行敌方跳动, 敌方每跳一次,下行一次*/
+message EnemyJumpProtoOut
+{
+	required bool isLeftJump = 1;                  //玩家是否往左边跳
+	required int32 jumpIndex = 2;					//目标平台index
+	required float multiple = 3;                   //跳跃动画的时长倍数(0.5 ~ 1)
+	required int32 playerID = 4;					//玩家ID
+}
+
+/*敌方中途死亡*/
+message EnemyBeKillProtoOut
+{
+	required int32 platformIndex = 1;               //平台的索引，敌方在跳空或者撞到障碍物时要后退5步
+	required int32 playerID = 2;					//玩家ID
+}
+
+/**游戏结果*/
+message GameOverProtoOut
+{
+	required bool isWin = 1;             		//是否胜利
+	required int32 playerWinCount = 2;   		//玩家胜利次数
+	required int32 enemyWinCount = 3;    		//敌方胜利次数
+	required int32 winnerGetDiamondCount = 4;   //胜者新加钻石数
+	required int32 winnerGetDonutCount = 5;     //胜者获得的甜甜圈数
+}
+
+/*收到在来一局的邀请*/
+message GetInviteAgainProtoOut
+{
+	required string enemyName = 1;          //敌方的名字
+}
+
+/*主动邀请的结果*/
+message InviteAgainReturnProtoOut
+{
+	required string enemyName = 1;        //敌方的名字
+	required bool isPermit = 2;           //是否允许
+}
+
+/**充值 */
+message RechargeProtoOut
+{
+	required string orderNum = 1;				//订单号
+	required string productID = 2;              //商品在后台的ID
+}
+
+
+/** 刷新资源,属性等 */
+message ResourceRefresh
+{
+	optional int32 winCount = 1;					//胜利次数（联机玩法中的胜利）
+	optional int32 failCount = 2;					//失败次数（联机玩法中的失败）
+	optional int32 diamondCount = 3;				//玩家拥有钻石数
+	optional int32 donutCount = 4;                  //玩家拥有的甜甜圈数
+	optional int64 endlessTopScore = 5;             //最佳成绩(无尽模式)
+	repeated RoleType unlockRoleType = 6;           //已经解锁的角色类型
+	repeated PlatformTheme unlockTheme = 7;         //已经解锁的主题类型
+	repeated ModeType unlockGameMode = 8;     		//已经解锁的游戏类型
+	optional bool isRemoveAd = 9;                   //是否去广告
+	required int64 timelimitTopScore = 10;          //最佳成绩(限时模式)
+	required int64 raceTopScore = 11;               //最佳成绩(竞速模式)
+	required bool isCanUnlockCoinModeByAD=12;		//是否可以通过广告解锁金币模式
+	required int32 headID = 13;						//头像ID
+	repeated int32 unlockHeadID = 14;               //已解锁的头像ID
+	required int64 globalTopScore = 15;             //全局最佳成绩
+	required bool isBinded = 16;                    //是否已绑定谷歌账号
+	required int32 buyRemoveAdYear = 17;            //购买广告的时间点对应的年份
+	required int32 buyRemoveAdMonth = 18;           //购买广告的时间点对应的月份
+	required int32 buyRemoveAdDay = 19;             //购买广告的时间点对应的日
+	required int32 leftRemoveAdDay = 20;            //去广告剩余的天数
+}
+
+/*单个排行榜基础信息*/
+message RankBaseInfoProtoOut
+{
+	required RankType  rankType = 1;       //排行榜类型
+	required int64 totalRankIndex = 2;     //玩家当前的总排名
+}
+
+
+/*排行榜基础信息*/
+message RankBaseInfoListProtoOut
+{
+	repeated RankBaseInfoProtoOut rankBaseInfoList = 1;     //基础信息列表
+}
+
+
+/*单个排行信息*/
+message RankInfoProtoOut
+{
+	required int32 rankIndex = 1;    //排名
+	required int32 headID = 2;       //头像ID
+	required string nickName = 3;    //玩家昵称
+	required int64 resultValue = 4;  //数值
+}
+
+/*排行榜数据 */
+message RankInfoListProtoOut
+{
+	required RankType rankType = 1;                //排行榜类型
+	repeated RankInfoProtoOut rankList = 2;        //排行榜列表
+	required RankInfoProtoOut playerRankInfo = 3;  //玩家排行信息
+	required RankTimeType rankTimeType = 4;        //排行榜时间类型
+	required RankSectionType rankSectionType = 5;  //排行榜区间类型
+}
+
+/* 奖励广告数据*/
+message RewardADProtoOut
+{
+	required int64 triggerADLeftTime = 1;          //本次可触发广告的剩余时间
+	//required int64 triggerADLastTime = 1;          //上次客户端触发奖励广告的时间点
+	required int64 todayTriggerADCount = 2;        //今日已触发广告的次数
+}
+
+/*房间信息*/
+message RoomInfoProtoOut
+{
+	required int32 roomID 				= 1;       //房间ID
+	required string roomName 			= 2;     //房间名字
+	required int32 length 				= 3;      //地块长度
+
+}
+
+/*房间信息列表*/
+message RoomListInfoProtoOut
+{
+	repeated RoomInfoProtoOut roomInfoList = 1;       //房间信息列表
+	required int32 roomCount = 2;                     //房间个数
+}
+
+/*房间的玩家信息*/
+message RoomPlayerInfoProtoOut
+{
+	required int32 roomID = 1;				     //房间ID
+	required RoleType roomOwnerRoleType = 2;     //房主的角色类型（房主的状态默认是已准备）
+	required RoleType roomerRoleType = 3;        //房员的角色类型
+	required int32 roomerStatus = 4;             //房员的状态(0：还没有房员 1：未准备, 2:已准备)
+	required int32 length = 5;                   //地块长度
+	required string roomName = 6;                //房间名字
+}
+
+/*错误码*/
+message ErrorCodeProtoOut
+{
+	required int32 errorID = 1;        //错误码
+}
+
+/*房员准备状态*/
+message RoomerReadyStatusProtoOut
+{
+	required int32 roomerStatus = 1;             //房员的状态(1：未准备, 2:已准备)
+}

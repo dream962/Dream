@@ -1,0 +1,253 @@
+2019-08-08 15:11:45,090|ERROR|main|Please input the config path.
+2019-08-08 15:12:06,618|ERROR|main|init datasource error, url: jdbc:mysql://106.75.156.132:13619/db_upload?allowMultiQueries=true&characterEncoding=UTF-8
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056) [druid-1.0.29.jar:1.0.29]
+	at com.upload.database.pool.druid.DruidPool.getConnection(DruidPool.java:35) [bin/:na]
+	at com.upload.database.pool.DBHelper.openConn(DBHelper.java:337) [bin/:na]
+	at com.upload.database.pool.DBHelper.executeQuery(DBHelper.java:117) [bin/:na]
+	at com.upload.database.BaseDao.queryList(BaseDao.java:123) [bin/:na]
+	at com.upload.database.BaseDao.queryList(BaseDao.java:109) [bin/:na]
+	at com.upload.data.business.ServerListBusiness.listAll(ServerListBusiness.java:32) [bin/:na]
+	at com.upload.component.ServerListComponent.initialize(ServerListComponent.java:83) [bin/:na]
+	at com.upload.component.ComponentManager.addComponent(ComponentManager.java:54) [bin/:na]
+	at com.upload.UploadServer.main(UploadServer.java:47) [bin/:na]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 26 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 27 common frames omitted
+2019-08-08 15:12:06,657|ERROR|main|{dataSource-1} init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056) [druid-1.0.29.jar:1.0.29]
+	at com.upload.database.pool.druid.DruidPool.getConnection(DruidPool.java:35) [bin/:na]
+	at com.upload.database.pool.DBHelper.openConn(DBHelper.java:337) [bin/:na]
+	at com.upload.database.pool.DBHelper.executeQuery(DBHelper.java:117) [bin/:na]
+	at com.upload.database.BaseDao.queryList(BaseDao.java:123) [bin/:na]
+	at com.upload.database.BaseDao.queryList(BaseDao.java:109) [bin/:na]
+	at com.upload.data.business.ServerListBusiness.listAll(ServerListBusiness.java:32) [bin/:na]
+	at com.upload.component.ServerListComponent.initialize(ServerListComponent.java:83) [bin/:na]
+	at com.upload.component.ComponentManager.addComponent(ComponentManager.java:54) [bin/:na]
+	at com.upload.UploadServer.main(UploadServer.java:47) [bin/:na]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 26 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 27 common frames omitted
+2019-08-08 15:12:06,659|ERROR|main|Exception:
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056) ~[druid-1.0.29.jar:1.0.29]
+	at com.upload.database.pool.druid.DruidPool.getConnection(DruidPool.java:35) ~[bin/:na]
+	at com.upload.database.pool.DBHelper.openConn(DBHelper.java:337) [bin/:na]
+	at com.upload.database.pool.DBHelper.executeQuery(DBHelper.java:117) [bin/:na]
+	at com.upload.database.BaseDao.queryList(BaseDao.java:123) [bin/:na]
+	at com.upload.database.BaseDao.queryList(BaseDao.java:109) [bin/:na]
+	at com.upload.data.business.ServerListBusiness.listAll(ServerListBusiness.java:32) [bin/:na]
+	at com.upload.component.ServerListComponent.initialize(ServerListComponent.java:83) [bin/:na]
+	at com.upload.component.ComponentManager.addComponent(ComponentManager.java:54) [bin/:na]
+	at com.upload.UploadServer.main(UploadServer.java:47) [bin/:na]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 26 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 27 common frames omitted
+2019-08-08 15:12:06,760|ERROR|main|
+java.lang.NullPointerException: null
+	at com.upload.component.ServerListComponent.initialize(ServerListComponent.java:84) ~[bin/:na]
+	at com.upload.component.ComponentManager.addComponent(ComponentManager.java:54) ~[bin/:na]
+	at com.upload.UploadServer.main(UploadServer.java:47) [bin/:na]
+2019-08-08 15:12:06,761|ERROR|main|服务器列表模块失败
+2019-08-08 15:13:12,997|ERROR|main|Please input the config path.
+2019-08-08 15:13:14,583|ERROR|main|定时任务:刷新服务器信息开始
+2019-08-08 15:13:15,343|ERROR|main|定时任务:刷新服务器信息结束
+2019-08-08 15:13:16,031|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-08-08 15:13:16,032|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-08-08 15:13:16,193|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-08-08 15:13:16,194|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-08-08 15:13:16,194|ERROR|main|****************** All Component has started successfully.******************
+2019-08-08 15:13:16,194|ERROR|main|UploadServer has started successfully, taken 3204 millis.
+2019-08-08 15:13:49,107|ERROR|qtp813823788-24|******连接SSH服务器成功：43.240.3.81:5188,admin
+2019-08-08 15:13:53,264|ERROR|qtp813823788-24|******关闭SSH服务器的连接！
+
+2019-08-08 15:13:54,080|ERROR|qtp813823788-24|******连接SSH服务器成功：43.240.3.81:5188,admin
+2019-08-08 15:13:54,547|ERROR|qtp813823788-24|******关闭SSH服务器的连接！
+
+2019-08-08 15:13:55,024|ERROR|qtp813823788-24|******连接SSH服务器成功：43.240.3.81:5188,admin
+2019-08-08 15:13:55,477|ERROR|qtp813823788-24|******关闭SSH服务器的连接！
+
+2019-08-08 15:13:55,902|ERROR|qtp813823788-24|******连接SSH服务器成功：43.240.3.81:5188,admin
+2019-08-08 15:13:56,333|ERROR|qtp813823788-24|******关闭SSH服务器的连接！
+
+2019-08-08 15:13:56,822|ERROR|qtp813823788-24|******连接SSH服务器成功：43.240.3.81:5188,admin
+2019-08-08 15:13:57,285|ERROR|qtp813823788-24|******关闭SSH服务器的连接！
+
+2019-08-08 15:14:14,583|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-08 15:14:15,341|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-08 15:15:10,832|ERROR|qtp813823788-26|当前正在执行SQL的服务器: 1服-楼兰女王 ,ID:1 ,DB:db_game_tlcs_0001
+2019-08-08 15:15:15,343|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-08 15:15:16,046|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-08 15:16:16,048|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-08 15:16:16,783|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-08 15:16:24,294|ERROR|qtp813823788-26|当前正在执行SQL的服务器: 1服-楼兰女王 ,ID:1 ,DB:db_game_tlcs_0001
+2019-08-08 15:16:50,808|ERROR|qtp813823788-26|区服执行完毕...数据保存:H:\web\uploadTool\UploadServer\save\20190808151621.csv
+2019-08-08 15:17:00,039|ERROR|qtp813823788-26|当前正在执行SQL的服务器: 6服-大荒龙冢 ,ID:6 ,DB:db_game_tlcs_0006
+2019-08-08 15:17:02,096|ERROR|qtp813823788-26|区服执行完毕...数据保存:H:\web\uploadTool\UploadServer\save\20190808151621.csv
+2019-08-08 15:17:02,096|ERROR|qtp813823788-26|当前正在执行SQL的服务器: 10服-秦皇疑冢 ,ID:10 ,DB:db_game_tlcs_0010
+2019-08-08 15:17:02,393|ERROR|qtp813823788-26|区服执行完毕...数据保存:H:\web\uploadTool\UploadServer\save\20190808151621.csv
+2019-08-08 15:17:02,394|ERROR|qtp813823788-26|当前正在执行SQL的服务器: 17服-蓬莱仙境 ,ID:17 ,DB:db_game_tlcs_0017
+2019-08-08 15:17:02,728|ERROR|qtp813823788-26|区服执行完毕...数据保存:H:\web\uploadTool\UploadServer\save\20190808151621.csv
+2019-08-08 15:17:02,728|ERROR|qtp813823788-26|当前正在执行SQL的服务器: 18服-昆仑神宫 ,ID:18 ,DB:db_game_tlcs_0018
+2019-08-08 15:17:04,066|ERROR|qtp813823788-26|区服执行完毕...数据保存:H:\web\uploadTool\UploadServer\save\20190808151621.csv
+2019-08-08 15:17:04,067|ERROR|qtp813823788-26|查询执行完毕...数据保存:H:\web\uploadTool\UploadServer\save\20190808151621.csv
+2019-08-08 15:17:16,785|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-08 15:17:17,805|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-08 15:18:17,807|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-08 15:18:18,475|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-08 15:19:18,477|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-08 15:19:19,186|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-08 15:20:19,188|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-08 15:20:19,906|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-08 15:21:19,909|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-08 15:21:20,617|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-08 15:22:20,619|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-08 15:22:21,351|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束

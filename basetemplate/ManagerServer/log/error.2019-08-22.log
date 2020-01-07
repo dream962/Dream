@@ -1,0 +1,52 @@
+2019-08-22 11:05:49,680|ERROR|main|Please input the config path.
+2019-08-22 11:05:51,264|ERROR|main|定时任务:刷新服务器信息开始
+2019-08-22 11:05:58,660|ERROR|main|定时任务:刷新服务器信息结束
+2019-08-22 11:05:59,467|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-08-22 11:05:59,467|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-08-22 11:05:59,665|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-08-22 11:05:59,666|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-08-22 11:05:59,666|ERROR|main|****************** All Component has started successfully.******************
+2019-08-22 11:05:59,666|ERROR|main|UploadServer has started successfully, taken 9999 millis.
+2019-08-22 11:15:22,583|ERROR|main|Please input the config path.
+2019-08-22 11:15:41,336|ERROR|main|Please input the config path.
+2019-08-22 11:15:42,138|ERROR|main|定时任务:刷新服务器信息开始
+2019-08-22 11:15:42,194|ERROR|main|定时任务:刷新服务器信息结束
+2019-08-22 11:15:42,831|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-08-22 11:15:42,832|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-08-22 11:15:42,996|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-08-22 11:15:42,996|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-08-22 11:15:42,996|ERROR|main|****************** All Component has started successfully.******************
+2019-08-22 11:15:42,997|ERROR|main|UploadServer has started successfully, taken 1667 millis.
+2019-08-22 11:16:42,137|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:16:42,181|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:17:42,182|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:17:42,254|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:18:42,255|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:18:42,314|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:19:42,316|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:19:42,380|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:22:20,152|ERROR|main|Please input the config path.
+2019-08-22 11:22:20,942|ERROR|main|定时任务:刷新服务器信息开始
+2019-08-22 11:22:20,996|ERROR|main|定时任务:刷新服务器信息结束
+2019-08-22 11:22:21,687|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-08-22 11:22:21,688|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-08-22 11:22:21,861|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-08-22 11:22:21,862|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-08-22 11:22:21,862|ERROR|main|****************** All Component has started successfully.******************
+2019-08-22 11:22:21,863|ERROR|main|UploadServer has started successfully, taken 1722 millis.
+2019-08-22 11:23:20,940|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:23:21,010|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:24:21,012|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:24:21,053|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:25:21,055|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:25:21,114|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:26:21,116|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:26:21,170|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:27:21,171|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:27:21,239|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:28:21,242|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:28:21,281|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:29:21,282|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:29:21,327|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-08-22 11:30:21,329|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-08-22 11:30:21,379|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束

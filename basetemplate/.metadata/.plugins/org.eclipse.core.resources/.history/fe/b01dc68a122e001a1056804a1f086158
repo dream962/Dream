@@ -1,0 +1,43 @@
+package com.game.component;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+import com.base.component.AbstractComponent;
+import com.util.ThreadSafeRandom;
+
+/**
+ * 掉落奖励组件
+ * 
+ * @author dream
+ *
+ */
+public class RewardDropComponent extends AbstractComponent
+{
+    private static ReadWriteLock lock = new ReentrantReadWriteLock();
+
+    @Override
+    public boolean initialize()
+    {
+        lock.writeLock().lock();
+        try
+        {
+
+        }
+        finally
+        {
+            lock.writeLock().unlock();
+        }
+
+        return true;
+    }
+
+    @Override
+    public void stop()
+    {
+
+    }
+
+}

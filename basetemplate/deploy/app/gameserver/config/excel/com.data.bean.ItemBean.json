@@ -1,0 +1,14 @@
+[
+	{
+	"itemDesc":"民国时期的通用货币资源\n充值即可获得，月卡极度优惠！",
+	"itemName":"金币",
+	"icon":"ic_exchange_donuts_small",
+	"itemID":101
+	},
+	{
+	"itemDesc":"充值即可获得，[color=#00ff90]月卡[/color]极度优惠！\n可在商城中购买[color=#00ff90]天矶盒[/color]，从中获得[color=#00ff90]高级宝石、混沌武器[/color]",
+	"itemName":"甜甜圈",
+	"icon":"ic_ads_free_donuts",
+	"itemID":102
+	}
+]

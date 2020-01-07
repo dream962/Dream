@@ -1,0 +1,70 @@
+package com.game.user.cmd.common;
+
+import java.util.Date;
+
+import com.base.code.ErrorCodeType;
+import com.base.command.ICode;
+import com.base.net.CommonMessage;
+import com.data.bean.ChargeBean;
+import com.data.bean.factory.ChargeBeanFactory;
+import com.data.info.ChargeInfo;
+import com.game.object.player.GamePlayer;
+import com.game.user.cmd.AbstractUserCmd;
+import com.proto.command.UserCmdType.UserCmdInType;
+import com.proto.command.UserCmdType.UserCmdOutType;
+import com.proto.user.gen.UserInMsg.RechargeProtoIn;
+import com.proto.user.gen.UserOutMsg.RechargeProtoOut;
+import com.util.UuidUtil;
+import com.util.print.LogFactory;
+
+/**
+ * 充值
+ * 
+ * @author dream
+ *
+ */
+@ICode(code = UserCmdInType.RECHARGE_VALUE)
+public class RechargeCreateCmd extends AbstractUserCmd
+{
+    @Override
+    public void execute(GamePlayer player, CommonMessage packet)
+    {
+        try
+        {
+            RechargeProtoIn proto = RechargeProtoIn.parseFrom(packet.getBody());
+            int configID = proto.getRechargeConfigID();
+
+            ChargeBean bean = ChargeBeanFactory.getChargeBean(configID);
+            if (bean == null)
+            {
+                player.sendErrorCode(ErrorCodeType.Config_Error, "配置错误.");
+                return;
+            }
+
+            String sku = bean.getGoogleSKU();
+            String orderID = UuidUtil.generateGUID();
+            
+            player.getDataModule().charge();
+
+            ChargeInfo chargeInfo = new ChargeInfo();
+            chargeInfo.setAccountName(player.getPlayerInfo().getAccountName());
+            chargeInfo.setConfigID(configID);
+            chargeInfo.setCreateTime(new Date());
+            chargeInfo.setOrderId(orderID);
+            chargeInfo.setOrderStatus(0);
+            chargeInfo.setPayMoney(bean.getChargeValue());
+            chargeInfo.setPayTime(new Date());
+            chargeInfo.setUserID(player.getUserID());
+            chargeInfo.setPayWay("google");
+
+            RechargeProtoOut.Builder builder = RechargeProtoOut.newBuilder();
+            builder.setOrderNum(orderID);
+            builder.setProductID(sku);
+            player.sendMessage(UserCmdOutType.RECHARGE_RESULT_VALUE, builder);
+        }
+        catch (Exception e)
+        {
+            LogFactory.error("异常", e);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+2019-10-11 09:02:39,572|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-11 09:02:40,197|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 192.168.1.96:6380,db0
+2019-10-11 09:02:41,851|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-11 09:02:41,852|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-11 09:02:42,109|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-11 09:02:42,110|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-11 09:02:42,110|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-11 09:02:42,110|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-11 09:02:42,655|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-11 09:02:42,656|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-10-11 09:02:42,658|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 3091 millis.

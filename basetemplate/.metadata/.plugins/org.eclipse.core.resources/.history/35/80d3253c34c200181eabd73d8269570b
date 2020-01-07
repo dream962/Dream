@@ -1,0 +1,36 @@
+package com.game.scene.city;
+
+import com.data.info.CityInfo;
+import com.game.scene.ScenePlayer;
+
+/**
+ * 城池
+ * 
+ * @author dream
+ *
+ */
+public class BaseCity extends AbstractCity
+{
+    public BaseCity(ScenePlayer player, CityInfo cityInfo)
+    {
+        super(player, cityInfo);
+    }
+
+    @Override
+    public boolean init()
+    {
+        return false;
+    }
+
+    @Override
+    public void update(long time)
+    {
+        // 恢复城防值
+        if (getCityHP() < getCityMaxHp() && (time - lastRecoverTime) / 1000 >= getCityBean().getRecoverTime())
+        {
+            lastRecoverTime = time;
+            int hp = (int) (getCityBean().getRecoverPercent() * getCityBean().getCityHP());
+            addHP(hp);
+        }
+    }
+}

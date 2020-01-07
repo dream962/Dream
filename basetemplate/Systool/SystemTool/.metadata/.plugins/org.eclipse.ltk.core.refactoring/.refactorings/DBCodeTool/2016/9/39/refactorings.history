@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;exportData&apos; in &apos;com.tool.MainWindow.main(...)&apos; to &apos;luaDataTool&apos;&#x0D;&#x0A;- Original project: &apos;DBCodeTool&apos;&#x0D;&#x0A;- Original element: &apos;com.tool.MainWindow.main(String[]).exportData&apos;&#x0D;&#x0A;- Renamed element: &apos;exportData&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;exportData&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.tool{MainWindow.java[MainWindow~main~\[QString;@exportData!7184!7237!7193!7202!QToolItem;!0!false" name="luaDataTool" references="true" stamp="1474362510910" version="1.0"/>
+</session>

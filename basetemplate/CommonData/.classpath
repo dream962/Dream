@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/ammentos_revise_1.3.7.jar" sourcepath="/CommonLib/lib/ammentos_revise_1.3.7.zip"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CommonUtil"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/fastjson-1.2.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BaseServer"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/commons-lang3-3.4.jar" sourcepath="/CommonLib/lib/commons-lang3-3.4-src.zip"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jxl-2.6.12.jar" sourcepath="/CommonLib/lib/jxl-src.zip"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/CommonLib/lib/jedis-3.0.0.jar" sourcepath="/CommonLib/resource/jredis3.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

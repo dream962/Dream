@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>头部</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+
+		<script src="js/jquery.cookie.js"></script>
+		<script src="src/lib/ajax.js"></script>
+		<script src="src/lib/util.js"></script>
+		<script src="js/config/configure.js"></script>
+		<script src="src/lib/checkLogin.js"></script>
+	</head>
+
+	<body>
+		<!-- 头部 -->
+		<div class="head">
+			<div class="headL">
+				<img class="headLogo" src="img/top.png" />
+			</div>
+			<div class="headR">
+				<span style="color:#FFF">欢迎：<span id="name"></span></span>
+				<a href="javascript:void(0)" rel="external" onclick="logOut()" target="_top">【退出】</a>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(function() {
+				var getUrl = port + "/getNickName";
+				$.get(getUrl , function(result){
+					var data = $.parseJSON(result);
+					if(data.code == 1){
+						top.location.href = port + "/login.html";
+					}
+					$("#name").html(data.json);
+				})
+			})
+
+			function logOut() {
+				var baseurl = port + "/logout";
+				$.post(baseurl, {}, function(data) {
+					if(data.code == 0) {
+						$.cookie('token', 'null');
+						top.location.href = port + "/login.html";
+					}
+				}, "json")
+			}
+		</script>
+	</body>
+
+</html>

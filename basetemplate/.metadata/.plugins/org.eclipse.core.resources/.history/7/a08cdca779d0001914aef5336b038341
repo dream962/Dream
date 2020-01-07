@@ -1,0 +1,41 @@
+package com.logic.component;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import com.base.component.AbstractComponent;
+import com.logic.object.RobotPlayer;
+
+/**
+ * 机器人组件信息
+ * 
+ * @author dream
+ *
+ */
+public class RobotComponent extends AbstractComponent
+{
+    private static Map<Long, RobotPlayer> robotMap = new ConcurrentHashMap<>();
+
+    @Override
+    public boolean initialize()
+    {
+        return true;
+    }
+
+    @Override
+    public void stop()
+    {
+        robotMap.clear();
+    }
+
+    public static RobotPlayer getRobot()
+    {
+        for (RobotPlayer player : robotMap.values())
+        {
+            if (player.getRoomModule().getCurrentRoom() == null)
+                return player;
+        }
+
+        return null;
+    }
+}

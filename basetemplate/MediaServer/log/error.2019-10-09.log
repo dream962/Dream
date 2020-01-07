@@ -1,0 +1,162 @@
+2019-10-09 10:20:25,047|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-09 10:20:25,586|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 106.12.25.131:6380,db0
+2019-10-09 10:20:27,104|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-09 10:20:27,105|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-09 10:20:27,680|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-09 10:20:27,680|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-09 10:20:27,680|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-09 10:20:27,680|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-09 10:20:28,201|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-09 10:20:28,202|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-10-09 10:20:28,202|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 3159 millis.
+2019-10-09 17:44:24,872|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-09 17:44:25,569|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 106.12.25.131:6380,db0
+2019-10-09 17:44:26,080|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-09 17:44:26,081|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-09 17:44:32,100|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-09 17:44:32,100|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-09 17:44:32,100|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-09 17:44:32,101|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-09 17:44:32,486|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-09 17:44:32,487|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-10-09 17:44:32,488|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 7618 millis.
+2019-10-09 19:53:15,746|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-09 19:53:16,320|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 106.12.25.131:6380,db0
+2019-10-09 19:53:16,883|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-09 19:53:16,884|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-09 19:53:21,251|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-09 19:53:21,251|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-09 19:53:21,251|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-09 19:53:21,252|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-09 19:53:21,563|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:32)
+WebComponent Start Exception:
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:298)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:431)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.base.web.WebComponent.start(WebComponent.java:74)
+	at com.base.component.ComponentManager.start(ComponentManager.java:95)
+	at com.AccountServer.loadComponent(AccountServer.java:96)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.AccountServer.main(AccountServer.java:56)
+2019-10-09 19:53:21,563|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:97)
+****** Component:[com.base.web.WebComponent] has started failed.******************
+2019-10-09 19:53:21,564|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+GameServer has started failed.
+2019-10-09 19:53:45,056|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-09 19:53:45,640|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 106.12.25.131:6380,db0
+2019-10-09 19:53:46,149|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-09 19:53:46,149|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-09 19:53:50,296|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-09 19:53:50,297|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-09 19:53:50,297|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-09 19:53:50,297|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-09 19:53:50,618|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-09 19:53:50,618|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-10-09 19:53:50,619|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 5565 millis.
+2019-10-09 19:55:53,323|ERROR|qtp1541525668-38|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:32)
+192.168.1.47--请求异常:action(login) params({'userName':'test','password':'1234'})
+java.lang.NullPointerException: null
+	at com.account.servlet.LoginServlet.execute(LoginServlet.java:50)
+	at com.base.web.PlayerHandlerServlet.doPost(PlayerHandlerServlet.java:61)
+	at com.base.web.PlayerHandlerServlet.doGet(PlayerHandlerServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122)
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.lang.Thread.run(Unknown Source)
+2019-10-09 20:02:27,594|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-09 20:02:28,362|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 106.12.25.131:6380,db0
+2019-10-09 20:02:28,934|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-09 20:02:28,935|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-09 20:02:33,813|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-09 20:02:33,814|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-09 20:02:33,814|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-09 20:02:33,814|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-09 20:02:34,193|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-09 20:02:34,193|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-10-09 20:02:34,196|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 6605 millis.

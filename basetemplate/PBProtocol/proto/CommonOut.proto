@@ -1,0 +1,94 @@
+option java_package = "com.proto.common.gen";
+option java_outer_classname = "CommonOutMsg";
+
+/*地块组合类型*/
+enum PlatformType
+{
+	Normal = 0;          //普通，既只有单独一个地块
+	Theme = 1;          //主题组合
+	Spike = 2;            //钉子组合
+}
+
+//玩法模式类型
+enum ModeType
+{
+    NormalMode 	 = 1;           //正常模式
+    Coin 		 = 2;           //金币
+    EndLess 	 = 3;           //无尽
+    TimeLimit 	 = 4;           //限时
+    RAC          = 5;           //竞速
+    RandomMatch  = 6;           //随机匹配(200)
+	RandomMatch2 = 7;           //随机匹配(500)
+	RandomMatch3 = 8;           //随机匹配(1000)
+    //LAN          = 9;           //局域网(200)
+	//LAN2         = 10;          //局域网(500)
+	//LAN3         = 11;          //局域网(1000)
+	Room         = 9;           //房间模式(200)
+	Room2        = 10;          //房间模式(500)
+	Room3        = 11;          //房间模式(1000)
+    RandomProp   = 12;          //随机道具
+	Challenge    = 13;          //挑战模式
+	Online       = 14;          //联网模式
+}
+
+//平台主题类型
+enum PlatformTheme
+{
+    Grass    = 1;        	//草原
+    Desert   = 2;         	//沙漠
+    Forest   = 3;           //树林
+    Winter   = 4;           //雪景
+	Ocean    = 5;           //海洋
+	Polar    = 6;           //极地
+	Space    = 7;           //太空
+}
+
+
+//角色类型
+enum RoleType
+{
+    Whale    = 1;       //鲸鱼
+    Fox      = 2;       //狐狸
+    Panda    = 3;       //熊猫
+    Lion     = 4;       //狮子
+	Seal     = 5;       //海豹
+	Crab     = 6;       //螃蟹
+	Scorpion = 7;		//蝎子
+	Monster  = 8;       //怪兽
+	UFO      = 9;       //UFO
+	Pig      = 10;      //小猪
+}
+
+//排行榜类型
+enum RankType
+{
+	Endless     = 1;       //无尽
+	Timelimit   = 2;       //限时
+	RACE        = 3;       //竞速
+	Net         = 4;       //随机联网
+	GoodPersion = 5;       //好人
+	//LANNet      = 6;       //局域网
+	RoomMatch        = 6;       //房间
+}
+
+//排行榜时间类型
+enum RankTimeType
+{
+	Week  = 1;       //周榜
+	Month = 2;       //月榜
+	Total = 3;       //历史榜(总榜)
+}
+
+//排行榜区间类型
+enum RankSectionType
+{
+	World = 1;         //世界
+	Friend = 2;        //好友
+}
+
+//排行榜页面类型
+enum RankPageType
+{
+	Main = 1;        //主页面
+	Detail = 2;      //详情页
+}

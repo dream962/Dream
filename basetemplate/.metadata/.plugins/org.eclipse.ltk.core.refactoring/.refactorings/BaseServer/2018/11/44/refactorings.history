@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename enum constant &apos;TEAM_STATUS_ERROR&apos; of &apos;com.base.code.ErrorCodeType&apos; to &apos;Team_Status_Error&apos;&#x0D;&#x0A;- Original project: &apos;BaseServer&apos;&#x0D;&#x0A;- Original element: &apos;com.base.code.ErrorCodeType.TEAM_STATUS_ERROR&apos;&#x0D;&#x0A;- Renamed element: &apos;com.base.code.ErrorCodeType.Team_Status_Error&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename enum constant &apos;TEAM_STATUS_ERROR&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.enum.constant" input="/src&lt;com.base.code{ErrorCodeType.java[ErrorCodeType^TEAM_STATUS_ERROR" name="Team_Status_Error" references="true" setter="false" stamp="1541053299241" textual="false" version="1.0"/>
+</session>

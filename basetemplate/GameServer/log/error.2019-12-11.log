@@ -1,0 +1,158 @@
+2019-12-11 11:09:02,120|ERROR|nioEventLoopGroup-3-6|AbstractUserCmd:com.game.user.cmd.common.LoginCmd execute overtime. time:81
+2019-12-11 11:09:07,502|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-11 11:11:24,099|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-11 11:11:51,401|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:12:05,259|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-11 11:16:52,463|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10029
+2019-12-11 11:16:54,688|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-11 11:18:54,745|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10029
+2019-12-11 11:18:56,857|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-11 11:18:59,555|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10029
+2019-12-11 11:19:01,529|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-11 11:23:08,326|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:23:49,990|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10029
+2019-12-11 11:25:28,872|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-11 11:25:48,004|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:25:54,218|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-11 11:26:07,163|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:26:11,267|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-11 11:26:29,038|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:31:50,135|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-11 11:32:16,050|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:36:39,642|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-11 11:36:55,171|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:40:43,169|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-11 11:41:25,642|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:43:40,943|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-11 11:43:51,636|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:43:55,651|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-11 11:48:36,165|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:49:10,550|ERROR|GamePlayer-Worker-4|AdRewardBean is Null.configID:0
+2019-12-11 11:49:38,053|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10027
+2019-12-11 11:49:52,334|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-11 11:50:19,773|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10027
+2019-12-11 13:42:59,522|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-11 13:56:29,156|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10027
+2019-12-11 13:56:52,985|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-11 13:59:14,366|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10027
+2019-12-11 13:59:28,974|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-11 14:02:45,446|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:03:00,238|ERROR|GamePlayer-Worker-4|AdRewardBean is Null.configID:0
+2019-12-11 14:03:36,102|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:05:13,571|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-11 14:06:41,313|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:06:47,522|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-11 14:07:14,686|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:07:38,816|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-11 14:08:17,970|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:10:01,415|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-11 14:10:44,804|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:11:43,646|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-11 14:12:21,663|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:15:06,710|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-11 14:19:34,203|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:20:24,868|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-11 14:22:03,554|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:25:12,766|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-11 14:26:54,486|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:27:45,329|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-11 14:28:10,981|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:29:13,623|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-11 14:29:34,537|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:29:39,915|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-11 14:30:27,124|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:31:17,960|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-11 14:34:00,435|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:35:11,216|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-11 14:36:09,242|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:37:19,917|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-11 14:38:31,031|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-11 14:44:52,490|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-11 14:45:25,218|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-11 15:16:59,171|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-11 15:20:03,993|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10029
+2019-12-11 15:20:07,268|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-11 15:20:51,140|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10029
+2019-12-11 15:20:53,803|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-11 15:24:40,409|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10029
+2019-12-11 15:24:49,489|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-11 15:37:27,333|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-11 15:38:46,261|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10027
+2019-12-11 15:52:21,202|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:51 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,202|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:51 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,202|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:51 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,215|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:52 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:53 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:54 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:55 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:56 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:57 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:57 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:58 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:59 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:60 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:61 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:61 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:61 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:21,216|ERROR|nioEventLoopGroup-3-5|SelfDrivenTaskQueue Add Count Over 100.size return.:61 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-11 15:52:24,199|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10029
+2019-12-11 15:53:31,860|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-11 15:54:39,040|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10029
+2019-12-11 15:54:45,497|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-11 15:54:52,790|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10029
+2019-12-11 16:18:56,463|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-11 16:21:23,246|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10029
+2019-12-11 16:21:25,880|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-11 16:22:48,395|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10029
+2019-12-11 16:22:54,667|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-11 16:23:36,353|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10029
+2019-12-11 16:24:54,268|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-11 16:25:03,180|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-11 16:26:29,626|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10029
+2019-12-11 16:27:48,699|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10027
+2019-12-11 16:37:47,173|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-11 16:46:12,112|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-11 16:46:58,966|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-11 16:47:27,195|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10029
+2019-12-11 16:53:26,936|ERROR|GamePlayer-Worker-4|AdRewardBean is Null.configID:0
+2019-12-11 16:54:59,489|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10029
+2019-12-11 16:55:03,232|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-11 16:59:29,951|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-11 17:00:17,321|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10029
+2019-12-11 17:00:20,310|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-11 17:00:48,190|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10029
+2019-12-11 17:01:20,599|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-11 17:02:51,730|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-11 17:04:03,434|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10029
+2019-12-11 17:04:06,223|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-11 17:11:43,026|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10029
+2019-12-11 17:17:02,406|ERROR|GamePlayer-Worker-4|AdRewardBean is Null.configID:0
+2019-12-11 17:18:13,339|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10029
+2019-12-11 17:18:17,149|ERROR|GamePlayer-Worker-4|AdRewardBean is Null.configID:0
+2019-12-11 17:19:42,161|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10029
+2019-12-11 18:01:00,291|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-11 18:11:42,173|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10031
+2019-12-11 18:12:06,695|ERROR|GamePlayer-Worker-4|AdRewardBean is Null.configID:0
+2019-12-11 18:13:22,423|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-11 18:15:21,124|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-11 18:16:05,584|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-11 18:16:44,593|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-11 18:21:24,509|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10031
+2019-12-11 18:21:54,673|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-11 18:24:09,716|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10031
+2019-12-11 18:24:11,134|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-11 18:24:13,787|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10031
+2019-12-11 18:24:16,406|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-11 18:35:56,764|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-11 18:37:48,208|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-11 18:51:02,182|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10031
+2019-12-11 18:51:59,083|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-11 19:03:18,387|ERROR|GamePlayer-Worker-11|the game in room is null,but received packet. --- Code:10003,GameKey:10031
+2019-12-11 19:03:18,732|ERROR|GamePlayer-Worker-7|the game in room is null,but received packet. --- Code:10003,GameKey:10031
+2019-12-11 19:05:02,741|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-11 19:09:43,915|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10027
+2019-12-11 19:10:12,404|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-11 19:15:24,820|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10027
+2019-12-11 19:16:54,503|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-11 19:19:50,833|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10027
+2019-12-11 19:23:46,513|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10031

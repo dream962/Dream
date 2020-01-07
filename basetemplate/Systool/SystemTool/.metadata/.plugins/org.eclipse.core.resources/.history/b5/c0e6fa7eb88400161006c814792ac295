@@ -1,0 +1,79 @@
+package com.tool;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import com.tool.code.FieldInfo;
+import com.tool.data.DBSource;
+
+public class CompareFactory
+{
+    public static void compare(String fightDB, String testDB)
+    {
+        DBSource source = MainWindow.dataSource.dBSource;
+
+        List<String> fightList = source.getTables(fightDB);
+        List<String> testList = source.getTables(testDB);
+
+        // 添加的表
+        List<String> sqlList=new ArrayList<>();
+        
+        for (String s : fightList)
+        {
+            boolean flag = true;
+            for (String t : testList)
+            {
+                if (t.equalsIgnoreCase(s))
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            
+            if(flag)
+            {
+                String sql=createTable(fightDB,s);
+                sqlList.add(sql);
+            }
+        }
+
+    }
+    
+    private static String createTable(String dbName,String tableName)
+    {
+        DBSource source = MainWindow.dataSource.dBSource;
+        String sql="";
+        
+        Map<String, FieldInfo> fields = source.getTableFieldList(dbName, tableName);
+        
+        StringBuilder builder = new StringBuilder();
+        
+        builder.append("create table ").append(tableName).append("\n");
+        builder.append("(").append("\n");
+        
+        for(FieldInfo info : fields.values())
+        {
+            builder.append(info.name).append("\t");
+            if(info.sqlType.equalsIgnoreCase("datetime"))
+            {
+                builder.append(info.sqlType);
+            }
+            else
+            {
+                builder.append(info.sqlType).append("(").append(info.len).append(")");
+            }
+            
+            if(!info.isNull)
+            {
+                builder.append("\tNOT NULL\t");
+            }
+            
+            builder.append("comment ").append("'").append(info.comment).append("',");
+        }
+        
+        builder.append(");");
+        
+        return sql;
+    }
+}

@@ -1,0 +1,66 @@
+2019-12-10 14:02:32,986|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-12-10 14:02:34,569|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:32)
+redis client init Exception:192.168.1.96:6380
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.jedis.util.Pool.getResource(Pool.java:59)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:234)
+	at com.base.redis.RedisClient.init(RedisClient.java:78)
+	at com.base.redis.RedisClientComponent.initialize(RedisClientComponent.java:50)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.AccountServer.loadComponent(AccountServer.java:78)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.AccountServer.main(AccountServer.java:56)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: Failed connecting to host 192.168.1.96:6380
+	at redis.clients.jedis.Connection.connect(Connection.java:204)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:100)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1862)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:117)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.jedis.util.Pool.getResource(Pool.java:50)
+	... 7 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at redis.clients.jedis.Connection.connect(Connection.java:181)
+	... 14 common frames omitted
+2019-12-10 14:02:34,571|ERROR|main|Caller+0	 at com.base.component.ComponentManager.addComponent(ComponentManager.java:67)
+com.base.redis.RedisClientComponent getName() is null or empty。
+2019-12-10 14:02:34,571|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+GameServer has started failed.
+2019-12-10 14:04:14,842|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-12-10 14:04:15,313|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 192.168.1.96:6380,db0
+2019-12-10 14:04:16,645|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-10 14:04:16,646|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-12-10 14:04:16,647|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+begin reload tableList.
+2019-12-10 14:04:16,879|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+begin reload username.
+2019-12-10 14:04:16,913|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+-------------Save UserName Total =21-----------------
+2019-12-10 14:04:16,913|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-12-10 14:04:16,913|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-10 14:04:16,913|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-10 14:04:16,913|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-12-10 14:04:17,296|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-10 14:04:17,297|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-12-10 14:04:17,297|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 2459 millis.

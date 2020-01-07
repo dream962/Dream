@@ -1,0 +1,182 @@
+2019-10-14 14:51:06,016|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-14 14:51:06,861|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 192.168.1.96:6380,db0
+2019-10-14 14:51:08,662|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-14 14:51:08,663|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-14 14:51:09,266|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-14 14:51:09,267|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-14 14:51:09,267|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-14 14:51:09,267|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-14 14:51:09,774|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:32)
+WebComponent Start Exception:
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:298)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:431)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.base.web.WebComponent.start(WebComponent.java:74)
+	at com.base.component.ComponentManager.start(ComponentManager.java:95)
+	at com.AccountServer.loadComponent(AccountServer.java:96)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.AccountServer.main(AccountServer.java:56)
+2019-10-14 14:51:09,776|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:97)
+****** Component:[com.base.web.WebComponent] has started failed.******************
+2019-10-14 14:51:09,777|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+GameServer has started failed.
+2019-10-14 14:54:17,499|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-14 14:54:17,915|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 192.168.1.96:6380,db0
+2019-10-14 14:54:18,876|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-14 14:54:18,876|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-14 14:54:19,035|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-14 14:54:19,035|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-14 14:54:19,035|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-14 14:54:19,036|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-14 14:54:19,320|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-14 14:54:19,320|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-10-14 14:54:19,321|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 1825 millis.
+2019-10-14 17:21:54,373|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-14 17:21:54,812|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 192.168.1.96:6380,db0
+2019-10-14 17:21:55,831|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-14 17:21:55,831|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-14 17:21:56,003|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-14 17:21:56,003|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-14 17:21:56,003|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-14 17:21:56,003|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-14 17:21:56,271|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-14 17:21:56,272|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-10-14 17:21:56,273|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 1902 millis.
+2019-10-14 18:10:50,098|ERROR|qtp632071960-36|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:32)
+执行脚本出错
+java.sql.SQLException: Field 'KeyID' doesn't have a default value
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1075)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3562)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3494)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2696)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2105)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2398)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2316)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2301)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2843)
+	at com.alibaba.druid.filter.FilterAdapter.preparedStatement_executeUpdate(FilterAdapter.java:1091)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_executeUpdate(FilterEventAdapter.java:491)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeUpdate(FilterChainImpl.java:2841)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeUpdate(PreparedStatementProxyImpl.java:194)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeUpdate(DruidPooledPreparedStatement.java:256)
+	at com.base.database.pool.DBHelper.execNoneQuery(DBHelper.java:64)
+	at com.data.account.dao.impl.CommonDataDaoImpl.addOrUpdate(CommonDataDaoImpl.java:82)
+	at com.data.account.dao.impl.CommonDataDaoImpl.addOrUpdate(CommonDataDaoImpl.java:1)
+	at com.account.component.ServerComponent.addNotice(ServerComponent.java:93)
+	at com.account.servlet.AddNoticeServlet.execute(AddNoticeServlet.java:38)
+	at com.base.web.PlayerHandlerServlet.doPost(PlayerHandlerServlet.java:61)
+	at com.base.web.PlayerHandlerServlet.doGet(PlayerHandlerServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122)
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.lang.Thread.run(Unknown Source)
+2019-10-14 18:16:27,135|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-14 18:16:27,573|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 192.168.1.96:6380,db0
+2019-10-14 18:16:28,582|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-14 18:16:28,583|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-14 18:16:28,760|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-14 18:16:28,761|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-14 18:16:28,762|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-14 18:16:28,762|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-14 18:16:29,081|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-14 18:16:29,082|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-10-14 18:16:29,082|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 1952 millis.
+2019-10-14 19:47:34,434|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+path set default value.
+2019-10-14 19:47:34,864|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+add redis client : 0, 192.168.1.96:6380,db0
+2019-10-14 19:47:35,934|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-14 19:47:35,935|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.redis.RedisClientComponent] has started successfully.******************
+2019-10-14 19:47:36,111|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.data.account.cache.AccountCacheComponent] has started successfully.******************
+2019-10-14 19:47:36,112|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-14 19:47:36,112|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-14 19:47:36,112|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.account.component.ServerComponent] has started successfully.******************
+2019-10-14 19:47:36,385|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:102)
+****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-14 19:47:36,386|ERROR|main|Caller+0	 at com.base.component.ComponentManager.start(ComponentManager.java:106)
+****** All Component has started successfully.******************
+2019-10-14 19:47:36,387|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
+AccountServer has started successfully, taken 1956 millis.

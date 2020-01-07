@@ -1,0 +1,19 @@
+package com.logic.map;
+
+import java.util.LinkedList;
+
+public class MapFindPath
+{
+    /** 是否可达 */
+    public boolean reachable;
+    /** 最短距离 */
+    public int minStep;
+    /** 路径 */
+    public LinkedList<Integer> step;
+    
+    public MapFindPath(boolean reachable, int minStep)
+    {
+        this.reachable = reachable;
+        this.minStep = minStep;
+    }
+}

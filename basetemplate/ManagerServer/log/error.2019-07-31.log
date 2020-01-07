@@ -1,0 +1,311 @@
+2019-07-31 09:54:59,331|ERROR|main|Please input the config path.
+2019-07-31 09:55:00,910|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-07-31 09:55:00,912|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-07-31 09:55:01,090|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-07-31 09:55:01,090|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-07-31 09:55:01,091|ERROR|main|****************** All Component has started successfully.******************
+2019-07-31 09:55:01,091|ERROR|main|UploadServer has started successfully, taken 1768 millis.
+2019-07-31 09:56:00,189|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 09:56:00,388|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 09:59:55,930|ERROR|main|Please input the config path.
+2019-07-31 09:59:57,558|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-07-31 09:59:57,561|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-07-31 09:59:57,731|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-07-31 09:59:57,731|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-07-31 09:59:57,731|ERROR|main|****************** All Component has started successfully.******************
+2019-07-31 09:59:57,731|ERROR|main|UploadServer has started successfully, taken 1812 millis.
+2019-07-31 10:00:56,798|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:00:56,852|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:05:56,864|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:05:56,921|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:10:56,927|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:10:56,975|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:15:56,981|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:15:57,033|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:20:57,039|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:20:57,073|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:25:57,079|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:25:57,144|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:30:57,151|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:30:57,181|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:35:57,187|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:35:57,234|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:40:57,240|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:40:57,274|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:45:57,280|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:45:57,310|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:50:57,316|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:50:57,381|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 10:55:57,388|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 10:55:57,444|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:00:57,450|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:00:57,486|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:05:57,493|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:05:57,526|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:10:57,532|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:10:57,558|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:14:08,132|ERROR|main|Please input the config path.
+2019-07-31 11:14:09,594|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-07-31 11:14:09,596|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-07-31 11:14:09,759|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-07-31 11:14:09,760|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-07-31 11:14:09,760|ERROR|main|****************** All Component has started successfully.******************
+2019-07-31 11:14:09,760|ERROR|main|UploadServer has started successfully, taken 1636 millis.
+2019-07-31 11:15:08,963|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:15:09,021|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:15:41,511|ERROR|qtp1810923540-31|执行Groovy错误..
+java.lang.NullPointerException: null
+	at java.net.URLEncoder.encode(URLEncoder.java:204) ~[na:1.8.0_60]
+	at com.upload.web.servlet.sql.ExecuteGroovyServlet.execute(ExecuteGroovyServlet.java:56) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+2019-07-31 11:17:57,426|ERROR|qtp1810923540-25|执行Groovy错误..
+java.lang.NullPointerException: null
+	at java.net.URLEncoder.encode(URLEncoder.java:204) ~[na:1.8.0_60]
+	at com.upload.web.servlet.sql.ExecuteGroovyServlet.execute(ExecuteGroovyServlet.java:56) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+2019-07-31 11:19:34,318|ERROR|qtp1810923540-32|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 11:20:09,028|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:20:09,078|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:20:48,018|ERROR|qtp1810923540-32|执行结果:Read timed out
+2019-07-31 11:22:29,283|ERROR|qtp1810923540-33|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 11:23:01,535|ERROR|qtp1810923540-33|执行结果:{"code":0,"msg":"脚本完成:"}
+2019-07-31 11:24:49,064|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 11:25:09,084|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:25:09,125|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:26:38,197|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 11:26:41,645|ERROR|qtp1810923540-19|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 11:27:24,061|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 11:27:24,194|ERROR|qtp1810923540-19|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 11:30:09,132|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:30:09,193|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:33:43,092|ERROR|qtp1810923540-38|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 11:33:43,214|ERROR|qtp1810923540-38|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 11:35:09,198|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:35:09,239|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:40:09,246|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:40:09,288|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:45:09,294|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:45:09,361|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:50:09,367|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:50:09,413|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 11:55:09,419|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 11:55:09,467|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:00:09,474|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:00:09,532|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:05:09,539|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:05:09,591|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:10:09,597|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:10:09,673|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:15:09,679|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:15:09,731|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:20:09,737|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:20:09,769|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:25:09,775|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:25:09,821|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:30:09,828|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:30:09,856|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:35:09,862|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:35:09,891|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:40:09,897|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:40:09,925|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:45:09,932|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:45:09,961|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:50:09,967|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:50:10,011|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 12:55:10,017|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 12:55:10,056|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:00:10,063|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:00:10,091|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:05:10,097|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:05:10,142|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:10:10,148|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:10:10,171|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:15:10,177|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:15:10,217|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:20:10,223|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:20:10,264|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:25:10,270|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:25:10,298|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:30:10,305|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:30:10,331|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:35:10,337|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:35:10,395|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:40:10,402|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:40:10,433|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:41:13,366|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:资源服,ID:2000
+2019-07-31 13:41:13,384|ERROR|qtp1810923540-19|执行结果:http://192.168.1.96:8080/gm/script?params={'script':'%0Aimport+com.road.tl.data.GmActivityTempData%3B%0Aimport+com.road.tl.mgr.GmActivityMgr%0A%0AGmActivityTempData.reload%28%29%3B%0Adef+str%3D%22%22%3B%0Adef+top%3DGmActivityMgr.getTopActivity%28%29%3B%0Aif%28top%21%3Dnull%29+%7B%0A++++top.resetTopMsg%28%29%3B%0A++++str%3D%22ok%22%3B%0A%7D%0Aelse%7B%0A++++str%3D%22over%22%3B%0A%7D%0A%0Areturn+str%3B'}
+2019-07-31 13:41:13,384|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:97,ID:1
+2019-07-31 13:41:13,432|ERROR|qtp1810923540-19|执行结果:http://192.168.1.97:80/gm/script?params={'script':'%250Aimport%2Bcom.road.tl.data.GmActivityTempData%253B%250Aimport%2Bcom.road.tl.mgr.GmActivityMgr%250A%250AGmActivityTempData.reload%2528%2529%253B%250Adef%2Bstr%253D%2522%2522%253B%250Adef%2Btop%253DGmActivityMgr.getTopActivity%2528%2529%253B%250Aif%2528top%2521%253Dnull%2529%2B%257B%250A%2B%2B%2B%2Btop.resetTopMsg%2528%2529%253B%250A%2B%2B%2B%2Bstr%253D%2522ok%2522%253B%250A%257D%250Aelse%257B%250A%2B%2B%2B%2Bstr%253D%2522over%2522%253B%250A%257D%250A%250Areturn%2Bstr%253B'}
+2019-07-31 13:41:13,433|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:kuangjin,ID:2
+2019-07-31 13:41:14,456|ERROR|qtp1810923540-19|执行结果:Connection refused: connect
+2019-07-31 13:41:14,457|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:caidewei,ID:3
+2019-07-31 13:41:46,224|ERROR|main|Please input the config path.
+2019-07-31 13:41:47,618|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-07-31 13:41:47,620|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-07-31 13:41:47,783|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-07-31 13:41:47,783|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-07-31 13:41:47,783|ERROR|main|****************** All Component has started successfully.******************
+2019-07-31 13:41:47,783|ERROR|main|UploadServer has started successfully, taken 1567 millis.
+2019-07-31 13:42:17,789|ERROR|qtp1581078471-19|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 13:42:18,881|ERROR|qtp1581078471-19|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 13:42:18,882|ERROR|qtp1581078471-19|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 13:42:18,905|ERROR|qtp1581078471-19|执行结果:{"code":0,"msg":"脚本完成:startup failed:\r\nScript6.groovy: 1: unexpected token: % @ line 1, column 1.\r\n   %0Aimport+com.road.tl.data.GmActivityTempData%3B%0Aimport+com.road.tl.mgr.GmActivityMgr%0A%0AGmActivityTempData.reload%28%29%3B%0Adef+str%3D%22%22%3B%0Adef+top%3DGmActivityMgr.getTopActivity%28%29%3B%0Aif%28top%21%3Dnull%29+%7B%0A++++top.resetTopMsg%28%29%3B%0A++++str%3D%22ok%22%3B%0A%7D%0Aelse%7B%0A++++str%3D%22over%22%3B%0A%7D%0A%0Areturn+str%3B\r\n   ^\r\n\r\n1 error\r\n"}
+2019-07-31 13:42:46,969|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:42:47,036|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:43:13,452|ERROR|qtp1581078471-21|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 13:43:13,539|ERROR|qtp1581078471-21|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 13:43:13,539|ERROR|qtp1581078471-21|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 13:44:06,130|ERROR|qtp1581078471-21|执行结果:{"code":0,"msg":"脚本完成:startup failed:\r\nScript7.groovy: 1: unexpected token: % @ line 1, column 1.\r\n   %0Aimport+com.road.tl.data.GmActivityTempData%3B%0Aimport+com.road.tl.mgr.GmActivityMgr%0A%0AGmActivityTempData.reload%28%29%3B%0Adef+str%3D%22%22%3B%0Adef+top%3DGmActivityMgr.getTopActivity%28%29%3B%0Aif%28top%21%3Dnull%29+%7B%0A++++top.resetTopMsg%28%29%3B%0A++++str%3D%22ok%22%3B%0A%7D%0Aelse%7B%0A++++str%3D%22over%22%3B%0A%7D%0A%0Areturn+str%3B\r\n   ^\r\n\r\n1 error\r\n"}
+2019-07-31 13:44:13,243|ERROR|qtp1581078471-19|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 13:44:13,259|ERROR|qtp1581078471-19|执行结果:Illegal character in URL
+2019-07-31 13:44:13,259|ERROR|qtp1581078471-19|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 13:44:13,264|ERROR|qtp1581078471-19|执行结果:Illegal character in URL
+2019-07-31 13:45:03,102|ERROR|qtp1581078471-26|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 13:47:47,042|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:47:47,105|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:52:47,112|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:52:47,153|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:52:56,076|ERROR|qtp1581078471-26|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 13:53:19,122|ERROR|qtp1581078471-26|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 13:53:49,054|ERROR|qtp1581078471-26|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 13:53:49,142|ERROR|qtp1581078471-26|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 13:53:49,142|ERROR|qtp1581078471-26|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 13:53:55,316|ERROR|qtp1581078471-26|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 13:56:43,095|ERROR|qtp1581078471-25|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 13:56:43,174|ERROR|qtp1581078471-25|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 13:56:43,174|ERROR|qtp1581078471-25|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 13:56:45,976|ERROR|qtp1581078471-25|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 13:57:47,160|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 13:57:47,217|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 13:58:07,167|ERROR|qtp1581078471-24|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 13:58:07,246|ERROR|qtp1581078471-24|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 13:58:07,246|ERROR|qtp1581078471-24|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 13:58:07,346|ERROR|qtp1581078471-24|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 13:59:30,137|ERROR|qtp1581078471-19|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 13:59:30,187|ERROR|qtp1581078471-19|执行结果:{"code":0,"msg":"脚本完成:startup failed:\nScript7.groovy: 5: unexpected token: 1.96 @ line 5, column 14.\n   6\t96\t192.168.1.96\tdb_game_tlcs_0001\tdb_game_tlcs_log_0001\t2019-03-27 00:00\t开启\n                ^\n\n1 error\n"}
+2019-07-31 13:59:30,188|ERROR|qtp1581078471-19|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 13:59:30,208|ERROR|qtp1581078471-19|执行结果:{"code":0,"msg":"脚本完成:startup failed:\r\nScript11.groovy: 5: unexpected token: 1.96 @ line 5, column 14.\r\n   6\t96\t192.168.1.96\tdb_game_tlcs_0001\tdb_game_tlcs_log_0001\t2019-03-27 00:00\t开启\r\n                ^\r\n\r\n1 error\r\n"}
+2019-07-31 14:02:47,223|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:02:47,270|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:03:03,318|ERROR|qtp1581078471-26|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 14:03:03,400|ERROR|qtp1581078471-26|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 14:03:03,400|ERROR|qtp1581078471-26|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 14:03:03,529|ERROR|qtp1581078471-26|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 14:04:12,665|ERROR|main|Please input the config path.
+2019-07-31 14:04:14,381|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-07-31 14:04:14,383|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-07-31 14:04:14,556|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-07-31 14:04:14,557|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-07-31 14:04:14,557|ERROR|main|****************** All Component has started successfully.******************
+2019-07-31 14:04:14,557|ERROR|main|UploadServer has started successfully, taken 1900 millis.
+2019-07-31 14:04:39,723|ERROR|qtp1810923540-26|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 14:04:39,760|ERROR|qtp1810923540-26|执行结果:{"code":0,"msg":"脚本完成:startup failed:\nScript9.groovy: 5: unexpected token: 1.96 @ line 5, column 14.\n   6\t96\t192.168.1.96\tdb_game_tlcs_0001\tdb_game_tlcs_log_0001\t2019-03-27 00:00\t开启\n                ^\n\n1 error\n"}
+2019-07-31 14:04:39,760|ERROR|qtp1810923540-26|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 14:04:39,774|ERROR|qtp1810923540-26|执行结果:{"code":0,"msg":"脚本完成:startup failed:\r\nScript13.groovy: 5: unexpected token: 1.96 @ line 5, column 14.\r\n   6\t96\t192.168.1.96\tdb_game_tlcs_0001\tdb_game_tlcs_log_0001\t2019-03-27 00:00\t开启\r\n                ^\r\n\r\n1 error\r\n"}
+2019-07-31 14:05:13,625|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:05:13,686|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:05:37,869|ERROR|qtp1810923540-23|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 14:05:37,883|ERROR|qtp1810923540-23|执行结果:{"code":0,"msg":"脚本完成:startup failed:\nScript10.groovy: 5: unexpected token: 1.96 @ line 5, column 14.\n   6\t96\t192.168.1.96\tdb_game_tlcs_0001\tdb_game_tlcs_log_0001\t2019-03-27 00:00\t开启\n                ^\n\n1 error\n"}
+2019-07-31 14:05:37,900|ERROR|qtp1810923540-23|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 14:06:10,127|ERROR|qtp1810923540-23|执行结果:{"code":0,"msg":"脚本完成:startup failed:\r\nScript14.groovy: 5: unexpected token: 1.96 @ line 5, column 14.\r\n   6\t96\t192.168.1.96\tdb_game_tlcs_0001\tdb_game_tlcs_log_0001\t2019-03-27 00:00\t开启\r\n                ^\r\n\r\n1 error\r\n"}
+2019-07-31 14:06:23,316|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 14:06:23,329|ERROR|qtp1810923540-19|执行结果:{"code":0,"msg":"脚本完成:startup failed:\nScript11.groovy: 5: unexpected token: 1.96 @ line 5, column 14.\n   6\t96\t192.168.1.96\tdb_game_tlcs_0001\tdb_game_tlcs_log_0001\t2019-03-27 00:00\t开启\n                ^\n\n1 error\n"}
+2019-07-31 14:06:23,330|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 14:06:25,155|ERROR|qtp1810923540-19|执行结果:{"code":0,"msg":"脚本完成:startup failed:\r\nScript15.groovy: 5: unexpected token: 1.96 @ line 5, column 14.\r\n   6\t96\t192.168.1.96\tdb_game_tlcs_0001\tdb_game_tlcs_log_0001\t2019-03-27 00:00\t开启\r\n                ^\r\n\r\n1 error\r\n"}
+2019-07-31 14:08:21,610|ERROR|qtp1810923540-23|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 14:08:21,686|ERROR|qtp1810923540-23|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 14:08:21,686|ERROR|qtp1810923540-23|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 14:08:21,787|ERROR|qtp1810923540-23|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 14:08:52,385|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 14:08:52,457|ERROR|qtp1810923540-19|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 14:08:52,458|ERROR|qtp1810923540-19|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 14:08:52,548|ERROR|qtp1810923540-19|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 14:09:03,038|ERROR|qtp1810923540-21|当前正在执行Groovy的服务器:96,ID:6
+2019-07-31 14:09:03,109|ERROR|qtp1810923540-21|执行结果:{"code":0,"msg":"脚本完成:ok"}
+2019-07-31 14:09:03,109|ERROR|qtp1810923540-21|当前正在执行Groovy的服务器:dream,ID:13
+2019-07-31 14:09:03,213|ERROR|qtp1810923540-21|执行结果:{"code":0,"msg":"脚本完成:over"}
+2019-07-31 14:10:13,692|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:10:13,757|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:10:27,488|ERROR|main|Please input the config path.
+2019-07-31 14:10:28,961|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-07-31 14:10:28,963|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-07-31 14:10:29,153|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-07-31 14:10:29,153|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-07-31 14:10:29,153|ERROR|main|****************** All Component has started successfully.******************
+2019-07-31 14:10:29,153|ERROR|main|UploadServer has started successfully, taken 1671 millis.
+2019-07-31 14:11:28,322|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:11:28,386|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:16:28,393|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:16:28,466|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:21:28,472|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:21:28,508|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:26:28,514|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:26:28,577|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:31:28,583|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:31:28,633|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:36:28,639|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:36:28,690|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:41:28,697|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:41:28,758|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:46:28,764|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:46:28,792|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:51:28,798|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:51:28,837|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 14:56:28,843|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 14:56:28,907|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-07-31 15:01:28,913|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-07-31 15:01:28,983|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束

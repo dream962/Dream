@@ -1,0 +1,1014 @@
+2019-12-12 09:11:59,112|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-12 09:20:03,136|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10031
+2019-12-12 09:20:05,593|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-12 09:23:53,464|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10031
+2019-12-12 09:23:55,674|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 09:26:45,681|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10031
+2019-12-12 09:27:36,230|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 09:28:16,467|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-12 09:37:15,138|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 09:38:50,176|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10031
+2019-12-12 09:38:54,266|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-12 09:39:49,993|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10031
+2019-12-12 09:39:52,828|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-12 09:44:12,054|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10031
+2019-12-12 09:45:21,577|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-12 09:54:11,572|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10031
+2019-12-12 09:55:50,646|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-12 10:02:27,501|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-12 10:03:15,956|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10027
+2019-12-12 10:03:40,917|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10031
+2019-12-12 10:18:25,736|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-12 10:19:52,827|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10031
+2019-12-12 10:19:56,798|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 10:20:37,412|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10031
+2019-12-12 10:20:42,647|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-12 10:22:03,146|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10031
+2019-12-12 10:22:05,325|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 10:22:24,807|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-12 10:22:31,218|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10031
+2019-12-12 10:22:33,326|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-12 10:22:53,880|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10031
+2019-12-12 10:23:03,134|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10027
+2019-12-12 10:23:10,743|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-12 10:24:00,904|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-12 10:24:21,436|ERROR|GamePlayer-Worker-4|AdRewardBean is Null.configID:0
+2019-12-12 10:25:12,968|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10031
+2019-12-12 10:25:15,080|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 10:26:54,032|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-12 10:27:32,813|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-12 10:33:24,765|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10031
+2019-12-12 10:33:26,858|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-12 10:40:49,893|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-12 10:41:34,919|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-12 10:41:47,035|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-12 10:43:17,847|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10027
+2019-12-12 10:48:09,010|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10031
+2019-12-12 10:49:16,439|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 11:00:34,527|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10031
+2019-12-12 11:00:39,339|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-12 11:01:02,440|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10031
+2019-12-12 11:02:15,764|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 11:02:45,146|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10027
+2019-12-12 11:03:08,427|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-12 11:03:56,263|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10027
+2019-12-12 11:10:42,439|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 11:11:05,311|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10031
+2019-12-12 11:12:31,053|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-12 11:13:56,407|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-12 11:14:11,890|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10031
+2019-12-12 11:18:16,435|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-12 11:18:47,299|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-12 11:21:36,257|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-12 11:21:54,484|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 11:22:15,109|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-12 11:22:49,125|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-12 11:23:37,543|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-12 11:30:27,002|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-12 11:32:53,295|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10031
+2019-12-12 11:32:55,820|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 11:33:24,114|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-12 11:38:12,617|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 11:39:42,786|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10031
+2019-12-12 11:48:34,730|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-12 13:57:39,470|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:51 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:52 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:53 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:54 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:55 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:56 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:57 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:58 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:59 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:60 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:61 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:62 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:63 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:64 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:65 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:66 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:67 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:68 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,471|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:69 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:70 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:71 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:72 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:73 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:74 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:75 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:76 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:77 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:78 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:79 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:80 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:81 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:82 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:83 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:84 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:85 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:86 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:87 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,472|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:88 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:89 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:90 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:91 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:92 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:93 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:94 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:95 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:96 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:97 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:98 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:99 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:100 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:101 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:102 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,473|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:103 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,474|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:104 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,474|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:105 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,474|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:106 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,474|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:107 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,474|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:108 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,474|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:109 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,474|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:110 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,474|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:111 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,474|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:112 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:113 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:114 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:115 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:116 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:117 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:118 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:119 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:120 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:121 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:122 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:123 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:124 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:125 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:126 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:127 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:128 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,475|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:129 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:130 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:131 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:132 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:133 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:134 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:135 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:136 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:137 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:138 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:139 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:140 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:141 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:142 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:143 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:144 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:145 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:146 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:147 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:148 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:149 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,479|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:150 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,480|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:151 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,480|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:152 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,480|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:153 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,480|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:154 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,480|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:155 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,480|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:156 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,480|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:157 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:158 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:159 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:160 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:161 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:162 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:163 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:164 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:165 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:166 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:167 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:168 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:169 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:170 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:171 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:172 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:173 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:174 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:175 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:176 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:177 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:178 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,481|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:179 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:180 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:181 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:182 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:183 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:184 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:185 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:186 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:187 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:188 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:189 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:190 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,482|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:191 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:192 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:193 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:194 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:195 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:196 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:197 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:198 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:199 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|SelfDrivenTaskQueue Add Count Over 100.size return.:200 - executing name:com.game.user.cmd.common.UserPingCmd
+2019-12-12 13:57:39,483|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10031
+2019-12-12 13:57:39,539|ERROR|nioEventLoopGroup-3-7|Player Add Too Much Action Over 200.Disconnect it.UserID:10031
+2019-12-12 13:57:39,539|ERROR|nioEventLoopGroup-3-7|AbstractUserCmd:com.game.user.cmd.common.UserPingCmd execute overtime. time:56
+2019-12-12 13:57:44,303|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-12 13:59:40,593|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10031
+2019-12-12 14:00:22,585|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 14:01:17,049|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10031
+2019-12-12 14:02:52,931|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-12 14:02:57,556|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10031
+2019-12-12 14:07:26,785|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-12 14:09:03,298|ERROR|GamePlayer-Worker-3|Exit Room.1,UserID:10031
+2019-12-12 14:09:04,679|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:07,713|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:10,713|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:13,714|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:16,715|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:19,716|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:22,716|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:25,716|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:28,717|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:31,718|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:34,719|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:37,722|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:40,723|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:43,724|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:46,724|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:49,725|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:52,726|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:55,727|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:09:58,728|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:01,728|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:04,729|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:07,729|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:10,730|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:12,423|ERROR|GamePlayer-Worker-7|Exit Room.1,UserID:10031
+2019-12-12 14:10:13,731|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:16,732|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:19,732|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:22,733|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:25,733|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:28,733|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:31,734|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:35,993|ERROR|GamePlayer-Worker-3|Exit Room.1,UserID:10031
+2019-12-12 14:10:37,734|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:10:38,877|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10031
+2019-12-12 14:10:43,186|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 14:13:58,591|ERROR|GamePlayer-Worker-4|Exit Room.1,UserID:10031
+2019-12-12 14:13:58,781|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:14:02,023|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:14:05,024|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:14:08,025|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:14:11,025|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:14:14,026|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:14:17,027|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:14:20,028|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:14:23,530|ERROR|GamePlayer-Worker-10|Exit Room.1,UserID:10031
+2019-12-12 14:14:26,028|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:14:27,922|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10031
+2019-12-12 14:14:30,643|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 14:24:41,218|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 14:25:08,193|ERROR|GamePlayer-Worker-9|Exit Room.1,UserID:10027
+2019-12-12 14:25:10,416|ERROR|GamePlayer-Worker-6|Exit Room.1,UserID:10027
+2019-12-12 14:25:11,130|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:25:14,130|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:25:17,132|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:25:20,134|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:25:22,411|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-12 14:25:35,164|ERROR|GamePlayer-Worker-4|AdRewardBean is Null.configID:0
+2019-12-12 14:25:53,600|ERROR|GamePlayer-Worker-8|Exit Room.1,UserID:10027
+2019-12-12 14:25:56,143|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:25:57,092|ERROR|GamePlayer-Worker-11|Exit Room.1,UserID:10027
+2019-12-12 14:25:59,144|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:26:02,144|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:26:05,145|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:26:08,150|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:26:11,164|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:26:14,165|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:26:17,165|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:26:18,990|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-12 14:27:09,225|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 14:27:31,428|ERROR|GamePlayer-Worker-7|Exit Room.1,UserID:10027
+2019-12-12 14:27:32,182|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:27:35,183|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:27:38,184|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:27:41,184|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:27:44,185|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:27:47,186|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:27:50,187|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:27:53,187|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:27:56,188|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:27:59,188|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:02,189|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:05,189|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:08,189|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:11,190|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:14,191|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:17,192|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:20,193|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:23,194|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:26,194|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:29,195|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:32,195|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:35,195|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:38,196|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:41,196|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:44,196|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:46,001|ERROR|GamePlayer-Worker-4|Exit Room.1,UserID:10031
+2019-12-12 14:28:47,197|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:28:47,197|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:50,197|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:28:50,198|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:53,198|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:28:53,198|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:56,199|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:28:56,199|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:28:59,200|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:28:59,200|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:02,200|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:02,200|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:05,201|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:05,201|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:08,202|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:08,202|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:11,203|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:11,203|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:14,204|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:14,204|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:17,205|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:17,205|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:20,207|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:20,207|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:23,208|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:23,208|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:26,209|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:26,209|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:29,210|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:29,210|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:32,212|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:32,212|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:35,212|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:35,212|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:38,212|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:38,213|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:41,214|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:41,214|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:44,215|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:44,215|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:47,216|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:47,216|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:50,217|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:50,217|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:53,218|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:53,218|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:56,219|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:56,219|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:29:59,220|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:29:59,220|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:02,221|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:02,221|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:05,222|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:05,222|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:08,223|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:08,223|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:11,224|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:11,224|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:14,225|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:14,225|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:17,227|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:17,227|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:20,228|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:20,228|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:23,229|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:23,229|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:26,230|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:26,231|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:29,231|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:29,231|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:32,232|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:32,232|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:35,232|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:35,233|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:38,233|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:38,233|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:41,234|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:41,234|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:44,235|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:44,235|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:47,236|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:47,236|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:50,236|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:50,236|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:53,241|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:53,242|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:30:56,243|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:56,857|ERROR|GamePlayer-Worker-3|Exit Room.1,UserID:10027
+2019-12-12 14:30:59,244|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:30:59,244|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:02,245|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:02,245|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:05,246|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:05,246|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:08,247|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:08,247|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:11,248|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:11,248|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:14,249|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:14,249|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:17,250|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:17,250|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:20,252|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:20,252|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:23,253|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:23,253|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:26,253|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:26,253|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:29,254|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:29,254|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:32,255|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:32,255|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:35,256|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:35,256|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:38,258|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:38,259|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:41,259|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:41,259|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:44,259|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:44,259|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:47,260|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:47,260|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:50,261|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:50,261|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:53,262|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:53,262|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:56,263|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:56,263|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:31:59,264|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:31:59,264|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:02,265|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:02,265|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:05,265|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:05,265|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:08,265|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:08,265|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:11,266|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:11,268|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:14,268|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:14,269|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:17,269|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:17,269|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:20,270|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:20,270|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:23,272|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:23,272|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:26,273|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:26,274|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:29,274|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:29,274|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:32,275|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:32,275|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:35,276|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:35,276|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:38,277|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:38,277|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:41,277|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:41,277|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:44,277|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:44,277|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:47,278|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:47,278|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:50,279|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:50,279|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:53,280|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:53,280|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:56,280|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:56,280|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:32:59,281|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:32:59,281|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:02,283|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:02,283|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:05,283|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:05,283|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:08,283|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:08,283|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:11,284|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:11,284|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:14,285|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:14,285|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:17,286|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:17,286|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:20,287|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:20,287|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:23,287|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:23,287|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:26,288|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:26,288|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:29,289|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:29,290|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:32,290|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:32,290|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:35,291|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:35,291|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:38,293|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:38,293|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:41,294|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:41,294|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:44,295|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:44,295|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:47,295|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:47,295|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:50,296|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:50,297|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:53,298|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:53,298|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:56,299|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:56,299|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:33:59,300|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:33:59,300|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:02,301|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:02,301|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:05,302|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:05,302|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:08,303|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:08,303|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:11,304|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:11,304|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:14,305|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:14,305|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:17,306|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:17,306|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:20,307|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:20,307|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:23,308|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:23,308|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:26,310|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:26,310|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:29,311|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:29,311|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:32,312|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:32,312|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:35,312|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:35,313|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:38,313|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:38,314|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:41,315|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:41,315|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:44,317|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:44,317|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:47,317|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:47,319|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:50,319|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:50,319|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:53,320|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:53,320|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:56,321|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:56,322|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:34:59,322|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:34:59,322|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:02,323|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:02,323|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:05,324|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:05,324|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:08,324|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:08,324|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:11,325|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:11,325|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:14,325|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:14,325|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:17,326|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:17,326|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:20,330|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:20,331|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:23,331|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:23,331|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:26,333|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:26,333|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:29,334|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:29,334|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:32,335|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:32,336|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:35,337|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:35,337|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:38,337|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:38,337|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:41,339|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:41,339|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:44,341|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:44,341|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:47,341|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:47,341|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:50,342|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:50,342|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:53,342|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:53,342|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:56,343|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:56,343|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:35:59,344|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:35:59,345|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:02,345|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:02,345|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:05,345|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:05,345|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:08,346|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:08,346|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:11,347|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:11,347|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:14,348|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:14,348|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:17,348|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:17,348|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:20,350|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:20,350|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:23,350|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:23,350|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:26,352|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:26,352|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:29,353|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:29,353|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:32,355|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:32,355|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:35,357|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:35,357|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:38,358|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:38,358|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:41,359|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:41,359|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:44,359|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:44,360|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:47,360|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:47,360|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:50,362|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:50,362|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:53,363|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:53,364|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:56,364|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:56,364|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:36:59,366|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:36:59,366|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:37:02,366|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:02,366|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:37:05,367|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:05,367|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:37:08,367|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:08,367|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:37:11,368|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:11,368|ERROR|pool-1-thread-1|Exit Room.0,UserID:10027
+2019-12-12 14:37:13,850|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-12 14:37:14,369|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:17,370|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:20,370|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:23,370|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:24,613|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 14:37:26,371|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:29,371|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:32,372|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:35,372|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:38,372|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:41,373|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:44,374|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:47,374|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:50,374|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:53,375|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:56,400|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:37:57,370|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10027
+2019-12-12 14:37:59,400|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:02,401|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:05,401|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:08,402|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:11,402|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:14,402|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:17,403|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:20,403|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:23,403|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:26,404|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:28,719|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-12 14:38:29,404|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:32,405|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:35,405|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:38,405|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:41,406|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:44,406|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:44,999|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-12 14:38:47,407|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:50,407|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:53,407|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:56,408|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:38:59,408|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:02,409|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:05,410|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:08,410|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:11,411|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:14,412|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:17,412|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:20,413|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:23,413|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:26,413|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:29,414|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:32,415|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:35,416|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:38,417|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:41,417|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:44,418|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:47,418|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:50,419|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:53,419|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:56,420|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:39:59,421|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:02,421|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:05,421|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:08,422|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:10,313|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-12 14:40:11,422|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:14,424|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:17,424|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:20,424|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:23,428|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:24,706|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10027
+2019-12-12 14:40:26,429|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:29,430|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:32,128|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 14:40:32,431|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:35,431|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:38,432|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:41,432|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:44,432|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:47,433|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:50,435|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:53,436|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:56,436|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:40:58,375|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10027
+2019-12-12 14:40:59,436|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:41:02,437|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:41:05,438|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:41:08,438|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:41:11,438|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:41:14,439|ERROR|pool-1-thread-1|Exit Room.0,UserID:10031
+2019-12-12 14:41:18,555|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10031
+2019-12-12 15:25:23,930|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-12 15:25:27,494|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10027
+2019-12-12 15:25:40,089|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 15:25:57,275|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10027
+2019-12-12 15:26:31,629|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-12 15:27:08,289|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10027
+2019-12-12 15:38:59,579|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-12 15:39:00,233|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-12 15:39:00,235|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-12 15:39:00,236|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-12 15:39:00,236|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-12 15:39:00,237|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-12 15:39:00,237|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-12 15:39:00,238|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-12 15:39:00,238|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-12 15:39:00,238|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-12 15:39:00,238|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-12 15:39:00,239|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-12 15:39:00,239|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-12 15:39:00,239|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-12 15:39:00,240|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-12 15:39:00,240|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-12 15:39:00,240|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-12 15:39:00,241|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-12 15:39:00,241|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-12 15:39:00,241|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-12 15:39:00,241|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-12 15:39:00,242|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-12 15:39:00,242|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-12 15:39:00,242|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-12 15:39:00,946|ERROR|main|********************Robot Count:1000**************************
+2019-12-12 15:39:02,120|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-12 15:39:02,120|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-12 15:39:02,120|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-12 15:39:02,120|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-12 15:39:02,120|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-12 15:39:02,120|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-12 15:39:02,121|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-12 15:39:02,121|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-12 15:39:02,121|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-12 15:39:02,124|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-12 15:39:02,158|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-12 15:39:02,158|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-12 15:39:02,158|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-12 15:39:02,158|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-12 15:39:02,158|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-12 15:39:02,496|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-12 15:39:02,719|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-12 15:39:02,719|ERROR|main|****** All Component has started successfully.******************
+2019-12-12 15:39:02,720|ERROR|main|游戏服启动成功, 耗时 3 秒.
+2019-12-12 15:40:08,659|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-12 15:40:09,430|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-12 15:40:09,432|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-12 15:40:09,433|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-12 15:40:09,433|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-12 15:40:09,433|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-12 15:40:09,434|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-12 15:40:09,435|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-12 15:40:09,435|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-12 15:40:09,435|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-12 15:40:09,435|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-12 15:40:09,436|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-12 15:40:09,436|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-12 15:40:09,436|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-12 15:40:09,437|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-12 15:40:09,437|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-12 15:40:09,438|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-12 15:40:09,438|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-12 15:40:09,439|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-12 15:40:09,439|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-12 15:40:09,440|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-12 15:40:09,440|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-12 15:40:09,440|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-12 15:40:09,441|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-12 15:40:10,169|ERROR|main|********************Robot Count:1000**************************
+2019-12-12 15:40:11,046|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-12 15:40:11,047|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-12 15:40:11,047|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-12 15:40:11,047|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-12 15:40:11,047|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-12 15:40:11,047|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-12 15:40:11,047|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-12 15:40:11,047|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-12 15:40:11,047|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-12 15:40:11,050|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-12 15:40:11,086|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-12 15:40:11,087|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-12 15:40:11,087|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-12 15:40:11,087|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-12 15:40:11,087|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-12 15:40:11,395|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-12 15:40:11,589|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-12 15:40:11,590|ERROR|main|****** All Component has started successfully.******************
+2019-12-12 15:40:11,590|ERROR|main|游戏服启动成功, 耗时 2 秒.
+2019-12-12 15:42:13,776|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-12 15:42:14,350|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-12 15:42:14,351|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-12 15:42:14,351|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-12 15:42:14,352|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-12 15:42:14,352|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-12 15:42:14,352|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-12 15:42:14,352|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-12 15:42:14,353|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-12 15:42:14,353|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-12 15:42:14,353|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-12 15:42:14,354|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-12 15:42:14,354|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-12 15:42:14,354|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-12 15:42:14,354|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-12 15:42:14,354|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-12 15:42:14,355|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-12 15:42:14,356|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-12 15:42:14,356|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-12 15:42:14,356|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-12 15:42:14,356|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-12 15:42:14,357|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-12 15:42:14,357|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-12 15:42:14,357|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-12 15:42:15,086|ERROR|main|********************Robot Count:1000**************************
+2019-12-12 15:42:16,093|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-12 15:42:16,093|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-12 15:42:16,093|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-12 15:42:16,093|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-12 15:42:16,094|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-12 15:42:16,094|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-12 15:42:16,094|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-12 15:42:16,094|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-12 15:42:16,094|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-12 15:42:16,098|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-12 15:42:16,128|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-12 15:42:16,128|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-12 15:42:16,128|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-12 15:42:16,128|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-12 15:42:16,128|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-12 15:42:16,444|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-12 15:42:16,636|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-12 15:42:16,637|ERROR|main|****** All Component has started successfully.******************
+2019-12-12 15:42:16,637|ERROR|main|游戏服启动成功, 耗时 2 秒.
+2019-12-12 16:06:35,484|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-12 16:06:37,840|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:06:44,937|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-12 16:07:04,758|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:07:24,751|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-12 16:07:56,913|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:08:08,163|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-12 16:08:18,463|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:10:15,014|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 16:10:18,172|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:10:39,617|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-12 16:11:00,409|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:12:31,913|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-12 16:13:16,914|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:13:42,411|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 16:14:25,446|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:15:19,088|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-12 16:17:38,314|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:18:44,286|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 16:19:19,720|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:19:46,028|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-12 16:20:05,625|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:20:14,043|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 16:20:14,457|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:22:52,307|ERROR|GamePlayer-Worker-4|AdRewardBean is Null.configID:0
+2019-12-12 16:23:04,987|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:26:45,855|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-12 16:26:56,563|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:27:01,792|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-12 16:27:28,096|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:28:10,871|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-12 16:28:59,521|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:31:13,917|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-12 16:31:29,929|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:31:34,514|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 16:32:48,573|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:32:57,878|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 16:33:11,557|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:33:30,288|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-12 16:33:43,527|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:34:21,991|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-12 16:34:34,773|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:35:27,736|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-12 16:36:44,451|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:36:53,732|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-12 16:37:16,295|ERROR|GamePlayer-Worker-5|the game in room is null,but received packet. --- Code:10003,GameKey:10027
+2019-12-12 16:37:16,511|ERROR|GamePlayer-Worker-6|the game in room is null,but received packet. --- Code:10003,GameKey:10027
+2019-12-12 16:37:16,743|ERROR|GamePlayer-Worker-7|the game in room is null,but received packet. --- Code:10003,GameKey:10027
+2019-12-12 16:37:30,442|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:37:48,298|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-12 16:38:02,254|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:39:18,753|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-12 16:40:16,502|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:43:26,724|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 16:44:33,229|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:44:39,593|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-12 16:44:43,840|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:44:49,743|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 16:45:43,078|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-12 16:45:53,266|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-12 16:46:24,181|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-12 17:30:01,748|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-12 17:30:05,903|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10024
+2019-12-12 17:30:18,907|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-12 17:30:29,652|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10024
+2019-12-12 17:31:40,618|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 17:31:46,818|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10024
+2019-12-12 17:31:53,201|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-12 17:32:16,999|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10024
+2019-12-12 17:41:26,517|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-12 17:41:41,596|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10027
+2019-12-12 17:41:55,001|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-12 17:48:09,558|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10027
+2019-12-12 17:48:22,587|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-12 17:48:30,009|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10027
+2019-12-12 17:49:07,160|ERROR|GamePlayer-Worker-2|AdRewardBean is Null.configID:0
+2019-12-12 17:49:42,871|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10027
+2019-12-12 17:56:52,478|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-12 17:56:55,651|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10027
+2019-12-12 17:57:16,464|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-12 17:57:50,666|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-12 17:57:54,832|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2019-12-12 17:58:00,317|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-12 17:59:29,054|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-12 17:59:51,183|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:03:20,837|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 18:03:21,977|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:03:26,176|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-12 18:03:29,415|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:03:53,979|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-12 18:03:56,119|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:04:08,738|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2019-12-12 18:04:10,161|ERROR|nioEventLoopGroup-3-6|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:04:30,833|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-12 18:04:46,655|ERROR|nioEventLoopGroup-3-7|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:05:17,245|ERROR|GamePlayer-Worker-8|AdRewardBean is Null.configID:0
+2019-12-12 18:05:35,181|ERROR|nioEventLoopGroup-3-8|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:16:39,451|ERROR|GamePlayer-Worker-13|AdRewardBean is Null.configID:0
+2019-12-12 18:17:01,615|ERROR|nioEventLoopGroup-3-9|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:18:25,247|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2019-12-12 18:18:35,257|ERROR|nioEventLoopGroup-3-10|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:18:46,924|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2019-12-12 18:19:03,987|ERROR|nioEventLoopGroup-3-11|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:55:27,684|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 18:55:42,672|ERROR|nioEventLoopGroup-3-12|Disconnect Exit Room.null,UserID:10027
+2019-12-12 18:57:18,045|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-12 18:57:31,798|ERROR|nioEventLoopGroup-3-13|Disconnect Exit Room.null,UserID:10027
+2019-12-12 19:01:45,343|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-12 19:02:01,967|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10027
+2019-12-12 19:03:00,564|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-12 19:03:20,162|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10027
+2019-12-12 19:04:20,181|ERROR|GamePlayer-Worker-3|AdRewardBean is Null.configID:0
+2019-12-12 19:04:34,976|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10027
+2019-12-12 19:04:51,540|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2019-12-12 19:05:12,696|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10027
+2019-12-12 19:05:18,085|ERROR|GamePlayer-Worker-6|AdRewardBean is Null.configID:0
+2019-12-12 19:18:24,025|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10027

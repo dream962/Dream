@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<server>
+		<languagePath>../CommonLib/language/Language-zh_cn.txt</languagePath>
+		<pubAlipayRSAKey>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsYAIyV8H0AgzsiCxb6AUxjJOyxT9y7WHy9p4OmA+bm75A/LdT65ohx2PQkBUqAqogRFKjRiBmCOvWgqodC2aTghV19NOaNMguLKiM2Eq+Ysytev/6+Ix/yNzBo2ydVKfHtJsGAUP32UKm973swiFuR3dVbqkmRRcwGrMp4iA1ukT+nMiMVZoPP+SCHwWlLh8fGI1UD1Au9zkDVvWmlUROMiM61IwOK6BYqoRDBDkMRocEbderr9ejZswc6dFO62SwnluqfQ9DRffKBWz7VMf/liqvFyVnyapQxFZcyyv6Xsw67kIRe9+JviBXpgu+08IMCRpV+2aspOS1shNj2e79QIDAQAB</pubAlipayRSAKey>
+		<priAlipayRSAKey>MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCxgAjJXwfQCDOyILFvoBTGMk7LFP3LtYfL2ng6YD5ubvkD8t1PrmiHHY9CQFSoCqiBEUqNGIGYI69aCqh0LZpOCFXX005o0yC4sqIzYSr5izK16//r4jH/I3MGjbJ1Up8e0mwYBQ/fZQqb3vezCIW5Hd1VuqSZFFzAasyniIDW6RP6cyIxVmg8/5IIfBaUuHx8YjVQPUC73OQNW9aaVRE4yIzrUjA4roFiqhEMEOQxGhwRt16uv16NmzBzp0U7rZLCeW6p9D0NF98oFbPtUx/+WKq8XJWfJqlDEVlzLK/pezDruQhF734m+IFemC77TwgwJGlX7Zqyk5LWyE2PZ7v1AgMBAAECggEABEYa8A5Tt9Saug1DeHaYSXVopEcrHT6PuH7YKj+rASm24Tt1zLdcWPSDQIsf/rPS/tiVvPP8GtexHy/mgnWeo4Zb2siBuNBsl0Xl1erfCAcr/2lhTiKyJXyLBnte8qg8oJdcdu+YRD7AlKQ3vp3T6nMnoyrNT8pHuXJY3yfQQlxr+IRNPAhIdMChkkYCZLdHy3D3ZiIgPHi/O4XyvCZ6UDNHAUn44A98oPR/srsPj/mYUxiH1rYE+8vQH8RRjIbTOJVgu4B1DPm691Jjv3gyoQV645dZ3QzsrmDEy7kvy91vYyoz7X7QvaXpI4x0417ZO+EMROIFBGLKVBfrP7bLeQKBgQD2zo768zO87vquK9q8ccortbIO60zPXWE0G0v0PgcDbH25yDokcRDjuAcu51PhCuGy7EG1+W46TEg7/8JrRBGw7vYK8R5WVuXY886z03SXQZG7GLwqjVhRxeLPUnO5AuiYC+1bMPgmGo4d93182o3Brg1Judeeez5mGROOBwzaYwKBgQC4HJjrKcXLQimAbg6WXlw5n04Gvj5A7Wk9sPptidtxn0IxdqV8Cb8/gEX7QITVO3Jw0kI+FWFqC1WQQycnDUmCh9EL+YjqDGAbcq2uXBF1ZXqzw7WYwOMmm8U5QdIGoPApz6OXEUbMdHZEBIieChXcnZ+ynBefrcrWnYtS5crzxwKBgQDhZsIkJCqzORpOKRUKl22JP9ZPU8wBcgnNOcTDWkazdMjZ/ChFkdFX94Dv8Cql03dPHf/hPtzRd0tdKHaZ2j/B9GtWkOEg/xnJatjzWIIZhbOfSLbIse/gNraum2G+rQ5ZlkL+zplCy2vRqG69sShXoyrVk1l9jpbtTaeTRZMSewKBgDacxP98tJ9GUOk3vDv+YXz2ND7rz6uSwNT72k0Dx4Q8qXXiq9PPUFuVwSx2RvC5YYj11ZB05yB9nDPet45t8pA1mVzj+Cj04s1BhyNhTAx2vZ71PrjA/qBFNIt3asVsl9DPNsdo6IddRHeIoL3AYBvA5c4lXxyOgMyIjvtYDouhAoGBAIgUfSJPSt5PxsGj/1stsO0/gtTCZR+YFITdnzcVAKfX/hIrFJ+DoCglCL4Rc4pTyU/iwiYOmsvJk4N7A5AFYrFJiCKUYovsHteZjmK1V2ZsjXr2TuW1ucVARraLnFvR9ggPv8/Qdh4Ut7YKXuBThnEUTjtp4PIjHogwde9Tpbgd</priAlipayRSAKey>
+		<hasCheatPrivilege>true</hasCheatPrivilege>
+
+		<centerServerIp>192.168.1.97</centerServerIp>
+		<centerServerPort>12200</centerServerPort>
+		<isDebug>0</isDebug>
+	</server>
+	
+	<cacheServer>
+	<ip>192.168.1.97</ip>
+	<port>6380</port>
+	<password>daomu2</password>
+	<expiredTime>72</expiredTime>
+	<syncInterval desc="定时保存时间10s">10</syncInterval>
+	<isCompress desc="value是否压缩">true</isCompress>
+	<redis>
+		<detail key="0" desc="common"/>
+	</redis>
+	</cacheServer>
+
+	<database>
+		<privateModulus>AIv9tT8w1f3NmLU94btc4vQzUi3b2prtn+1kzxq6/+aVKbH424eFYphP7VxXRknAeUs3P+I7hs7WY+BdJra7O4Hx0t45Om6vs4DNpFhS20U7R8pxLW0zc0VE+qr0gi9JnpxhIvfaNEfN1DhH2czqxgVYpGumL1GJApA1R+rD+OK3
+		</privateModulus>
+		<privateExponent>QJ40il2VeVjsk0RkLOMcU5JY7ZgdGQR0nNS6kGEe/CWAIIl5c93K+/lw2/3hEOwKUQDIuTm26USmx4rX8uML/ShtuiPImvbyQI3m6nbo3O0IWbVaMFIXd0R/Wh/JzUA00idf4l36h3cJZoJJ3IJsBxABv1yjKAkFP/3SdqxX4vk=
+		</privateExponent>
+		<druid>
+			<db area="" name="db_account">
+				<url>jdbc:mysql://192.168.1.97:13619/slg_account?allowMultiQueries=true</url>
+				<username>daomu2_admin</username>
+				<password>daomu2!@#</password>
+				<maxActive desc="">10</maxActive>
+				<initialSize desc="">5</initialSize>
+				<minIdle desc="">2</minIdle>
+				<filters desc="">stat</filters>
+				<maxWait desc="">600000</maxWait>
+			</db>
+		</druid>
+
+	</database>
+
+	<web>
+		<port>12100</port>
+		<resourcePath></resourcePath>
+		<contextPath>/</contextPath>
+		<packages>com.account</packages>
+		<isShowDirectory>true</isShowDirectory>
+	</web>
+	
+</config>
+
+
+

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<link href="css/haiersoft.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/side.js" type="text/javascript"></script>
+		<script src="src/lib/ajax.js"></script>
+		<script src="src/lib/util.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/config/configure.js"></script>
+		<script src="src/lib/checkLogin.js"></script>
+		<!-- 
+		<link href="fileUpload/css/bootstrap.min.css" rel="stylesheet">
+		<script src="fileUpload/js/popper.min.js" type="text/javascript"></script>
+		<script src="fileUpload/js/bootstrap.min.js" type="text/javascript"></script>
+		-->
+		<script src="js/highcharts/highcharts.js"></script>
+        <script src="js/highcharts/modules/data.js"></script>
+		<script src="js/highcharts/modules/drilldown.js"></script>
+		<script src="js/highcharts/modules/exporting.js"></script>
+		
+   
+	   <link href="fileUpload/datetimepicker/bootstrap.min.css" rel="stylesheet" media="screen">
+       <link href="fileUpload/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+       
+<script type="text/javascript" src="fileUpload/datetimepicker/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="fileUpload/datetimepicker/bootstrap.min.js"></script>
+<script type="text/javascript" src="fileUpload/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<!-- 
+<script type="text/javascript" src="fileUpload/datetimepicker/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+ -->
+<script type="text/javascript" src="fileUpload/datetimepicker/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+</head>
+<body>
+<div>
+<table>
+<tr>
+								<td colspan="21" class="info_boxA">
+					    
+					     			<div class="floatL" style="margin-top: 7px;">
+										<font size="2">选择日期 ：</font>
+									</div>
+						
+									<div class="floatL" style="margin-top: 7px;">
+									<!-- 	<font size="2"><input type="datetime-local" name="datetime" value="2018-09-24T13:59:59"/></font>
+										   -->
+													<div class="form-group">
+									              <!--   <label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label> -->
+									                <div class="input-group date form_datetime col-md-5" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+									                    <input class="form-control" size="16" type="text" value="" readonly>
+									                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+														<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+									                </div>
+													<input type="hidden" id="dtp_input1" value="" /><br/>
+									            </div>
+									</div>
+									
+									<div class="floatL" style="margin-top: 7px;">
+										<font size="2">服务器类型：</font>
+									</div>
+								
+									<div class="selectbox floatL" style="width:100px;">
+										<select class="select" style="height: 30px;" id="selectBox_type"   onchange="searchServer()" >
+											<option value="0">-- 请选择 --</option>
+											<option value="1">游戏服</option>
+											<option value="2">账户服</option>
+											<option value="3">充值服</option>
+										</select>
+									</div>
+									<div class="floatL" style="margin-top: 7px;margin-left: 20px;">
+										<font size="2">具体服务器名称：</font>
+									</div>
+									<div class="selectbox floatL" style="width:100px;">
+										<select class="select"   style="height: 30px;" id="selectBox_status">	
+										</select>
+									</div>
+									<div class="btn_box floatL mag_l20" style="margin-top: 2px;">
+										<input name="" onclick="init()" type="button" value="查询" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+			
+								</td>
+							</tr>
+</table>
+</div>
+
+<div id="container"  class="form_boxB">
+</div>
+	<div class="picBox" onClick="switchSysBar()" id="switchPoint"></div>
+		<div class="wrap_right">					
+        <div id="Contents">
+		<div id="MainForm">
+			<div class="form_boxB">
+				<table cellpadding="0" cellspacing="0" id="grid">
+                     <tr>	
+				     <td><b>服务器ID</b></td> 	
+				     <td><b>IP</b></td>                       
+                     <td><b>端口</b></td> 
+					 <td><b>实时内存</b></td> 
+					 
+					 <td><b>实时最高内存</b></td> 
+					 <td><b>配置最大内存</b></td> 
+					 <td><b>RDB模式频率</b></td>
+					  
+					 <td><b>RDB文件目录 </b></td> 
+					 <td><b>AOF模式 </b></td> 
+					 <td><b>AOF文件目录</b></td> 
+                     <td><b>客服端连接数</b></td>
+					</tr>
+				</table>			
+			   </div>
+         </div>
+</div>
+</div>
+<script type="text/javascript">
+
+$('.form_datetime').datetimepicker({
+    //language:  'fr',
+    weekStart: 1,
+    todayBtn:  1,
+	autoclose: 1,
+	todayHighlight: 1,
+	startView: 2,
+	forceParse: 0,
+    showMeridian: 1
+});
+$('.form_date').datetimepicker({
+    language:  'fr',
+    weekStart: 1,
+    todayBtn:  1,
+	autoclose: 1,
+	todayHighlight: 1,
+	startView: 2,
+	minView: 2,
+	forceParse: 0
+});
+$('.form_time').datetimepicker({
+    language:  'fr',
+    weekStart: 1,
+    todayBtn:  1,
+	autoclose: 1,
+	todayHighlight: 1,
+	startView: 1,
+	minView: 0,
+	maxView: 1,
+	forceParse: 0
+});
+
+
+
+var xset = [];
+var ysetplayerToday = [];
+var ysetUsedMemoryPeakHuman=[];
+var time=0;
+			$(function() {
+				startinit();
+				initChar();
+			})
+			
+	    function startinit(){
+				var serverID=0;
+				var serversListUrl = port + "/getRedisList?params={serverID:" + serverID + "}";
+				$.getJSON(serversListUrl, null, function(data) {
+					var st; // 服务器状态
+					var ty; // 服务器类型
+					$("#totalCount").html(data.length)
+					var xset = [];
+                    var ysetplayerToday = [];
+                    var ysetUsedMemoryPeakHuman=[];
+					$.each(data, function(key, value) {
+						appendData(key, value);
+					});
+				})
+			}
+			
+		function initChar(){
+			var serverID=0;
+			var status=3;
+            var searchUrl = port + "/getRedisList?params={serverID:" + serverID + ", status:"+ status +"}";
+			$.getJSON(searchUrl, null, function(data) {
+				var st; // 服务器状态
+				var ty; // 服务器类型
+				$("#totalCount").html(data.length)
+				xset = [];
+				ysetplayerToday = [];
+				ysetUsedMemoryPeakHuman=[];
+				$.each(data, function(key, value) {
+					appendData(key, value);
+				});
+				initGrids(ysetplayerToday,ysetUsedMemoryPeakHuman,xset);
+			})
+		}	
+			
+	    function init(){
+				 var time=$("#dtp_input1").val();
+				 var serverID=$("#selectBox_status").val();
+				 if(serverID==null){
+					 alert("请选择服务器！");
+				 }else if(time==null){
+					 alert("请选择日期");
+			     }
+				 else{
+				 searchServerTable(); 
+				 selectChart();
+				 }
+			}
+		// 服务器列表 	
+	    function  searchServerTable(){
+	    	var serverID=$("#selectBox_status").val();
+            var status=1;
+            var time=$("#dtp_input1").val();
+                time=time.substring(0,10)
+            var searchUrl = port + "/getRedisList?params={serverID:" + serverID + ", status:"+ status +", time:"+time+"}";
+            $.getJSON(searchUrl, null, function(data) {
+				$(".dataGrid").remove();
+				$("#totalCount").html(data.length)
+				if(data.aofEnabled == 0) {
+				     st = "<font >关闭</font>";
+			    } else {
+				     st = "<font >开启</font>";
+			    }
+				$("#grid").append("<tr class='dataGrid'><td>"+  data.serverID+
+				"</td>" +
+				"<td>" +  data.iP +
+				"</td><td>" +  data.port +
+				"</td><td>" +  data.usedMemoryHuman+
+				"</td><td>" +  data.usedMemoryPeakHuman+
+				"</td><td>" +  data.usedMemoryRss+
+				"</td><td>" +  data.rdbChangesSinceLastSave+
+				"</td><td>" +  data.rdbDbFilename +
+				"</td><td>" +  st +
+				"</td><td>" +  data.aofDbFilename+
+				"</td><td>" +  data.connectedClients +
+				"</td></tr>")	
+			})
+	    }
+		//折线图 
+	    function selectChart(){	 
+	    	var time=$("#dtp_input1").val();
+            time=time.substring(0,10)
+	    	var serverID=$("#selectBox_status").val();
+			var status=2;
+			var serverID=$("#selectBox_status").val();
+			var serversListUrl = port + "/getRedisList?params={serverID:" + serverID + ", status:"+ status + ", time:"+time+"}";
+				$.getJSON(serversListUrl, null, function(data) {
+					var st; // 服务器状态
+					var ty; // 服务器类型
+					$("#totalCount").html(data.length);
+					xset = [];
+					ysetplayerToday = [];
+				    ysetUsedMemoryPeakHuman=[];
+					$.each(data, function(key, value){
+						time=value.recordDate.substring(10,16)
+						console.log("value.recordDate里面的值为"+value.recordDate);
+						console.log("time"+time);
+						ysetplayerToday.push(value.usedMemoryHuman);	    
+				  	    xset.push(time);
+				  	    ysetUsedMemoryPeakHuman.push(value.usedMemoryPeakHuman);
+					});
+					initGrids(ysetplayerToday,ysetUsedMemoryPeakHuman,xset);
+				})
+	     }
+			
+		function appendData(key, value) {
+			if(value.aofEnabled == 0) {
+				st = "<font >关闭</font>";
+			} else {
+				st = "<font >开启</font>";
+			}
+			  	//$("#grid").append("<tr class='dataGrid' id='tr"+ value.keyID +"'><td>" + "<input type='checkbox' id='ci"+value.keyID+"' onclick='chooseTr("+ value.keyID +")' class='isChoose' value='" + value.keyID + "' />" +	
+					$("#grid").append("<tr class='dataGrid'><td>"+value.serverID+
+					"</td>" +
+					"<td>" + value.iP  +
+					"</td><td>" + value.port +
+					"</td><td>" + value.usedMemoryHuman+
+					"</td><td>" + value.usedMemoryPeakHuman+
+					"</td><td>" + value.usedMemoryRss+
+					"</td><td>" + value.rdbChangesSinceLastSave+
+					"</td><td>" + value.rdbDbFilename +
+					"</td><td>" + st +
+					"</td><td>" + value.aofDbFilename+
+					"</td><td>" + value.connectedClients +
+					"</td></tr>")	
+					time=value.recordDate.substring(10,16)
+					ysetplayerToday.push(value.usedMemoryHuman);	    
+			  	    xset.push(time);
+			  	    ysetUsedMemoryPeakHuman.push(value.usedMemoryPeakHuman);
+		     }
+			
+			 var chart;
+			 function initGrids(yset,ysetUsedMemoryPeakHuman,xset){
+			 chart = new  Highcharts.Chart({
+					chart:{
+						renderTo:'container',     
+					},
+					title:{
+						text:''
+					},
+					series:[
+					{
+						type:'line',
+						name:"内存占用",
+						data:yset   //将yset作为y轴数据
+					}
+					,
+					{
+						name : '峰值内存',
+						yAxis : 0,//坐标轴序号
+						data : ysetUsedMemoryPeakHuman 
+					//将yset作为y轴数据
+					}
+					],
+					credits: {
+					     enabled: false
+					},
+					yAxis: {
+			         gridLineColor: '#FFFFFF',
+			         lineColor:'#FFFFFF'
+			       },
+			       xAxis: {
+			          gridLineColor: '#FFFFFF',
+			          lineColor:'#FFFFFF',
+			          categories:xset     //将xset作为x轴数据源
+			       },
+			          plotOptions:{
+			         	 enableMouseTracking:false
+			          },
+			          legend:{
+			          	 enabled:false
+			          }
+					});
+			         }
+				function searchServer() {
+					var type = $("#selectBox_type").val();
+					var status =0;
+					var searchUrl = port + "/getServerList?params={type:" + type + ", status:"+ status +"}";
+					$.getJSON(searchUrl, function(data) {
+						 $("#selectBox_status").empty();  
+						$.each(data, function(key, value) {
+							appendServerList(key, value);
+						});
+					})
+				}
+				function appendServerList(key, value){
+					 op = "<option value='" + value.serverID +"'>" + value.ip+"---"+ value.serverID+"</option>";
+	 				 $("#selectBox_status").append(op);
+				}		
+</script>
+</body>
+</html>

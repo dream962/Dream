@@ -1,0 +1,41 @@
+1537150840550	Rename field 'groupList'
+1537152155902	Rename local variable 'info'
+1537167418740	Delete element
+1537167434517	Rename type 'WorldEventClickCmd'
+1537167527755	Rename type 'SearchBeginCmd'
+1537169718049	Rename local variable 'fieldID'
+1537169729197	Rename local variable 'eventKeyID'
+1537173985976	Copy compilation unit
+1537175552927	Copy compilation unit
+1537175583818	Rename type 'EventQuickCancelCmd'
+1537177872017	Copy compilation unit
+1537236290554	Rename type 'SearchTeam'
+1537237792521	Rename type 'SceneBaseTeam'
+1537257015477	Rename type 'BaseTeam'
+1537257022005	Delete element
+1537257046092	Rename method 'createSceneSearchTeam'
+1537410020582	Delete element
+1537412265168	Rename method 'init'
+1537415270472	Copy compilation unit
+1537415286232	Rename type 'ScenePrivateEventModule'
+1537423030065	Copy compilation unit
+1537493938560	Rename type 'SceneBaseTeam'
+1537493948774	Rename type 'SceneTeamFactory'
+1537494029119	Rename package 'com.game.scene.team'
+1537494870213	Rename method 'getTeamID'
+1537495000848	Rename method 'updateTeamInfo'
+1537495008360	Rename method 'getTeamList'
+1537495056582	Rename method 'createSceneBaseTeam'
+1537495618872	Rename field 'TEAM_EXPLORE'
+1537495625886	Rename field 'TEAM_EVENT_SEARCH'
+1537495635700	Rename field 'TEAM_EVENT_ARMY'
+1537498167581	Copy compilation unit
+1537498210235	Copy compilation unit
+1537498255829	Copy compilation unit
+1537498269104	Copy compilation unit
+1537510320904	Rename local variable 'searchFieldID'
+1537512377280	Copy compilation unit
+1537512457494	Rename type 'EventArmyCancelCmd'
+1537518126674	Copy compilation unit
+1537523605026	Copy compilation unit
+1537523617197	Delete element

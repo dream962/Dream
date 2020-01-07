@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CommonUtil"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/google-collections-1.0.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/mysql-connector-java-5.1.12-bin.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/slf4j-api-1.7.2.jar" sourcepath="/CommonLib/resource/logback-classic-1.2.3-sources.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/gson-2.2.4.jar" sourcepath="/CommonLib/lib/gson-2.2.4-sources.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jaxen-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/protobuf-java-2.5.0.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/ammentos_revise_1.3.7.jar" sourcepath="/CommonLib/lib/ammentos_revise_1.3.7.zip"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/ehcache-core-2.6.6.jar" sourcepath="G:/ehcache-2.6.6-distribution/ehcache-2.6.6/src"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/ehcache-terracotta-2.6.6.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/commons-pool2-2.4.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-continuation-9.4.0.v20161208.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-http-9.4.0.v20161208.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-io-9.4.0.v20161208.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-security-9.4.0.v20161208.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-server-9.4.0.v20161208.jar" sourcepath="/CommonLib/resource/jetty.project-master.zip"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-servlet-9.4.0.v20161208.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-util-9.4.0.v20161208.jar" sourcepath="/CommonLib/resource/jetty.project-master.zip"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-webapp-9.4.0.v20161208.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jedis-3.0.0.jar" sourcepath="/CommonLib/resource/jredis3.0.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/quartz-2.2.3.jar" sourcepath="/CommonLib/resource/quartz-2.2.3-src.zip"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/quartz-jobs-2.2.3.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/servlet-api-3.1.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/logback-classic-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/logback-core-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/druid-1.1.9.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/groovy-2.4.13.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jna-5.0.0.jar" sourcepath="/CommonLib/resource/jna-5.0.0.zip"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/netty-all-4.1.32.Final.jar" sourcepath="C:/server/fight/project2/CommonLib/resource/netty-all-4.1.32.Final-sources.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/fastjson-1.2.4.jar" sourcepath="/CommonLib/resource/fastjson-1.2.4.zip"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-xml-9.4.0.v20161208.jar" sourcepath="/CommonLib/resource/jetty.project-master.zip"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-api-1.0.8.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-runtime-1.0.8.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-collectionschema-1.0.8.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-core-1.0.8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,137 @@
+package com.logic.map;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+
+import com.util.structure.BinaryHeap;
+
+/**
+ * @author dream
+ *
+ */
+public class PathAStar
+{
+    private BinaryHeap<PathANode> open;
+    private List<PathANode> closed;
+    private MapGraph map;
+    private PathANode endNode;
+    private PathANode startNode;
+    private LinkedList<PathANode> path;
+
+    public PathAStar(MapGraph grid)
+    {
+        map = grid;
+    }
+
+    public MapFindPath findPath(int begin, int end)
+    {
+        MapFindPath result = new MapFindPath();
+
+        PathANode beginNode = map.getPathNode(begin);
+        PathANode endNode = map.getPathNode(end);
+        open = new BinaryHeap<PathANode>(new Comparator<PathANode>()
+        {
+            @Override
+            public int compare(PathANode o1, PathANode o2)
+            {
+                return (int) (o1.f - o2.f);
+            }
+        });
+        closed = new ArrayList<PathANode>();
+
+        this.startNode = beginNode;
+        this.endNode = endNode;
+
+        startNode.g = 0;
+        startNode.h = toEndDistance(startNode);
+        startNode.f = startNode.g + startNode.h;
+
+        result.reachable = search();
+        result.step = path;
+
+        return result;
+    }
+
+    public boolean search()
+    {
+        PathANode node = startNode;
+        while (node != endNode)
+        {
+            List<PathANode> neightors = node.getNeighbors();
+
+            // 寻找当前节点周围6个点
+            for (PathANode test : neightors)
+            {
+                if (test == node || !test.node.getCanMove())
+                {
+                    continue;
+                }
+
+                float g = node.g + map.getCell();
+                float h = toEndDistance(test);
+                float f = g + h;
+                // 判断是否已经在openList里面
+                boolean isInOpen = open.indexOf(test) != -1;
+                if (isInOpen || closed.indexOf(test) != -1)
+                {
+                    if (test.f > f)
+                    {
+                        test.f = f;
+                        test.g = g;
+                        test.h = h;
+                        test.parent = node;
+                        if (isInOpen)
+                            open.updateNode(test);
+                    }
+                }
+                else
+                {
+                    // 加入到openList里面
+                    test.f = f;
+                    test.g = g;
+                    test.h = h;
+                    test.parent = node;
+                    open.push(test);
+                }
+            }
+
+            closed.add(node);
+            if (open.getSize() == 0)
+            {
+                return false;
+            }
+
+            node = open.pop();
+        }
+
+        // 构造路径
+        path = new LinkedList<PathANode>();
+        PathANode temp = endNode;
+        path.addLast(temp);
+
+        while (temp != startNode)
+        {
+            temp = temp.parent;
+            path.addFirst(temp);
+        }
+
+        return true;
+    }
+
+    /**
+     * 直线算法,当前点到终点的距离计算
+     * 
+     * @param node
+     * @return
+     */
+    private float toEndDistance(PathANode node)
+    {
+        int disX = node.node.getPX() - endNode.node.getPX();
+        int disY = node.node.getPY() - endNode.node.getPY();
+        int distance = (int) Math.sqrt(disX * disX + disY * disY);
+        return distance;
+    }
+
+}

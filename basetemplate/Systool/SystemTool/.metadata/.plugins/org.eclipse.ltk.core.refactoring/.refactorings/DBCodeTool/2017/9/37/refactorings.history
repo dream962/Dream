@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;DBCodeTool&apos;&#x0D;&#x0A;- Original project: &apos;DBCodeTool&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     地宫副本配置表.xls&#x0D;&#x0A;     技能配置表.xls" description="Delete elements" element1="excel/地宫副本配置表.xls" element2="excel/技能配置表.xls" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1505483892322" subPackages="false" version="1.0"/>
+</session>

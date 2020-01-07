@@ -1,0 +1,450 @@
+2019-05-05 15:50:37,948|ERROR|main|Please input the config path.
+2019-05-05 15:50:41,102|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-05 15:50:41,106|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-05 15:50:41,429|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-05 15:50:41,429|ERROR|main|****************** All Component has started successfully.******************
+2019-05-05 15:50:41,430|ERROR|main|UploadServer has started successfully, taken 3489 millis.
+2019-05-05 15:51:32,845|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.174.181:5188,admin
+2019-05-05 15:51:33,142|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:35,745|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.174.181:5188,admin
+2019-05-05 15:51:36,021|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:36,142|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.174.181:5188,admin
+2019-05-05 15:51:36,422|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:36,580|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.174.181:5188,admin
+2019-05-05 15:51:36,862|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:37,026|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.174.181:5188,admin
+2019-05-05 15:51:37,303|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:37,428|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.174.181:5188,admin
+2019-05-05 15:51:37,704|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:37,840|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.174.181:5188,admin
+2019-05-05 15:51:38,116|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:38,284|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.174.181:5188,admin
+2019-05-05 15:51:38,565|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:38,707|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.153.9:5188,admin
+2019-05-05 15:51:38,986|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:39,109|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.153.9:5188,admin
+2019-05-05 15:51:39,387|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:40,777|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.153.9:5188,admin
+2019-05-05 15:51:41,054|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:41,206|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.153.9:5188,admin
+2019-05-05 15:51:41,486|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:41,618|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.153.9:5188,admin
+2019-05-05 15:51:41,893|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:42,057|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.153.9:5188,admin
+2019-05-05 15:51:42,332|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:42,447|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.153.9:5188,admin
+2019-05-05 15:51:42,723|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:42,869|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.153.9:5188,admin
+2019-05-05 15:51:43,145|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:43,539|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.172.229:5188,admin
+2019-05-05 15:51:43,817|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:44,132|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.172.229:5188,admin
+2019-05-05 15:51:44,406|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:44,531|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.172.229:5188,admin
+2019-05-05 15:51:44,805|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:44,956|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.172.229:5188,admin
+2019-05-05 15:51:45,235|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:45,356|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.172.229:5188,admin
+2019-05-05 15:51:45,631|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:45,780|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.172.229:5188,admin
+2019-05-05 15:51:46,055|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:47,176|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.172.229:5188,admin
+2019-05-05 15:51:47,453|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:47,555|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.172.229:5188,admin
+2019-05-05 15:51:47,829|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:47,950|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:48,227|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:48,373|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:48,651|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:48,769|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:49,046|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:49,148|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:49,424|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:49,542|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:49,819|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:49,974|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:50,250|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:50,418|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:50,696|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:50,798|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:51,075|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:51,222|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:51,501|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:51,597|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:51,874|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:52,005|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:52,284|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:52,431|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:52,709|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:52,808|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:53,083|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:53,195|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:53,472|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:53,590|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:53,866|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 15:51:53,988|ERROR|qtp366252104-29|******连接SSH服务器成功：106.75.137.205:5188,admin
+2019-05-05 15:51:54,265|ERROR|qtp366252104-29|******关闭SSH服务器的连接！
+
+2019-05-05 16:12:30,259|ERROR|main|Please input the config path.
+2019-05-05 16:12:31,995|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-05 16:12:31,998|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-05 16:12:32,477|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-05 16:12:32,477|ERROR|main|****************** All Component has started successfully.******************
+2019-05-05 16:12:32,477|ERROR|main|UploadServer has started successfully, taken 2224 millis.
+2019-05-05 16:47:08,113|ERROR|qtp1148255190-22|实时查询服务器状态异常...
+com.jcraft.jsch.JSchException: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:98) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:206) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:200) ~[jsch-0.1.44.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:79) ~[bin/:na]
+	at com.upload.web.servlet.serverlist.MonitorServerServlet.execute(MonitorServerServlet.java:70) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:89) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doGet(BaseHandlerServlet.java:53) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_60]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_60]
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:83) ~[jsch-0.1.44.jar:na]
+	... 35 common frames omitted
+2019-05-05 16:47:24,391|ERROR|qtp1148255190-22|实时查询服务器状态异常...
+com.jcraft.jsch.JSchException: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:98) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:206) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:200) ~[jsch-0.1.44.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:79) ~[bin/:na]
+	at com.upload.web.servlet.serverlist.MonitorServerServlet.execute(MonitorServerServlet.java:70) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:89) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doGet(BaseHandlerServlet.java:53) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_60]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_60]
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:83) ~[jsch-0.1.44.jar:na]
+	... 35 common frames omitted
+2019-05-05 16:48:10,346|ERROR|qtp1148255190-18|实时查询服务器状态异常...
+com.jcraft.jsch.JSchException: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:98) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:206) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:200) ~[jsch-0.1.44.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:79) ~[bin/:na]
+	at com.upload.web.servlet.serverlist.MonitorServerServlet.execute(MonitorServerServlet.java:70) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:89) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doGet(BaseHandlerServlet.java:53) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_60]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_60]
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:83) ~[jsch-0.1.44.jar:na]
+	... 35 common frames omitted
+2019-05-05 16:50:07,024|ERROR|qtp1148255190-28|实时查询服务器状态异常...
+com.jcraft.jsch.JSchException: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:98) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:206) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:200) ~[jsch-0.1.44.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:79) ~[bin/:na]
+	at com.upload.web.servlet.serverlist.MonitorServerServlet.execute(MonitorServerServlet.java:70) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:89) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doGet(BaseHandlerServlet.java:53) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_60]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_60]
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:83) ~[jsch-0.1.44.jar:na]
+	... 35 common frames omitted
+2019-05-05 16:51:36,144|ERROR|qtp1148255190-28|实时查询服务器状态异常...
+com.jcraft.jsch.JSchException: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:98) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:206) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:200) ~[jsch-0.1.44.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:79) ~[bin/:na]
+	at com.upload.web.servlet.serverlist.MonitorServerServlet.execute(MonitorServerServlet.java:70) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:89) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doGet(BaseHandlerServlet.java:53) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_60]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_60]
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:83) ~[jsch-0.1.44.jar:na]
+	... 35 common frames omitted
+2019-05-05 16:52:25,227|ERROR|qtp1148255190-22|实时查询服务器状态异常...
+com.jcraft.jsch.JSchException: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:98) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:206) ~[jsch-0.1.44.jar:na]
+	at com.jcraft.jsch.JSch.addIdentity(JSch.java:200) ~[jsch-0.1.44.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:79) ~[bin/:na]
+	at com.upload.web.servlet.serverlist.MonitorServerServlet.execute(MonitorServerServlet.java:70) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:89) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doGet(BaseHandlerServlet.java:53) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: java.io.FileNotFoundException: H:\web\uploadTool\UploadServer\config\configid_rsa (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_60]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_60]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_60]
+	at com.jcraft.jsch.IdentityFile.newInstance(IdentityFile.java:83) ~[jsch-0.1.44.jar:na]
+	... 35 common frames omitted
+2019-05-05 16:54:29,362|ERROR|qtp1148255190-22|******连接SSH服务器成功：106.75.146.3:5188,admin
+2019-05-05 16:54:29,660|ERROR|qtp1148255190-22|******关闭SSH服务器的连接！
+
+2019-05-05 16:54:36,833|ERROR|qtp1148255190-22|******连接SSH服务器成功：106.75.146.3:5188,admin
+2019-05-05 16:54:37,105|ERROR|qtp1148255190-22|******关闭SSH服务器的连接！
+
+2019-05-05 17:00:44,773|ERROR|main|Please input the config path.
+2019-05-05 17:00:46,092|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-05 17:00:46,094|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-05 17:00:46,372|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-05 17:00:46,372|ERROR|main|****************** All Component has started successfully.******************
+2019-05-05 17:00:46,373|ERROR|main|UploadServer has started successfully, taken 1605 millis.
+2019-05-05 17:04:44,358|ERROR|main|Please input the config path.
+2019-05-05 17:04:45,476|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-05 17:04:45,477|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-05 17:04:45,723|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-05 17:04:45,723|ERROR|main|****************** All Component has started successfully.******************
+2019-05-05 17:04:45,724|ERROR|main|UploadServer has started successfully, taken 1370 millis.
+2019-05-05 17:05:24,005|ERROR|qtp366252104-19|******连接SSH服务器成功：106.75.146.3:5188,admin
+2019-05-05 17:05:24,293|ERROR|qtp366252104-19|******关闭SSH服务器的连接！
+
+2019-05-05 17:05:26,954|ERROR|qtp366252104-19|******连接SSH服务器成功：106.75.146.3:5188,admin
+2019-05-05 17:05:27,226|ERROR|qtp366252104-19|******关闭SSH服务器的连接！
+
+2019-05-05 18:16:01,792|ERROR|main|Please input the config path.
+2019-05-05 18:16:03,131|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-05 18:16:03,133|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-05 18:16:03,427|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-05 18:16:03,428|ERROR|main|****************** All Component has started successfully.******************
+2019-05-05 18:16:03,428|ERROR|main|UploadServer has started successfully, taken 1643 millis.
+2019-05-05 18:18:19,945|ERROR|main|Please input the config path.
+2019-05-05 18:18:21,059|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-05 18:18:21,061|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-05 18:18:21,297|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-05 18:18:21,298|ERROR|main|****************** All Component has started successfully.******************
+2019-05-05 18:18:21,298|ERROR|main|UploadServer has started successfully, taken 1359 millis.
+2019-05-05 19:54:49,248|ERROR|main|Please input the config path.
+2019-05-05 19:54:50,559|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-05 19:54:50,560|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-05 19:54:50,804|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-05 19:54:50,805|ERROR|main|****************** All Component has started successfully.******************
+2019-05-05 19:54:50,805|ERROR|main|UploadServer has started successfully, taken 1564 millis.
+2019-05-05 19:54:56,923|ERROR|main|Please input the config path.
+2019-05-05 19:54:57,975|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-05 19:54:57,976|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-05 19:54:58,240|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-05 19:54:58,240|ERROR|main|****************** All Component has started successfully.******************
+2019-05-05 19:54:58,240|ERROR|main|UploadServer has started successfully, taken 1322 millis.

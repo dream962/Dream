@@ -1,0 +1,7 @@
+2019-05-08 09:12:07,009|ERROR|main|Please input the config path.
+2019-05-08 09:12:09,013|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-08 09:12:09,015|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-08 09:12:09,230|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-08 09:12:09,230|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-05-08 09:12:09,230|ERROR|main|****************** All Component has started successfully.******************
+2019-05-08 09:12:09,231|ERROR|main|UploadServer has started successfully, taken 2236 millis.

@@ -1,0 +1,217 @@
+package com.tool;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+import org.eclipse.jface.window.ApplicationWindow;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.RowData;
+import org.eclipse.swt.layout.RowLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+
+public class EnumGenWindow extends ApplicationWindow
+{
+    private static final String PATH = "config/db.properties";
+    
+    private static final String CODE_PATH = "config/code.xml";
+
+    private Text text_desc;
+
+    private Text text_path;
+    
+    private String path="";
+
+    /**
+     * Create the application window.
+     */
+    public EnumGenWindow()
+    {
+        super(null);
+        init();
+    }
+
+    private void init()
+    {
+        Properties prop = new Properties();
+        InputStream in = null;
+        try
+        {
+            in = new FileInputStream(PATH);
+            prop.load(in);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+            try
+            {
+                in.close();
+            }
+            catch (IOException e1)
+            {
+                e1.printStackTrace();
+            }
+            System.exit(1);
+        }
+        
+        path=prop.getProperty("path");
+    }
+
+    /**
+     * Create contents of the application window.
+     * 
+     * @param parent
+     */
+    @Override
+    protected Control createContents(Composite parent)
+    {
+        Composite container = new Composite(parent, SWT.NONE);
+        RowLayout rl_container = new RowLayout(SWT.VERTICAL);
+        rl_container.fill = true;
+        rl_container.justify = true;
+        rl_container.center = true;
+        rl_container.spacing = 0;
+        rl_container.marginTop = 0;
+        rl_container.marginRight = 0;
+        rl_container.marginLeft = 0;
+        rl_container.marginBottom = 0;
+        container.setLayout(rl_container);
+        {
+            {
+                Composite composite = new Composite(container, SWT.NONE);
+                composite.setLayoutData(new RowData(SWT.DEFAULT, 114));
+                composite.setLayout(new FillLayout(SWT.HORIZONTAL));
+                {
+                    Group group = new Group(composite, SWT.NONE);
+                    group.setText("保存路径");
+
+                    text_path = new Text(group, SWT.BORDER);
+                    text_path.setBounds(147, 26, 533, 23);
+                    text_path.setText(path);
+
+                    Label label = new Label(group, SWT.NONE);
+                    label.setBounds(61, 29, 61, 17);
+                    label.setText("路径：");
+
+                    Button btnC = new Button(group, SWT.NONE);
+                    btnC.setBounds(167, 65, 80, 27);
+                    btnC.addSelectionListener(new SelectionAdapter()
+                    {
+                        @Override
+                        public void widgetSelected(SelectionEvent e)
+                        {
+                            if (text_path.getText().isEmpty())
+                            {
+                                text_desc.append("选择的表无效。\n");
+                                return;
+                            }
+
+                            EnumGenFactory.genCshapeCode(text_path.getText(),CODE_PATH);
+                            
+                            text_desc.append("代码生成完成。\n");
+                        }
+                    });
+                    btnC.setText("C#");
+
+                    Button btnNewButton_2 = new Button(group, SWT.NONE);
+                    btnNewButton_2.setBounds(324, 65, 80, 27);
+                    btnNewButton_2.addSelectionListener(new SelectionAdapter()
+                    {
+                        @Override
+                        public void widgetSelected(SelectionEvent e)
+                        {
+                            if (text_path.getText().isEmpty())
+                            {
+                                text_desc.append("选择的路径无效。\n");
+                                return;
+                            }
+                            
+                            EnumGenFactory.genJavaCode(text_path.getText(),CODE_PATH);
+                            text_desc.append("代码生成完成。");
+                        }
+                    });
+                    btnNewButton_2.setText("Java");
+
+                    Button btnNewButton_1 = new Button(group, SWT.NONE);
+                    btnNewButton_1.setBounds(484, 65, 80, 27);
+                    btnNewButton_1.addSelectionListener(new SelectionAdapter()
+                    {
+                        @Override
+                        public void widgetSelected(SelectionEvent e)
+                        {
+                            text_desc.setText("");
+                        }
+                    });
+                    btnNewButton_1.setText("清除日志");
+                }
+            }
+        }
+
+        {
+            Composite composite = new Composite(container, SWT.NONE);
+            composite.setLayoutData(new RowData(SWT.DEFAULT, 250));
+            
+                        text_desc = new Text(composite, SWT.MULTI | SWT.LEAD | SWT.BORDER | SWT.V_SCROLL | SWT.READ_ONLY);
+                        text_desc.setBounds(10, 10, 723, 230);
+                        text_desc.setTopIndex(Integer.MAX_VALUE);
+                        text_desc.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
+                        text_desc.append("");
+        }
+
+        return container;
+    }
+
+    /**
+     * Launch the application.
+     * 
+     * @param args
+     */
+    public static void main(String args[])
+    {
+        try
+        {
+            EnumGenWindow window = new EnumGenWindow();
+            window.setBlockOnOpen(true);
+            window.open();
+            Display.getCurrent().dispose();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Configure the shell.
+     * 
+     * @param newShell
+     */
+    @Override
+    protected void configureShell(Shell newShell)
+    {
+        super.configureShell(newShell);
+        newShell.setText("枚举生成工具");
+    }
+
+    /**
+     * Return the initial size of the window.
+     */
+    @Override
+    protected Point getInitialSize()
+    {
+        return new Point(769, 448);
+    }
+}

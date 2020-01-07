@@ -1,0 +1,5 @@
+compiler.compileProtoFiles=true
+compiler.protocFilePath=F\:\\GP\\PBProtocol\\protoc.exe
+compiler.useProtocInCustomPath=true
+compiler.useProtocInSystemPath=false
+eclipse.preferences.version=1

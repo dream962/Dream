@@ -1,0 +1,19 @@
+1541040265489	Move compilation unit
+1541040294288	Rename type 'PlayerWildModule'
+1541051651393	Copy compilation unit
+1541122883233	Rename method 'refreshProduct'
+1541122897071	Rename method 'refreshProduct'
+1541122906951	Rename method 'refreshIndustry'
+1541124171713	Copy compilation unit
+1541127693367	Rename type 'ArmyMineCancelCmd'
+1541128377937	Delete element
+1541129171493	Delete element
+1541130412074	Delete element
+1541130598107	Delete element
+1541138022001	Rename type 'BaseSceneArmy'
+1541139289142	Copy compilation unit
+1541151021883	Rename type 'SceneBehaviorModule'
+1541151612888	Rename type 'ArmyOperationType'
+1541151630593	Rename type 'ArmyType'
+1541153044014	Rename method 'getBehaviorModule'
+1541153058173	Rename enum constant 'Logic_Behavior'

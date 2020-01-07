@@ -1,0 +1,300 @@
+package com.tool.code;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+import com.tool.MainWindow;
+
+public class CommonUtil
+{
+    public static Map<String, String> entitySuffix = new HashMap<String, String>();
+    public static Map<String, String> entitySubPath = new HashMap<String, String>();
+
+    public static String RootPath = "";
+
+    public static String LuaPath = "";
+
+    public static String entityPath = "";
+    public static String interfacePath = "dao";
+    public static String implPath = "dao//impl";
+    public static String factoryPath = "factory";
+
+    public static String Default_Root_Package = "com.data";
+    public static String Default_Dao = ".dao";
+    public static String Default_Dao_Impl = ".dao.impl";
+
+    public static String default_interfacePackage = ".dao";
+    public static String default_dao_implPackage = ".dao.impl";
+
+    public static String default_orm_interfacePackage = ".dao";
+    public static String default_orm_implPackage = ".dao.impl";
+
+    public static String default_factory_Package = ".factory";
+
+    public static String default_dao_interfaceImport = "";
+
+    public static String default_dao_implImport = "";
+
+    public static String default_orm_interfaceImport = "";
+
+    public static String default_orm_implImport = "";
+
+    public static String default_orm_entityImport = "";
+
+    public static String default_orm_annotationImport = "";
+
+    static
+    {
+        default_dao_implImport = "import java.sql.PreparedStatement;\n"
+                + "import java.sql.ResultSet;\n"
+                + "import java.sql.SQLException;\n"
+                + "import java.sql.Types;\n"
+                + "import java.util.List;\n\n"
+                + "import com.base.database.BaseDao;\n"
+                + "import com.base.database.DBParamWrapper;\n"
+                + "import com.base.database.DataExecutor;\n"
+                + "import com.base.database.pool.DBHelper;\n\n";
+
+        default_dao_interfaceImport = "import com.base.database.IBaseDao;\n"
+                + "import java.util.List;\n";
+
+        default_orm_annotationImport = "import com.base.database.annotation.ICreateBeanAnnotation;";
+
+        default_orm_implImport = "import com.base.orm.BaseOrmDao;\n";
+
+        default_orm_interfaceImport = "import com.base.orm.IBaseOrmDao;\n";
+
+        default_orm_entityImport = "import it.biobytes.ammentos.PersistentEntity;\n"
+                + "import it.biobytes.ammentos.PersistentField;\n";
+    }
+
+    public static Properties prop = new Properties();
+
+    static
+    {
+        InputStream in = null;
+        try
+        {
+            in = new FileInputStream(MainWindow.propertiesPath);
+            prop.load(in);
+
+            RootPath = prop.getProperty("rootPath");
+            LuaPath = prop.getProperty("luaPath");
+
+            Default_Root_Package = prop.getProperty("rootPackage");
+
+            default_interfacePackage = Default_Root_Package + default_interfacePackage;
+            default_dao_implPackage = Default_Root_Package + default_dao_implPackage;
+            default_orm_interfacePackage = Default_Root_Package + default_orm_interfacePackage;
+            default_orm_implPackage = Default_Root_Package + default_orm_implPackage;
+            default_factory_Package = Default_Root_Package + default_factory_Package;
+
+            // 表对应的实体后缀 [t_X:XXX:BBB] t_X表示的数据库表的前缀，XXX表示代码中实体的后缀，BBB表示该实体在entity目录下面的子目录
+            String suffix = prop.getProperty("suffix");
+            String[] _suffixs = suffix.split(",");
+            for (String string : _suffixs)
+            {
+                String[] _suffix = string.split(":");
+                entitySuffix.put(_suffix[0], _suffix[1]);
+                entitySubPath.put(_suffix[0], _suffix[2]);
+            }
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+            System.exit(1);
+        }
+        finally
+        {
+            try
+            {
+                in.close();
+            }
+            catch (IOException e1)
+            {
+                e1.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * 保存用户设置导出路径，并持久化
+     */
+    public static void storeProperties()
+    {
+        OutputStream out = null;
+        try
+        {
+            out = new FileOutputStream(MainWindow.propertiesPath);
+            prop.setProperty("rootPath", RootPath);
+            prop.store(out, "Last store:" + new Date());
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+            System.exit(1);
+        }
+        finally
+        {
+            try
+            {
+                out.close();
+            }
+            catch (IOException e1)
+            {
+                e1.printStackTrace();
+            }
+        }
+    }
+
+    public static String ExchangeEntityName(String entityName)
+    {
+        return entityName.substring(0, 1).toUpperCase() + entityName.substring(1);
+    }
+
+    public static String toLowerName(String entityName)
+    {
+        return entityName.substring(0, 1).toLowerCase() + entityName.substring(1);
+    }
+
+    public static String toUpperName(String entityName)
+    {
+        return entityName.substring(0, 1).toUpperCase() + entityName.substring(1);
+    }
+
+    public static String CreateInterfaceName(String entityName, String tableName)
+    {
+        return "I" + CreateEntityName(entityName, tableName) + "Dao";
+    }
+
+    public static String CreateImplName(String entityName, String tableName)
+    {
+        String name = CreateEntityName(entityName, tableName) + "DaoImpl";
+        return name;
+    }
+
+    public static String CreateFactoryName(String entityName, String tableName)
+    {
+        String name = CreateEntityName(entityName, tableName) + "Factory";
+        return name;
+    }
+
+    public static String CreateEntityName(String entityName, String tableName)
+    {
+        return ExchangeEntityName(entityName) + getEntitySuffix(tableName);
+    }
+
+    public static String CreateCacheName(String entityName, String tableName)
+    {
+        if (tableName.startsWith("t_p"))
+        {
+            String name = "CachePublic" + ExchangeEntityName(entityName);
+            return name;
+        }
+        else
+        {
+            String name = "Cache" + ExchangeEntityName(entityName);
+            return name;
+        }
+    }
+
+    public static String CreateEntityParameterName(String entityName, String tableName)
+    {
+        return toLowerName(entityName) + getEntitySuffix(tableName);
+    }
+
+    public static String CreateEntityPluralParaName(String entityName, String tableName)
+    {
+        return toLowerName(entityName) + getEntitySuffix(tableName) + "s";
+    }
+
+    public static String getEntitySuffix(String tableName)
+    {
+        for (String pref : entitySuffix.keySet())
+        {
+            if (tableName.startsWith(pref))
+            {
+                return entitySuffix.get(pref);
+            }
+        }
+
+        return "";
+    }
+
+    public static String getEntitySubPath(String tableName)
+    {
+        for (String pref : entitySubPath.keySet())
+        {
+            if (tableName.startsWith(pref))
+            {
+                return entitySubPath.get(pref);
+            }
+        }
+
+        return "";
+    }
+
+    public static String generateDaoEntityPackage(String tableName)
+    {
+        String subPath = CommonUtil.getEntitySubPath(tableName);
+        String _package = CommonUtil.Default_Root_Package + (subPath.equals("") ? "" : "." + subPath);
+        return _package;
+    }
+
+    public static String generateORMEntityPackage(String tableName)
+    {
+        String subPath = CommonUtil.getEntitySubPath(tableName);
+        String _package = CommonUtil.Default_Root_Package + (subPath.equals("") ? "" : "." + subPath);
+        return _package;
+    }
+
+    public static String generateEntityNameBySourceTable(String tableName)
+    {
+        String[] sub = tableName.split("_");
+        String _tableName = "";
+        if (sub.length < 2)
+        {
+            return tableName;
+        }
+        for (int i = 2; i < sub.length; i++)
+        {
+            _tableName += toUpperName(sub[i]);
+        }
+        return _tableName;
+    }
+
+    public static String dataToObject(String dataType)
+    {
+        if (dataType.equalsIgnoreCase("int"))
+            return "Integer";
+        if (dataType.equalsIgnoreCase("long"))
+            return "Long";
+        if (dataType.equalsIgnoreCase("string"))
+            return "String";
+        if (dataType.equalsIgnoreCase("short"))
+            return "Short";
+        if (dataType.equalsIgnoreCase("byte"))
+            return "Byte";
+        if (dataType.equalsIgnoreCase("boolean"))
+            return "Boolean";
+
+        return dataType;
+    }
+
+    public static String comment()
+    {
+        String str = "\n/**\n"
+                + " * This file is generated by system automatically.Don't Modify It.\n"
+                + " *\n"
+                + " * @author System\n"
+                + " */\n";
+        return str;
+    }
+}

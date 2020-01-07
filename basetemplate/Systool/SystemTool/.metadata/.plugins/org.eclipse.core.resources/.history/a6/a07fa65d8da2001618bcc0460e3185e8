@@ -1,0 +1,101 @@
+package com.tool;
+
+import java.io.File;
+import java.io.IOException;
+
+import com.tool.data.XmlCommonData.XmlData;
+import com.tool.data.XmlCommonData.XmlEnumData;
+import com.tool.data.XmlCommonData.XmlListData;
+
+/**
+ *
+ */
+public class EnumGenFactory
+{
+
+    public static void genCshapeCode(String savePath, String codePath)
+    {
+        try
+        {
+            String xmlStr = FileUtil.readTxt(codePath, "UTF-8");
+            XmlListData listData = XmlUtil.toObject(xmlStr, XmlListData.class);
+            
+            StringBuilder builder = new StringBuilder();
+            builder.append("using System;").append("\n");
+            
+            for(XmlEnumData data : listData.list)
+            {
+                String code=genCshapeEnumClass(data);
+                builder.append(code).append("\n\n");
+            }
+            
+            FileUtil.createFile(savePath+File.separatorChar+"FightEnumType.cs", builder.toString());
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    
+    private static String genCshapeEnumClass(XmlEnumData data)
+    {
+        StringBuilder builder = new StringBuilder();
+        builder.append("/// <summary>").append("\n")
+        .append("/// ").append(data.desc).append("\n")
+        .append("/// </summary>").append("\n");
+       
+        builder.append("public enum interface ").append(data.name).append(" \n");
+        builder.append("{").append(" \n");
+        for(XmlData e : data.data)
+        {
+            builder.append("\t").append("/** ").append(e.desc).append("*/\n");
+            builder.append("\t").append("public static final int ").append(e.code).append(" = ").append(e.value).append(";").append("\n\n");
+        }
+        builder.append("}").append(" \n");
+        
+        return builder.toString();
+    }
+    
+    private static String genJavaEnumClass(XmlEnumData data)
+    {
+        StringBuilder builder = new StringBuilder();
+        builder.append("\t/** ").append("\n")
+        .append("\t * ").append(data.desc).append("\n")
+        .append("\t */").append("\n");
+        builder.append("\tpublic static interface ").append(data.name).append(" \n");
+        builder.append("\t{").append(" \n");
+        for(XmlData e : data.data)
+        {
+            builder.append("\t\t").append("/** ").append(e.desc).append("*/\n");
+            builder.append("\t\t").append("public static final int ").append(e.code).append(" = ").append(e.value).append(";").append("\n\n");
+        }
+        builder.append("\t}").append(" \n");
+        
+        return builder.toString();
+    }
+    
+    public static void genJavaCode(String savePath, String codePath)
+    {
+        try
+        {
+            String xmlStr = FileUtil.readTxt(codePath, "UTF-8");
+            XmlListData listData = XmlUtil.toObject(xmlStr, XmlListData.class);
+            
+            StringBuilder builder = new StringBuilder();
+            builder.append("public class FightEnumType ").append("\n");
+            builder.append("{").append("\n\n");
+            for(XmlEnumData data : listData.list)
+            {
+                String code=genJavaEnumClass(data);
+                builder.append(code).append("\n\n");
+            }
+            builder.append("}");
+            
+            FileUtil.createFile(savePath+File.separatorChar+"FightEnumType.java", builder.toString());
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+}

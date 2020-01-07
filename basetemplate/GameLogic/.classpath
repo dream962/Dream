@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/slf4j-api-1.7.2.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CommonUtil"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CommonData"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PBProtocol"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/protobuf-java-2.5.0.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/ammentos_revise_1.3.7.jar" sourcepath="/CommonLib/lib/ammentos_revise_1.3.7.zip"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/fastjson-1.2.4.jar" sourcepath="/CommonLib/resource/fastjson-1.2.4.zip"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BaseServer"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/logback-classic-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/logback-core-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jna-5.0.0.jar" sourcepath="/CommonLib/resource/jna-5.0.0.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

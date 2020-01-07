@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="upload-server-min" name="daomu2" basedir="../../.">
+	<!-- <project default="deploy-all" name="daomu2" basedir="../."> -->
+	<description>
+		盗墓2版本自动编译打包脚本
+	</description>
+	<!-- 注意：使用该脚本时，需要自行更改 的属性: 1. myhost改为你的ip地址. -->
+	<echo>start to build daomu2...</echo>
+	<echo>${basedir}</echo>
+
+	<!--发布变量设置 -->
+	<property name="project-name" value="dm2" />
+	<property name="myhost" value="192.168.1.47" />
+
+	<!-- game.xml 里面替换的excel路径 -->
+	<property name="excel" value="G:\project4\cehua\游戏数据（版本打包）\配置表" />
+
+	<!-- 拷贝源excel配置到CommonLib/excel文件下 -->
+	<property name="source-excel" value="G:\project4\cehua\游戏数据（版本打包）\配置表" />
+	<property name="source-skill" value="G:\project4\cehua\游戏数据（版本打包）\编辑器数据\skill" />
+	<property name="source-mission" value="G:\project4\cehua\游戏数据（版本打包）\编辑器数据\mission" />
+	<property name="source-effect" value="G:\project4\cehua\游戏数据（版本打包）\编辑器数据\EffectBody" />
+	<property name="source-map" value="G:\project4\cehua\游戏数据（版本打包）\编辑器数据\map" />
+
+	<!--外网配置106.75.172.148 -->
+	<property name="port" value="5188" />
+	<property name="user" value="root" />
+	<property name="password" value="ZhuoHua_fb2873" />
+	<property name="ftpserverdir" value="/data/server" />
+
+	<property name="hostA1" value="106.75.173.25" />
+	<property name="gameserverdir001" value="${hostA1}:${ftpserverdir}/gameserver001" />
+	<property name="gameserverdir002" value="${hostA1}:${ftpserverdir}/gameserver002" />
+
+	<!--定义相关编译变量 -->
+	<property name="is-debug" value="on" />
+	<property name="java-version" value="1.8" />
+	<property name="app-version" value="1.0" />
+	<property name="webapp-version" value="1.0" />
+	<property name="exclude-svn" value="**/*.svn/*.*,servlet-api.jar" />
+	<property name="exclude-local" value="*.propertieslocal" />
+
+	<!--输入变量定义 -->
+	<property name="config" value="${basedir}/CommonLib/config" />
+	<property name="libs" value="${basedir}/CommonLib" />
+	<property name="util" value="${basedir}/CommonUtil" />
+	<property name="game_dao" value="${basedir}/CommonData" />
+	<property name="acc_dao" value="${basedir}/AccountData" />
+	<property name="proto" value="${basedir}/PBProtocol" />
+
+	<property name="baseserver" value="${basedir}/BaseServer" />
+	<property name="gameserver" value="${basedir}/GameServer" />
+	<property name="gamelogic" value="${basedir}/GameLogic" />
+	<!--<property name="commonservice" value="${basedir}/CommonService" /> -->
+
+	<!--定义最终文件输出路径 -->
+	<property name="lib-out" value="${basedir}/deploy/lib" />
+	<property name="lib-out-min" value="${basedir}/deploy/lib-min" />
+	<property name="app-out" value="${basedir}/deploy/app" />
+	<property name="gameserver-out" value="${app-out}/gameserver" />
+	<property name="gameserver-out-min" value="${app-out}/gameserver-min" />
+
+	<path id="lib-out">
+		<fileset dir="${basedir}/deploy/lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+
+
+	<!-- 清除已生成的旧版本文件 -->
+	<target name="clean">
+		<delete dir="${app-out}" />
+		<delete dir="${lib-out}" />
+		<delete dir="${lib-out-min}" />
+	</target>
+
+	<!-- 创建部署文件所需路径 -->
+	<target name="init" depends="clean">
+		<mkdir dir="${lib-out}" />
+		<mkdir dir="${lib-out-min}" />
+		<mkdir dir="${app-out}" />
+		<mkdir dir="${app-out}/config" />
+
+		<!-- GameServer -->
+		<mkdir dir="${gameserver-out}" />
+		<mkdir dir="${gameserver-out}/lib" />
+		<mkdir dir="${gameserver-out}/language" />
+		<mkdir dir="${gameserver-out}/excel" />
+
+		<!-- GameServer-min -->
+		<mkdir dir="${gameserver-out-min}" />
+		<mkdir dir="${gameserver-out-min}/lib" />
+		<mkdir dir="${gameserver-out-min}/language" />
+		<mkdir dir="${gameserver-out-min}/excel" />
+
+	</target>
+
+	<!-- 打包基础组件 -->
+	<target name="deploy-basic" depends="init">
+		<copydir src="${libs}/config" dest="${app-out}/config" excludes="${exclude-local}" />
+		<copydir src="${libs}/lib" dest="${lib-out}" />
+
+		<copydir src="${source-excel}" dest="${libs}/excel" />
+		<copydir src="${source-skill}" dest="${gameserver}/config/skill" />
+		<copydir src="${source-mission}" dest="${gameserver}/config/mission" />
+		<copydir src="${source-effect}" dest="${gameserver}/config/effect" />
+
+		<!--打包proto -->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${proto}/src" destdir="${proto}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${proto}/bin" destfile="${lib-out}/${project-name}_proto_${app-version}.jar" />
+		<jar basedir="${proto}/bin" destfile="${lib-out-min}/${project-name}_proto_${app-version}.jar" />
+
+		<!--打包util -->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${util}/src" destdir="${util}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${util}/bin" destfile="${lib-out}/${project-name}_util_${app-version}.jar" />
+		<jar basedir="${util}/bin" destfile="${lib-out-min}/${project-name}_util_${app-version}.jar" />
+
+		<!--打包baseserver -->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${baseserver}/src" destdir="${baseserver}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${baseserver}/bin" destfile="${lib-out}/${project-name}_baseserver_${app-version}.jar" />
+		<jar basedir="${baseserver}/bin" destfile="${lib-out-min}/${project-name}_baseserver_${app-version}.jar" />
+
+		<!--打包game_dao -->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${game_dao}/src" destdir="${game_dao}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${game_dao}/bin" destfile="${lib-out}/${project-name}_game_dao_${app-version}.jar" />
+		<jar basedir="${game_dao}/bin" destfile="${lib-out-min}/${project-name}_game_dao_${app-version}.jar" />
+
+		<!--打包acc_dao -->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${acc_dao}/src" destdir="${acc_dao}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${acc_dao}/bin" destfile="${lib-out}/${project-name}_acc_dao_${app-version}.jar" />
+		<jar basedir="${acc_dao}/bin" destfile="${lib-out-min}/${project-name}_acc_dao_${app-version}.jar" />
+
+		<!--打包gamelogic -->
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${gamelogic}/src" destdir="${gamelogic}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${gamelogic}/bin" destfile="${lib-out}/${project-name}_gamelogic_${app-version}.jar" />
+		<jar basedir="${gamelogic}/bin" destfile="${lib-out-min}/${project-name}_gamelogic_${app-version}.jar" />
+
+		<!--打包commonservice -->
+		<!--<javac encoding="utf-8" includeAntRuntime="false" srcdir="${commonservice}/src" destdir="${commonservice}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+		<jar basedir="${commonservice}/bin" destfile="${lib-out}/${project-name}_commonservice_${app-version}.jar" />
+		<jar basedir="${commonservice}/bin" destfile="${lib-out-min}/${project-name}_commonservice_${app-version}.jar" />-->
+	</target>
+
+	<!-- 编译GameServer -->
+	<target name="compile-gameserver" depends="deploy-basic">
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${gameserver}/src" destdir="${gameserver}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+	</target>
+
+	<!-- 打包GameServer -->
+	<target name="deploy-gameserver" depends="compile-gameserver">
+		<copydir src="${lib-out}" dest="${gameserver-out}/lib" excludes="${exclude-svn}" />
+		<!--<copydir src="${commonservice}/lib" dest="${gameserver-out}/lib" excludes="${exclude-svn}" />-->
+
+		<copy file="${libs}/sh/gameserver.sh" todir="${gameserver-out}/" />
+		<copydir src="${gameserver}/config" dest="${gameserver-out}/config" />
+		<copydir src="${libs}/language" dest="${gameserver-out}/language" excludes="${exclude-svn}" />
+
+		<copydir src="${libs}/names" dest="${gameserver-out}/names" />
+		<replace file="${gameserver-out}/names/names.xml" token="../CommonLib" value="." />
+
+		<copydir src="${libs}/dirty" dest="${gameserver-out}/dirty" />
+
+		<copydir src="${libs}/excel" dest="${gameserver-out}/excel" />
+
+		<jar basedir="${gameserver}/bin" destfile="${gameserver-out}/${project-name}_gameserver_${app-version}.jar">
+			<manifest>
+				<attribute name="Main-Class" value="com.game.GameServer" />
+			</manifest>
+		</jar>
+	</target>
+
+	<!-- 上传gameserver -->
+	<target name="upload-game-server" depends="deploy-gameserver">
+		<echo>============start upload============</echo>
+
+		<!-- 上传GameServer到 FTP 服务器 -->
+		<mkdir dir="${gameserver-out}" />
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+
+		<echo>===========endupload================</echo>
+	</target>
+
+	<!-- 所有gameserver -->
+	<target name="upload-server" depends="deploy-all">
+		<echo>=========start upload===============</echo>
+
+		<!-- 上传GameServer到 FTP 服务器 -->
+		<mkdir dir="${gameserver-out}" />
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir001}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+	</target>
+
+	<target name="upload-server-min" depends="deploy-all-min">
+		<echo>==========================begin
+			upload${user}:${password}@${fightserverdir}=====================================
+		</echo>
+
+		<!-- 上传GameServer-Min到 FTP 服务器 -->
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out-min}">
+			</fileset>
+		</scp>
+
+		<echo>============================end
+			upload=====================================
+		</echo>
+	</target>
+
+	<!--deploy-all -->
+	<target name="deploy-all" depends="
+		deploy-gameserver">
+	</target>
+
+	<!--deploy-all-min -->
+	<target name="deploy-all-min" depends="deploy-all">
+		<!-- min gameserver -->
+		<copydir src="${lib-out-min}" dest="${gameserver-out-min}/lib" excludes="${exclude-svn}" />
+		<copydir src="${libs}/language" dest="${gameserver-out-min}/language" excludes="${exclude-svn}" />
+		<copydir src="${gameserver}/config" dest="${gameserver-out-min}/config" />
+		<copy file="${gameserver-out}/${project-name}_gameserver_${app-version}.jar" todir="${gameserver-out-min}/" />
+
+		<copydir src="${libs}/names" dest="${gameserver-out-min}/names" />
+		<replace file="${gameserver-out-min}/names/names.xml" token="../CommonLib" value="." />
+
+		<copydir src="${libs}/dirty" dest="${gameserver-out-min}/dirty" />
+
+		<copydir src="${libs}/excel" dest="${gameserver-out-min}/excel" />
+
+	</target>
+
+	<!-- 仅上传策划配置文件（配置表和编辑器数据） -->
+	<target name="upload-config" depends="clean">
+		<echo>==========================start upload==========================</echo>
+
+		<mkdir dir="${lib-out}" />
+		<mkdir dir="${app-out}" />
+
+		<mkdir dir="${gameserver-out}" />
+		<mkdir dir="${gameserver-out}/excel" />
+
+		<copydir src="${source-excel}" dest="${libs}/excel" />
+		<copydir src="${source-skill}" dest="${gameserver}/config/skill" />
+		<copydir src="${source-mission}" dest="${gameserver}/config/mission" />
+		<copydir src="${source-effect}" dest="${gameserver}/config/effect" />
+
+		<copydir src="${gameserver}/config" dest="${gameserver-out}/config" />
+		<copydir src="${libs}/excel" dest="${gameserver-out}/excel" />
+
+		<!-- 上传GameServer到 FTP 服务器 -->
+		<mkdir dir="${gameserver-out}" />
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir001}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+					upload001=====================================
+				</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir002}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+							upload002=====================================
+						</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir003}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload003=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir012}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload012=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir005}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload005=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir013}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload013=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir007}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload007=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir014}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload014=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir006}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload006=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir015}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload015=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir004}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload004=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir016}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload016=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir008}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload008=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir017}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload017=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir009}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload009=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir018}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload018=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir010}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload010=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir019}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload019=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir011}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload011=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir020}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload020=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir501}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload501=====================================
+									</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir502}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload502=====================================
+									</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir503}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload503=====================================
+									</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir504}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload504=====================================
+									</echo>
+
+		<echo>==========================end
+						upload=====================================
+					</echo>
+	</target>
+
+	<!-- 仅上传策划配置文件（配置表和编辑器数据） -->
+	<target name="upload-single-config" depends="">
+		<echo>==========================start upload==========================
+		</echo>
+
+		<mkdir dir="${lib-out}" />
+		<mkdir dir="${app-out}" />
+
+		<mkdir dir="${gameserver-out}" />
+		<mkdir dir="${gameserver-out}/excel" />
+
+		<copydir src="${source-excel}" dest="${libs}/excel" />
+		<copydir src="${source-skill}" dest="${gameserver}/config/skill" />
+		<copydir src="${source-mission}" dest="${gameserver}/config/mission" />
+		<copydir src="${source-effect}" dest="${gameserver}/config/effect" />
+
+		<copydir src="${gameserver}/config" dest="${gameserver-out}/config" />
+		<copydir src="${libs}/excel" dest="${gameserver-out}/excel" />
+
+		<!-- 上传GameServer到 FTP 服务器 -->
+		<mkdir dir="${gameserver-out}" />
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir001}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+					upload001=====================================
+				</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir002}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+							upload002=====================================
+						</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir003}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload003=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir012}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload012=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir005}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload005=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir013}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload013=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir007}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload007=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir014}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload014=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir006}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload006=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir015}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload015=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir004}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload004=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir016}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload016=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir008}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload008=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir017}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload017=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir009}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload009=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir018}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload018=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir010}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload010=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir019}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload019=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir011}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload011=====================================
+							</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir020}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload020=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir501}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload501=====================================
+									</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir502}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload502=====================================
+									</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir503}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload503=====================================
+									</echo>
+
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir504}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload504=====================================
+									</echo>
+
+		<echo>==========================end
+						upload=====================================
+					</echo>
+	</target>
+
+
+	<!-- 仅上传gameserver.jar -->
+	<target name="upload-game-jar" depends="deploy-basic">
+		<echo>==========================start upload==========================
+		</echo>
+		<jar basedir="${gameserver}/bin" destfile="${gameserver-out}/${project-name}_gameserver_${app-version}.jar">
+			<manifest>
+				<attribute name="Main-Class" value="com.game.GameServer" />
+			</manifest>
+		</jar>
+		<!-- 上传GameServer到 FTP 服务器 -->
+		<mkdir dir="${gameserver-out}" />
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir001}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+					upload001=====================================
+				</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir002}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+							upload002=====================================
+						</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir003}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload003=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir012}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload012=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir005}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+							upload005=====================================
+						</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir013}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+							upload013=====================================
+						</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir007}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+							upload007=====================================
+						</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir014}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload014=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir006}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload006=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir015}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload015=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir004}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload004=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir016}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload016=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir008}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload008=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir017}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload017=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir009}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload009=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir018}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload018=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir010}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload010=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir019}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload019=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir011}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload011=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir020}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+											upload020=====================================
+										</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir501}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+													upload501=====================================
+												</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir502}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+													upload502=====================================
+												</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir503}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+													upload503=====================================
+												</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir504}" trust="true" verbose="true">
+			<fileset dir="${gameserver-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+													upload504=====================================
+												</echo>
+		<echo>==========================end
+			upload=====================================
+		</echo>
+	</target>
+
+	<!-- 上传gameserver.jar和lib下的各种jar -->
+	<target name="upload-lib-jar" depends="upload-game-jar">
+		<echo>==========================start upload==========================
+		</echo>
+
+		<!-- 上传lib下的jar到 FTP 服务器 -->
+
+		<mkdir dir="${lib-out}" />
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir001}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+					upload001=====================================
+				</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir002}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+							upload002=====================================
+						</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir003}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload003=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir012}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload012=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir005}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload005=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir013}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload013=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir007}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload007=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir014}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload014=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir006}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload006=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir015}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload015=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir004}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload004=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir016}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload016=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir008}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload008=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir017}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload017=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir009}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload009=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir018}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload018=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir010}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload010=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir019}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload019=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir011}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload011=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir020}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+								upload020=====================================
+							</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir501}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload501=====================================
+									</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir502}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload502=====================================
+									</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir503}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload503=====================================
+									</echo>
+		<scp port="${port}" todir="${user}:${password}@${gameserverdir504}/lib" trust="true" verbose="true">
+			<fileset dir="${lib-out}">
+			</fileset>
+		</scp>
+		<echo>==========================end
+										upload504=====================================
+									</echo>
+		<echo>==========================end
+			upload=====================================
+		</echo>
+	</target>
+</project>

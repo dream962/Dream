@@ -1,0 +1,236 @@
+2019-06-25 19:41:04,223|ERROR|main|Please input the config path.
+2019-06-25 19:41:05,524|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-06-25 19:41:06,730|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-06-25 19:41:06,731|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-06-25 19:41:07,057|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-06-25 19:41:07,059|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-06-25 19:41:07,060|ERROR|main|****************** All Component has started successfully.******************
+2019-06-25 19:41:07,060|ERROR|main|UploadServer has started successfully, taken 2851 millis.
+2019-06-25 19:43:21,561|ERROR|main|Please input the config path.
+2019-06-25 19:43:22,451|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-06-25 19:43:23,587|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-06-25 19:43:23,587|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-06-25 19:43:23,799|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-06-25 19:43:23,800|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-06-25 19:43:23,800|ERROR|main|****************** All Component has started successfully.******************
+2019-06-25 19:43:23,800|ERROR|main|UploadServer has started successfully, taken 2246 millis.
+2019-06-25 19:43:31,130|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-06-25 19:44:59,498|ERROR|qtp1356840024-32|定时任务:刷新服务器信息开始
+2019-06-25 19:44:59,601|ERROR|qtp1356840024-32|定时任务:刷新服务器信息结束
+2019-06-25 19:45:00,445|ERROR|qtp1356840024-31|定时任务:刷新服务器信息开始
+2019-06-25 19:45:00,521|ERROR|qtp1356840024-31|定时任务:刷新服务器信息结束
+2019-06-25 19:45:01,223|ERROR|qtp1356840024-26|定时任务:刷新服务器信息开始
+2019-06-25 19:45:01,318|ERROR|qtp1356840024-26|定时任务:刷新服务器信息结束
+2019-06-25 19:45:01,535|ERROR|qtp1356840024-25|定时任务:刷新服务器信息开始
+2019-06-25 19:45:01,601|ERROR|qtp1356840024-25|定时任务:刷新服务器信息结束
+2019-06-25 19:45:01,727|ERROR|qtp1356840024-30|定时任务:刷新服务器信息开始
+2019-06-25 19:45:01,791|ERROR|qtp1356840024-30|定时任务:刷新服务器信息结束
+2019-06-25 19:45:01,886|ERROR|qtp1356840024-19|定时任务:刷新服务器信息开始
+2019-06-25 19:45:01,971|ERROR|qtp1356840024-19|定时任务:刷新服务器信息结束
+2019-06-25 19:45:02,053|ERROR|qtp1356840024-31|定时任务:刷新服务器信息开始
+2019-06-25 19:45:02,100|ERROR|qtp1356840024-31|定时任务:刷新服务器信息结束
+2019-06-25 19:45:02,205|ERROR|qtp1356840024-32|定时任务:刷新服务器信息开始
+2019-06-25 19:45:02,251|ERROR|qtp1356840024-32|定时任务:刷新服务器信息结束
+2019-06-25 19:45:02,375|ERROR|qtp1356840024-25|定时任务:刷新服务器信息开始
+2019-06-25 19:45:02,416|ERROR|qtp1356840024-25|定时任务:刷新服务器信息结束
+2019-06-25 19:45:02,523|ERROR|qtp1356840024-30|定时任务:刷新服务器信息开始
+2019-06-25 19:45:02,565|ERROR|qtp1356840024-30|定时任务:刷新服务器信息结束
+2019-06-25 19:47:34,126|ERROR|qtp1356840024-25|定时任务:刷新服务器信息开始
+2019-06-25 19:47:34,382|ERROR|qtp1356840024-25|定时任务:刷新服务器信息结束
+2019-06-25 19:47:36,693|ERROR|qtp1356840024-25|定时任务:刷新服务器信息开始
+2019-06-25 19:47:36,799|ERROR|qtp1356840024-25|定时任务:刷新服务器信息结束
+2019-06-25 19:48:22,460|ERROR|pool-1-thread-1|定时任务:检查服务器运行状态开始!
+2019-06-25 19:48:23,689|ERROR|pool-1-thread-1|
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:394) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[jsch-0.1.55.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:102) ~[bin/:na]
+	at com.upload.component.ServerListComponent.checkServerState(ServerListComponent.java:94) [bin/:na]
+	at com.upload.component.ServerListComponent.lambda$3(ServerListComponent.java:68) [bin/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_60]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_60]
+	at com.jcraft.jsch.Util$1.run(Util.java:362) ~[jsch-0.1.55.jar:na]
+	... 1 common frames omitted
+2019-06-25 19:48:23,690|ERROR|pool-1-thread-1|******关闭SSH服务器的连接！
+
+2019-06-25 19:48:44,698|ERROR|pool-1-thread-1|
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:394) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[jsch-0.1.55.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:102) ~[bin/:na]
+	at com.upload.component.ServerListComponent.checkServerState(ServerListComponent.java:94) [bin/:na]
+	at com.upload.component.ServerListComponent.lambda$3(ServerListComponent.java:68) [bin/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_60]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_60]
+	at com.jcraft.jsch.Util$1.run(Util.java:362) ~[jsch-0.1.55.jar:na]
+	... 1 common frames omitted
+2019-06-25 19:48:44,699|ERROR|pool-1-thread-1|******关闭SSH服务器的连接！
+
+2019-06-25 19:49:05,705|ERROR|pool-1-thread-1|
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:394) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[jsch-0.1.55.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:102) ~[bin/:na]
+	at com.upload.component.ServerListComponent.checkServerState(ServerListComponent.java:94) [bin/:na]
+	at com.upload.component.ServerListComponent.lambda$3(ServerListComponent.java:68) [bin/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_60]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_60]
+	at com.jcraft.jsch.Util$1.run(Util.java:362) ~[jsch-0.1.55.jar:na]
+	... 1 common frames omitted
+2019-06-25 19:49:05,707|ERROR|pool-1-thread-1|******关闭SSH服务器的连接！
+
+2019-06-25 19:49:05,900|ERROR|pool-1-thread-1|******连接SSH服务器成功：192.168.1.96:5188,root
+2019-06-25 19:49:06,819|ERROR|pool-1-thread-1|******关闭SSH服务器的连接！
+
+2019-06-25 19:49:06,913|ERROR|pool-1-thread-1|
+com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:519) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[jsch-0.1.55.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:102) ~[bin/:na]
+	at com.upload.component.ServerListComponent.checkServerState(ServerListComponent.java:94) [bin/:na]
+	at com.upload.component.ServerListComponent.lambda$3(ServerListComponent.java:68) [bin/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_60]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_60]
+2019-06-25 19:49:06,913|ERROR|pool-1-thread-1|******关闭SSH服务器的连接！
+
+2019-06-25 19:49:07,029|ERROR|pool-1-thread-1|
+com.jcraft.jsch.JSchException: Auth fail
+	at com.jcraft.jsch.Session.connect(Session.java:519) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[jsch-0.1.55.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:102) ~[bin/:na]
+	at com.upload.component.ServerListComponent.checkServerState(ServerListComponent.java:94) [bin/:na]
+	at com.upload.component.ServerListComponent.lambda$3(ServerListComponent.java:68) [bin/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_60]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_60]
+2019-06-25 19:49:07,030|ERROR|pool-1-thread-1|******关闭SSH服务器的连接！
+
+2019-06-25 19:49:08,028|ERROR|pool-1-thread-1|
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:394) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[jsch-0.1.55.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:102) ~[bin/:na]
+	at com.upload.component.ServerListComponent.checkServerState(ServerListComponent.java:94) [bin/:na]
+	at com.upload.component.ServerListComponent.lambda$3(ServerListComponent.java:68) [bin/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_60]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_60]
+	at com.jcraft.jsch.Util$1.run(Util.java:362) ~[jsch-0.1.55.jar:na]
+	... 1 common frames omitted
+2019-06-25 19:49:08,029|ERROR|pool-1-thread-1|******关闭SSH服务器的连接！
+
+2019-06-25 19:49:09,039|ERROR|pool-1-thread-1|定时任务:检查服务器运行状态结束!
+2019-06-25 19:49:09,039|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-06-25 19:49:09,128|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-06-25 19:54:09,045|ERROR|pool-1-thread-1|定时任务:检查服务器运行状态开始!
+2019-06-25 19:54:10,161|ERROR|pool-1-thread-1|
+com.jcraft.jsch.JSchException: java.net.ConnectException: Connection refused: connect
+	at com.jcraft.jsch.Util.createSocket(Util.java:394) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:215) ~[jsch-0.1.55.jar:na]
+	at com.jcraft.jsch.Session.connect(Session.java:183) ~[jsch-0.1.55.jar:na]
+	at com.upload.util.JSchUtils.connectWithKey(JSchUtils.java:102) ~[bin/:na]
+	at com.upload.component.ServerListComponent.checkServerState(ServerListComponent.java:94) [bin/:na]
+	at com.upload.component.ServerListComponent.lambda$3(ServerListComponent.java:68) [bin/:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_60]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_60]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_60]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_60]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_60]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_60]
+	at com.jcraft.jsch.Util$1.run(Util.java:362) ~[jsch-0.1.55.jar:na]
+	... 1 common frames omitted
+2019-06-25 19:54:10,161|ERROR|pool-1-thread-1|******关闭SSH服务器的连接！
+

@@ -1,0 +1,227 @@
+2019-05-07 11:23:15,344|ERROR|qtp1076984738-18|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "96f57472-6c36-4bf6-88bd-5f00046861db",
+    "contentLength" : 79,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557199398000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwdENADAEBcCJJMUj/HUVWt1/hN7BXBKOPV18JIL0ahCsmJJdqaBv2tZk5wf86Ate"
+}
+2019-05-07 11:23:15,550|ERROR|qtp1076984738-18|{"details":[{"createdAt":1557199398000,"progress":0,"status":"in-progress","task":{"type":"directory","url":"http://dlq.hgame.com/"}}],"metadata":{"bceRequestId":"e0a8269e-a793-470e-9db2-82e1b5c7675e","contentLength":213,"contentType":"application/json;charset=utf-8","date":1557199398000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 14:40:51,789|ERROR|qtp1076984738-30|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "0f2fe455-62cf-48c7-8e68-4775b72bf161",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557211255000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcENACAIA8CJSEyFCj9XqRj3H8E7D6LAtSOdN59Mp8u8MexQtKUayFvzSR8CEQvC"
+}
+2019-05-07 14:40:52,040|ERROR|qtp1076984738-30|{"details":[{"createdAt":1557211255000,"progress":0,"status":"in-progress","task":{"type":"directory","url":"http://dlq.hgame.com/"}}],"metadata":{"bceRequestId":"af70ac89-384c-4499-80bd-e2d4ba5fb737","contentLength":213,"contentType":"application/json;charset=utf-8","date":1557211255000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 16:03:30,237|ERROR|main|Please input the config path.
+2019-05-07 16:03:32,020|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-05-07 16:03:32,022|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-05-07 16:03:32,242|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-05-07 16:03:32,242|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-05-07 16:03:32,242|ERROR|main|****************** All Component has started successfully.******************
+2019-05-07 16:03:32,243|ERROR|main|UploadServer has started successfully, taken 2014 millis.
+2019-05-07 16:04:15,075|ERROR|qtp1076984738-31|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "035af8d6-3fed-400f-84e1-b1faef7f4415",
+    "contentLength" : 80,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557216258000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwdENADAEBcCJJDyU/nUVNN1/hN6ZL2xJPZIc5fXoRhnZc6ZUHkIL0HXRox/5egtv"
+}
+2019-05-07 16:04:15,422|ERROR|qtp1076984738-31|{"details":[{"createdAt":1557216258000,"progress":0,"status":"in-progress","task":{"type":"directory","url":"http://dlq.hgame.com/"}}],"metadata":{"bceRequestId":"076adadb-e530-4517-b69c-a3816c5f8c36","contentLength":213,"contentType":"application/json;charset=utf-8","date":1557216258000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 16:11:52,940|ERROR|qtp1076984738-31|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "839325de-8f5f-429d-a71a-1a40165e3438",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557216716000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwckRACAIBLCKeCCX+7MVxNn+SzDxyAWtPEa1mg3BI8QTlFtGmZ7sGot4+P5pC64="
+}
+2019-05-07 16:11:53,168|ERROR|qtp1076984738-31|{"details":[{"createdAt":1557216716000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/Main.max.js"}}],"metadata":{"bceRequestId":"801f00ef-5a11-48ac-9b9c-719538a432b9","contentLength":219,"contentType":"application/json;charset=utf-8","date":1557216716000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 16:28:10,558|ERROR|qtp1076984738-18|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "72b89a5b-8e03-4e2c-83a1-4fa341bff20c",
+    "contentLength" : 78,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557217693000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwckNACAIBMCKSJBjZX+2ohj7L8GZSBgHdPVFKpHyyCMxcwoLLru8YPc1YB/xLQq+"
+}
+2019-05-07 16:28:10,780|ERROR|qtp1076984738-18|{"details":[{"createdAt":1557217693000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/Main.max.js"}},{"createdAt":1557217693000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/game.js"}}],"metadata":{"bceRequestId":"7a9fb58e-46b4-4f91-93a5-118251dfda9e","contentLength":401,"contentType":"application/json;charset=utf-8","date":1557217694000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 16:30:47,353|ERROR|qtp1076984738-23|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "4ebd0ef2-794b-4d4d-95f7-dff3a9aca668",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557217850000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwbcRADAIBLCJKAjPQ+dVOIf9R7AUSGsF1wNx6RRopoS7yrSWxN02p4PV9gHrZQqD"
+}
+2019-05-07 16:30:47,552|ERROR|qtp1076984738-23|{"details":[{"createdAt":1557217850000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/game.js"}}],"metadata":{"bceRequestId":"e03cbbf7-62e8-4191-8444-6f4947d28e49","contentLength":215,"contentType":"application/json;charset=utf-8","date":1557217850000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 16:32:57,303|ERROR|qtp1076984738-30|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "12eacb81-f515-41f2-8a3a-3e3308363994",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557217980000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcENACAIA8CJSESBhp+r1Gj3H8G7yJrtmfu4dNiywWgL8BmHy25dAEvg6g8Otgvy"
+}
+2019-05-07 16:32:57,494|ERROR|qtp1076984738-30|{"details":[{"createdAt":1557217980000,"progress":0,"status":"in-progress","task":{"type":"directory","url":"http://dlq.hgame.com/"}}],"metadata":{"bceRequestId":"e888d93b-2070-4880-ae79-e05d82163cd6","contentLength":213,"contentType":"application/json;charset=utf-8","date":1557217980000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 16:35:10,739|ERROR|qtp1076984738-31|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "7ca71246-6033-460e-a81a-5bd3f3e4a928",
+    "contentLength" : 78,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557218114000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcENACAIBLCJSPDgFH6uQiTsP4KtcyMX7Y7vOQcjVdrinZRwpFhX8AWoCx/9zQsB"
+}
+2019-05-07 16:35:10,930|ERROR|qtp1076984738-31|{"details":[{"createdAt":1557218114000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/index.html"}}],"metadata":{"bceRequestId":"2bc2c1dc-c1ce-4290-8800-00ee79f7808e","contentLength":218,"contentType":"application/json;charset=utf-8","date":1557218114000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 16:35:18,215|ERROR|qtp1076984738-23|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "4cc72076-29df-4c19-8d00-31492c882967",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557218121000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcENACAIBLCJSFAOlJ+rCMj+I9hCbfrQeXIVJDnJNUCwlxQ+NpU4OqxuM38Bmwu5"
+}
+2019-05-07 16:35:18,390|ERROR|qtp1076984738-23|{"details":[{"createdAt":1557218121000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/game.js"}}],"metadata":{"bceRequestId":"2613dc06-f0ab-45d2-b119-a96670a43588","contentLength":215,"contentType":"application/json;charset=utf-8","date":1557218121000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 18:11:41,628|ERROR|qtp1076984738-18|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "d646ffef-aa81-46e4-a5ca-7888959e9e6a",
+    "contentLength" : 78,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557223905000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcERADAEBMCKzCQ44ZdWCP23kF2FcSzYzVR5NqDhYVJBUGUF7equ5xA/+QEGUgvn"
+}
+2019-05-07 18:11:41,857|ERROR|qtp1076984738-18|{"details":[{"createdAt":1557223905000,"progress":0,"status":"in-progress","task":{"type":"directory","url":"http://dlq.hgame.com/"}}],"metadata":{"bceRequestId":"b070e459-a2d9-47ea-a8c4-c7c58e960b3a","contentLength":213,"contentType":"application/json;charset=utf-8","date":1557223905000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 18:13:55,311|ERROR|qtp1076984738-23|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "a3d8e784-53a0-4f9c-a192-593cc33f1b86",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557224038000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwzMTUzsjQwNXFINUgzSU4yTNa1TDFO1DUxN07WTTRLM9G1TEtKAdIWqWnmiQAMBQxT"
+}
+2019-05-07 18:13:55,535|ERROR|qtp1076984738-23|{"details":[{"createdAt":1557224038000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/config.js"}}],"metadata":{"bceRequestId":"10237eb8-5f2c-4068-82f0-af9b28beaddf","contentLength":217,"contentType":"application/json;charset=utf-8","date":1557224038000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 19:27:56,936|ERROR|qtp1076984738-18|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "db0d840e-2715-40a2-9437-847a23df19bb",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557228480000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwzMTUzsrC0MHAwNjIxN042s9C1SDIw1jUxSjHQTTIGsowTU0zSDJMSE5OMTQHsyQsT"
+}
+2019-05-07 19:27:57,180|ERROR|qtp1076984738-18|{"details":[{"createdAt":1557228480000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/Main.max.js"}}],"metadata":{"bceRequestId":"a21208cc-0328-4232-ab58-b7f1334fa97d","contentLength":219,"contentType":"application/json;charset=utf-8","date":1557228480000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 19:29:44,519|ERROR|qtp1076984738-23|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "3a69c3dd-c445-47a3-a11c-d6bb80735681",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557228588000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcENACAIBLCJSOSEA36uYpD9V7A1J7Iiz7grCcrVNDFCJQcuvRGMJmq9D+daCk0="
+}
+2019-05-07 19:29:44,730|ERROR|qtp1076984738-23|{"details":[{"createdAt":1557228588000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/Main.max.js"}}],"metadata":{"bceRequestId":"2b0410c6-0ead-4fca-8da0-616782ac0ca9","contentLength":219,"contentType":"application/json;charset=utf-8","date":1557228588000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 19:30:23,686|ERROR|qtp1076984738-29|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "1bb8acc8-57c4-463e-8966-e54edb090216",
+    "contentLength" : 78,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557228627000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwckNACAIBMCKSOQS9mcraKD/Epwx35KIOJqh3ACtNyBzKSooyLkQuOI9+gHwYArt"
+}
+2019-05-07 19:30:23,873|ERROR|qtp1076984738-29|{"details":[{"createdAt":1557228627000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/Main.max.js"}}],"metadata":{"bceRequestId":"9cbf50e0-1bb5-48dc-a97c-844d8fb10fe1","contentLength":219,"contentType":"application/json;charset=utf-8","date":1557228627000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 19:31:10,986|ERROR|qtp1076984738-29|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "987387bd-c462-48a6-8b19-03ddb70bcf58",
+    "contentLength" : 79,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557228674000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcERACAIA7CJuFMoUH/uIrD/CCbwUJ7Mu0mLtyAsV4FNCdtMMjsQrQPMB+6cCus="
+}
+2019-05-07 19:31:11,199|ERROR|qtp1076984738-29|{"details":[{"createdAt":1557228674000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/Main.max.js"}}],"metadata":{"bceRequestId":"04a3b796-c85c-4112-b4a1-c3d91c5753b4","contentLength":219,"contentType":"application/json;charset=utf-8","date":1557228674000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 19:34:45,327|ERROR|qtp1076984738-30|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "b8d41f55-2904-4788-b6bf-706e031b060e",
+    "contentLength" : 78,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557228888000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwUkNADAIBEBFJC3Xwq9WSAD/Ejqj5hwJeVy9hgJVt5GOLeUeoTsahcY46wcLmAvM"
+}
+2019-05-07 19:34:45,503|ERROR|qtp1076984738-30|{"details":[{"createdAt":1557228888000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/Main.max.js"}}],"metadata":{"bceRequestId":"a51dd750-be80-4f87-9acb-7a2de1d264f7","contentLength":219,"contentType":"application/json;charset=utf-8","date":1557228889000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 19:35:46,753|ERROR|qtp1076984738-31|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "695fb566-1df8-4183-94f2-9f192962f706",
+    "contentLength" : 78,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557228950000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcERACAIA7CJeFiRlp+r4KH7j2DiK6Ak9tADu2GqkLlAO/mOTVbeai8yPvszC3g="
+}
+2019-05-07 19:35:46,983|ERROR|qtp1076984738-31|{"details":[{"createdAt":1557228950000,"progress":0,"status":"in-progress","task":{"type":"directory","url":"http://dlq.hgame.com/"}}],"metadata":{"bceRequestId":"e7deb02a-d43c-414f-9796-5b2e35a9f928","contentLength":213,"contentType":"application/json;charset=utf-8","date":1557228950000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 19:39:37,183|ERROR|qtp1076984738-29|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "e4a5ba24-47c3-4af9-a5a9-94a6062af9eb",
+    "contentLength" : 80,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557229180000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwbkBACAIBLCJKPiPzlUE3H8FE/MQVOA4ZCYapNtJxlHUs0PpSL7FuU8//qwLdA=="
+}
+2019-05-07 19:39:37,370|ERROR|qtp1076984738-29|{"details":[{"createdAt":1557229180000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/Main.max.js"}}],"metadata":{"bceRequestId":"d1fec5e5-a10b-41e6-98be-030a2c04f6d6","contentLength":219,"contentType":"application/json;charset=utf-8","date":1557229180000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 20:33:10,011|ERROR|qtp1076984738-31|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "9fbfca76-a557-4705-aacf-e0b11a98cd3d",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557232393000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcENACAIBLCJSEQB4ecqcOL+I9iK2vRgPVZ46GjaI0BSDSoBUz7Ou6R5u38WLwxQ"
+}
+2019-05-07 20:33:10,228|ERROR|qtp1076984738-31|{"details":[{"createdAt":1557232393000,"progress":0,"status":"in-progress","task":{"type":"file","url":"http://dlq.hgame.com/game.js"}}],"metadata":{"bceRequestId":"adbe8ff7-03ba-4c47-90a5-6569d1354127","contentLength":215,"contentType":"application/json;charset=utf-8","date":1557232393000,"server":"nginx/1.14.0"},"truncated":false}
+2019-05-07 20:34:18,804|ERROR|qtp1076984738-18|请求刷新缓存：{
+  "metadata" : {
+    "bceRequestId" : "ed65dc60-3945-4990-8181-4e2f06c954b4",
+    "contentLength" : 77,
+    "contentType" : "application/json;charset=utf-8",
+    "date" : 1557232462000,
+    "server" : "nginx/1.14.0"
+  },
+  "id" : "eJwFwcEBACAEBdCJHJKPbq1C2H+E3hMo+1n7ztTYDlCVGgmSKdibnieAEPXVHwySC8g="
+}
+2019-05-07 20:34:19,090|ERROR|qtp1076984738-18|{"details":[{"createdAt":1557232462000,"progress":0,"status":"in-progress","task":{"type":"directory","url":"http://dlq.hgame.com/"}}],"metadata":{"bceRequestId":"102760b8-219b-48ca-94d7-8ba9ad8814ec","contentLength":213,"contentType":"application/json;charset=utf-8","date":1557232462000,"server":"nginx/1.14.0"},"truncated":false}

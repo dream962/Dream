@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 描述里面的@代表引号，代码生成时会替换 -->
+<root>
+	<enum name="EnumTest1Type" desc="测试枚举1">
+		<detail code="Test1" desc="枚举1" value="1" attrDesc="[SkillViewAttribute(@技能类型@, 2)]"/>
+		<detail code="Test2" desc="枚举2" value="2" attrDesc="[SkillViewAttribute(@技能类型@, 2)]"/>
+		<detail code="Test3" desc="枚举3" value="3" attrDesc="[SkillViewAttribute(@技能类型@, 2)]"/>
+	</enum>
+
+	<enum name="EnumTest2Type" desc="测试枚举2">
+		<detail code="Test21" desc="枚举21" value="1" attrDesc="[SkillViewAttribute(@技能类型@, 2)]"/>
+		<detail code="Test22" desc="枚举22" value="2" attrDesc="[SkillViewAttribute(@技能类型@, 2)]"/>
+		<detail code="Test23" desc="枚举23" value="3" attrDesc="[SkillViewAttribute(@技能类型@, 2)]"/>
+	</enum>
+</root>

@@ -1,0 +1,6 @@
+compiler.enableProjectSettings=true
+compiler.javaOutputDirectory=src
+compiler.protocFilePath=H\:\\github\\h5\\server\\basetemplate\\PBProtocol\\protoc.exe
+compiler.refreshOutputDirectory=true
+compiler.refreshProject=false
+eclipse.preferences.version=1

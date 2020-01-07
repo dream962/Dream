@@ -1,0 +1,211 @@
+2019-10-10 09:17:26,278|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-10-10 09:17:27,533|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-10-10 09:17:27,537|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-10-10 09:17:27,539|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-10-10 09:17:27,542|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-10-10 09:17:27,543|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-10-10 09:17:27,544|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-10-10 09:17:27,545|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-10-10 09:17:27,546|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-10-10 09:17:27,547|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-10-10 09:17:27,548|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-10-10 09:17:27,550|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 120
+2019-10-10 09:17:27,550|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-10-10 09:17:27,551|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 3 ? * 1
+2019-10-10 09:17:27,551|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-10-10 09:17:27,552|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-10-10 09:17:27,553|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-10-10 09:17:27,554|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-10-10 09:17:27,554|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-10-10 09:17:27,555|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-10-10 09:17:27,555|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-10-10 09:17:27,556|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-10-10 09:17:27,557|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-10-10 09:17:28,755|ERROR|main|********************Robot Count:1000**************************
+2019-10-10 09:17:30,781|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-10 09:17:30,782|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-10-10 09:17:30,783|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-10-10 09:17:30,783|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-10 09:17:30,783|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-10-10 09:17:30,783|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-10-10 09:17:30,784|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-10-10 09:17:30,784|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-10 09:17:30,784|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-10-10 09:17:30,806|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-10-10 09:17:30,866|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-10-10 09:17:30,866|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-10-10 09:17:30,866|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-10-10 09:17:30,866|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-10-10 09:17:31,776|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-10 09:17:32,624|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-10-10 09:17:32,625|ERROR|main|****** All Component has started successfully.******************
+2019-10-10 09:17:32,634|ERROR|main|游戏服启动成功, 耗时 6 秒.
+2019-10-10 09:47:11,820|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-10-10 09:47:12,814|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-10-10 09:47:12,816|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-10-10 09:47:12,817|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-10-10 09:47:12,818|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-10-10 09:47:12,818|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-10-10 09:47:12,819|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-10-10 09:47:12,819|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-10-10 09:47:12,820|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-10-10 09:47:12,821|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-10-10 09:47:12,821|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-10-10 09:47:12,821|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 120
+2019-10-10 09:47:12,821|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-10-10 09:47:12,822|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 3 ? * 1
+2019-10-10 09:47:12,822|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-10-10 09:47:12,822|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-10-10 09:47:12,824|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-10-10 09:47:12,824|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-10-10 09:47:12,825|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-10-10 09:47:12,825|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-10-10 09:47:12,826|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-10-10 09:47:12,826|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-10-10 09:47:12,826|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-10-10 09:47:13,920|ERROR|main|********************Robot Count:1000**************************
+2019-10-10 09:47:15,510|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-10 09:47:15,511|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-10-10 09:47:15,511|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-10-10 09:47:15,512|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-10 09:47:15,513|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-10-10 09:47:15,513|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-10-10 09:47:15,513|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-10-10 09:47:15,515|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-10 09:47:15,516|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-10-10 09:47:15,523|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-10-10 09:47:15,579|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-10-10 09:47:15,580|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-10-10 09:47:15,580|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-10-10 09:47:15,580|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-10-10 09:47:16,182|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-10 09:47:16,574|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-10-10 09:47:16,574|ERROR|main|****** All Component has started successfully.******************
+2019-10-10 09:47:16,575|ERROR|main|游戏服启动成功, 耗时 4 秒.
+2019-10-10 16:03:35,421|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-10-10 16:03:36,291|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-10-10 16:03:36,293|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-10-10 16:03:36,294|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-10-10 16:03:36,294|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-10-10 16:03:36,295|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-10-10 16:03:36,295|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-10-10 16:03:36,296|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-10-10 16:03:36,296|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-10-10 16:03:36,296|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-10-10 16:03:36,296|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-10-10 16:03:36,297|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 120
+2019-10-10 16:03:36,297|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-10-10 16:03:36,297|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 3 ? * 1
+2019-10-10 16:03:36,297|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-10-10 16:03:36,298|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-10-10 16:03:36,299|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-10-10 16:03:36,299|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-10-10 16:03:36,300|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-10-10 16:03:36,300|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-10-10 16:03:36,301|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-10-10 16:03:36,301|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-10-10 16:03:36,301|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-10-10 16:03:37,289|ERROR|main|********************Robot Count:1000**************************
+2019-10-10 16:03:38,903|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-10 16:03:38,904|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-10-10 16:03:38,904|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-10-10 16:03:38,905|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-10 16:03:38,906|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-10-10 16:03:38,907|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-10-10 16:03:38,911|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-10-10 16:03:38,912|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-10 16:03:38,914|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-10-10 16:03:38,917|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-10-10 16:03:38,968|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-10-10 16:03:38,969|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-10-10 16:03:38,969|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-10-10 16:03:38,969|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-10-10 16:03:39,758|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-10 16:03:39,979|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-10-10 16:03:39,979|ERROR|main|****** All Component has started successfully.******************
+2019-10-10 16:03:39,981|ERROR|main|游戏服启动成功, 耗时 4 秒.
+2019-10-10 17:46:55,793|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-10-10 17:46:56,567|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-10-10 17:46:56,568|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-10-10 17:46:56,569|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-10-10 17:46:56,570|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-10-10 17:46:56,571|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-10-10 17:46:56,572|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-10-10 17:46:56,573|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-10-10 17:46:56,573|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-10-10 17:46:56,573|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-10-10 17:46:56,574|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-10-10 17:46:56,574|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 120
+2019-10-10 17:46:56,574|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-10-10 17:46:56,575|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 3 ? * 1
+2019-10-10 17:46:56,575|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-10-10 17:46:56,576|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-10-10 17:46:56,577|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-10-10 17:46:56,577|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-10-10 17:46:56,577|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-10-10 17:46:56,577|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-10-10 17:46:56,578|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-10-10 17:46:56,578|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-10-10 17:46:56,578|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-10-10 17:46:57,411|ERROR|main|********************Robot Count:1000**************************
+2019-10-10 17:46:58,563|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-10 17:46:58,563|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-10-10 17:46:58,563|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-10-10 17:46:58,564|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-10 17:46:58,564|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-10-10 17:46:58,564|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-10-10 17:46:58,564|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-10-10 17:46:58,564|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-10 17:46:58,564|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-10-10 17:46:58,568|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-10-10 17:46:58,601|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-10-10 17:46:58,601|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-10-10 17:46:58,601|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-10-10 17:46:58,601|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-10-10 17:46:58,955|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-10 17:46:59,167|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-10-10 17:46:59,168|ERROR|main|****** All Component has started successfully.******************
+2019-10-10 17:46:59,169|ERROR|main|游戏服启动成功, 耗时 3 秒.
+2019-10-10 17:57:18,472|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-10-10 17:57:19,025|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-10-10 17:57:19,027|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-10-10 17:57:19,028|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-10-10 17:57:19,035|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-10-10 17:57:19,035|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-10-10 17:57:19,036|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-10-10 17:57:19,040|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-10-10 17:57:19,041|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-10-10 17:57:19,042|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-10-10 17:57:19,042|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-10-10 17:57:19,042|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 120
+2019-10-10 17:57:19,043|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-10-10 17:57:19,043|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 3 ? * 1
+2019-10-10 17:57:19,043|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-10-10 17:57:19,044|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-10-10 17:57:19,045|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-10-10 17:57:19,045|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-10-10 17:57:19,045|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-10-10 17:57:19,046|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-10-10 17:57:19,046|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-10-10 17:57:19,047|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-10-10 17:57:19,047|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-10-10 17:57:19,776|ERROR|main|********************Robot Count:1000**************************
+2019-10-10 17:57:21,096|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-10-10 17:57:21,097|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-10-10 17:57:21,097|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-10-10 17:57:21,097|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-10-10 17:57:21,097|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-10-10 17:57:21,107|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-10-10 17:57:21,108|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-10-10 17:57:21,108|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-10-10 17:57:21,108|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-10-10 17:57:21,113|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-10-10 17:57:21,144|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-10-10 17:57:21,144|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-10-10 17:57:21,145|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-10-10 17:57:21,145|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-10-10 17:57:21,754|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-10-10 17:57:22,344|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-10-10 17:57:22,345|ERROR|main|****** All Component has started successfully.******************
+2019-10-10 17:57:22,345|ERROR|main|游戏服启动成功, 耗时 3 秒.
+2019-10-10 18:01:58,685|ERROR|GamePlayer-Worker-8|the game in room is null,but received packet. --- Code:10003,GameKey:10018

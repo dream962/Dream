@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.util.EntityUtil&apos; to &apos;EntityHashUtil&apos;&#x0D;&#x0A;- Original project: &apos;CommonUtil&apos;&#x0D;&#x0A;- Original element: &apos;com.util.EntityUtil&apos;&#x0D;&#x0A;- Renamed element: &apos;com.util.EntityHashUtil&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;EntityUtil&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.util{EntityUtil.java[EntityUtil" matchStrategy="1" name="EntityHashUtil" qualified="false" references="true" similarDeclarations="false" stamp="1535512637108" textual="false" version="1.0"/>
+</session>

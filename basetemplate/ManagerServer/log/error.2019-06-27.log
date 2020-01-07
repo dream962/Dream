@@ -1,0 +1,18 @@
+2019-06-27 09:33:21,240|ERROR|main|Please input the config path.
+2019-06-27 09:33:23,506|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-06-27 09:33:23,508|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-06-27 09:33:23,737|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-06-27 09:33:23,738|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-06-27 09:33:23,738|ERROR|main|****************** All Component has started successfully.******************
+2019-06-27 09:33:23,738|ERROR|main|UploadServer has started successfully, taken 2505 millis.
+2019-06-27 09:34:22,511|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-06-27 09:34:23,845|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2019-06-27 09:36:25,230|ERROR|main|Please input the config path.
+2019-06-27 09:36:26,795|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2019-06-27 09:36:26,797|ERROR|main|****************** Component:[com.upload.component.ServerListComponent] has started successfully.******************
+2019-06-27 09:36:26,960|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2019-06-27 09:36:26,960|ERROR|main|****************** Component:[com.upload.component.CdnComponent] has started successfully.******************
+2019-06-27 09:36:26,961|ERROR|main|****************** All Component has started successfully.******************
+2019-06-27 09:36:26,961|ERROR|main|UploadServer has started successfully, taken 1740 millis.
+2019-06-27 09:37:26,171|ERROR|pool-1-thread-1|定时任务:刷新服务器信息开始
+2019-06-27 09:37:27,757|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
