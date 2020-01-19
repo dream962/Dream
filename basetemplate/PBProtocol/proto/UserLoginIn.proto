@@ -167,3 +167,10 @@ message RoomIDProtoIn
 	required int32 roomID = 1;         //房间ID
 	required RoleType roleType = 2;    //角色类型
 }
+
+/*房间内修改角色类型*/
+message ChangeRoleTypeProtoIn
+{
+	required RoleType roleType = 1;    //角色类型
+}
+

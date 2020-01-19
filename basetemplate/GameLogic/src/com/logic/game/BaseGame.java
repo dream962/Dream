@@ -154,7 +154,7 @@ public abstract class BaseGame extends AbstractGame
 
     /**
      * 检查一个旋转矩形内包含的living
-     * 
+     *
      * @param livings
      * @param w
      * @param h
@@ -189,7 +189,7 @@ public abstract class BaseGame extends AbstractGame
 
     /**
      * 计算扇形内的living
-     * 
+     *
      * @param livings
      *            所有其他living
      * @param sectorX
@@ -212,12 +212,12 @@ public abstract class BaseGame extends AbstractGame
         {
             if (sectorAngle >= 360)
             {
-                if (MathsUtil.pointInCircle(living.getX(), living.getY(), sectorX, sectorY, (int) radius))
+                if (MathsUtil.pointInCircle(living.getX(), living.getY(), sectorX, sectorY, radius))
                     list.add(living);
             }
             else
             {
-                if (MathsUtil.pointInSector(living.getX(), living.getY(), sectorX, sectorY, (int) radius, (int) sectorAngle, (int) dir))
+                if (MathsUtil.pointInSector(living.getX(), living.getY(), sectorX, sectorY, radius, sectorAngle, dir))
                     list.add(living);
             }
         }
@@ -225,36 +225,36 @@ public abstract class BaseGame extends AbstractGame
         return list;
     }
 
-//    /**
-//     * 计算扇形内的living
-//     * 
-//     * @param x
-//     * @param y
-//     * @param dir
-//     * @param radius
-//     * @param sectorAngle
-//     * @return
-//     */
-//    public List<Living> calLivingsInSector(int x, int y, int dir, int radius, int sectorAngle)
-//    {
-//        List<Living> list = new ArrayList<>();
-//
-//        for (Living living : livings)
-//        {
-//            int distance = (x - living.getX()) * (x - living.getX()) + (y - living.getY()) * (y - living.getY());
-//            if (distance <= radius * radius)
-//            {
-//                if (MathsUtil.pointInSector(living.getX(), living.getY(), x, y, radius, sectorAngle, dir))
-//                    list.add(living);
-//            }
-//        }
-//
-//        return list;
-//    }
+    //    /**
+    //     * 计算扇形内的living
+    //     *
+    //     * @param x
+    //     * @param y
+    //     * @param dir
+    //     * @param radius
+    //     * @param sectorAngle
+    //     * @return
+    //     */
+    //    public List<Living> calLivingsInSector(int x, int y, int dir, int radius, int sectorAngle)
+    //    {
+    //        List<Living> list = new ArrayList<>();
+    //
+    //        for (Living living : livings)
+    //        {
+    //            int distance = (x - living.getX()) * (x - living.getX()) + (y - living.getY()) * (y - living.getY());
+    //            if (distance <= radius * radius)
+    //            {
+    //                if (MathsUtil.pointInSector(living.getX(), living.getY(), x, y, radius, sectorAngle, dir))
+    //                    list.add(living);
+    //            }
+    //        }
+    //
+    //        return list;
+    //    }
 
     /**
      * 计算圆内的living
-     * 
+     *
      * @param livings
      * @param x
      * @param y
@@ -268,26 +268,26 @@ public abstract class BaseGame extends AbstractGame
         return list;
     }
 
-//    /**
-//     * 计算在圆内的玩家
-//     * 
-//     * @param x
-//     * @param y
-//     * @param radius
-//     * @return
-//     */
-//    public List<Player> calPlayersCircle(int x, int y, float radius)
-//    {
-//        List<Player> list = new ArrayList<>();
-//
-//        players.forEach((k, p) -> {
-//            int d = (int) ((x - p.getX()) * (x - p.getX()) + (y - p.getY()) * (y - p.getY()) - radius * radius);
-//            if (d <= 0)
-//                list.add(p);
-//        });
-//
-//        return list;
-//    }
+    //    /**
+    //     * 计算在圆内的玩家
+    //     *
+    //     * @param x
+    //     * @param y
+    //     * @param radius
+    //     * @return
+    //     */
+    //    public List<Player> calPlayersCircle(int x, int y, float radius)
+    //    {
+    //        List<Player> list = new ArrayList<>();
+    //
+    //        players.forEach((k, p) -> {
+    //            int d = (int) ((x - p.getX()) * (x - p.getX()) + (y - p.getY()) * (y - p.getY()) - radius * radius);
+    //            if (d <= 0)
+    //                list.add(p);
+    //        });
+    //
+    //        return list;
+    //    }
 
     /*********************************************************************************************/
 
@@ -309,7 +309,7 @@ public abstract class BaseGame extends AbstractGame
 
     /**
      * 发送测试移动包
-     * 
+     *
      * @param physics
      */
     public void sendTestMove(Physics physics, long time)

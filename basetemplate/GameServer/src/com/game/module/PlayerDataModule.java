@@ -22,6 +22,7 @@ import com.proto.command.UserCmdType.UserCmdOutType;
 import com.proto.common.gen.CommonOutMsg.RankTimeType;
 import com.proto.common.gen.CommonOutMsg.RankType;
 import com.proto.user.gen.UserOutMsg.RechargeProtoOut;
+import com.proto.user.gen.UserOutMsg.RechargeVerifyProtoOut;
 import com.util.TimeUtil;
 import com.util.UuidUtil;
 
@@ -109,7 +110,7 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
         return true;
     }
 
-    public void addRank(RankType type, int value)
+    public void addRank(RankType rankType, int value)
     {
         if (value <= 0)
             return;
@@ -117,14 +118,14 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
         RankTimeType[] types = RankTimeType.values();
         for (RankTimeType timeType : types)
         {
-            RankInfo info = rankInfoMap.get(timeType.getNumber() + "-" + type.getNumber());
+            RankInfo info = rankInfoMap.get(timeType.getNumber() + "-" + rankType.getNumber());
             if (info == null)
             {
                 info = new RankInfo();
                 info.setUserID(player.getUserID());
-                info.setRankType(type.getNumber());
+                info.setRankType(rankType.getNumber());
 
-                if (type == RankType.GoodPersion || type == RankType.Net)
+                if (rankType == RankType.GoodPersion || rankType == RankType.Net)
                 {
                     info.setRankValue(value + info.getRankValue());
                 }
@@ -136,7 +137,7 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
                 info.setTimeType(timeType.getNumber());
                 info.setUpdateTime(new Date());
 
-                rankInfoMap.put(timeType.getNumber() + "-" + type.getNumber(), info);
+                rankInfoMap.put(timeType.getNumber() + "-" + rankType.getNumber(), info);
 
                 RankComponent.addRank(info);
             }
@@ -254,9 +255,11 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
 
         chargeInfo.setPurchaseToken(purchaseToken);
 
+        int code = 0;
         int result = ChargeComponent.checkPay(chargeInfo.getConfigID() + "", purchaseToken);
         if (result == 1)
         {
+            code = 1;
             // 完成
             chargeInfo.setOrderStatus(2);
 
@@ -274,5 +277,12 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
         {
             player.sendErrorCode(ErrorCodeType.Charge_Order_Check, "");
         }
+
+        // 返回
+        RechargeVerifyProtoOut.Builder builder = RechargeVerifyProtoOut.newBuilder();
+        builder.setCode(code);
+        builder.setRechargeConfigID(chargeInfo.getConfigID());
+
+        player.sendMessage(UserCmdOutType.RECHARGE_VERIFY_RETURN_VALUE, builder);
     }
 }

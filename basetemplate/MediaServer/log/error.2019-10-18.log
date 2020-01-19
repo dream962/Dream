@@ -1,2 +1,0 @@
-2019-10-18 09:46:53,710|ERROR|main|Caller+0	 at com.util.print.LogFactory.error(LogFactory.java:27)
-path set default value.

@@ -28881,6 +28881,580 @@ public final class UserOutMsg {
     // @@protoc_insertion_point(class_scope:RemoveAdProtoOut)
   }
 
+  public interface ChangeRoleTypeProtoOutOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 userID = 1;
+    /**
+     * <code>required int32 userID = 1;</code>
+     *
+     * <pre>
+     *玩家ID
+     * </pre>
+     */
+    boolean hasUserID();
+    /**
+     * <code>required int32 userID = 1;</code>
+     *
+     * <pre>
+     *玩家ID
+     * </pre>
+     */
+    int getUserID();
+
+    // required .RoleType roleType = 2;
+    /**
+     * <code>required .RoleType roleType = 2;</code>
+     *
+     * <pre>
+     *角色类型
+     * </pre>
+     */
+    boolean hasRoleType();
+    /**
+     * <code>required .RoleType roleType = 2;</code>
+     *
+     * <pre>
+     *角色类型
+     * </pre>
+     */
+    com.proto.common.gen.CommonOutMsg.RoleType getRoleType();
+  }
+  /**
+   * Protobuf type {@code ChangeRoleTypeProtoOut}
+   *
+   * <pre>
+   * 房间内更换角色类型
+   * </pre>
+   */
+  public static final class ChangeRoleTypeProtoOut extends
+      com.google.protobuf.GeneratedMessage
+      implements ChangeRoleTypeProtoOutOrBuilder {
+    // Use ChangeRoleTypeProtoOut.newBuilder() to construct.
+    private ChangeRoleTypeProtoOut(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ChangeRoleTypeProtoOut(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ChangeRoleTypeProtoOut defaultInstance;
+    public static ChangeRoleTypeProtoOut getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ChangeRoleTypeProtoOut getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ChangeRoleTypeProtoOut(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userID_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              com.proto.common.gen.CommonOutMsg.RoleType value = com.proto.common.gen.CommonOutMsg.RoleType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                roleType_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.proto.user.gen.UserOutMsg.internal_static_ChangeRoleTypeProtoOut_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.proto.user.gen.UserOutMsg.internal_static_ChangeRoleTypeProtoOut_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut.class, com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ChangeRoleTypeProtoOut> PARSER =
+        new com.google.protobuf.AbstractParser<ChangeRoleTypeProtoOut>() {
+      public ChangeRoleTypeProtoOut parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ChangeRoleTypeProtoOut(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChangeRoleTypeProtoOut> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 userID = 1;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userID_;
+    /**
+     * <code>required int32 userID = 1;</code>
+     *
+     * <pre>
+     *玩家ID
+     * </pre>
+     */
+    public boolean hasUserID() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 userID = 1;</code>
+     *
+     * <pre>
+     *玩家ID
+     * </pre>
+     */
+    public int getUserID() {
+      return userID_;
+    }
+
+    // required .RoleType roleType = 2;
+    public static final int ROLETYPE_FIELD_NUMBER = 2;
+    private com.proto.common.gen.CommonOutMsg.RoleType roleType_;
+    /**
+     * <code>required .RoleType roleType = 2;</code>
+     *
+     * <pre>
+     *角色类型
+     * </pre>
+     */
+    public boolean hasRoleType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required .RoleType roleType = 2;</code>
+     *
+     * <pre>
+     *角色类型
+     * </pre>
+     */
+    public com.proto.common.gen.CommonOutMsg.RoleType getRoleType() {
+      return roleType_;
+    }
+
+    private void initFields() {
+      userID_ = 0;
+      roleType_ = com.proto.common.gen.CommonOutMsg.RoleType.Whale;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUserID()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRoleType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, userID_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, roleType_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userID_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, roleType_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ChangeRoleTypeProtoOut}
+     *
+     * <pre>
+     * 房间内更换角色类型
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOutOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.proto.user.gen.UserOutMsg.internal_static_ChangeRoleTypeProtoOut_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.proto.user.gen.UserOutMsg.internal_static_ChangeRoleTypeProtoOut_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut.class, com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut.Builder.class);
+      }
+
+      // Construct using com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userID_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        roleType_ = com.proto.common.gen.CommonOutMsg.RoleType.Whale;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.proto.user.gen.UserOutMsg.internal_static_ChangeRoleTypeProtoOut_descriptor;
+      }
+
+      public com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut getDefaultInstanceForType() {
+        return com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut.getDefaultInstance();
+      }
+
+      public com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut build() {
+        com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut buildPartial() {
+        com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut result = new com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userID_ = userID_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.roleType_ = roleType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut) {
+          return mergeFrom((com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut other) {
+        if (other == com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut.getDefaultInstance()) return this;
+        if (other.hasUserID()) {
+          setUserID(other.getUserID());
+        }
+        if (other.hasRoleType()) {
+          setRoleType(other.getRoleType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUserID()) {
+          
+          return false;
+        }
+        if (!hasRoleType()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.proto.user.gen.UserOutMsg.ChangeRoleTypeProtoOut) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 userID = 1;
+      private int userID_ ;
+      /**
+       * <code>required int32 userID = 1;</code>
+       *
+       * <pre>
+       *玩家ID
+       * </pre>
+       */
+      public boolean hasUserID() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 userID = 1;</code>
+       *
+       * <pre>
+       *玩家ID
+       * </pre>
+       */
+      public int getUserID() {
+        return userID_;
+      }
+      /**
+       * <code>required int32 userID = 1;</code>
+       *
+       * <pre>
+       *玩家ID
+       * </pre>
+       */
+      public Builder setUserID(int value) {
+        bitField0_ |= 0x00000001;
+        userID_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 userID = 1;</code>
+       *
+       * <pre>
+       *玩家ID
+       * </pre>
+       */
+      public Builder clearUserID() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userID_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required .RoleType roleType = 2;
+      private com.proto.common.gen.CommonOutMsg.RoleType roleType_ = com.proto.common.gen.CommonOutMsg.RoleType.Whale;
+      /**
+       * <code>required .RoleType roleType = 2;</code>
+       *
+       * <pre>
+       *角色类型
+       * </pre>
+       */
+      public boolean hasRoleType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required .RoleType roleType = 2;</code>
+       *
+       * <pre>
+       *角色类型
+       * </pre>
+       */
+      public com.proto.common.gen.CommonOutMsg.RoleType getRoleType() {
+        return roleType_;
+      }
+      /**
+       * <code>required .RoleType roleType = 2;</code>
+       *
+       * <pre>
+       *角色类型
+       * </pre>
+       */
+      public Builder setRoleType(com.proto.common.gen.CommonOutMsg.RoleType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        roleType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .RoleType roleType = 2;</code>
+       *
+       * <pre>
+       *角色类型
+       * </pre>
+       */
+      public Builder clearRoleType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        roleType_ = com.proto.common.gen.CommonOutMsg.RoleType.Whale;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ChangeRoleTypeProtoOut)
+    }
+
+    static {
+      defaultInstance = new ChangeRoleTypeProtoOut(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:ChangeRoleTypeProtoOut)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_LoginInfoProtoOut_descriptor;
   private static
@@ -29031,6 +29605,11 @@ public final class UserOutMsg {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_RemoveAdProtoOut_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_ChangeRoleTypeProtoOut_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ChangeRoleTypeProtoOut_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29132,8 +29711,10 @@ public final class UserOutMsg {
       "rifyProtoOut\022\014\n\004code\030\001 \002(\005\022\030\n\020rechargeCo",
       "nfigID\030\002 \002(\005\"9\n\024ExchangeItemProtoOut\022\016\n\006" +
       "itemID\030\001 \002(\005\022\021\n\titemCount\030\002 \002(\005\",\n\020Remov" +
-      "eAdProtoOut\022\030\n\020removeAdConfigID\030\001 \002(\005B \n" +
-      "\022com.proto.user.genB\nUserOutMsg"
+      "eAdProtoOut\022\030\n\020removeAdConfigID\030\001 \002(\005\"E\n" +
+      "\026ChangeRoleTypeProtoOut\022\016\n\006userID\030\001 \002(\005\022" +
+      "\033\n\010roleType\030\002 \002(\0162\t.RoleTypeB \n\022com.prot" +
+      "o.user.genB\nUserOutMsg"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -29320,6 +29901,12 @@ public final class UserOutMsg {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_RemoveAdProtoOut_descriptor,
               new java.lang.String[] { "RemoveAdConfigID", });
+          internal_static_ChangeRoleTypeProtoOut_descriptor =
+            getDescriptor().getMessageTypes().get(30);
+          internal_static_ChangeRoleTypeProtoOut_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_ChangeRoleTypeProtoOut_descriptor,
+              new java.lang.String[] { "UserID", "RoleType", });
           return null;
         }
       };

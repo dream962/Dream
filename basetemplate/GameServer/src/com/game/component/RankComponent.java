@@ -321,7 +321,7 @@ public class RankComponent extends AbstractComponent
         {
             sort(info.getRankType(), temp);
 
-            if (System.currentTimeMillis() - lastUpdateTime >= 10)
+            if (System.currentTimeMillis() - lastUpdateTime >= 200)
             {
                 genProto();
             }

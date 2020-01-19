@@ -29,7 +29,7 @@ enum UserCmdInType
 	TRIGGER_REWARD_AD = 24;                         //触发观看奖励广告                      空
 	RECHARGE_VERIFY = 25;                           //充值验证                              RechargeVerifyProtoIn
 	BIND_ACCOUNT = 26;                              //绑定账号                              BindAccountProtoIn
-
+	CHANGE_ROLE_TYPE = 27;                          //回合中修改角色类型                    ChangeRoleTypeProtoIn
 
 	CHEAT_ADD_ITEM = 1000;                           //作弊协议，添加物品                   CheatAddItemProtoIn
 
@@ -75,6 +75,7 @@ enum UserCmdOutType
 	EXCHANGE_ITEM_RETURN = 21;                      //兑换物品回调                        ExchangeItemProtoOut
 	REMOVE_AD_RETURN = 22;                          //购买去广告回调                      RemoveAdProtoOut
 	CHANGE_HEADER=23;								//更改头像				ChangeHeaderProtoOut
+	CHANGE_ROLETYPE_RETURN = 24;                    //回合中修改角色类型返回              ChangeRoleTypeProtoOut
 
 	ERROR_CODE_RETURN = 1000;                       //错误码                              ErrorCodeProtoOut
 

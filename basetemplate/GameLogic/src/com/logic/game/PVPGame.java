@@ -86,15 +86,14 @@ public class PVPGame extends AbstractGame
         if (players.size() <= 0)
             return true;
 
-        boolean isPlayerConnect = false;
-
         // 有玩家完成,结束
         for (Player p : players)
         {
             if (false == p.getGamePlayer().getIsRobot())
             {
                 if (p.getGamePlayer().getNetworkModule().isConnect())
-                    isPlayerConnect = true;
+                {
+                }
             }
 
             // 如果有玩家投降
@@ -231,17 +230,24 @@ public class PVPGame extends AbstractGame
         int diamond = getDiamondMap().size();
         int donut = 0;
 
+        Player winner = null;
+        Player loser = null;
+
         boolean isSurrender = false;
         for (Player player : players)
         {
+            if (player.isSuccess())
+                winner = player;
+            else
+                loser = player;
+
             if (player.isSurrender())
             {
                 isSurrender = true;
-                break;
             }
         }
 
-        // 如果有投降的玩家，不计算系统奖励
+        // 如果没有投降的玩家，计算系统奖励
         if (isSurrender == false)
         {
             NetRewardBean rewardBean = NetRewardBeanFactory.getNetRewardBean(gameType);
@@ -259,7 +265,7 @@ public class PVPGame extends AbstractGame
                 {
                     diamond += rewardBean.getItemCount2();
                 }
-                else if (rewardBean.getItemID1() == ResourceType.TTQ.getValue())
+                else if (rewardBean.getItemID2() == ResourceType.TTQ.getValue())
                 {
                     donut += rewardBean.getItemCount2();
                 }

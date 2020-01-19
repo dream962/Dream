@@ -50,6 +50,7 @@ public class SetHeaderCmd extends AbstractUserCmd
                 player.getDataModule().changeHeader(headerID);
                 RankComponent.changeHeader(player.getUserID(), headerID);
 
+                // 同步给房间其他人
                 AbstractRoom room = player.getRoomModule().getCurrentRoom();
                 if (room != null)
                 {

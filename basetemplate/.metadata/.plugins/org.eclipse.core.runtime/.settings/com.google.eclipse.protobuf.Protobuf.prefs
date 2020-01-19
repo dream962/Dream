@@ -1,7 +1,0 @@
-compiler.compileProtoFiles=true
-compiler.javaCodeGenerationEnabled=true
-compiler.javaOutputDirectory=src
-compiler.protocFilePath=H\:\\web\\Server\\branches\\basetemplate\\PBProtocol\\protoc.exe
-compiler.useProtocInCustomPath=true
-compiler.useProtocInSystemPath=false
-eclipse.preferences.version=1

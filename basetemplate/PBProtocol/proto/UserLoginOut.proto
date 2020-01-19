@@ -283,3 +283,10 @@ message RemoveAdProtoOut
 {
 	required int32  removeAdConfigID = 1;       //移除广告的配置ID
 }
+
+/* 房间内更换角色类型*/
+message ChangeRoleTypeProtoOut
+{
+	required int32 userID = 1;				//玩家ID
+	required RoleType roleType = 2;         //角色类型
+}

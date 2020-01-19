@@ -1,5 +1,6 @@
 package com.game.module;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import com.proto.common.gen.CommonOutMsg.PlatformTheme;
 import com.proto.common.gen.CommonOutMsg.RoleType;
 import com.proto.user.gen.UserOutMsg.LoginInfoProtoOut;
 import com.proto.user.gen.UserOutMsg.ResourceRefresh;
+import com.util.TimeUtil;
 
 /**
  * 玩家网络数据代理
@@ -48,6 +50,17 @@ public class PlayerSenderModule extends AbstractPlayerModule<GamePlayer>
         builder.setRaceTopScore(player.getPlayerInfo().getRaceTopScore());
         builder.setTodayTriggerADCount(player.getPlayerInfo().getAdTriggerCount());
         builder.setGlobalTopScore(player.getPlayerInfo().getTopLength());
+
+        if (player.getPlayerInfo().getBuyAdTime() != null)
+        {
+            Calendar calendar = TimeUtil.getCalendar(player.getPlayerInfo().getBuyAdTime());
+            builder.setBuyRemoveAdDay(calendar.get(Calendar.DAY_OF_MONTH));
+            builder.setBuyRemoveAdMonth(calendar.get(Calendar.MONTH));
+            builder.setBuyRemoveAdYear(calendar.get(Calendar.YEAR));
+
+            int day = TimeUtil.dateCompare(player.getPlayerInfo().getBuyAdTime(), player.getPlayerInfo().getAdExpireTime());
+            builder.setLeftRemoveAdDay(day);
+        }
 
         AdRewardBean bean = AdRewardBeanFactory.getAdRewardBean(player.getPlayerInfo().getAdTriggerCount());
         if (bean != null)
@@ -107,6 +120,17 @@ public class PlayerSenderModule extends AbstractPlayerModule<GamePlayer>
         builder.setTimelimitTopScore(player.getPlayerInfo().getTimeTopScore());
         builder.setRaceTopScore(player.getPlayerInfo().getRaceTopScore());
         builder.setGlobalTopScore(player.getPlayerInfo().getTopLength());
+
+        if (player.getPlayerInfo().getBuyAdTime() != null)
+        {
+            Calendar calendar = TimeUtil.getCalendar(player.getPlayerInfo().getBuyAdTime());
+            builder.setBuyRemoveAdDay(calendar.get(Calendar.DAY_OF_MONTH));
+            builder.setBuyRemoveAdMonth(calendar.get(Calendar.MONTH));
+            builder.setBuyRemoveAdYear(calendar.get(Calendar.YEAR));
+
+            int day = TimeUtil.dateCompare(player.getPlayerInfo().getBuyAdTime(), player.getPlayerInfo().getAdExpireTime());
+            builder.setLeftRemoveAdDay(day);
+        }
 
         List<Integer> roles = player.getRoleTypes();
         for (int role : roles)

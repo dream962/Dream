@@ -18,7 +18,6 @@ import com.proto.user.gen.UserOutMsg.MatchPlayerDetail;
 import com.proto.user.gen.UserOutMsg.PlatformGroupInfoProtoOut;
 import com.proto.user.gen.UserOutMsg.PlatformInfoProtoOut;
 import com.proto.user.gen.UserOutMsg.RandomMatchProtoOut;
-import com.util.ThreadSafeRandom;
 import com.util.print.LogFactory;
 
 /**
@@ -72,7 +71,7 @@ public class FightRoom extends AbstractRoom
             // 匹配的长度
             int length = getMissionType();
             // 匹配的主题
-            PlatformTheme theme = PlatformTheme.valueOf((ThreadSafeRandom.next(1, 8)));
+            PlatformTheme theme = PlatformTheme.valueOf(getRandomTheme());
             // 生成的地块
             List<PlatformGroupInfoProtoOut> map = MapBuilder.build(length, theme);
 

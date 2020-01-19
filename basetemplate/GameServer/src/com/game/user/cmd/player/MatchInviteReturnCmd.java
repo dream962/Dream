@@ -59,14 +59,6 @@ public class MatchInviteReturnCmd extends AbstractUserCmd
                     }
                 }
             }
-            else
-            {
-                // 退出房间
-                if (player.getRoomModule().getCurrentRoom() != null)
-                {
-                    player.getRoomModule().exitRoom(1);
-                }
-            }
         }
         catch (Exception e)
         {

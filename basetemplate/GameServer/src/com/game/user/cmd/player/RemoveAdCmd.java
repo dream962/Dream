@@ -11,7 +11,9 @@ import com.data.bean.factory.AdvertiseBeanFactory;
 import com.game.object.player.GamePlayer;
 import com.game.user.cmd.AbstractUserCmd;
 import com.proto.command.UserCmdType.UserCmdInType;
+import com.proto.command.UserCmdType.UserCmdOutType;
 import com.proto.user.gen.UserInMsg.RemoveAdProtoIn;
+import com.proto.user.gen.UserOutMsg.RemoveAdProtoOut;
 import com.util.TimeUtil;
 import com.util.print.LogFactory;
 
@@ -35,11 +37,11 @@ public class RemoveAdCmd extends AbstractUserCmd
             AdvertiseBean bean = AdvertiseBeanFactory.getAdvertiseBean(configID);
             if (bean == null)
             {
-                player.sendErrorCode(ErrorCodeType.Config_Error, "广告配置无效");
+                player.sendErrorCode(ErrorCodeType.Config_Error, "配置无效");
                 return;
             }
 
-            if (!player.checkResource(bean.getConsumeID(), bean.getConsumeCount()))
+            if (player.checkResource(bean.getConsumeID(), bean.getConsumeCount()) == false)
             {
                 player.sendErrorCode(ErrorCodeType.Not_Enough_Resource, "资源不足.");
                 return;
@@ -50,6 +52,7 @@ public class RemoveAdCmd extends AbstractUserCmd
             Date expireTime = player.getPlayerInfo().getAdExpireTime();
             if (expireTime == null || expireTime.getTime() < new Date().getTime())
             {
+                player.getPlayerInfo().setBuyAdTime(new Date());
                 expireTime = TimeUtil.getDateByDay(new Date());
                 expireTime = TimeUtil.addOrRemoveDate(expireTime, Calendar.MONTH, bean.getMonthCount());
             }
@@ -61,6 +64,10 @@ public class RemoveAdCmd extends AbstractUserCmd
             player.getPlayerInfo().setAdExpireTime(expireTime);
 
             player.getSenderModule().sendRes();
+
+            RemoveAdProtoOut.Builder builder = RemoveAdProtoOut.newBuilder();
+            builder.setRemoveAdConfigID(configID);
+            player.sendMessage(UserCmdOutType.REMOVE_AD_RETURN_VALUE, builder);
         }
         catch (Exception e)
         {

@@ -35,7 +35,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 	public boolean add(PlayerInfo playerInfo)
 	{
 		boolean result = false;
-		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`, `BuyAdTime`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.INTEGER,playerInfo.getUserID());
 		params.put(Types.VARCHAR,playerInfo.getPlayerName());
@@ -62,6 +62,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 		params.put(Types.TINYINT,playerInfo.getIsCanUnlockCoinModeByAD());
 		params.put(Types.TIMESTAMP,playerInfo.getLastAdTime());
 		params.put(Types.INTEGER,playerInfo.getAdTriggerCount());
+		params.put(Types.TIMESTAMP,playerInfo.getBuyAdTime());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
 	}
@@ -70,7 +71,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 	public boolean update(PlayerInfo playerInfo)
 	{
 		boolean result = false;
-		String sql = "update t_u_player set `PlayerName`=?, `AccountID`=?, `AccountName`=?, `CreateTime`=?, `LastLoginTime`=?, `Gold`=?, `Diamond`=?, `Money`=?, `HeaderID`=?, `AdExpireTime`=?, `WinCount`=?, `FailCount`=?, `RoleTypes`=?, `Modes`=?, `Theme`=?, `Headers`=?, `TimeTopScore`=?, `RaceTopScore`=?, `EndTopScore`=?, `TopLength`=?, `DonateValue`=?, `isCanUnlockCoinModeByAD`=?, `LastAdTime`=?, `AdTriggerCount`=? where `UserID`=?;";
+		String sql = "update t_u_player set `PlayerName`=?, `AccountID`=?, `AccountName`=?, `CreateTime`=?, `LastLoginTime`=?, `Gold`=?, `Diamond`=?, `Money`=?, `HeaderID`=?, `AdExpireTime`=?, `WinCount`=?, `FailCount`=?, `RoleTypes`=?, `Modes`=?, `Theme`=?, `Headers`=?, `TimeTopScore`=?, `RaceTopScore`=?, `EndTopScore`=?, `TopLength`=?, `DonateValue`=?, `isCanUnlockCoinModeByAD`=?, `LastAdTime`=?, `AdTriggerCount`=?, `BuyAdTime`=? where `UserID`=?;";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.VARCHAR,playerInfo.getPlayerName());
 		params.put(Types.BIGINT,playerInfo.getAccountID());
@@ -96,6 +97,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 		params.put(Types.TINYINT,playerInfo.getIsCanUnlockCoinModeByAD());
 		params.put(Types.TIMESTAMP,playerInfo.getLastAdTime());
 		params.put(Types.INTEGER,playerInfo.getAdTriggerCount());
+		params.put(Types.TIMESTAMP,playerInfo.getBuyAdTime());
 		params.put(Types.INTEGER,playerInfo.getUserID());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
@@ -116,7 +118,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 	public boolean addOrUpdate(PlayerInfo playerInfo)
 	{
 		boolean result = false;
-		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?;";
+		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`, `BuyAdTime`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?,`BuyAdTime`=?;";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.INTEGER,playerInfo.getUserID());
 		params.put(Types.VARCHAR,playerInfo.getPlayerName());
@@ -143,6 +145,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 		params.put(Types.TINYINT,playerInfo.getIsCanUnlockCoinModeByAD());
 		params.put(Types.TIMESTAMP,playerInfo.getLastAdTime());
 		params.put(Types.INTEGER,playerInfo.getAdTriggerCount());
+		params.put(Types.TIMESTAMP,playerInfo.getBuyAdTime());
 		params.put(Types.VARCHAR,playerInfo.getPlayerName());
 		params.put(Types.BIGINT,playerInfo.getAccountID());
 		params.put(Types.VARCHAR,playerInfo.getAccountName());
@@ -167,6 +170,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 		params.put(Types.TINYINT,playerInfo.getIsCanUnlockCoinModeByAD());
 		params.put(Types.TIMESTAMP,playerInfo.getLastAdTime());
 		params.put(Types.INTEGER,playerInfo.getAdTriggerCount());
+		params.put(Types.TIMESTAMP,playerInfo.getBuyAdTime());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
 	}
@@ -204,7 +208,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 	{
 		if (playerInfos == null || playerInfos.isEmpty())
 			return new int[1];
-		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?;";
+		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`, `BuyAdTime`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?,`BuyAdTime`=?;";
 		int[] effectedRows = getDBHelper().sqlBatch(sql, playerInfos, new DataExecutor<int[]>()
 			{
 				@Override
@@ -240,6 +244,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 						params.put(Types.TINYINT,playerInfo.getIsCanUnlockCoinModeByAD());
 						params.put(Types.TIMESTAMP,playerInfo.getLastAdTime());
 						params.put(Types.INTEGER,playerInfo.getAdTriggerCount());
+						params.put(Types.TIMESTAMP,playerInfo.getBuyAdTime());
 						params.put(Types.VARCHAR,playerInfo.getPlayerName());
 						params.put(Types.BIGINT,playerInfo.getAccountID());
 						params.put(Types.VARCHAR,playerInfo.getAccountName());
@@ -264,6 +269,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 						params.put(Types.TINYINT,playerInfo.getIsCanUnlockCoinModeByAD());
 						params.put(Types.TIMESTAMP,playerInfo.getLastAdTime());
 						params.put(Types.INTEGER,playerInfo.getAdTriggerCount());
+						params.put(Types.TIMESTAMP,playerInfo.getBuyAdTime());
 						statement = getDBHelper().prepareCommand(statement,params.getParams());
 						statement.addBatch();
 					}
@@ -326,6 +332,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 		playerInfo.setIsCanUnlockCoinModeByAD(rs.getBoolean("isCanUnlockCoinModeByAD"));
 		playerInfo.setLastAdTime(rs.getTimestamp("LastAdTime"));
 		playerInfo.setAdTriggerCount(rs.getInt("AdTriggerCount"));
+		playerInfo.setBuyAdTime(rs.getTimestamp("BuyAdTime"));
 		return playerInfo;
 	}
 
