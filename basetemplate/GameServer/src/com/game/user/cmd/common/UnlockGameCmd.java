@@ -17,7 +17,7 @@ import com.util.print.LogFactory;
 
 /**
  * 关卡解锁
- * 
+ *
  * @author dream
  *
  */
@@ -31,21 +31,32 @@ public class UnlockGameCmd extends AbstractUserCmd
         {
             GameUnlockProtoIn proto = GameUnlockProtoIn.parseFrom(packet.getBody());
             ModeType type = proto.getGameMode();
+            boolean unlockByAD = proto.getUnLockByAD();
 
             UnlockBean bean = UnlockBeanFactory.getUnlockBean(type.getNumber());
-            if (bean == null)
+            // 非金币模式
+            if (type != ModeType.Coin)
             {
-                player.sendErrorCode(ErrorCodeType.Config_Error, "解锁关卡配置无效");
-                return;
-            }
+                if (bean == null)
+                {
+                    player.sendErrorCode(ErrorCodeType.Config_Error, "解锁关卡配置无效");
+                    return;
+                }
 
-            if (!player.checkResource(bean.getItemID(), bean.getItemCount()))
+                if (!player.checkResource(bean.getItemID(), bean.getItemCount()))
+                {
+                    player.sendErrorCode(ErrorCodeType.Not_Enough_Resource, "资源不足.");
+                    return;
+                }
+
+                player.removeResource(bean.getItemID(), bean.getItemCount());
+            }
+            else
             {
-                player.sendErrorCode(ErrorCodeType.Not_Enough_Resource, "资源不足.");
-                return;
+                // 金币模式可以通过广告解锁
+                if (unlockByAD == false)
+                    return;
             }
-
-            player.removeResource(bean.getItemID(), bean.getItemCount());
 
             player.addGameModeType(type.getNumber());
             String attachs = bean.getAttachModes();

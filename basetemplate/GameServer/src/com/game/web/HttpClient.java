@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.game.web;
 
@@ -11,16 +11,17 @@ import com.util.print.LogFactory;
 
 /**
  * Http请求服务器
+ *
  * @author dream
  *
  */
 public class HttpClient
 {
-    public static int TIME_OUT = 20;
+    public static int TIME_OUT = 30;
 
     /**
      * 请求账号服
-     * 
+     *
      * @param action
      * @param params
      * @return
@@ -57,42 +58,4 @@ public class HttpClient
         return null;
     }
 
-    /**
-     * 请求充值服
-     * 
-     * @param action
-     * @param params
-     * @return
-     */
-    public static String getFromCharge(String action, String params)
-    {
-        String url = "";
-        try
-        {
-            String ip = GlobalConfigComponent.getConfig().server.chargeServerIp;
-            int port = GlobalConfigComponent.getConfig().server.chargeServerPort;
-
-            url = String.format("http://%s:%d/%s?params=%s", ip, port, action, params);
-            Document document = Jsoup.connect(url).timeout(TIME_OUT * 1000).get();
-            if (document == null)
-            {
-                LogFactory.error("HttpClient.getFromCharge Exception.URL:{}", url);
-                return "";
-            }
-
-            String result = document.text();
-            if (result == null || result.isEmpty() || result == "")
-            {
-                LogFactory.error("HttpClient.getFromCharge Return Empty.URL:{}", url);
-            }
-
-            return result;
-        }
-        catch (Exception e)
-        {
-            LogFactory.error("HttpClient：" + url, e);
-        }
-
-        return null;
-    }
 }

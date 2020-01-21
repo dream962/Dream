@@ -35,7 +35,7 @@ public class UserDataDaoImpl extends BaseDao<UserData> implements IUserDataDao
 	public boolean add(UserData userData)
 	{
 		boolean result = false;
-		String sql = "insert into t_p_user(`UserID`, `OpenID`, `UserName`, `RegisterDate`, `LastLoginDate`, `MachineCode`) values(?, ?, ?, ?, ?, ?);";
+		String sql = "insert into t_p_user(`UserID`, `OpenID`, `UserName`, `RegisterDate`, `LastLoginDate`, `MachineCode`, `GName`) values(?, ?, ?, ?, ?, ?, ?);";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.BIGINT,userData.getUserID());
 		params.put(Types.VARCHAR,userData.getOpenID());
@@ -43,6 +43,7 @@ public class UserDataDaoImpl extends BaseDao<UserData> implements IUserDataDao
 		params.put(Types.TIMESTAMP,userData.getRegisterDate());
 		params.put(Types.TIMESTAMP,userData.getLastLoginDate());
 		params.put(Types.VARCHAR,userData.getMachineCode());
+		params.put(Types.VARCHAR,userData.getGName());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
 	}
@@ -51,13 +52,14 @@ public class UserDataDaoImpl extends BaseDao<UserData> implements IUserDataDao
 	public boolean update(UserData userData)
 	{
 		boolean result = false;
-		String sql = "update t_p_user set `OpenID`=?, `UserName`=?, `RegisterDate`=?, `LastLoginDate`=?, `MachineCode`=? where `UserID`=?;";
+		String sql = "update t_p_user set `OpenID`=?, `UserName`=?, `RegisterDate`=?, `LastLoginDate`=?, `MachineCode`=?, `GName`=? where `UserID`=?;";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.VARCHAR,userData.getOpenID());
 		params.put(Types.VARCHAR,userData.getUserName());
 		params.put(Types.TIMESTAMP,userData.getRegisterDate());
 		params.put(Types.TIMESTAMP,userData.getLastLoginDate());
 		params.put(Types.VARCHAR,userData.getMachineCode());
+		params.put(Types.VARCHAR,userData.getGName());
 		params.put(Types.BIGINT,userData.getUserID());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
@@ -78,7 +80,7 @@ public class UserDataDaoImpl extends BaseDao<UserData> implements IUserDataDao
 	public boolean addOrUpdate(UserData userData)
 	{
 		boolean result = false;
-		String sql = "insert into t_p_user(`UserID`, `OpenID`, `UserName`, `RegisterDate`, `LastLoginDate`, `MachineCode`) values(?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `OpenID`=?,`UserName`=?,`RegisterDate`=?,`LastLoginDate`=?,`MachineCode`=?;";
+		String sql = "insert into t_p_user(`UserID`, `OpenID`, `UserName`, `RegisterDate`, `LastLoginDate`, `MachineCode`, `GName`) values(?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `OpenID`=?,`UserName`=?,`RegisterDate`=?,`LastLoginDate`=?,`MachineCode`=?,`GName`=?;";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.BIGINT,userData.getUserID());
 		params.put(Types.VARCHAR,userData.getOpenID());
@@ -86,11 +88,13 @@ public class UserDataDaoImpl extends BaseDao<UserData> implements IUserDataDao
 		params.put(Types.TIMESTAMP,userData.getRegisterDate());
 		params.put(Types.TIMESTAMP,userData.getLastLoginDate());
 		params.put(Types.VARCHAR,userData.getMachineCode());
+		params.put(Types.VARCHAR,userData.getGName());
 		params.put(Types.VARCHAR,userData.getOpenID());
 		params.put(Types.VARCHAR,userData.getUserName());
 		params.put(Types.TIMESTAMP,userData.getRegisterDate());
 		params.put(Types.TIMESTAMP,userData.getLastLoginDate());
 		params.put(Types.VARCHAR,userData.getMachineCode());
+		params.put(Types.VARCHAR,userData.getGName());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
 	}
@@ -128,7 +132,7 @@ public class UserDataDaoImpl extends BaseDao<UserData> implements IUserDataDao
 	{
 		if (userDatas == null || userDatas.isEmpty())
 			return new int[1];
-		String sql = "insert into t_p_user(`UserID`, `OpenID`, `UserName`, `RegisterDate`, `LastLoginDate`, `MachineCode`) values(?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `OpenID`=?,`UserName`=?,`RegisterDate`=?,`LastLoginDate`=?,`MachineCode`=?;";
+		String sql = "insert into t_p_user(`UserID`, `OpenID`, `UserName`, `RegisterDate`, `LastLoginDate`, `MachineCode`, `GName`) values(?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `OpenID`=?,`UserName`=?,`RegisterDate`=?,`LastLoginDate`=?,`MachineCode`=?,`GName`=?;";
 		int[] effectedRows = getDBHelper().sqlBatch(sql, userDatas, new DataExecutor<int[]>()
 			{
 				@Override
@@ -145,11 +149,13 @@ public class UserDataDaoImpl extends BaseDao<UserData> implements IUserDataDao
 						params.put(Types.TIMESTAMP,userData.getRegisterDate());
 						params.put(Types.TIMESTAMP,userData.getLastLoginDate());
 						params.put(Types.VARCHAR,userData.getMachineCode());
+						params.put(Types.VARCHAR,userData.getGName());
 						params.put(Types.VARCHAR,userData.getOpenID());
 						params.put(Types.VARCHAR,userData.getUserName());
 						params.put(Types.TIMESTAMP,userData.getRegisterDate());
 						params.put(Types.TIMESTAMP,userData.getLastLoginDate());
 						params.put(Types.VARCHAR,userData.getMachineCode());
+						params.put(Types.VARCHAR,userData.getGName());
 						statement = getDBHelper().prepareCommand(statement,params.getParams());
 						statement.addBatch();
 					}
@@ -193,6 +199,7 @@ public class UserDataDaoImpl extends BaseDao<UserData> implements IUserDataDao
 		userData.setRegisterDate(rs.getTimestamp("RegisterDate"));
 		userData.setLastLoginDate(rs.getTimestamp("LastLoginDate"));
 		userData.setMachineCode(rs.getString("MachineCode"));
+		userData.setGName(rs.getString("GName"));
 		return userData;
 	}
 

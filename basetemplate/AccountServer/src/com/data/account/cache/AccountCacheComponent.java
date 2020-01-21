@@ -19,7 +19,7 @@ import com.util.print.LogFactory;
 
 /**
  * 缓存管理组件
- * 
+ *
  * @author dream
  */
 public class AccountCacheComponent extends AbstractComponent

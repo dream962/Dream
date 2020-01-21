@@ -273,45 +273,37 @@ public class PVPGame extends AbstractGame
         }
 
         // 胜利者更新数据
-        for (Player player : players)
-        {
-            if (player.isSuccess())
-                player.getGamePlayer().onGameOver(modeType, 1, diamond, donut);
-            else
-                player.getGamePlayer().onGameOver(modeType, 0, 0, 0);
-        }
+        if (winner != null)
+            winner.getGamePlayer().onGameOver(modeType, 1, diamond, donut);
+        if (loser != null)
+            loser.getGamePlayer().onGameOver(modeType, 0, 0, 0);
 
         // 同步消息
         for (Player player : players)
         {
             GameOverProtoOut.Builder builder = GameOverProtoOut.newBuilder();
-
-            if (player.isSuccess())
-            {
-                builder.setIsWin(true);
-            }
-            else
-            {
-                builder.setIsWin(false);
-            }
-
             builder.setPlayerWinCount(player.getGamePlayer().getRoomModule().getWinCount());
-            boolean isSet = false;
-            for (Player e : players)
-            {
-                if (e.getPlayerID() != player.getPlayerID())
-                {
-                    isSet = true;
-                    builder.setEnemyWinCount(e.getGamePlayer().getRoomModule().getWinCount());
-                }
-            }
-
-            // 防止中途退出,只剩一个玩家而没有设置值
-            if (isSet == false)
-                builder.setEnemyWinCount(0);
-
             builder.setWinnerGetDiamondCount(diamond);
             builder.setWinnerGetDonutCount(donut);
+
+            if (player == winner)
+            {
+                builder.setIsWin(true);
+                if (loser != null)
+                    builder.setEnemyWinCount(loser.getGamePlayer().getRoomModule().getWinCount());
+                else
+                    builder.setEnemyWinCount(0);
+            }
+
+            if (player == loser)
+            {
+                builder.setIsWin(false);
+
+                if (winner != null)
+                    builder.setEnemyWinCount(winner.getGamePlayer().getRoomModule().getWinCount());
+                else
+                    builder.setEnemyWinCount(0);
+            }
 
             player.sendMessage(builder, UserCmdOutType.GAME_OVER_VALUE);
         }

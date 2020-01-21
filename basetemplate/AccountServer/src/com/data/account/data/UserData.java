@@ -41,6 +41,11 @@ public final class UserData extends ChangedObject
 	 */
 	private String machineCode;
 
+	/**
+	 * 绑定的GName
+	 */
+	private String gName;
+
 
     public UserData()
     {
@@ -222,6 +227,37 @@ public final class UserData extends ChangedObject
 		}
 	}
 
+	/**
+	 * 绑定的GName
+	 */
+	public String getGName()
+	{
+		return gName;
+	}
+
+	/**
+	 * 绑定的GName
+	 */
+	public void setGName(String gName)
+	{
+		if(gName != null)
+		{
+			if(!gName.equals(this.gName))
+			{
+				this.gName = gName;
+				setChanged(true);
+			}
+		}
+		else
+		{
+			if(gName != this.gName)
+			{
+				this.gName = gName;
+				setChanged(true);
+			}
+		}
+	}
+
 
 	/**
 	 * x.clone() != x
@@ -235,6 +271,7 @@ public final class UserData extends ChangedObject
 		clone.setRegisterDate(this.getRegisterDate());
 		clone.setLastLoginDate(this.getLastLoginDate());
 		clone.setMachineCode(this.getMachineCode());
+		clone.setGName(this.getGName());
 		return clone;
 	}
 
@@ -249,6 +286,7 @@ public final class UserData extends ChangedObject
 		this.setRegisterDate(info.getRegisterDate());
 		this.setLastLoginDate(info.getLastLoginDate());
 		this.setMachineCode(info.getMachineCode());
+		this.setGName(info.getGName());
 	}
 
 }

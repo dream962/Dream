@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.account.servlet;
 
@@ -24,7 +24,7 @@ import com.util.TokenUtil;
 
 /**
  * 创建注册账号
- * 
+ *
  * @author dream
  *
  */
@@ -35,7 +35,7 @@ public class LoginAccountServlet extends PlayerHandlerServlet
 
     public static class RequestInfo
     {
-        public String name;
+        public String name;// openID->gName;machineCode->UserName
         public String openID;
         public String machinecode;
     }
@@ -78,7 +78,8 @@ public class LoginAccountServlet extends PlayerHandlerServlet
             }
         }
 
-        if (userInfo == null)
+        // 自定义名字注册的判断名字是否重复
+        if (userInfo == null || StringUtil.isNullOrEmpty(requestInfo.openID))
         {
             boolean isUserNameUsed = AccountCacheComponent.getCacheUser().checkUserName(requestInfo.name);
             if (isUserNameUsed)
@@ -122,7 +123,8 @@ public class LoginAccountServlet extends PlayerHandlerServlet
         res.name = requestInfo.name;
         res.error = "success";
 
-        System.err.println("account:" + res.name + "," + requestInfo.openID + ",userID:" + userInfo.getUserID() + ",machineCode:" + userInfo.getMachineCode());
+        System.err.println("account:" + res.name + "," + requestInfo.openID + ",userID:" + userInfo.getUserID() + ",machineCode:"
+                + userInfo.getMachineCode());
 
         String msg = gson.toJson(res);
         return gson.toJson(new RetInfo(ErrorCodeType.Success, "", msg));

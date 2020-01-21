@@ -17,7 +17,7 @@ message BindAccountProtoIn
 	required string name = 1;           //玩家自定义的名字
 	required string machinecode = 2;    //本机的机器码
 	required string googleName = 3;     //谷歌上的名字
-	required string openID = 4;         //谷歌账号的唯一识别吗
+	required string openID = 4;         //谷歌账号的唯一识别码
 }
 
 
@@ -81,8 +81,6 @@ message GameUnlockProtoIn
 {
 	required ModeType gameMode = 1;              //解锁的游戏类型
 	required bool unLockByAD = 2;               //通过广告解锁，只有金币模式才用到
-	//required int32 consumeItmeID = 2;            //解锁的消耗物品ID
-	//required int32 consumeCount = 3;             //解锁的消耗物品个数
 }
 
 /* 捐献物品*/

@@ -286,6 +286,7 @@ public final class CachePublicUser extends AbstractCache
         return true;
     }
 
+    @Override
     public boolean reload(long userID)
     {
         String key = String.format(KEY_USER, userID);
@@ -299,17 +300,17 @@ public final class CachePublicUser extends AbstractCache
         return true;
     }
 
-    public UserData getUserInfoByName(String userName, String openID)
+    public UserData getUserInfoByName(String gName, String openID)
     {
-        String key = String.format(KEY_NAME, userName + "-openid-" + openID);
+        String key = String.format(KEY_NAME, gName + "-openid-" + openID);
         RedisClient client = getRedisClient();
         Long userID = client.get(key, Long.class);
         if (userID == null)
         {
             DBParamWrapper param = new DBParamWrapper();
-            param.put(userName);
+            param.put(gName);
             param.put(openID);
-            userID = UserDataFactory.getDao().queryOneColumnDataOne("select UserID from t_p_user where `UserName`=? And `OpenID`=?;", param);
+            userID = UserDataFactory.getDao().queryOneColumnDataOne("select UserID from t_p_user where `GName`=? And `OpenID`=?;", param);
             if (null != userID && userID > 0)
             {
                 client.set(key, userID);
@@ -324,6 +325,13 @@ public final class CachePublicUser extends AbstractCache
         }
         else
             return null;
+    }
+
+    public void updateUserGName(String gName, String openID, long userID)
+    {
+        String key = String.format(KEY_NAME, gName + "-openid-" + openID);
+        RedisClient client = getRedisClient();
+        client.set(key, userID);
     }
 
     public UserData getUserInfoByNameTest(String userName)
@@ -351,7 +359,8 @@ public final class CachePublicUser extends AbstractCache
             DBParamWrapper param = new DBParamWrapper();
             param.put(userName);
             param.put(machineCode);
-            userID = UserDataFactory.getDao().queryOneColumnDataOne("select UserID from t_p_user where `UserName`=? And `MachineCode`=?;", param);
+            userID = UserDataFactory.getDao().queryOneColumnDataOne("select UserID from t_p_user where `UserName`=? And `MachineCode`=?;",
+                    param);
             if (null != userID && userID > 0)
             {
                 client.set(key, userID);

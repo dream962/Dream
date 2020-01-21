@@ -8,7 +8,9 @@ import com.data.bean.factory.ExchangeBeanFactory;
 import com.game.object.player.GamePlayer;
 import com.game.user.cmd.AbstractUserCmd;
 import com.proto.command.UserCmdType.UserCmdInType;
+import com.proto.command.UserCmdType.UserCmdOutType;
 import com.proto.user.gen.UserInMsg.ExchangeItemProtoIn;
+import com.proto.user.gen.UserOutMsg.ExchangeItemProtoOut;
 import com.util.print.LogFactory;
 
 @ICode(code = UserCmdInType.EXCHANGE_ITEM_VALUE)
@@ -39,6 +41,12 @@ public class ExchangeItemCmd extends AbstractUserCmd
             player.addResource(bean.getTargetItemID(), bean.getTargetItemCount());
 
             player.getSenderModule().sendRes();
+
+            ExchangeItemProtoOut.Builder builder = ExchangeItemProtoOut.newBuilder();
+            builder.setItemCount(bean.getTargetItemCount());
+            builder.setItemID(bean.getTargetItemID());
+
+            player.sendMessage(UserCmdOutType.EXCHANGE_ITEM_RETURN_VALUE, builder);
         }
         catch (Exception e)
         {
