@@ -1,0 +1,14 @@
+1543306352556	Copy compilation unit
+1543310790707	Copy compilation unit
+1543375106214	Copy compilation unit
+1543375777595	Rename field 'fields'
+1543375814456	Rename field 'viewAreaList'
+1543405319827	Rename field 'viewFieldList'
+1543408209746	Rename method 'init'
+1543408268126	Rename method 'init'
+1543456385271	Rename type 'WorldView'
+1543458377126	Rename method 'initView'
+1543461838688	Copy compilation unit
+1543563532499	Rename local variable 'scenePlayer'
+1543569534247	Rename method 'getViewFieldList'
+1543569539412	Rename method 'getViewAreaList'

@@ -1,0 +1,49 @@
+package com.game.scene.city;
+
+import java.util.Date;
+
+import com.data.bean.CityBean;
+import com.data.info.CityInfo;
+import com.game.scene.ScenePlayer;
+
+/**
+ * 世界地图上的城池
+ * 
+ * @author dream
+ *
+ */
+public class BaseCity extends AbstractCity
+{
+    
+    
+    public BaseCity(ScenePlayer player, CityInfo cityInfo,CityBean bean)
+    {
+        super(player, cityInfo,bean);
+    }
+
+    @Override
+    public boolean init()
+    {
+        // 计算城防恢复值
+        if (getCityHP() < getCityMaxHp())
+        {
+            int count = (int) ((new Date().getTime() - cityInfo.getCityHPTime().getTime()) / 1000 / getCityBean().getRecoverTime());
+            cityInfo.setCityHPTime(new Date());
+            int hp = (int) (getCityBean().getRecoverPercent() * getCityBean().getCityHP() * count);
+            addHP(hp);
+        }
+        return true;
+    }
+
+    @Override
+    public void update(long time)
+    {
+        // 恢复城防值
+        if (getCityHP() < getCityMaxHp() && (time - cityInfo.getCityHPTime().getTime()) / 1000 >= getCityBean().getRecoverTime())
+        {
+            cityInfo.setCityHPTime(new Date());
+            int hp = (int) (getCityBean().getRecoverPercent() * getCityBean().getCityHP());
+            addHP(hp);
+        }
+    }
+}

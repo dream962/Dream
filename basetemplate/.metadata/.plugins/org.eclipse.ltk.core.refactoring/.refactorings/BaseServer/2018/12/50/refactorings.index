@@ -1,0 +1,5 @@
+1544428689871	Rename enum constant 'Scene_Field_Not_Open'
+1544669906498	Rename method 'setClientConnection'
+1544669919609	Rename method 'getClientConnection'
+1544671247789	Rename method 'setMainClient'
+1544671275599	Rename method 'getMainClient'

@@ -1,0 +1,5 @@
+1544669408263	Rename method 'setTcpClient'
+1544669492494	Rename method 'getTcpClient'
+1544682043947	Rename type 'GamePlayerCmdQueueModule'
+1544685506971	Rename method 'getPlayerBattleModule'
+1544687672890	Delete element

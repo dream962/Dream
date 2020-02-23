@@ -45,9 +45,10 @@ public class LoginCmd extends AbstractUserCmd
 
     /**
      * 玩家登陆时的处理方法
-     * 
+     *
      * @param
      */
+    @Override
     public void executeConnect(IClientConnection conn, CommonMessage packet)
     {
         try
@@ -142,7 +143,7 @@ public class LoginCmd extends AbstractUserCmd
                 playerInfo.setWinCount(0);
                 playerInfo.setFailCount(0);
                 playerInfo.setHeaderID(0);
-                playerInfo.setIsCanUnlockCoinModeByAD(false);
+                playerInfo.setIsCanUnlockCoinModeByAD(true);
 
                 PlayerBusiness.addOrUpdatePlayer(playerInfo);
             }
@@ -213,7 +214,7 @@ public class LoginCmd extends AbstractUserCmd
 
     /**
      * 更新玩家的加解密密钥
-     * 
+     *
      * @param newKey
      *            新密钥
      */

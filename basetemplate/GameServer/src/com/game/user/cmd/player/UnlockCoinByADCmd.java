@@ -21,7 +21,7 @@ public class UnlockCoinByADCmd extends AbstractUserCmd
     {
         try
         {
-            player.getPlayerInfo().setIsCanUnlockCoinModeByAD(true);
+            player.getPlayerInfo().setIsCanUnlockCoinModeByAD(false);
             player.getSenderModule().sendRes();
         }
         catch (Exception e)

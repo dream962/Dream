@@ -1037,7 +1037,7 @@ public final class UserInMsg {
      * <code>required string openID = 4;</code>
      *
      * <pre>
-     *谷歌账号的唯一识别吗
+     *谷歌账号的唯一识别码
      * </pre>
      */
     boolean hasOpenID();
@@ -1045,7 +1045,7 @@ public final class UserInMsg {
      * <code>required string openID = 4;</code>
      *
      * <pre>
-     *谷歌账号的唯一识别吗
+     *谷歌账号的唯一识别码
      * </pre>
      */
     java.lang.String getOpenID();
@@ -1053,7 +1053,7 @@ public final class UserInMsg {
      * <code>required string openID = 4;</code>
      *
      * <pre>
-     *谷歌账号的唯一识别吗
+     *谷歌账号的唯一识别码
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -1346,7 +1346,7 @@ public final class UserInMsg {
      * <code>required string openID = 4;</code>
      *
      * <pre>
-     *谷歌账号的唯一识别吗
+     *谷歌账号的唯一识别码
      * </pre>
      */
     public boolean hasOpenID() {
@@ -1356,7 +1356,7 @@ public final class UserInMsg {
      * <code>required string openID = 4;</code>
      *
      * <pre>
-     *谷歌账号的唯一识别吗
+     *谷歌账号的唯一识别码
      * </pre>
      */
     public java.lang.String getOpenID() {
@@ -1377,7 +1377,7 @@ public final class UserInMsg {
      * <code>required string openID = 4;</code>
      *
      * <pre>
-     *谷歌账号的唯一识别吗
+     *谷歌账号的唯一识别码
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -2016,7 +2016,7 @@ public final class UserInMsg {
        * <code>required string openID = 4;</code>
        *
        * <pre>
-       *谷歌账号的唯一识别吗
+       *谷歌账号的唯一识别码
        * </pre>
        */
       public boolean hasOpenID() {
@@ -2026,7 +2026,7 @@ public final class UserInMsg {
        * <code>required string openID = 4;</code>
        *
        * <pre>
-       *谷歌账号的唯一识别吗
+       *谷歌账号的唯一识别码
        * </pre>
        */
       public java.lang.String getOpenID() {
@@ -2044,7 +2044,7 @@ public final class UserInMsg {
        * <code>required string openID = 4;</code>
        *
        * <pre>
-       *谷歌账号的唯一识别吗
+       *谷歌账号的唯一识别码
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -2064,7 +2064,7 @@ public final class UserInMsg {
        * <code>required string openID = 4;</code>
        *
        * <pre>
-       *谷歌账号的唯一识别吗
+       *谷歌账号的唯一识别码
        * </pre>
        */
       public Builder setOpenID(
@@ -2081,7 +2081,7 @@ public final class UserInMsg {
        * <code>required string openID = 4;</code>
        *
        * <pre>
-       *谷歌账号的唯一识别吗
+       *谷歌账号的唯一识别码
        * </pre>
        */
       public Builder clearOpenID() {
@@ -2094,7 +2094,7 @@ public final class UserInMsg {
        * <code>required string openID = 4;</code>
        *
        * <pre>
-       *谷歌账号的唯一识别吗
+       *谷歌账号的唯一识别码
        * </pre>
        */
       public Builder setOpenIDBytes(
@@ -6796,9 +6796,9 @@ public final class UserInMsg {
   public interface GameUnlockProtoInOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .ModeType gameMode = 1;
+    // optional .ModeType gameMode = 1;
     /**
-     * <code>required .ModeType gameMode = 1;</code>
+     * <code>optional .ModeType gameMode = 1;</code>
      *
      * <pre>
      *解锁的游戏类型
@@ -6806,7 +6806,7 @@ public final class UserInMsg {
      */
     boolean hasGameMode();
     /**
-     * <code>required .ModeType gameMode = 1;</code>
+     * <code>optional .ModeType gameMode = 1;</code>
      *
      * <pre>
      *解锁的游戏类型
@@ -6814,9 +6814,9 @@ public final class UserInMsg {
      */
     com.proto.common.gen.CommonOutMsg.ModeType getGameMode();
 
-    // required bool unLockByAD = 2;
+    // optional bool unLockByAD = 2;
     /**
-     * <code>required bool unLockByAD = 2;</code>
+     * <code>optional bool unLockByAD = 2;</code>
      *
      * <pre>
      *通过广告解锁，只有金币模式才用到
@@ -6824,7 +6824,7 @@ public final class UserInMsg {
      */
     boolean hasUnLockByAD();
     /**
-     * <code>required bool unLockByAD = 2;</code>
+     * <code>optional bool unLockByAD = 2;</code>
      *
      * <pre>
      *通过广告解锁，只有金币模式才用到
@@ -6943,11 +6943,11 @@ public final class UserInMsg {
     }
 
     private int bitField0_;
-    // required .ModeType gameMode = 1;
+    // optional .ModeType gameMode = 1;
     public static final int GAMEMODE_FIELD_NUMBER = 1;
     private com.proto.common.gen.CommonOutMsg.ModeType gameMode_;
     /**
-     * <code>required .ModeType gameMode = 1;</code>
+     * <code>optional .ModeType gameMode = 1;</code>
      *
      * <pre>
      *解锁的游戏类型
@@ -6957,7 +6957,7 @@ public final class UserInMsg {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .ModeType gameMode = 1;</code>
+     * <code>optional .ModeType gameMode = 1;</code>
      *
      * <pre>
      *解锁的游戏类型
@@ -6967,11 +6967,11 @@ public final class UserInMsg {
       return gameMode_;
     }
 
-    // required bool unLockByAD = 2;
+    // optional bool unLockByAD = 2;
     public static final int UNLOCKBYAD_FIELD_NUMBER = 2;
     private boolean unLockByAD_;
     /**
-     * <code>required bool unLockByAD = 2;</code>
+     * <code>optional bool unLockByAD = 2;</code>
      *
      * <pre>
      *通过广告解锁，只有金币模式才用到
@@ -6981,7 +6981,7 @@ public final class UserInMsg {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required bool unLockByAD = 2;</code>
+     * <code>optional bool unLockByAD = 2;</code>
      *
      * <pre>
      *通过广告解锁，只有金币模式才用到
@@ -7000,14 +7000,6 @@ public final class UserInMsg {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
-      if (!hasGameMode()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasUnLockByAD()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -7225,14 +7217,6 @@ public final class UserInMsg {
       }
 
       public final boolean isInitialized() {
-        if (!hasGameMode()) {
-          
-          return false;
-        }
-        if (!hasUnLockByAD()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -7255,10 +7239,10 @@ public final class UserInMsg {
       }
       private int bitField0_;
 
-      // required .ModeType gameMode = 1;
+      // optional .ModeType gameMode = 1;
       private com.proto.common.gen.CommonOutMsg.ModeType gameMode_ = com.proto.common.gen.CommonOutMsg.ModeType.NormalMode;
       /**
-       * <code>required .ModeType gameMode = 1;</code>
+       * <code>optional .ModeType gameMode = 1;</code>
        *
        * <pre>
        *解锁的游戏类型
@@ -7268,7 +7252,7 @@ public final class UserInMsg {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .ModeType gameMode = 1;</code>
+       * <code>optional .ModeType gameMode = 1;</code>
        *
        * <pre>
        *解锁的游戏类型
@@ -7278,7 +7262,7 @@ public final class UserInMsg {
         return gameMode_;
       }
       /**
-       * <code>required .ModeType gameMode = 1;</code>
+       * <code>optional .ModeType gameMode = 1;</code>
        *
        * <pre>
        *解锁的游戏类型
@@ -7294,7 +7278,7 @@ public final class UserInMsg {
         return this;
       }
       /**
-       * <code>required .ModeType gameMode = 1;</code>
+       * <code>optional .ModeType gameMode = 1;</code>
        *
        * <pre>
        *解锁的游戏类型
@@ -7307,10 +7291,10 @@ public final class UserInMsg {
         return this;
       }
 
-      // required bool unLockByAD = 2;
+      // optional bool unLockByAD = 2;
       private boolean unLockByAD_ ;
       /**
-       * <code>required bool unLockByAD = 2;</code>
+       * <code>optional bool unLockByAD = 2;</code>
        *
        * <pre>
        *通过广告解锁，只有金币模式才用到
@@ -7320,7 +7304,7 @@ public final class UserInMsg {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required bool unLockByAD = 2;</code>
+       * <code>optional bool unLockByAD = 2;</code>
        *
        * <pre>
        *通过广告解锁，只有金币模式才用到
@@ -7330,7 +7314,7 @@ public final class UserInMsg {
         return unLockByAD_;
       }
       /**
-       * <code>required bool unLockByAD = 2;</code>
+       * <code>optional bool unLockByAD = 2;</code>
        *
        * <pre>
        *通过广告解锁，只有金币模式才用到
@@ -7343,7 +7327,7 @@ public final class UserInMsg {
         return this;
       }
       /**
-       * <code>required bool unLockByAD = 2;</code>
+       * <code>optional bool unLockByAD = 2;</code>
        *
        * <pre>
        *通过广告解锁，只有金币模式才用到
@@ -14685,8 +14669,8 @@ public final class UserInMsg {
       "argeProtoIn\022\030\n\020rechargeConfigID\030\001 \001(\005\"R\n" +
       "\025RechargeVerifyProtoIn\022\017\n\007orderID\030\001 \002(\t\022" +
       "\021\n\tproductID\030\002 \002(\t\022\025\n\rpurchaseToken\030\003 \002(" +
-      "\t\"D\n\021GameUnlockProtoIn\022\033\n\010gameMode\030\001 \002(\016" +
-      "2\t.ModeType\022\022\n\nunLockByAD\030\002 \002(\010\"_\n\021Donat" +
+      "\t\"D\n\021GameUnlockProtoIn\022\033\n\010gameMode\030\001 \001(\016" +
+      "2\t.ModeType\022\022\n\nunLockByAD\030\002 \001(\010\"_\n\021Donat" +
       "eItemProtoIn\022\016\n\006itemID\030\001 \002(\005\022\021\n\titemCoun",
       "t\030\002 \002(\005\022\022\n\nbyAdDonate\030\003 \002(\010\022\023\n\013consumeTy" +
       "pe\030\004 \002(\005\"/\n\023ExchangeItemProtoIn\022\030\n\020excha" +

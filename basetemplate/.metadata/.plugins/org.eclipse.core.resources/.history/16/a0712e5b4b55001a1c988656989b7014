@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="deploy-all" name="daomu2" basedir="../.">
+	<!-- <project default="deploy-all" name="daomu2" basedir="../."> -->
+	<description>
+		维护工具自动编译打包脚本
+	</description>
+	<!-- 注意：使用该脚本时，需要自行更改 的属性: 1. myhost改为你的ip地址. -->
+	<echo>start to build uploadServer...</echo>
+	<echo>${basedir}</echo>
+
+	<!-- 清除已生成的旧版本文件 -->
+	<target name="clean">
+		<delete dir="${app-out}" />
+		<delete dir="${lib-out}" />
+		<delete dir="${lib-out-min}" />
+	</target>
+
+	<!--发布变量设置-->
+	<property name="project-name" value="dm2" />
+	<property name="myhost" value="192.168.1.53" />
+	<property name="inner-host" value="192.168.1.97" />
+	<property name="host" value="192.168.1.97" />
+	<property name="port" value="22" />
+	<property name="resourcehost" value="192.168.1.97" />
+	<property name="user" value="root" />
+	<property name="password" value="1234567" />
+
+	<!--定义相关编译变量-->
+	<property name="is-debug" value="on" />
+	<property name="java-version" value="1.8" />
+	<property name="app-version" value="1.0" />
+	<property name="webapp-version" value="1.0" />
+	<property name="exclude-svn" value="**/*.svn/*.*,servlet-api.jar" />
+	<property name="exclude-local" value="*.propertieslocal" />
+
+	<!--输入变量定义-->
+	<property name="config" value="${basedir}/ManagerServer/config" />
+	<property name="libs" value="${basedir}/ManagerServer/lib" />
+
+	<property name="uploadserver" value="${basedir}/ManagerServer" />
+
+	<!--定义最终文件输出路径-->
+	<property name="lib-out" value="${basedir}/deploy/lib" />
+	<property name="lib-out-min" value="${basedir}/deploy/lib-min" />
+	<property name="app-out" value="${basedir}/deploy/app" />
+	<property name="uploadserver-out" value="${app-out}/managerserver" />
+	<property name="uploadserver-out-min" value="${app-out}/managerserver-min" />
+
+	<path id="lib-out">
+		<fileset dir="${basedir}/deploy/lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- 自动上传设置 -->
+	<property name="ftpserverdir" value="/root/daomu2/servers" />
+	<property name="uploadserverdir" value="${host}:${ftpserverdir}/uploadserver" />
+
+	<!-- 创建部署文件所需路径 -->
+	<target name="init" depends="clean">
+		<mkdir dir="${lib-out}" />
+		<mkdir dir="${lib-out-min}" />
+		<mkdir dir="${app-out}" />
+		<mkdir dir="${app-out}/config" />
+
+		<!-- UploadServer -->
+		<mkdir dir="${uploadserver-out}" />
+		<mkdir dir="${uploadserver-out}/lib" />
+		<mkdir dir="${uploadserver-out}/web" />
+		<mkdir dir="${uploadserver-out}/config" />
+	</target>
+
+	<!-- 打包基础组件 -->
+	<target name="deploy-basic" depends="init">
+		<copydir src="${libs}" dest="${lib-out}" />
+		<copydir src="${uploadserver}/config" dest="${uploadserver-out}/config" excludes="upload.xml" />
+		<copy file="${uploadserver}/config/config.xml" tofile="${app-out}/config/config.xml" overwrite="true" />
+	</target>
+
+	<!-- 编译UploadServer -->
+	<target name="compile-uploadserver" depends="deploy-basic">
+		<javac encoding="utf-8" includeAntRuntime="false" srcdir="${uploadserver}/src" destdir="${uploadserver}/bin" source="${java-version}" target="${java-version}" debug="${is-debug}">
+			<classpath refid="lib-out" />
+		</javac>
+	</target>
+
+	<!-- 打包UploadServer -->
+	<target name="deploy-uploadserver" depends="compile-uploadserver">
+		<copydir src="${lib-out}" dest="${uploadserver-out}/lib" excludes="${exclude-svn}" />
+		<!-- <copydir src="${commonservice}/lib" dest="${uploadserver-out}/lib" excludes="${exclude-svn}" /> -->
+		<copy file="${app-out}/config/upload.xml" todir="${uploadserver-out}/" />
+		<replace file="${uploadserver-out}/upload.xml" token="${myhost}" value="${host}" />
+
+		<copy file="${uploadserver}/sh/uploadserver.sh" todir="${uploadserver-out}/" />
+		<copydir src="${uploadserver}/web" dest="${uploadserver-out}/web" excludes="${exclude-svn}" />
+
+		<replace file="${uploadserver-out}/upload.xml" token="D:\\develop\\work\\fight\\UploadServer\\web" value="/root/daomu2/servers/uploadserver/web" />
+		<replace file="${uploadserver-out}/upload.xml" token="192.168.1.97" value="192.168.1.97" />
+		<jar basedir="${uploadserver}/bin" destfile="${uploadserver-out}/${project-name}_uploadserver_${app-version}.jar">
+			<manifest>
+				<attribute name="Main-Class" value="com.upload.UploadServer" />
+			</manifest>
+		</jar>
+	</target>
+
+	<!--deploy-all -->
+	<target name="deploy-all" depends="deploy-uploadserver">
+	</target>
+
+</project>

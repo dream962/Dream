@@ -1,0 +1,22 @@
+1568634611236	Delete element
+1568634612518	Delete element
+1568635483608	Rename type 'MapComponent'
+1568636099711	Rename method 'SpawnPlatform'
+1568636118804	Rename method 'RandomPlatformType'
+1568636127052	Rename method 'CalculateNextPlatformPos'
+1568636134399	Rename method 'CalculateNextSpikeDirePlatformPos'
+1568636141917	Rename method 'AddPlatformInfo'
+1568685394982	Delete element
+1568699505930	Rename local variable 'playerID'
+1568700150258	Copy compilation unit
+1568700174580	Rename type 'GameStepCmd'
+1568700661903	Copy compilation unit
+1568704201352	Copy compilation unit
+1568707637003	Rename type 'RoomStartCmd'
+1568711563433	Copy compilation unit
+1568711567708	Delete element
+1568711569328	Delete element
+1568712865848	Delete element
+1568712923019	Rename type 'UserBuyCmd'
+1568791990848	Copy compilation unit
+1568792009007	Copy compilation unit

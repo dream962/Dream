@@ -210,13 +210,21 @@ public final class UserCmdType {
      */
     CHANGE_ROLE_TYPE(23, 27),
     /**
+     * <code>EXIT_BOUT = 28;</code>
+     *
+     * <pre>
+     *退出回合                            空
+     * </pre>
+     */
+    EXIT_BOUT(24, 28),
+    /**
      * <code>CHEAT_ADD_ITEM = 1000;</code>
      *
      * <pre>
      *作弊协议，添加物品                   CheatAddItemProtoIn
      * </pre>
      */
-    CHEAT_ADD_ITEM(24, 1000),
+    CHEAT_ADD_ITEM(25, 1000),
     /**
      * <code>LOAD_FINISHI = 10001;</code>
      *
@@ -224,7 +232,7 @@ public final class UserCmdType {
      *场景加载完毕         					空
      * </pre>
      */
-    LOAD_FINISHI(25, 10001),
+    LOAD_FINISHI(26, 10001),
     /**
      * <code>USER_JUMP = 10003;</code>
      *
@@ -232,7 +240,7 @@ public final class UserCmdType {
      *上发我方跳动            				PlayerJumpProtoIn
      * </pre>
      */
-    USER_JUMP(26, 10003),
+    USER_JUMP(27, 10003),
     /**
      * <code>USER_KILL = 10005;</code>
      *
@@ -240,7 +248,7 @@ public final class UserCmdType {
      *上发我方中途死亡     					PlayerBeKillProtoIn
      * </pre>
      */
-    USER_KILL(27, 10005),
+    USER_KILL(28, 10005),
     /**
      * <code>USER_SURRENDER = 10006;</code>
      *
@@ -248,15 +256,7 @@ public final class UserCmdType {
      *上发我方投降认输                      空
      * </pre>
      */
-    USER_SURRENDER(28, 10006),
-    /**
-     * <code>EXIT_BOUT = 10010;</code>
-     *
-     * <pre>
-     *退出回合                              空
-     * </pre>
-     */
-    EXIT_BOUT(29, 10010),
+    USER_SURRENDER(29, 10006),
     /**
      * <code>GET_ROOM_LIST = 10020;</code>
      *
@@ -508,6 +508,14 @@ public final class UserCmdType {
      */
     public static final int CHANGE_ROLE_TYPE_VALUE = 27;
     /**
+     * <code>EXIT_BOUT = 28;</code>
+     *
+     * <pre>
+     *退出回合                            空
+     * </pre>
+     */
+    public static final int EXIT_BOUT_VALUE = 28;
+    /**
      * <code>CHEAT_ADD_ITEM = 1000;</code>
      *
      * <pre>
@@ -547,14 +555,6 @@ public final class UserCmdType {
      * </pre>
      */
     public static final int USER_SURRENDER_VALUE = 10006;
-    /**
-     * <code>EXIT_BOUT = 10010;</code>
-     *
-     * <pre>
-     *退出回合                              空
-     * </pre>
-     */
-    public static final int EXIT_BOUT_VALUE = 10010;
     /**
      * <code>GET_ROOM_LIST = 10020;</code>
      *
@@ -641,12 +641,12 @@ public final class UserCmdType {
         case 25: return RECHARGE_VERIFY;
         case 26: return BIND_ACCOUNT;
         case 27: return CHANGE_ROLE_TYPE;
+        case 28: return EXIT_BOUT;
         case 1000: return CHEAT_ADD_ITEM;
         case 10001: return LOAD_FINISHI;
         case 10003: return USER_JUMP;
         case 10005: return USER_KILL;
         case 10006: return USER_SURRENDER;
-        case 10010: return EXIT_BOUT;
         case 10020: return GET_ROOM_LIST;
         case 10021: return CREATE_ROOM;
         case 10022: return JOIN_ROOM;
@@ -883,13 +883,21 @@ public final class UserCmdType {
      */
     CHANGE_ROLETYPE_RETURN(20, 24),
     /**
+     * <code>EXIT_BOUT_RETURN = 25;</code>
+     *
+     * <pre>
+     *退出回合                            	  ExitBoutProtoOut
+     * </pre>
+     */
+    EXIT_BOUT_RETURN(21, 25),
+    /**
      * <code>ERROR_CODE_RETURN = 1000;</code>
      *
      * <pre>
      *错误码                              ErrorCodeProtoOut
      * </pre>
      */
-    ERROR_CODE_RETURN(21, 1000),
+    ERROR_CODE_RETURN(22, 1000),
     /**
      * <code>START_GAME = 10002;</code>
      *
@@ -897,7 +905,7 @@ public final class UserCmdType {
      *开始游戏                            空
      * </pre>
      */
-    START_GAME(22, 10002),
+    START_GAME(23, 10002),
     /**
      * <code>ENEMY_JUMP = 10004;</code>
      *
@@ -905,7 +913,7 @@ public final class UserCmdType {
      *下行敌方跳动                     	  EnemyJumpProtoOut
      * </pre>
      */
-    ENEMY_JUMP(23, 10004),
+    ENEMY_JUMP(24, 10004),
     /**
      * <code>ENEMY_KILL = 10006;</code>
      *
@@ -913,7 +921,7 @@ public final class UserCmdType {
      *下行敌方中途死亡              	  EnemyBeKillProtoOut
      * </pre>
      */
-    ENEMY_KILL(24, 10006),
+    ENEMY_KILL(25, 10006),
     /**
      * <code>GAME_OVER = 10008;</code>
      *
@@ -921,15 +929,7 @@ public final class UserCmdType {
      *游戏结果                            GameOverProtoOut
      * </pre>
      */
-    GAME_OVER(25, 10008),
-    /**
-     * <code>EXIT_BOUT_RETURN = 10010;</code>
-     *
-     * <pre>
-     *退出回合                            空
-     * </pre>
-     */
-    EXIT_BOUT_RETURN(26, 10010),
+    GAME_OVER(26, 10008),
     /**
      * <code>GET_ROOM_LIST_RETURN = 10020;</code>
      *
@@ -1149,6 +1149,14 @@ public final class UserCmdType {
      */
     public static final int CHANGE_ROLETYPE_RETURN_VALUE = 24;
     /**
+     * <code>EXIT_BOUT_RETURN = 25;</code>
+     *
+     * <pre>
+     *退出回合                            	  ExitBoutProtoOut
+     * </pre>
+     */
+    public static final int EXIT_BOUT_RETURN_VALUE = 25;
+    /**
      * <code>ERROR_CODE_RETURN = 1000;</code>
      *
      * <pre>
@@ -1188,14 +1196,6 @@ public final class UserCmdType {
      * </pre>
      */
     public static final int GAME_OVER_VALUE = 10008;
-    /**
-     * <code>EXIT_BOUT_RETURN = 10010;</code>
-     *
-     * <pre>
-     *退出回合                            空
-     * </pre>
-     */
-    public static final int EXIT_BOUT_RETURN_VALUE = 10010;
     /**
      * <code>GET_ROOM_LIST_RETURN = 10020;</code>
      *
@@ -1271,12 +1271,12 @@ public final class UserCmdType {
         case 22: return REMOVE_AD_RETURN;
         case 23: return CHANGE_HEADER;
         case 24: return CHANGE_ROLETYPE_RETURN;
+        case 25: return EXIT_BOUT_RETURN;
         case 1000: return ERROR_CODE_RETURN;
         case 10002: return START_GAME;
         case 10004: return ENEMY_JUMP;
         case 10006: return ENEMY_KILL;
         case 10008: return GAME_OVER;
-        case 10010: return EXIT_BOUT_RETURN;
         case 10020: return GET_ROOM_LIST_RETURN;
         case 10021: return CREATE_ROOM_RETURN;
         case 10022: return ROOM_PLAYER_INFO_RETURN;
@@ -1445,7 +1445,7 @@ public final class UserCmdType {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026UserCmdTypeProto.proto*\301\005\n\rUserCmdInTy" +
+      "\n\026UserCmdTypeProto.proto*\300\005\n\rUserCmdInTy" +
       "pe\022\016\n\nUSER_LOGIN\020\001\022\r\n\tUSER_PING\020\002\022\021\n\rUSE" +
       "R_GAME_END\020\003\022\017\n\013RANDOMMATCH\020\004\022\020\n\014INVITE_" +
       "AGAIN\020\007\022\025\n\021INVITE_AGAIN_BACK\020\010\022\024\n\020USER_L" +
@@ -1457,34 +1457,34 @@ public final class UserCmdType {
       "SER_LEADERBOARD_BASE\020\025\022\016\n\nSET_HEADID\020\026\022\020",
       "\n\014UNLOCKHEADID\020\027\022\025\n\021TRIGGER_REWARD_AD\020\030\022" +
       "\023\n\017RECHARGE_VERIFY\020\031\022\020\n\014BIND_ACCOUNT\020\032\022\024" +
-      "\n\020CHANGE_ROLE_TYPE\020\033\022\023\n\016CHEAT_ADD_ITEM\020\350" +
-      "\007\022\021\n\014LOAD_FINISHI\020\221N\022\016\n\tUSER_JUMP\020\223N\022\016\n\t" +
-      "USER_KILL\020\225N\022\023\n\016USER_SURRENDER\020\226N\022\016\n\tEXI" +
-      "T_BOUT\020\232N\022\022\n\rGET_ROOM_LIST\020\244N\022\020\n\013CREATE_" +
-      "ROOM\020\245N\022\016\n\tJOIN_ROOM\020\246N\022\021\n\014DISMISS_ROOM\020" +
-      "\247N\022\016\n\tEXIT_ROOM\020\250N\022\017\n\nREADY_ROOM\020\251N\022\017\n\nS" +
-      "TART_ROOM\020\252N*\371\005\n\016UserCmdOutType\022\025\n\021USER_" +
-      "LOGIN_RESULT\020\001\022\017\n\013PING_RESULT\020\002\022\026\n\022RANDO",
-      "MMATCH_RESULT\020\003\022\032\n\026RANDOMMATCH_RESULT_MA" +
-      "P\020\004\022\024\n\020GET_INVITE_AGAIN\020\007\022\027\n\023INVITE_AGAI" +
-      "N_RETURN\020\010\022\026\n\022LEADERBOARD_RETURN\020\t\022\023\n\017RE" +
-      "CHARGE_RESULT\020\n\022\r\n\tKICK_USER\020\014\022\023\n\017UPDATE" +
-      "_RESOURCE\020\r\022\033\n\027LEADERBOARD_BASE_RETURN\020\016" +
-      "\022\022\n\016UNLOCK_SUCCESS\020\017\022\024\n\020REWARD_AD_RETURN" +
-      "\020\020\022\017\n\013ROOM_RESULT\020\021\022\023\n\017ROOM_RESULT_MAP\020\022" +
-      "\022\026\n\022DONATE_ITEM_RETURN\020\023\022\032\n\026RECHARGE_VER" +
-      "IFY_RETURN\020\024\022\030\n\024EXCHANGE_ITEM_RETURN\020\025\022\024" +
-      "\n\020REMOVE_AD_RETURN\020\026\022\021\n\rCHANGE_HEADER\020\027\022",
-      "\032\n\026CHANGE_ROLETYPE_RETURN\020\030\022\026\n\021ERROR_COD" +
-      "E_RETURN\020\350\007\022\017\n\nSTART_GAME\020\222N\022\017\n\nENEMY_JU" +
-      "MP\020\224N\022\017\n\nENEMY_KILL\020\226N\022\016\n\tGAME_OVER\020\230N\022\025" +
-      "\n\020EXIT_BOUT_RETURN\020\232N\022\031\n\024GET_ROOM_LIST_R" +
-      "ETURN\020\244N\022\027\n\022CREATE_ROOM_RETURN\020\245N\022\034\n\027ROO" +
-      "M_PLAYER_INFO_RETURN\020\246N\022\030\n\023DISMISS_ROOM_" +
-      "RETURN\020\247N\022\025\n\020EXIT_ROOM_RETURN\020\250N\022\026\n\021READ" +
-      "Y_ROOM_RETURN\020\251N**\n\013GameCmdType\022\014\n\007TWO_M" +
-      "IN\020\220N\022\r\n\007TWO_MAX\020\240\234\001B \n\021com.proto.comman" +
-      "dB\013UserCmdType"
+      "\n\020CHANGE_ROLE_TYPE\020\033\022\r\n\tEXIT_BOUT\020\034\022\023\n\016C" +
+      "HEAT_ADD_ITEM\020\350\007\022\021\n\014LOAD_FINISHI\020\221N\022\016\n\tU" +
+      "SER_JUMP\020\223N\022\016\n\tUSER_KILL\020\225N\022\023\n\016USER_SURR" +
+      "ENDER\020\226N\022\022\n\rGET_ROOM_LIST\020\244N\022\020\n\013CREATE_R" +
+      "OOM\020\245N\022\016\n\tJOIN_ROOM\020\246N\022\021\n\014DISMISS_ROOM\020\247" +
+      "N\022\016\n\tEXIT_ROOM\020\250N\022\017\n\nREADY_ROOM\020\251N\022\017\n\nST" +
+      "ART_ROOM\020\252N*\370\005\n\016UserCmdOutType\022\025\n\021USER_L" +
+      "OGIN_RESULT\020\001\022\017\n\013PING_RESULT\020\002\022\026\n\022RANDOM",
+      "MATCH_RESULT\020\003\022\032\n\026RANDOMMATCH_RESULT_MAP" +
+      "\020\004\022\024\n\020GET_INVITE_AGAIN\020\007\022\027\n\023INVITE_AGAIN" +
+      "_RETURN\020\010\022\026\n\022LEADERBOARD_RETURN\020\t\022\023\n\017REC" +
+      "HARGE_RESULT\020\n\022\r\n\tKICK_USER\020\014\022\023\n\017UPDATE_" +
+      "RESOURCE\020\r\022\033\n\027LEADERBOARD_BASE_RETURN\020\016\022" +
+      "\022\n\016UNLOCK_SUCCESS\020\017\022\024\n\020REWARD_AD_RETURN\020" +
+      "\020\022\017\n\013ROOM_RESULT\020\021\022\023\n\017ROOM_RESULT_MAP\020\022\022" +
+      "\026\n\022DONATE_ITEM_RETURN\020\023\022\032\n\026RECHARGE_VERI" +
+      "FY_RETURN\020\024\022\030\n\024EXCHANGE_ITEM_RETURN\020\025\022\024\n" +
+      "\020REMOVE_AD_RETURN\020\026\022\021\n\rCHANGE_HEADER\020\027\022\032",
+      "\n\026CHANGE_ROLETYPE_RETURN\020\030\022\024\n\020EXIT_BOUT_" +
+      "RETURN\020\031\022\026\n\021ERROR_CODE_RETURN\020\350\007\022\017\n\nSTAR" +
+      "T_GAME\020\222N\022\017\n\nENEMY_JUMP\020\224N\022\017\n\nENEMY_KILL" +
+      "\020\226N\022\016\n\tGAME_OVER\020\230N\022\031\n\024GET_ROOM_LIST_RET" +
+      "URN\020\244N\022\027\n\022CREATE_ROOM_RETURN\020\245N\022\034\n\027ROOM_" +
+      "PLAYER_INFO_RETURN\020\246N\022\030\n\023DISMISS_ROOM_RE" +
+      "TURN\020\247N\022\025\n\020EXIT_ROOM_RETURN\020\250N\022\026\n\021READY_" +
+      "ROOM_RETURN\020\251N**\n\013GameCmdType\022\014\n\007TWO_MIN" +
+      "\020\220N\022\r\n\007TWO_MAX\020\240\234\001B \n\021com.proto.commandB" +
+      "\013UserCmdType"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

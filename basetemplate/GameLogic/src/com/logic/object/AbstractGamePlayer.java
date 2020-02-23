@@ -142,9 +142,4 @@ public abstract class AbstractGamePlayer
     {
 
     }
-
-    public void onExitBout()
-    {
-
-    }
 }

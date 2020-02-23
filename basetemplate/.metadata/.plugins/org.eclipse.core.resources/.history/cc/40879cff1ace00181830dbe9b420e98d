@@ -1,0 +1,164 @@
+package com.game.component;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+import com.base.component.AbstractComponent;
+import com.data.bean.CityBean;
+import com.data.bean.LevelBean;
+import com.data.bean.ScienceBean;
+import com.data.component.SystemDataComponent;
+import com.util.print.LogFactory;
+
+/**
+ * 系统配置初始化
+ * 
+ * @author dream
+ *
+ */
+public class SystemConfigComponent extends AbstractComponent
+{
+    /** 玩家等级配置表《等级，数据》 */
+    private static Map<Integer, LevelBean> levelMap = new HashMap<>();
+
+    /** 城池配置《城池ID，数据》 */
+    private static Map<Integer, CityBean> cityMap = new HashMap<>();
+
+    /** 科技配置 */
+    private static List<ScienceBean> scienceList = new ArrayList<>();
+
+    private static ReadWriteLock lock = new ReentrantReadWriteLock();
+
+    @Override
+    public boolean initialize()
+    {
+        List<LevelBean> list1 = SystemDataComponent.getBeanList(LevelBean.class);
+        List<CityBean> list2 = SystemDataComponent.getBeanList(CityBean.class);
+        List<ScienceBean> list3 = SystemDataComponent.getBeanList(ScienceBean.class);
+
+        lock.writeLock().lock();
+        try
+        {
+            levelMap.clear();
+            for (LevelBean bean : list1)
+            {
+                levelMap.put(bean.getLevel(), bean);
+            }
+
+            cityMap.clear();
+            for (CityBean bean : list2)
+            {
+                cityMap.put(bean.getCityID(), bean);
+            }
+
+            scienceList.clear();
+            scienceList.addAll(list3);
+            scienceList.sort((p1, p2) -> p1.getScienceID() - p2.getScienceID());
+        }
+        finally
+        {
+            lock.writeLock().unlock();
+        }
+
+        return true;
+    }
+
+    public static LevelBean getLevelBean(int levelID)
+    {
+        lock.readLock().lock();
+        try
+        {
+            LevelBean bean = levelMap.get(levelID);
+            if (bean == null)
+                LogFactory.error("LevelBean is Null.levelID:{}", levelID);
+
+            return bean;
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+    }
+
+    public static ScienceBean getScienceBean(int scienceID)
+    {
+        lock.readLock().lock();
+        try
+        {
+            for (ScienceBean bean : scienceList)
+            {
+                if (bean.getScienceID() == scienceID)
+                    return bean;
+            }
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+
+        LogFactory.error("ScienceBean is Null.ScienceID:{}", scienceID);
+        return null;
+    }
+
+    public static CityBean getCityBean(int cityID)
+    {
+        lock.readLock().lock();
+        try
+        {
+            CityBean bean = cityMap.get(cityID);
+            if (bean == null)
+                LogFactory.error("CityBean is Null.cityID:{}", cityID);
+
+            return bean;
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+    }
+
+    /**
+     * 取得下一等级的城池Bean
+     * 
+     * @param minLevelID
+     * @return
+     */
+    public static CityBean getCityBeanByType(int minLevelID)
+    {
+        lock.readLock().lock();
+        try
+        {
+            CityBean bean = cityMap.get(minLevelID);
+            if (bean == null)
+            {
+                LogFactory.error("CityBean is null.cityID:{}", minLevelID);
+                return null;
+            }
+
+            for (CityBean b : cityMap.values())
+            {
+                if (b.getCityType() == bean.getCityType() && b.getCityLevel() == bean.getCityLevel() + 1)
+                {
+                    return b;
+                }
+            }
+            LogFactory.error("CityBean is Max Level.cityID:{},Level:{}", minLevelID, bean.getCityLevel());
+            return null;
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+    }
+
+    @Override
+    public void stop()
+    {
+
+    }
+
+}

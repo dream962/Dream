@@ -32,6 +32,16 @@ public final class PlayerInfo extends ChangedObject
 	private String accountName;
 
 	/**
+	 * 账号服G名
+	 */
+	private String accuntGName;
+
+	/**
+	 * 账号OpenID
+	 */
+	private String openID;
+
+	/**
 	 * 创建时间
 	 */
 	private Date createTime;
@@ -244,6 +254,68 @@ public final class PlayerInfo extends ChangedObject
 			if(accountName != this.accountName)
 			{
 				this.accountName = accountName;
+				setChanged(true);
+			}
+		}
+	}
+
+	/**
+	 * 账号服G名
+	 */
+	public String getAccuntGName()
+	{
+		return accuntGName;
+	}
+
+	/**
+	 * 账号服G名
+	 */
+	public void setAccuntGName(String accuntGName)
+	{
+		if(accuntGName != null)
+		{
+			if(!accuntGName.equals(this.accuntGName))
+			{
+				this.accuntGName = accuntGName;
+				setChanged(true);
+			}
+		}
+		else
+		{
+			if(accuntGName != this.accuntGName)
+			{
+				this.accuntGName = accuntGName;
+				setChanged(true);
+			}
+		}
+	}
+
+	/**
+	 * 账号OpenID
+	 */
+	public String getOpenID()
+	{
+		return openID;
+	}
+
+	/**
+	 * 账号OpenID
+	 */
+	public void setOpenID(String openID)
+	{
+		if(openID != null)
+		{
+			if(!openID.equals(this.openID))
+			{
+				this.openID = openID;
+				setChanged(true);
+			}
+		}
+		else
+		{
+			if(openID != this.openID)
+			{
+				this.openID = openID;
 				setChanged(true);
 			}
 		}
@@ -799,6 +871,8 @@ public final class PlayerInfo extends ChangedObject
 		clone.setPlayerName(this.getPlayerName());
 		clone.setAccountID(this.getAccountID());
 		clone.setAccountName(this.getAccountName());
+		clone.setAccuntGName(this.getAccuntGName());
+		clone.setOpenID(this.getOpenID());
 		clone.setCreateTime(this.getCreateTime());
 		clone.setLastLoginTime(this.getLastLoginTime());
 		clone.setGold(this.getGold());
@@ -833,6 +907,8 @@ public final class PlayerInfo extends ChangedObject
 		this.setPlayerName(info.getPlayerName());
 		this.setAccountID(info.getAccountID());
 		this.setAccountName(info.getAccountName());
+		this.setAccuntGName(info.getAccuntGName());
+		this.setOpenID(info.getOpenID());
 		this.setCreateTime(info.getCreateTime());
 		this.setLastLoginTime(info.getLastLoginTime());
 		this.setGold(info.getGold());

@@ -5,16 +5,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
-import com.upload.data.ServerType;
 import com.upload.data.business.ServerListBusiness;
 import com.upload.data.data.ServerData;
 import com.upload.data.data.ServerListData;
@@ -35,140 +32,7 @@ public class ServerListComponent extends AbstractComponent
     {
         List<ServerListData> serverList = ServerListBusiness.listAll();
         serverList.forEach(p -> serverMap.put(p.getServerID(), p));
-
         scheduler = Executors.newSingleThreadScheduledExecutor();
-        scheduler.scheduleWithFixedDelay(() -> refreshServerList(), 60, 60, TimeUnit.SECONDS);
-
-        // 刷新服务器信息
-        refreshServerList();
-
-        return true;
-    }
-
-    /**
-     * 刷新服务器信息(如果已经删除/被合服,删除;如果新加,添加;如果修改,修改)
-     * 
-     * @return
-     */
-    public static boolean refreshServerList()
-    {
-        LogFactory.error("定时任务:刷新服务器信息开始");
-        try
-        {
-            // 取得所有信息
-            List<ServerListData> serverList = getAllServerList();
-
-            String url = GlobalConfigComponent.getConfig().server.url;
-            String userName = GlobalConfigComponent.getConfig().server.username;
-            String password = GlobalConfigComponent.getConfig().server.password;
-
-            // 账号服取得的服务器列表
-            List<ServerData> list = getServerList(url, userName, password);
-            if (list == null || list.isEmpty())
-            {
-                LogFactory.error("********刷新服务器列表异常.**************");
-                return false;
-            }
-
-            // 合服删除的
-            List<ServerListData> delList = new ArrayList<>();
-
-            // 判断需要删除的服务器信息
-            for (ServerListData serverListData : serverList)
-            {
-                if (serverListData.getType() == ServerType.GAME_SERVER)
-                {
-                    boolean isExist = false;
-                    for (ServerData data : list)
-                    {
-                        if (data.getServerID() == serverListData.getServerID())
-                        {
-                            isExist = true;
-                            break;
-                        }
-                    }
-
-                    if (isExist == false)
-                        delList.add(serverListData);
-                }
-            }
-
-            // 删除被合服的信息
-            for (ServerListData p : delList)
-            {
-                serverMap.remove(p.getServerID());
-                ServerListBusiness.deleteData(p.getServerID());
-            }
-
-            // 添加或者更新服务器
-            for (ServerData data : list)
-            {
-                if (!serverMap.containsKey(data.getServerID()))
-                {
-                    ServerListData listData = new ServerListData();
-                    listData.setServerID(data.getServerID());
-                    listData.setServerIp(data.getHost());
-                    listData.setServerName(data.getServerName());
-                    listData.setGamePort(data.getGamePort());
-                    listData.setGatePort(data.getWebPort());
-                    listData.setType(ServerType.GAME_SERVER);
-                    listData.setOutState(data.getState());
-                    listData.setServerGroup(0);
-
-                    String serverPath = String.format("%04d", data.getServerID());
-
-                    listData.setDbAddress("/data/mysql_3306");
-                    listData.setDbIp(data.getHost());
-                    listData.setDbPassword("jump_admin_!#$@1980");
-                    listData.setDbPort("12000");
-                    listData.setDbStartAddress("sh /usr/local/shell/mysql.sh");
-                    listData.setDbUsername("daomu2_admin");
-                    listData.setDbGameName("db_game_tlcs_" + serverPath);
-                    listData.setDbLogName("db_game_tlcs_log_" + serverPath);
-
-                    listData.setLastOpenTime(new Date());
-                    listData.setLastUpdateTime(new Date());
-
-                    listData.setServerAddress("/data/server/gameserver" + serverPath);
-                    listData.setGateAddress("/data/server/gatewayserver" + serverPath);
-
-                    listData.setSSHKeyPassword("db_jump_2019");
-                    listData.setSSHKeyPath(GlobalConfigComponent.getConfig().server.keyName);
-                    listData.setSSHPassword("123456");
-                    listData.setSSHPort(5188);
-                    listData.setSSHUsername("admin");
-
-                    serverMap.put(data.getServerID(), listData);
-
-                    ServerListBusiness.addOrUpdate(listData);
-                }
-                else
-                {
-                    ServerListData listData = serverMap.get(data.getServerID());
-                    if (listData != null)
-                    {
-                        listData.setServerID(data.getServerID());
-                        listData.setServerIp(data.getHost());
-                        listData.setServerName(data.getServerName());
-                        listData.setGamePort(data.getGamePort());
-                        listData.setGatePort(data.getWebPort());
-                        listData.setType(ServerType.GAME_SERVER);
-                        listData.setOutState(data.getState());
-                        listData.setLastOpenTime(new Date());
-                        listData.setDbIp(data.getHost());
-                        listData.setServerGroup(0);
-                        ServerListBusiness.addOrUpdate(listData);
-                    }
-                }
-            }
-        }
-        catch (Exception e)
-        {
-            LogFactory.error("", e);
-        }
-
-        LogFactory.error("定时任务:刷新服务器信息结束");
-
         return true;
     }
 

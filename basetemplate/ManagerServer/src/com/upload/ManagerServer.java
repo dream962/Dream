@@ -49,12 +49,6 @@ public class ManagerServer
             return;
         }
 
-        // if (!ComponentManager.getInstance().addComponent(ServerListComponent.class.getName()))
-        // {
-        // logger.error("服务器列表模块失败");
-        // return;
-        // }
-
         if (!ComponentManager.getInstance().addComponent(WebComponent.class.getName()))
         {
             logger.error("jetty启动失败");

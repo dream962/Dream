@@ -1,0 +1,753 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="generator" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<link href="css/haiersoft.css" rel="stylesheet" type="text/css" media="screen,print" />
+		<link href="css/print.css" rel="stylesheet" type="text/css" media="print" />
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/side.js" type="text/javascript"></script>
+		<script src="src/lib/ajax.js"></script>
+		<script src="src/lib/util.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/config/configure.js"></script>
+		<script src="src/lib/checkLogin.js"></script>
+		<!-- 文件上传 相关-->
+	</head>
+
+	<body>
+		<div class="picBox" onClick="switchSysBar()" id="switchPoint"></div>
+		<div class="wrap_right">
+			<header>
+			</header>
+
+			<div id="Contents">
+				<script type="text/javascript">
+					$(function() {
+						$(".select").each(function() {
+							var s = $(this);
+							var z = parseInt(s.css("z-index"));
+							var dt = $(this).children("dt");
+							var dd = $(this).children("dd");
+							var _show = function() {
+								dd.slideDown(200);
+								dt.addClass("cur");
+								s.css("z-index", z + 1);
+							};
+							var _hide = function() {
+								dd.slideUp(200);
+								dt.removeClass("cur");
+								s.css("z-index", z);
+							};
+							dt.click(function() {
+								dd.is(":hidden") ? _show() : _hide();
+							});
+							dd.find("a").click(function() {
+								dt.html($(this).html());
+								_hide();
+							});
+							$("body").click(function(i) {
+								!$(i.target).parents(".select").first().is(s) ? _hide() : "";
+							});
+						})
+					})
+				</script>
+
+				<div id="MainForm">
+					<div class="form_boxB">
+						<h2>服务器列表</h2>
+						<table cellpadding="0" cellspacing="0" id="grid">
+							<tr>
+								<td colspan="21" class="info_boxA">
+									<div class="floatL" style="margin-top: 7px;">
+										<font size="2">服务器类型：</font>
+									</div>
+									<div class="selectbox floatL" style="width:100px;">
+										<select class="select" style="height: 30px;" id="selectBox_type">
+											<option value="0">-- 全部选择 --</option>
+											<option value="1">游戏服</option>
+											<option value="2">账户服</option>
+											<option value="3">SDK服</option>
+											<option value="4">跨服</option>
+											<option value="5">活动服</option>
+											<option value="6">资源服</option>
+										</select>
+									</div>
+									
+									<div class="floatL" style="margin-top: 7px;margin-left: 20px;">
+										<font size="2">服务器外网状态：</font>
+									</div>
+									<div class="selectbox floatL" style="width:100px;">
+										<select class="select" style="height: 30px;" id="selectBox_status">
+											<option value="-1" selected>-- 全部选择 --</option>
+											<option value="1">已开服</option>
+											<option value="0">待开启</option>
+										</select>
+									</div>
+									
+									<div class="floatL" style="margin-top: 7px;margin-left: 20px;">
+										<font size="2">服务器ID：</font>
+									</div>
+									<div class="selectbox floatL" style="width:70px;">
+										<input id="select_serverID" name="select_serverID" style="height: 20px;width:70px;" type="text" size="10" value="0">
+									</div>
+									
+									<div class="floatL" style="margin-top: 7px;margin-left: 20px;">
+										<font size="2">服务器组：</font>
+									</div>
+									<div class="selectbox floatL" style="width:50px;">
+										<input id="select_serverGroup" name="select_serverGroup" style="height: 20px;width:50px;" type="text" size="10" value="-1">
+									</div>
+									
+									<div class="btn_box floatL mag_l20" style="margin-top: 2px;">
+										<input name="" onclick="searchServer()" type="button" value="查询" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<div class="btn_box floatL mag_l20" style="margin-top: 2px;">
+										<input name="" onclick="addServer()" type="button" value="新增" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="21" class="info_boxA">
+									<input type="button" value="全选" onclick="selectAll()" style="margin-top: 4px;" />
+									<input type="button" value="全不选" onclick="unSelectAll()" />
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="deleteServer()" value="删除服务器" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="toOpenServer()" value="一键开服" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="toStopServer()" value="一键停服" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<!--
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="toUpdateExcels()" value="更新配置表" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									-->
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="refreshServer()" value="刷新服务器列表" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="toUploadServer()" value="服务器发布版本" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="toMonitorServers()" value="服务器状态查询" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="toExecuteSql()" value="辅助工具" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="toServerLog()" value="实时日志查看" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="toRefreshRes()" value="刷新客户端资源" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+									<div class="btn_box floatR mag_l20">
+										<input name="" type="button" onclick="toButterfly()" value="百度缓存(蝴蝶)" onMouseMove="this.className='input_move'" onMouseOut="this.className='input_out'">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><b>选择</b></td>
+								<td><b>Order</b></td>
+								<td><b>ServerID</b></td>
+								<td><b>名称</b></td>
+								<td><b>Group</b></td>
+								<td><b>外网状态</b></td>
+								<td><b>Host</b></td>
+								<td><b>SSH端口</b></td>
+								<td><b>游戏端口</b></td>
+								<td><b>网关端口</b></td>
+								<td><b>服务器类型</b></td>
+								<td><b>游戏状态</b></td>
+								<td><b>网关状态</b></td>
+								<td><b>更新时间</b></td>
+								<td><b>开服时间</b></td>
+								<td><b>操作</b></td>
+							</tr>
+						</table>
+						<p class="msg">共找到 <span id="totalCount"></span> 条服务器信息记录</p>
+					</div>
+				</div>
+
+			</div>
+			<footer>
+				<address>Powered by 深圳市灼华网络科技有限公司 版权所有</address>
+			</footer>
+			<div id="loading" style="width: 100%;height: 100%;position: fixed;top: 0;display: none;">
+				<img src="img/loading.gif" style="position: fixed;top: 20%;left: 20%;" />
+			</div>
+			<!-- 弹出编辑框 -->
+			<div style="position:fixed;top: 0%;left: 0%;width: 100%;height: 100%;display: none;z-index: 9999;" id="pop">
+				<div style="position: fixed;top:50%;transform: translate(-50%,-50%); background-color: #EBEBEB;left: 43%;" id="Popup">
+					<!-- -->
+					<div id="SubPopup">
+						<div class="form_boxC">
+							<form id="dataForm" action="" method="post">
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<th width="100">服务器ID</th>
+										<td>
+											<div class="txtbox floatL" style="width:100px;"><input id="f_serverID" name="serverID" type="text" size="6" value=""></div>
+										</td>
+										<th>服务器名称</th>
+										<td>
+											<div class="txtbox floatL" style="width:160px;"><input id="f_serverName" name="serverName" type="text" size="13" value=""></div>
+										</td>
+									</tr>
+
+									<tr>
+										<th>服务器IP</th>
+										<td>
+											<div class="txtbox floatL" style="width:160px;"><input id="f_ip" name="serverIp" type="text" size="13" value=""></div>
+										</td>
+										<th>SSH端口</th>
+										<td>
+											<div class="txtbox floatL" style="width:100px;"><input id="f_port" name="sSHPort" type="text" size="6" value=""></div>
+										</td>
+									</tr>
+
+									<tr>
+										<th>游戏端口</th>
+										<td>
+											<div class="txtbox floatL" style="width:100px;"><input id="f_tcpPort" name="gamePort" type="text" size="6" value="0"></div>
+										</td>
+										<th>网关端口</th>
+										<td>
+											<div class="txtbox floatL" style="width:100px;"><input id="f_webPort" name="gatePort" type="text" size="6" value=""></div>
+											<font color="red" size="3">(若无,则填0)</font>
+		
+										</td>
+									</tr>
+									<tr>
+										<th>服务器类型</th>
+										<td colspan="2">
+											<div class="txtbox floatL" style="width:100px;"><input id="f_type" name="type" type="text" size="6"></div>
+											<font color="red" size="3">(1-游戏|2-账户|3-SDK服|4-跨服|5-活动|6-资源)</font>
+										</td>
+									</tr>
+									<tr>
+										<th>游戏路径</th>
+										<td>
+											<div class="txtbox floatL" style="width:275px;"><input id="f_serverAddress" name="serverAddress" type="text" size="28" value=""></div>
+										</td>
+										<th>游戏状态</th>
+										<td>
+											<div class="txtbox floatL" style="width:100px;"><input id="f_outState" name="outState" type="text" size="6" value=""></div>
+										</td>
+									</tr>
+									<tr>
+										<th>网关路径</th>
+										<td>
+											<div class="txtbox floatL" style="width:275px;"><input id="f_gateAddress" name="gateAddress" type="text" size="28" value=""></div>
+										</td>
+										<th>游戏组</th>
+										<td>
+											<div class="txtbox floatL" style="width:100px;"><input id="f_serverGroup" name="serverGroup" type="text" size="6" value=""></div>
+										</td>
+									</tr>
+									<tr><td colspan="4"><hr/></td></tr>
+									<tr>
+										<th>数据库IP地址</th>
+										<td>
+											<div class="txtbox floatL" style="width:160px;"><input id="f_dbIp" name="dbIp" type="text" size="13" value=""></div>
+										</td>
+										<th>数据库端口</th>
+										<td>
+											<div class="txtbox floatL" style="width:100px;"><input id="f_dbPort" name="dbPort" type="text" size="6" value=""></div>
+										</td>
+									</tr>
+									<tr>
+										<th>数据库帐户名</th>
+										<td>
+											<div class="txtbox floatL" style="width:160px;"><input id="f_dbusername" name="dbUsername" type="text" size="13" value=""></div>
+										</td>
+										<th>数据库密码</th>
+										<td>
+											<div class="txtbox floatL" style="width:160px;"><input id="f_dbpassword" name="dbPassword" type="text" size="13" value=""></div>
+										</td>
+									</tr>
+									<tr>
+										<th>游戏库</th>
+										<td>
+											<div class="txtbox floatL" style="width:200px;"><input id="f_dbGameName" style="width:200px;" name="dbGameName" type="text" size="13" value=""></div>
+										</td>
+										<th>日志库</th>
+										<td>
+											<div class="txtbox floatL" style="width:200px;"><input id="f_dbLogName" style="width:200px;" name="dbLogName" type="text" size="13" value=""></div>
+										</td>
+									</tr>
+									<tr>
+										<th>统计库</th>
+										<td>
+											<div class="txtbox floatL" style="width:200px;"><input id="f_dbMartName" style="width:200px;" name="dbMartName" type="text" size="13" value=""></div>
+										</td>
+									</tr>
+									<tr><td colspan="4"><hr/></td></tr>
+									<tr>
+										<th>SSH帐户名</th>
+										<td>
+											<div class="txtbox floatL" style="width:160px;"><input id="f_username" name="sSHUsername" type="text" size="13" value=""></div>
+										</td>
+										<th>SSH密码</th>
+										<td>
+											<div class="txtbox floatL" style="width:160px;"><input id="f_password" name="sSHPassword" type="text" size="13" value=""></div>
+										</td>
+									</tr>
+									<tr>
+										<th>SSH秘钥路径</th>
+										<td>
+											<div class="txtbox floatL" style="width:160px;"><input id="f_sshKeyPath" name="sSHKeyPath" type="text" size="13" value=""></div>
+											<font color="red" size="3">设置0:使用密码</font>
+										</td>
+										<th>SSH秘钥密码</th>
+										<td>
+											<div class="txtbox floatL" style="width:160px;"><input id="f_sshKeyPass" name="sSHKeyPassword" type="text" size="13" value=""></div>
+										</td>
+									</tr>
+									
+								</table>
+							</form>
+						</div>
+					</div>
+
+					<div id="BtmBtn">
+						<div class="btn_boxB floatR mag_l20"><input onclick="cancel()" type="button" value="取消" onmousemove="this.className='input_move'" onmouseout="this.className='input_out'"></div>
+						<div class="btn_box floatR"><input name="" onclick="submitData()" type="button" value="提交" onmousemove="this.className='input_move'" onmouseout="this.className='input_out'"></div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<script type="text/javascript">
+			function chooseTr(value){
+				var ciID = "#ci" + value;
+				var trID = "#tr" + value;
+				var flag = $(ciID).is(":checked");
+				if(flag){
+					$(trID).css('backgroundColor','yellow');
+				}else{
+					$(trID).css('backgroundColor','');
+				}
+			}
+			
+			// 填充服务器列表的数据
+			function appendData(key, value) {
+				if(value.type == 1) {
+					ty = "游戏服";
+				} else if(value.type == 2) {
+					ty = "帐户服";
+				} else if(value.type == 3) {
+					ty = "SDK服";
+				} else if(value.type == 4) {
+						ty = "跨服 ";
+				} else if(value.type == 5) {
+						ty = "活动服";
+				} else if(value.type == 6) {
+						ty = "资源服";
+				}else {
+					ty = "其他";
+				}
+				if(value.status == 0) {
+					st = "<font color='green'>开启</font>";
+				} else {
+					st = "<font color='red'>关闭</font>";
+				}
+				
+				//1:待开启；2：维护；3：新服；4：流畅；5：火爆
+				if(value.outState == 2) {
+					ost = "<font color='blue'>维护</font>";
+				}
+				else if(value.outState == 3)
+				{
+					ost = "<font color='green'>新服</font>";
+				}
+				else if(value.outState == 4)
+				{
+					ost = "<font color='green'>流畅</font>";
+				}
+				else if(value.outState == 5)
+				{
+					ost = "<font color='green'>火爆</font>";
+				}
+				else {
+					ost = "<font color='red'>待开启</font>";
+				}
+				
+				if(value.gateStatus == 0) {
+					stgate = "<font color='green'>开启</font>";
+				} else {
+					stgate = "<font color='red'>关闭</font>";
+				}
+				$("#grid").append("<tr class='dataGrid' id='tr"+ value.serverID +"'><td>" + "<input type='checkbox' id='ci"+value.serverID+"' onclick='chooseTr("+ value.serverID +")' class='isChoose' value='" + value.serverID + "' />" +
+					"</td><td>" + (key + 1) +
+					"</td><td>" + value.serverID +
+					"</td><td>" + value.serverName +
+					"</td><td>" + value.serverGroup +
+					"</td><td>" + ost +
+					"</td><td>" + value.serverIp +
+					"</td><td>" + value.sSHPort +
+					"</td><td>" + value.gamePort +
+					"</td><td>" + value.gatePort +
+					"</td><td>" + ty +
+					"</td><td>" + st +
+					"</td><td>" + stgate +
+					"</td><td>" + value.lastUpdateTime +
+					"</td><td>" + value.lastOpenTime +
+					"</td><td>" + "<a href='javascript:void(0)' onclick='editServer(" + value.serverID + ")'>详情修改</a>" +
+					"</td></tr>")
+			}
+
+			function searchServer() {
+				var type = $("#selectBox_type").val();
+				var status = $("#selectBox_status").val();
+				var serverID = $("#select_serverID").val();
+				var serverGroup = $("#select_serverGroup").val()
+				
+				var searchUrl = port + "/getServerList?params={type:" + type + ", status:"+ status+",serverID:" + serverID + ",group:"+ serverGroup +"}";
+				$.getJSON(searchUrl, function(data) {
+					$(".dataGrid").remove();
+					console.log(data);
+					$("#totalCount").html(data.length)
+					$.each(data, function(key, value) {
+						appendData(key, value);
+					});
+				})
+			}
+
+			/* ajax拉取数据 */
+			$(function() {
+				var serversListUrl = port + "/getServerList?params={type:0, status:-1,group:-1}";
+				$.getJSON(serversListUrl, null, function(data) {
+					var st; // 游戏状态
+					var ty; // 服务器类型
+					var stgate; // 网关状态
+					console.log(data);
+					$("#totalCount").html(data.length)
+					$.each(data, function(key, value) {
+						appendData(key, value);
+					});
+				})
+			})
+
+			/* 打开编辑界面 */
+			function editServer(serverID) {
+				var editServerUrl = port + "/editServer?params={serverID :" + serverID + "}";
+				$.getJSON(editServerUrl, function(obj) {
+					if(obj.code == 1) {
+						alert(obj.json)
+						return;
+					}
+					var data = obj.json;
+					$("#f_serverID").val(data.serverID);
+					$("#f_serverName").val(data.serverName);
+					$("#f_ip").val(data.serverIp);
+					$("#f_port").val(data.sSHPort);
+					$("#f_tcpPort").val(data.gamePort);
+					$("#f_webPort").val(data.gatePort);
+					$("#f_outState").val(data.outState);
+					$("#f_type").val(data.type);
+					$("#f_serverAddress").val(data.serverAddress);
+					$("#f_gateAddress").val(data.gateAddress);
+					$("#f_serverGroup").val(data.serverGroup);
+					
+					$("#f_dbIp").val(data.dbIp);
+					$("#f_dbPort").val(data.dbPort);
+					$("#f_dbusername").val(data.dbUsername);
+					$("#f_dbpassword").val(data.dbPassword);
+					$("#f_dbGameName").val(data.dbGameName);
+					$("#f_dbLogName").val(data.dbLogName);
+					$("#f_dbMartName").val(data.dbMartName);
+
+					$("#f_username").val(data.sSHUsername);
+					$("#f_password").val(data.sSHPassword);
+					$("#f_sshKeyPath").val(data.sSHKeyPath);
+					$("#f_sshKeyPass").val(data.sSHKeyPassword);
+					
+				})
+				$("#pop").show();
+			}
+
+			/* 关闭编辑界面 */
+			function cancel() {
+				$("#pop").hide();
+				$("#dataForm")[0].reset();
+			}
+
+			/* 提交更新 */
+			function submitData() {
+				var form = document.getElementById("dataForm");
+				var elements = new Array();
+				var tagElements = form.getElementsByTagName('input');
+				for(var j = 0; j < tagElements.length; j++) {
+					elements.push(tagElements[j]);
+				}
+				var data = "{"
+				var flag = false;
+				$.each(elements, function(i, obj) {
+					console.log(obj.name + "-----------" + obj.value);
+					data += obj.name + ':"' + obj.value + '",';
+					if(obj.value == "") {
+						flag = true;
+					}
+				});
+				if(flag) {
+					alert("请输入完整的数据");
+					return;
+				}
+				data = data.substring(0, data.length - 1);
+				data += "}";
+				var updateServerUrl = port + "/updateServer";
+				$.getJSON(updateServerUrl, {
+					params: data
+				}, function(data) {
+					if(data.code == 0) {
+						alert("修改成功");
+						$("#pop").hide();
+						location.reload();
+					}
+				})
+			}
+
+			/* 打开添加界面 */
+			function addServer() {
+				$("#dataForm")[0].reset();
+				
+				$("#f_serverID").val(0);
+				$("#f_serverName").val("");
+				$("#f_port").val(5188);
+				$("#f_tcpPort").val(8000);
+				$("#f_webPort").val(10700);
+				$("#f_outState").val(1);
+				$("#f_type").val(1);
+				$("#f_serverAddress").val("/data/server/gameserver000X");
+				$("#f_gateAddress").val("/data/server/gatewayserver000X");
+
+				$("#f_dbPort").val(13619);
+				$("#f_dbusername").val("daomu2_admin");
+				$("#f_dbpassword").val("daomu2!@#");
+				$("#f_dbGameName").val("db_game_tlcs_000X");
+				$("#f_dbLogName").val("db_game_tlcs_log_000X");
+				$("#f_dbMartName").val("db_game_tlcs_mart_000X");
+				
+				$("#f_username").val("admin");
+				$("#f_password").val("123456");
+				$("#f_sshKeyPath").val("id_rsa");
+				$("#f_sshKeyPass").val("ZhuoHua_2019");
+				$("#pop").show();
+			}
+
+			/* 进入入口 */
+			function enterUpload(id) {
+				var toPage = "upload.html?keyID=" + id;
+				location.href = toPage;
+			}
+			
+			/** 百度缓存*/
+			function toButterfly(id) {
+				var toPage = "baidu.html";
+				location.href = toPage;
+			}
+			
+			/** 刷新客户端的资源 */
+			function toRefreshRes(){
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				$("#loading").show();
+				var serversListUrl = port + "/refreshClient?params={'id':'"+keyIDs+"'}";
+				$.getJSON(serversListUrl, null, function(data) {
+					console.log(data);
+					alert(data.result);
+					$("#loading").hide();
+					
+				})
+			}
+			
+			/* 跳转到上传配置表页面 */
+			function toUpdateExcels() {
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				var toUploadEcxelsPage = "uploadEcxels.html?keyIDs=" + keyIDs;
+				location.href = toUploadEcxelsPage;
+			}
+
+			/* 一键开服 */
+			function toOpenServer() {
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				var toOpenServerPage = "openServer.html?keyIDs=" + keyIDs;
+				location.href = toOpenServerPage;
+			}
+
+			/* 删除服务器列表 */
+			function deleteServer(){
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				
+				var serversListUrl = port + "/deleteServerList?params={'ids':'"+keyIDs+"'}";
+				$.getJSON(serversListUrl, null, function(data) {
+					var st; // 服务器状态
+					var ty; // 服务器类型
+					$("#totalCount").html(data.length);
+					$(".dataGrid").remove();
+					$.each(data, function(key, value) {
+						appendData(key, value);
+					});
+				})
+			}
+
+			/* 一键停服 */
+			function toStopServer() {
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				var toStopServerPage = "stopServer.html?keyIDs=" + keyIDs;
+				location.href = toStopServerPage;
+			}
+			
+			/* 跳转到上传页面*/
+			function toUploadServer() {
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				var toUploadServerPage = "uploadServer.html?keyIDs=" + keyIDs;
+				location.href = toUploadServerPage;
+			}
+
+			/* 刷新服务器列表 */
+			function refreshServer() {
+				var serversListUrl = port + "/refreshServerList";
+				$.getJSON(serversListUrl, null, function(data) {
+					var st; // 服务器状态
+					var ty; // 服务器类型
+					$("#totalCount").html(data.length);
+					$(".dataGrid").remove();
+					$.each(data, function(key, value) {
+						appendData(key, value);
+					});
+				})
+			}
+			
+			/* 选择全部 */
+			function selectAll() {
+				$(".isChoose").prop("checked", true);
+				$(".dataGrid").css('backgroundColor','yellow');
+			}
+
+			/* 反选全部 */
+			function unSelectAll() {
+				$(".isChoose").prop("checked", false);
+				$(".dataGrid").css('backgroundColor','');
+			}
+			
+			/* 实时查询服务器状态 */
+			function toMonitorServers() {
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				var toMonitorServerPage = "monitorServer.html?keyIDs=" + keyIDs;
+				location.href = toMonitorServerPage;	
+			}
+			
+			/* 执行Sql */
+			function toExecuteSql() {
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				var toExecuteSQLPage = "executeSql.html?keyIDs=" + keyIDs;
+				location.href = toExecuteSQLPage;
+			}
+			
+			/* 查看服务器日志 */
+			function toServerLog() {
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				var toServerLogPage = "serverLog.html?keyIDs=" + keyIDs;
+				location.href = toServerLogPage;
+			}
+			
+			/* 删除配置表（临时） */
+			function toDelServerExcels() {
+				var keyIDs = "";
+				$(".isChoose:checked").each(function(i) {
+					keyIDs += ($(this).val() + ",");
+				})
+				keyIDs = keyIDs.substring(0, keyIDs.length - 1);
+				if(keyIDs == "") {
+					alert("请选择服务器！");
+					return;
+				}
+				var toDelServerExcelsPage = "delServerExcels.html?keyIDs=" + keyIDs;
+				location.href = toDelServerExcelsPage;
+			}
+		
+		</script>
+		
+	</body>
+
+</html>

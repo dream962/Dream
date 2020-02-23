@@ -77,7 +77,8 @@ public class PlayerRoomModule extends AbstractPlayerModule<AbstractGamePlayer>
     /**
      * 玩家离开场景
      * 
-     * @param type:1-主动退出；2-跳转退出，保存位置；3-强制退出
+     * @param type
+     *            1-主动退出；2-跳转退出，保存位置；3-强制退出
      */
     public void exitRoom(int type)
     {

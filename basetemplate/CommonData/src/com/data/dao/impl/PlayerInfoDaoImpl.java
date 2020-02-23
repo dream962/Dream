@@ -35,12 +35,14 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 	public boolean add(PlayerInfo playerInfo)
 	{
 		boolean result = false;
-		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`, `BuyAdTime`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `AccuntGName`, `OpenID`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`, `BuyAdTime`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.INTEGER,playerInfo.getUserID());
 		params.put(Types.VARCHAR,playerInfo.getPlayerName());
 		params.put(Types.BIGINT,playerInfo.getAccountID());
 		params.put(Types.VARCHAR,playerInfo.getAccountName());
+		params.put(Types.VARCHAR,playerInfo.getAccuntGName());
+		params.put(Types.VARCHAR,playerInfo.getOpenID());
 		params.put(Types.TIMESTAMP,playerInfo.getCreateTime());
 		params.put(Types.TIMESTAMP,playerInfo.getLastLoginTime());
 		params.put(Types.INTEGER,playerInfo.getGold());
@@ -71,11 +73,13 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 	public boolean update(PlayerInfo playerInfo)
 	{
 		boolean result = false;
-		String sql = "update t_u_player set `PlayerName`=?, `AccountID`=?, `AccountName`=?, `CreateTime`=?, `LastLoginTime`=?, `Gold`=?, `Diamond`=?, `Money`=?, `HeaderID`=?, `AdExpireTime`=?, `WinCount`=?, `FailCount`=?, `RoleTypes`=?, `Modes`=?, `Theme`=?, `Headers`=?, `TimeTopScore`=?, `RaceTopScore`=?, `EndTopScore`=?, `TopLength`=?, `DonateValue`=?, `isCanUnlockCoinModeByAD`=?, `LastAdTime`=?, `AdTriggerCount`=?, `BuyAdTime`=? where `UserID`=?;";
+		String sql = "update t_u_player set `PlayerName`=?, `AccountID`=?, `AccountName`=?, `AccuntGName`=?, `OpenID`=?, `CreateTime`=?, `LastLoginTime`=?, `Gold`=?, `Diamond`=?, `Money`=?, `HeaderID`=?, `AdExpireTime`=?, `WinCount`=?, `FailCount`=?, `RoleTypes`=?, `Modes`=?, `Theme`=?, `Headers`=?, `TimeTopScore`=?, `RaceTopScore`=?, `EndTopScore`=?, `TopLength`=?, `DonateValue`=?, `isCanUnlockCoinModeByAD`=?, `LastAdTime`=?, `AdTriggerCount`=?, `BuyAdTime`=? where `UserID`=?;";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.VARCHAR,playerInfo.getPlayerName());
 		params.put(Types.BIGINT,playerInfo.getAccountID());
 		params.put(Types.VARCHAR,playerInfo.getAccountName());
+		params.put(Types.VARCHAR,playerInfo.getAccuntGName());
+		params.put(Types.VARCHAR,playerInfo.getOpenID());
 		params.put(Types.TIMESTAMP,playerInfo.getCreateTime());
 		params.put(Types.TIMESTAMP,playerInfo.getLastLoginTime());
 		params.put(Types.INTEGER,playerInfo.getGold());
@@ -118,12 +122,14 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 	public boolean addOrUpdate(PlayerInfo playerInfo)
 	{
 		boolean result = false;
-		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`, `BuyAdTime`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?,`BuyAdTime`=?;";
+		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `AccuntGName`, `OpenID`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`, `BuyAdTime`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`AccuntGName`=?,`OpenID`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?,`BuyAdTime`=?;";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.INTEGER,playerInfo.getUserID());
 		params.put(Types.VARCHAR,playerInfo.getPlayerName());
 		params.put(Types.BIGINT,playerInfo.getAccountID());
 		params.put(Types.VARCHAR,playerInfo.getAccountName());
+		params.put(Types.VARCHAR,playerInfo.getAccuntGName());
+		params.put(Types.VARCHAR,playerInfo.getOpenID());
 		params.put(Types.TIMESTAMP,playerInfo.getCreateTime());
 		params.put(Types.TIMESTAMP,playerInfo.getLastLoginTime());
 		params.put(Types.INTEGER,playerInfo.getGold());
@@ -149,6 +155,8 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 		params.put(Types.VARCHAR,playerInfo.getPlayerName());
 		params.put(Types.BIGINT,playerInfo.getAccountID());
 		params.put(Types.VARCHAR,playerInfo.getAccountName());
+		params.put(Types.VARCHAR,playerInfo.getAccuntGName());
+		params.put(Types.VARCHAR,playerInfo.getOpenID());
 		params.put(Types.TIMESTAMP,playerInfo.getCreateTime());
 		params.put(Types.TIMESTAMP,playerInfo.getLastLoginTime());
 		params.put(Types.INTEGER,playerInfo.getGold());
@@ -208,7 +216,7 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 	{
 		if (playerInfos == null || playerInfos.isEmpty())
 			return new int[1];
-		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`, `BuyAdTime`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?,`BuyAdTime`=?;";
+		String sql = "insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `AccuntGName`, `OpenID`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`, `BuyAdTime`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`AccuntGName`=?,`OpenID`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?,`BuyAdTime`=?;";
 		int[] effectedRows = getDBHelper().sqlBatch(sql, playerInfos, new DataExecutor<int[]>()
 			{
 				@Override
@@ -223,6 +231,8 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 						params.put(Types.VARCHAR,playerInfo.getPlayerName());
 						params.put(Types.BIGINT,playerInfo.getAccountID());
 						params.put(Types.VARCHAR,playerInfo.getAccountName());
+						params.put(Types.VARCHAR,playerInfo.getAccuntGName());
+						params.put(Types.VARCHAR,playerInfo.getOpenID());
 						params.put(Types.TIMESTAMP,playerInfo.getCreateTime());
 						params.put(Types.TIMESTAMP,playerInfo.getLastLoginTime());
 						params.put(Types.INTEGER,playerInfo.getGold());
@@ -248,6 +258,8 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 						params.put(Types.VARCHAR,playerInfo.getPlayerName());
 						params.put(Types.BIGINT,playerInfo.getAccountID());
 						params.put(Types.VARCHAR,playerInfo.getAccountName());
+						params.put(Types.VARCHAR,playerInfo.getAccuntGName());
+						params.put(Types.VARCHAR,playerInfo.getOpenID());
 						params.put(Types.TIMESTAMP,playerInfo.getCreateTime());
 						params.put(Types.TIMESTAMP,playerInfo.getLastLoginTime());
 						params.put(Types.INTEGER,playerInfo.getGold());
@@ -311,6 +323,8 @@ public class PlayerInfoDaoImpl extends BaseDao<PlayerInfo> implements IPlayerInf
 		playerInfo.setPlayerName(rs.getString("PlayerName"));
 		playerInfo.setAccountID(rs.getLong("AccountID"));
 		playerInfo.setAccountName(rs.getString("AccountName"));
+		playerInfo.setAccuntGName(rs.getString("AccuntGName"));
+		playerInfo.setOpenID(rs.getString("OpenID"));
 		playerInfo.setCreateTime(rs.getTimestamp("CreateTime"));
 		playerInfo.setLastLoginTime(rs.getTimestamp("LastLoginTime"));
 		playerInfo.setGold(rs.getInt("Gold"));

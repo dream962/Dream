@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CommonLib"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CommonUtil"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BaseServer"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PBProtocol"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

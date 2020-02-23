@@ -14,6 +14,7 @@ import com.proto.common.gen.CommonOutMsg.PlatformTheme;
 import com.proto.common.gen.CommonOutMsg.RoleType;
 import com.proto.user.gen.UserOutMsg.LoginInfoProtoOut;
 import com.proto.user.gen.UserOutMsg.ResourceRefresh;
+import com.util.StringUtil;
 import com.util.TimeUtil;
 
 /**
@@ -36,6 +37,7 @@ public class PlayerSenderModule extends AbstractPlayerModule<GamePlayer>
     {
         LoginInfoProtoOut.Builder builder = LoginInfoProtoOut.newBuilder();
         builder.setUserID(player.getUserID());
+        builder.setPlayerName(player.getNickName());
         builder.setFailCount(player.getPlayerInfo().getFailCount());
         builder.setWinCount(player.getPlayerInfo().getWinCount());
         builder.setDiamondCount(player.getPlayerInfo().getGold());
@@ -51,6 +53,15 @@ public class PlayerSenderModule extends AbstractPlayerModule<GamePlayer>
         builder.setTodayTriggerADCount(player.getPlayerInfo().getAdTriggerCount());
         builder.setGlobalTopScore(player.getPlayerInfo().getTopLength());
 
+        if (StringUtil.isNullOrEmpty(player.getPlayerInfo().getAccuntGName()))
+        {
+            builder.setIsBinded(false);
+        }
+        else
+        {
+            builder.setIsBinded(true);
+        }
+
         if (player.getPlayerInfo().getBuyAdTime() != null)
         {
             Calendar calendar = TimeUtil.getCalendar(player.getPlayerInfo().getBuyAdTime());
@@ -60,6 +71,13 @@ public class PlayerSenderModule extends AbstractPlayerModule<GamePlayer>
 
             int day = TimeUtil.dateCompare(player.getPlayerInfo().getBuyAdTime(), player.getPlayerInfo().getAdExpireTime());
             builder.setLeftRemoveAdDay(day);
+        }
+        else
+        {
+            builder.setBuyRemoveAdDay(0);
+            builder.setBuyRemoveAdMonth(0);
+            builder.setBuyRemoveAdYear(0);
+            builder.setLeftRemoveAdDay(0);
         }
 
         AdRewardBean bean = AdRewardBeanFactory.getAdRewardBean(player.getPlayerInfo().getAdTriggerCount());
@@ -102,6 +120,14 @@ public class PlayerSenderModule extends AbstractPlayerModule<GamePlayer>
 
         builder.setIsCanUnlockCoinModeByAD(player.getPlayerInfo().getIsCanUnlockCoinModeByAD());
 
+        try
+        {
+            player.sendMessage(UserCmdOutType.USER_LOGIN_RESULT_VALUE, builder);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         player.sendMessage(UserCmdOutType.USER_LOGIN_RESULT_VALUE, builder);
     }
 
@@ -130,6 +156,22 @@ public class PlayerSenderModule extends AbstractPlayerModule<GamePlayer>
 
             int day = TimeUtil.dateCompare(player.getPlayerInfo().getBuyAdTime(), player.getPlayerInfo().getAdExpireTime());
             builder.setLeftRemoveAdDay(day);
+        }
+        else
+        {
+            builder.setBuyRemoveAdDay(0);
+            builder.setBuyRemoveAdMonth(0);
+            builder.setBuyRemoveAdYear(0);
+            builder.setLeftRemoveAdDay(0);
+        }
+
+        if (StringUtil.isNullOrEmpty(player.getPlayerInfo().getAccuntGName()))
+        {
+            builder.setIsBinded(false);
+        }
+        else
+        {
+            builder.setIsBinded(true);
         }
 
         List<Integer> roles = player.getRoleTypes();

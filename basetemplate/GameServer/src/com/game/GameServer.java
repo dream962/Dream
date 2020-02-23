@@ -119,6 +119,7 @@ public class GameServer extends BaseServer
         }
     }
 
+    @Override
     public void stop()
     {
         try
@@ -134,41 +135,6 @@ public class GameServer extends BaseServer
 
         Runtime.getRuntime().halt(0);
         LogFactory.error("GameServer Has Been Stopped.");
-    }
-
-    public static void main(String[] args)
-    {
-        long time = System.currentTimeMillis();
-
-        LogFactory.info("GameServer is starting...");
-
-        String path = "";
-        if (args.length <= 0)
-        {
-            path = "../CommonLib/config/game.xml";
-            LogFactory.error("Please input the global config path.default:" + path);
-        }
-        else
-        {
-            path = args[0];
-        }
-
-        // 初始化配置管理器。
-        if (!GlobalConfigComponent.init(path))
-        {
-            LogFactory.error("GameServer has started failed.");
-            System.exit(1);
-        }
-
-        if (!GameServer.getInstance().start())
-        {
-            LogFactory.error("GameServer has started failed.");
-            System.exit(1);
-        }
-
-        LogFactory.error(String.format("游戏服启动成功, 耗时 %d 秒.", (System.currentTimeMillis() - time) / 1000));
-
-        startMonitorThread();
     }
 
     public static void startMonitorThread()
@@ -245,4 +211,34 @@ public class GameServer extends BaseServer
         });
     }
 
+    public static void main(String[] args)
+    {
+        long time = System.currentTimeMillis();
+
+        String path = "";
+        if (args.length <= 0)
+        {
+            path = "../CommonLib/config/game.xml";
+            LogFactory.error("Please input the global config path.default:" + path);
+        }
+        else
+        {
+            path = args[0];
+        }
+
+        // 初始化配置管理器。
+        if (!GlobalConfigComponent.init(path))
+        {
+            LogFactory.error("GameServer has started failed.");
+            System.exit(1);
+        }
+
+        if (!GameServer.getInstance().start())
+        {
+            LogFactory.error("GameServer has started failed.");
+            System.exit(1);
+        }
+
+        LogFactory.error(String.format("游戏服启动成功, 耗时 %d 秒.", (System.currentTimeMillis() - time) / 1000));
+    }
 }

@@ -1,0 +1,44 @@
+1539595838367	Rename package 'com.game.scene.structure'
+1539605143535	Copy compilation unit
+1539669324845	Rename local variable 'consumeGoldBar'
+1539671234233	Copy compilation unit
+1539674443939	Copy compilation unit
+1539677128106	Delete element
+1539677856287	Copy compilation unit
+1539766876520	Copy compilation unit
+1539768473523	Copy compilation unit
+1539768488130	Rename type 'CityCreateCmd'
+1539769092471	Rename method 'createCity'
+1539778164650	Copy compilation unit
+1539778923219	Rename field 'structureMap'
+1539778932439	Rename field 'structureCreateMap'
+1539778940798	Rename field 'structureLevelMap'
+1539778949178	Rename field 'structureFunctionMap'
+1539779053743	Rename method 'getStructureBean'
+1539779063924	Rename method 'getStructureCreateBean'
+1539779072017	Rename method 'getStructureLevelBean'
+1539779398242	Rename local variable 'structID'
+1539779415795	Rename local variable 'structID'
+1539779493981	Delete element
+1539825687217	Copy compilation unit
+1539828959099	Rename local variable 'data'
+1539833940328	Copy compilation unit
+1539842366178	Copy compilation unit
+1539846216160	Copy compilation unit
+1539849160311	Copy compilation unit
+1539851248034	Copy compilation unit
+1539854870438	Copy compilation unit
+1539856178108	Rename method 'addBuilding'
+1539857342732	Delete element
+1539857365895	Copy compilation unit
+1539857518681	Copy compilation unit
+1539858165130	Copy compilation unit
+1539858237634	Copy compilation unit
+1539912631752	Delete element
+1539912669761	Copy compilation unit
+1539927684751	Copy compilation unit
+1539927709593	Rename type 'WorldCityBuildingPopulaceJob'
+1539927717420	Rename type 'WorldFoodJob'
+1539931299583	Rename local variable 'addCount'
+1539934371390	Rename method 'getBuildingListByType'
+1539937894819	Copy compilation unit

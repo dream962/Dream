@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/CommonUtil"/>
-	<classpathentry kind="lib" path="/CommonLib/lib/google-collections-1.0.jar"/>
 	<classpathentry kind="lib" path="/CommonLib/lib/mysql-connector-java-5.1.12-bin.jar"/>
 	<classpathentry kind="lib" path="/CommonLib/lib/slf4j-api-1.7.2.jar" sourcepath="/CommonLib/resource/logback-classic-1.2.3-sources.jar"/>
 	<classpathentry kind="lib" path="/CommonLib/lib/gson-2.2.4.jar" sourcepath="/CommonLib/lib/gson-2.2.4-sources.jar"/>
@@ -34,10 +33,10 @@
 	<classpathentry kind="lib" path="/CommonLib/lib/jna-5.0.0.jar" sourcepath="/CommonLib/resource/jna-5.0.0.zip"/>
 	<classpathentry kind="lib" path="/CommonLib/lib/netty-all-4.1.32.Final.jar" sourcepath="C:/server/fight/project2/CommonLib/resource/netty-all-4.1.32.Final-sources.jar"/>
 	<classpathentry kind="lib" path="/CommonLib/lib/fastjson-1.2.4.jar" sourcepath="/CommonLib/resource/fastjson-1.2.4.zip"/>
-	<classpathentry kind="lib" path="/CommonLib/lib/jetty-xml-9.4.0.v20161208.jar" sourcepath="/CommonLib/resource/jetty.project-master.zip"/>
-	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-api-1.0.8.jar"/>
-	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-runtime-1.0.8.jar"/>
-	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-collectionschema-1.0.8.jar"/>
 	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-core-1.0.8.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-runtime-1.0.8.jar" sourcepath="C:/Users/dream/.m2/repository/com/dyuproject/protostuff/protostuff-runtime/1.0.8/protostuff-runtime-1.0.8-sources.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-api-1.0.8.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/protostuff-collectionschema-1.0.8.jar"/>
+	<classpathentry kind="lib" path="/CommonLib/lib/jetty-xml-9.4.0.v20161208.jar" sourcepath="/CommonLib/resource/jetty.project-master.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

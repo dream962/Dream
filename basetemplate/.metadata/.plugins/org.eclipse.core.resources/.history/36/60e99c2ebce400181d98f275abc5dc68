@@ -1,0 +1,369 @@
+package com.game.component;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+
+import com.base.component.AbstractComponent;
+import com.base.timer.QuartzComponent;
+import com.data.bean.SceneBean;
+import com.data.component.GamePropertiesComponent;
+import com.data.data.SceneData;
+import com.game.object.player.GamePlayer;
+import com.game.scene.WorldScene;
+import com.util.ThreadPoolUtil;
+import com.util.TimeUtil;
+import com.util.print.LogFactory;
+
+/**
+ * 世界地图场景管理
+ * 
+ * @author dream
+ * @date 2013-3-10
+ * @version
+ */
+public class WorldSceneLogicComponent extends AbstractComponent
+{
+    /** 《层级ID-场景ID，场景列表》》 */
+    private static Map<String, List<WorldScene>> sceneMap = new HashMap<>();
+
+    private static ReadWriteLock lock = new ReentrantReadWriteLock();
+
+    /** 地图场景更新主线程池 */
+    private static ExecutorService sceneExecutor;
+
+    private static ScheduledExecutorService schedule = ThreadPoolUtil.singleScheduledExecutor("world-scene-schedule");
+
+    /**
+     * 世界地图场景中公共事件刷新job,一小时刷新一次
+     * 
+     * @author dream
+     *
+     */
+    private static final class WorldPublicEventJob implements Job
+    {
+        @Override
+        public void execute(JobExecutionContext context) throws JobExecutionException
+        {
+            long time = System.currentTimeMillis();
+            List<WorldScene> list = getAllScene();
+            for (WorldScene scene : list)
+            {
+                scene.refreshPublicEvent();
+            }
+
+            LogFactory.error("WorldPublicEventJob Refresh Event.count:{},time:{}", list.size(), System.currentTimeMillis() - time);
+        }
+    }
+
+    /**
+     * 世界地图场景中私人事件刷新job,一小时刷新一次
+     * 
+     * @author dream
+     *
+     */
+    private static final class WorldPrivateEventJob implements Job
+    {
+        @Override
+        public void execute(JobExecutionContext context) throws JobExecutionException
+        {
+            long time = System.currentTimeMillis();
+            List<WorldScene> list = getAllScene();
+            for (WorldScene scene : list)
+            {
+                scene.refreshPrivateEvent();
+            }
+
+            LogFactory.error("WorldPrivateEventJob Refresh Event.count:{},time:{}", list.size(), System.currentTimeMillis() - time);
+        }
+    }
+
+    @Override
+    public boolean initialize()
+    {
+        int count = Runtime.getRuntime().availableProcessors() * 3;
+        sceneExecutor = ThreadPoolUtil.fixedServicePool(count, "world-scene-pool");
+        return true;
+    }
+
+    /**
+     * 世界地图场景启动时初始化过程：
+     * 1.根据配置表取得场景，初始化默认的分线场景
+     * 2.根据数据库配置，加载多余的的分线场景
+     * 3.地图的基础配置信息初始化
+     * 4.地图的公共事件等公共信息初始化
+     * 5.玩家个人信息初始化
+     * 6.玩家个人信息逻辑处理，无效信息删除。
+     * 7.玩家其他跨场景信息处理。
+     * 
+     * @return
+     */
+    private boolean initScene()
+    {
+        // 《层级，场景列表》
+        Map<Integer, List<SceneBean>> map = WorldSceneDataComponent.getAllLevelSceneMap();
+        for (Entry<Integer, List<SceneBean>> entry : map.entrySet())
+        {
+            List<SceneBean> list = entry.getValue();
+
+            for (SceneBean bean : list)
+            {
+                // 封装Key：地图层级-场景ID
+                String key = entry.getKey() + "-" + bean.getSceneID();
+                List<WorldScene> sceneList = initSingleSceneLineList(bean);
+                // 添加场景的实例scene
+                sceneMap.put(key, sceneList);
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * 初始化单个场景的所有分线实例
+     * 
+     * @param bean
+     * @return
+     */
+    private List<WorldScene> initSingleSceneLineList(SceneBean bean)
+    {
+        List<WorldScene> sceneList = new ArrayList<>();
+
+        // 缓存的分线列表
+        List<SceneData> sceneDataList = GameCacheComponent.getRemotePublic().getSceneLineList(bean.getSceneID());
+        if (sceneDataList == null || sceneDataList.isEmpty())
+        {
+            // 场景默认初始化个数
+            for (int i = 1; i <= bean.getInitCount(); i++)
+            {
+                WorldScene scene = new WorldScene(bean, i);
+                if (scene.init())
+                {
+                    sceneList.add(scene);
+                }
+                else
+                    LogFactory.error("严重错误：世界地图场景分线实例创建失败。SceneID:{},lineID:{}", bean.getSceneID(), i);
+            }
+        }
+        else
+        {
+            for (SceneData data : sceneDataList)
+            {
+                WorldScene scene = new WorldScene(bean, data);
+                if (scene.init())
+                {
+                    sceneList.add(scene);
+                }
+                else
+                    LogFactory.error("严重错误：世界地图场景分线实例加载失败。.SceneID:{},lineID:{}", bean.getSceneID(), data.getLineID());
+            }
+        }
+
+        return sceneList;
+    }
+
+    @Override
+    public boolean start()
+    {
+        if (initScene())
+        {
+            Date publicDate = TimeUtil.formartDate("2010-01-01 00:00:00", "yyyy-MM-dd HH:mm:ss");
+            QuartzComponent.addStartTimeRepeatJob("world-public-event", WorldPublicEventJob.class, publicDate, GamePropertiesComponent.WORLD_EVENT_REFRESH_TIME, null);
+            Date privateDate = TimeUtil.formartDate("2010-01-01 1:00:00", "yyyy-MM-dd HH:mm:ss");
+            QuartzComponent.addStartTimeRepeatJob("world-private-event", WorldPrivateEventJob.class, privateDate, GamePropertiesComponent.WORLD_EVENT_REFRESH_TIME, null);
+
+            // 场景定时更新
+            schedule.scheduleWithFixedDelay(() -> updateScene(), 0, 200, TimeUnit.MILLISECONDS);
+            return true;
+        }
+
+        return false;
+    }
+
+    public static List<WorldScene> getAllScene()
+    {
+        List<WorldScene> list = new ArrayList<>();
+
+        lock.readLock().lock();
+        try
+        {
+            for (Entry<String, List<WorldScene>> entry : sceneMap.entrySet())
+            {
+                list.addAll(entry.getValue());
+            }
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+
+        return list;
+    }
+
+    /**
+     * 更新世界地图场景
+     */
+    private static void updateScene()
+    {
+        List<WorldScene> list = getAllScene();
+
+        long time = System.currentTimeMillis();
+        for (WorldScene scene : list)
+        {
+            if (time - scene.getLastUpdateTime() >= GamePropertiesComponent.WORLD_SCENE_UPDATE_TIME)
+                sceneExecutor.submit(scene);
+        }
+
+        if (System.currentTimeMillis() - time >= 3000)
+        {
+            LogFactory.warn("WorldSceneLogicComponent updateScene Speed Too Much Time.time:{}", System.currentTimeMillis() - time);
+        }
+    }
+
+    /**
+     * 取得地图场景信息
+     * 
+     * @param layerID
+     * @param sceneID
+     * @param lineID
+     * @return
+     */
+    public static WorldScene getWorldScene(int layerID, int sceneID, int lineID)
+    {
+        lock.readLock().lock();
+        try
+        {
+            String key = layerID + "-" + sceneID;
+            List<WorldScene> list = sceneMap.get(key);
+
+            for (WorldScene scene : list)
+            {
+                if (scene.getLineID() == lineID)
+                    return scene;
+            }
+
+            return null;
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+    }
+
+    /**
+     * 根据玩家ID取得世界地图场景
+     * 
+     * @param userID
+     * @return
+     */
+    public static WorldScene getWorldSceneByUserID(long userID)
+    {
+        lock.readLock().lock();
+        try
+        {
+            for (List<WorldScene> list : sceneMap.values())
+            {
+                for (WorldScene scene : list)
+                {
+                    if (scene.getScenePlayer(userID) != null)
+                        return scene;
+                }
+            }
+
+            return null;
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+    }
+
+    /**
+     * 场景添加玩家，玩家出生
+     * 
+     * @param layerID
+     * @param sceneID
+     * @return
+     */
+    public static WorldScene sceneAddPlayer(int layerID, int sceneID, GamePlayer player)
+    {
+        String key = layerID + "-" + sceneID;
+
+        lock.readLock().lock();
+        try
+        {
+            List<WorldScene> list = sceneMap.get(key);
+
+            for (WorldScene scene : list)
+            {
+                if (scene.isCanAddPlayer() && scene.born(player))
+                {
+                    return scene;
+                }
+            }
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+
+        // 创建新场景
+        lock.writeLock().lock();
+        try
+        {
+            List<WorldScene> list = sceneMap.get(key);
+            int maxIndex = 0;
+            SceneBean sceneBean = WorldSceneDataComponent.getSceneBean(layerID, sceneID);
+            for (WorldScene scene : list)
+            {
+                if (scene.getLineID() > maxIndex)
+                    maxIndex = scene.getLineID();
+            }
+
+            WorldScene result = null;
+
+            int count = (int) (list.size() * GamePropertiesComponent.WORLD_SCENE_ADD_COUNT);
+            for (int i = 0; i <= count; i++)
+            {
+                WorldScene scene = new WorldScene(sceneBean, maxIndex++);
+                if (scene.init())
+                {
+                    list.add(scene);
+                    if (result == null)
+                        result = scene;
+                }
+                else
+                {
+                    LogFactory.error("严重错误：世界地图场景分线实例实时创建失败。.SceneID:{},lineID:{}", sceneBean.getSceneID(), i);
+                }
+            }
+
+            if (result != null)
+                result.born(player);
+
+            return result;
+        }
+        finally
+        {
+            lock.writeLock().unlock();
+        }
+    }
+
+    @Override
+    public void stop()
+    {
+        sceneMap.clear();
+    }
+}

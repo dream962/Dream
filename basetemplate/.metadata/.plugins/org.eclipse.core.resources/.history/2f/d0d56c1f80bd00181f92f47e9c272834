@@ -1,0 +1,11 @@
+package com.game.scene.city;
+
+import com.data.info.CityInfo;
+
+public class BaseCity extends AbstractCity
+{
+    public BaseCity(CityInfo cityInfo)
+    {
+        super(info);
+    }
+}

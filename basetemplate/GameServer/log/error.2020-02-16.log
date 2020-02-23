@@ -1,0 +1,614 @@
+2020-02-16 18:09:14,446|ERROR|main|token：ya29.c.Ko8BvQcvzYC5BVR2I98NIx-Qgx0FgutjxZbZAQhZLqituwP1yiutfgX56lxeuOZp_tlP6sfPntwtLKbJsS2Td2dnMKsnL5I2ftQ39mjOrgI53PzOnZ7m9I57AMwlDqj3vk6bMINdHry1rZ1RmrKD0-1S_xYQDCWqa5pdhphPFmgXbLWznKJmPQJcJgQrZDuN_Ac
+2020-02-16 18:10:01,136|ERROR|main|token：ya29.c.Ko8BvQeWm1qrODODtYwIAEI29bdL5sL6RoSpiazfR2ZGarYRHYWud3CknNKnajMB-ZbN9C8d6PG22mpFJ4sEoeh4MTGlnz8pUifUujVMBeeeDaO-tZCnP5n4nSYEmQukKbo5lODM1ZXltv-sJC8NUEF67DM4smrrUpbZJMy4aBTqlzm6NbcAUusNTLJO_xpn9qY
+2020-02-16 20:36:54,374|ERROR|main|token：ya29.c.Ko8BvQeVnE2RCvZRXa1oGWh2VZlu8NarKzG_nkSR1KJGg2RqcHys37POh0sldIeF4RmdRloRg4gK1feyOb_ywGIqzp0E1X3jrvi4SMpphdlMl4hTVH-sYqdEvOJfJlOo3xajYOmzp72zbnvtqsWXAnOa91JMNbR35rqpSfW_PGlPrvSdoFCwwYQHeRUDxFii5Uk
+2020-02-16 20:37:18,837|ERROR|main|token：ya29.c.Ko8BvQffgp95JtTHltbfZtOb1w0mjv9OdM-ZU1c9VLhZKSXx5--Ildj5GOpove7ijgvnNR046XA3dCOrZVK4tDa5_r8Um0udt1FFp52lgoSXnQtaYwZSmvActpeFowY-FcYu6rQPO4GNsHggjNUBWBNrLpA6-cRMMX2AIxCHW_8yrlVWw4BHJdB52fg0QP9QuFk
+2020-02-16 20:37:51,082|ERROR|main|token：ya29.c.Ko8BvQdp9bFggvEgjFJdkEUhnVrjX1ntssQM5CrcMIQI4Hm6GnC1BH5y3GxdZdO5mNNxCO35_pRxiC-q3g_rz7kCyGheHQ_WQGq1gMSRaImygbIx2mAnoTTzs16IS71d1Jbj1Hv_qmhQfwX7GvBO580rnamHfizI2prdajBSZwR9HnRNGlwYYgMm14QlcrQDzn8
+2020-02-16 20:38:46,317|ERROR|main|token：ya29.c.Ko8BvQcTrNfeu-aPnBdCSzbsrvbb9v9c7SOOFN4vVwxPKsiDJcKjHALssJEfXDc529ts46kxZoltpuXvftxyLVR2QXkRefSnPFfUjF8fp2knzlazZ4xIDpr1AOdoFoqtU1rdkEL5W4Q_O7Q3SIy777iN0A1unZE6eORV3WjDQZJJJcrf23Lqv-MAYRmVq57g3Tg
+2020-02-16 20:38:53,687|ERROR|main|token：ya29.c.Ko8BvQeO2N4RupzVjaSP2xUuNL7pDKBgfU7MmR8rL87LbJUEbhObznj7GLdD7-xiIoBdqnGeGeeVINLroSAKHEl4g6zAaQ0q3FmKKwVG60P5AXO1CvXUqpcnV_aCcvaFSBFOx8i0SyeMQWnotffRQMrZLUQ-kxVpqch1hpONHnCIzAqra0MaNaUBiPoN3FppwAg
+2020-02-16 20:49:11,518|ERROR|main|token：ya29.c.Ko8BvQddFHS8epk3GphZ_RBueTMf7YQDwIoxlQtbHkfrIhYu7HH24DBl7GpduK72kweoANpVDkJfdXuP4PWFVvlifP7hiuksPuDQrdQAg9tZeI5NZ_BjA9EaDNik0SpFmWepz2IAN7HInL-vJ5Mkyu81x_eSiby1l8whkIlOafsp-i7q9HhCqCdRvWJZFXCdCbo
+2020-02-16 21:17:15,328|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 21:17:15,826|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 21:17:15,827|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 21:17:15,827|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 21:17:15,828|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 21:17:15,828|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 21:17:15,828|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 21:17:15,828|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 21:17:15,828|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 21:17:15,829|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 21:17:15,829|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 21:17:15,829|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 21:17:15,829|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 21:17:15,829|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 21:17:15,829|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 21:17:15,830|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 21:17:15,830|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 21:17:15,830|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 21:17:15,830|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 21:17:15,830|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 21:17:15,831|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 21:17:15,831|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 21:17:15,831|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 21:17:15,831|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 21:17:15,831|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 21:17:25,611|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 21:17:28,242|ERROR|main|refresh token：ya29.c.Ko8BvQdGdwxlc7Tg97pqL_bdo0r3EOyhcZpMgC2Fmv5NBf6bkg4nwXYXihWsqu2GTlGIo8xoojL8LjsMH8fvESrIbeGSSYZFO9RyQqEVXC9E0HAJa8Ds9AmZbKwrexOW2nAuj1Qk9_cwftfizaQmNYCh5crOHIY3WSRF9UQNYon8mMlK06whJVvkvZrdPAVm-QY
+2020-02-16 21:17:29,804|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2020-02-16 21:17:29,804|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2020-02-16 21:17:29,804|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2020-02-16 21:17:29,804|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2020-02-16 21:17:29,805|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2020-02-16 21:17:29,805|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2020-02-16 21:17:29,805|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2020-02-16 21:17:29,805|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2020-02-16 21:17:29,805|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2020-02-16 21:17:29,811|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2020-02-16 21:17:29,865|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2020-02-16 21:17:29,866|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2020-02-16 21:17:29,866|ERROR|main|****** Component:[com.game.component.ChargeComponent] has started successfully.******************
+2020-02-16 21:17:29,866|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2020-02-16 21:17:29,866|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2020-02-16 21:17:30,044|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2020-02-16 21:17:30,330|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2020-02-16 21:17:30,331|ERROR|main|****** All Component has started successfully.******************
+2020-02-16 21:17:30,331|ERROR|main|游戏服启动成功, 耗时 15 秒.
+2020-02-16 21:59:27,142|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 21:59:27,573|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 21:59:27,574|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 21:59:27,574|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 21:59:27,574|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 21:59:27,574|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 21:59:27,574|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 21:59:27,575|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 21:59:27,575|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 21:59:27,575|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 21:59:27,575|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 21:59:27,575|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 21:59:27,575|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 21:59:27,575|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 21:59:27,576|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 21:59:27,576|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 21:59:27,576|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 21:59:27,577|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 21:59:27,577|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 21:59:27,577|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 21:59:27,577|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 21:59:27,577|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 21:59:27,578|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 21:59:27,578|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 21:59:27,578|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 21:59:36,518|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 21:59:39,052|ERROR|main|refresh token：ya29.c.Ko8BvQdv1l1Dd3GLm332gTlaLTIdp41QPw429dcjsqjjHBiENJNEk2lH973r2w9xJl8R4oOIcBLPX8Ru_pRSSkME8LKYhLHbimrSoDW5wjAyJdCw09UhRAy-ag_QUtld037LQjovtA7FvgPQ-FQUfJ-vit3mH1NylVw5gUkTnWDbR0EEck1cPOU28NF-CB5DNtg
+2020-02-16 21:59:40,478|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2020-02-16 21:59:40,478|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2020-02-16 21:59:40,478|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2020-02-16 21:59:40,478|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2020-02-16 21:59:40,478|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2020-02-16 21:59:40,478|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2020-02-16 21:59:40,478|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2020-02-16 21:59:40,478|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2020-02-16 21:59:40,479|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2020-02-16 21:59:40,483|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2020-02-16 21:59:40,519|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2020-02-16 21:59:40,519|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2020-02-16 21:59:40,519|ERROR|main|****** Component:[com.game.component.ChargeComponent] has started successfully.******************
+2020-02-16 21:59:40,519|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2020-02-16 21:59:40,519|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2020-02-16 21:59:40,687|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2020-02-16 21:59:40,964|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2020-02-16 21:59:40,964|ERROR|main|****** All Component has started successfully.******************
+2020-02-16 21:59:40,964|ERROR|main|游戏服启动成功, 耗时 13 秒.
+2020-02-16 21:59:48,288|ERROR|refresh-token-1|refresh token：ya29.c.Ko8BvQeTycFGQS6kCm_Iko-iSftWE5p67-kFRnTEscTCR8TOMpG0oXSV_8UlZ3-DEXhRYQwtW1iY7PPiLLtSwN9n7wjxJhd_n7mXuoGD7zjfc1G5tXO6vjsy3YuDTUk_7h2csKVjqWzR5yI7GyX5Te1_sZAa6xVgal1ZhO-wVNeUymjSWOgLzJAnzVdPjw4N-sA
+2020-02-16 22:19:29,198|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:19:29,645|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:19:29,645|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:19:29,645|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:19:29,645|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:19:29,646|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:19:29,646|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:19:29,646|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:19:29,646|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:19:29,646|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:19:29,646|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:19:29,646|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:19:29,646|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:19:29,647|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:19:29,647|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:19:29,647|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:19:29,647|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:19:29,647|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:19:29,648|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:19:29,648|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:19:29,648|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:19:29,648|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:19:29,648|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:19:29,648|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:19:29,648|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:19:31,251|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 22:21:39,856|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:21:40,263|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:21:40,263|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:21:40,263|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:21:40,263|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:21:40,264|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:21:40,264|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:21:40,264|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:21:40,264|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:21:40,264|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:21:40,264|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:21:40,265|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:21:40,265|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:21:40,265|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:21:40,265|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:21:40,265|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:21:40,266|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:21:40,266|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:21:40,266|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:21:40,266|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:21:40,266|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:21:40,267|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:21:40,267|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:21:40,267|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:21:40,267|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:21:41,813|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 22:22:56,904|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:22:57,309|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:22:57,310|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:22:57,310|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:22:57,310|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:22:57,310|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:22:57,310|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:22:57,310|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:22:57,310|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:22:57,311|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:22:57,311|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:22:57,311|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:22:57,311|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:22:57,311|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:22:57,311|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:22:57,311|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:22:57,312|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:22:57,312|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:22:57,312|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:22:57,312|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:22:57,312|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:22:57,313|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:22:57,313|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:22:57,313|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:22:57,313|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:22:58,831|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 22:27:19,872|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:27:20,240|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:27:20,240|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:27:20,241|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:27:20,241|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:27:20,241|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:27:20,241|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:27:20,241|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:27:20,241|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:27:20,241|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:27:20,242|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:27:20,242|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:27:20,242|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:27:20,242|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:27:20,242|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:27:20,242|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:27:20,243|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:27:20,243|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:27:20,243|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:27:20,243|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:27:20,243|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:27:20,243|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:27:20,244|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:27:20,244|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:27:20,244|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:27:29,482|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 22:30:05,401|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:30:05,829|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:30:05,829|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:30:05,829|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:30:05,829|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:30:05,830|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:30:05,830|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:30:05,830|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:30:05,830|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:30:05,830|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:30:05,830|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:30:05,830|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:30:05,830|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:30:05,830|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:30:05,831|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:30:05,831|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:30:05,831|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:30:05,831|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:30:05,831|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:30:05,832|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:30:05,832|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:30:05,832|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:30:05,832|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:30:05,832|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:30:05,833|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:30:48,715|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:30:49,093|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:30:49,094|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:30:49,094|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:30:49,094|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:30:49,094|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:30:49,094|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:30:49,094|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:30:49,094|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:30:49,095|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:30:49,095|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:30:49,095|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:30:49,095|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:30:49,095|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:30:49,095|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:30:49,096|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:30:49,096|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:30:49,096|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:30:49,097|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:30:49,097|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:30:49,097|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:30:49,097|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:30:49,097|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:30:49,097|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:30:49,097|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:30:58,842|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 22:44:17,552|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:44:17,970|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:44:17,971|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:44:17,971|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:44:17,971|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:44:17,971|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:44:17,971|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:44:17,972|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:44:17,972|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:44:17,972|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:44:17,972|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:44:17,972|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:44:17,972|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:44:17,973|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:44:17,973|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:44:17,973|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:44:17,973|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:44:17,973|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:44:17,974|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:44:17,974|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:44:17,974|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:44:17,974|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:44:17,974|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:44:17,974|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:44:17,974|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:44:28,762|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 22:46:18,910|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:46:19,302|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:46:19,303|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:46:19,303|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:46:19,303|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:46:19,303|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:46:19,303|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:46:19,304|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:46:19,304|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:46:19,304|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:46:19,304|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:46:19,304|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:46:19,304|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:46:19,304|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:46:19,305|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:46:19,305|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:46:19,305|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:46:19,306|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:46:19,306|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:46:19,306|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:46:19,306|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:46:19,306|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:46:19,306|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:46:19,306|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:46:19,307|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:46:28,603|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 22:47:49,092|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:47:49,467|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:47:49,468|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:47:49,468|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:47:49,468|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:47:49,468|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:47:49,468|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:47:49,468|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:47:49,469|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:47:49,469|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:47:49,469|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:47:49,469|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:47:49,469|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:47:49,469|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:47:49,469|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:47:49,469|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:47:49,470|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:47:49,470|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:47:49,470|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:47:49,470|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:47:49,470|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:47:49,471|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:47:49,471|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:47:49,471|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:47:49,471|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:47:58,769|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 22:48:24,007|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:48:24,416|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:48:24,416|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:48:24,416|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:48:24,416|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:48:24,417|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:48:24,417|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:48:24,417|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:48:24,417|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:48:24,417|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:48:24,417|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:48:24,417|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:48:24,417|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:48:24,418|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:48:24,418|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:48:24,418|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:48:24,418|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:48:24,418|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:48:24,419|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:48:24,419|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:48:24,419|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:48:24,419|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:48:24,419|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:48:24,419|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:48:24,419|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:48:33,441|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 22:55:04,255|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 22:55:04,712|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 22:55:04,713|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 22:55:04,713|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 22:55:04,713|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 22:55:04,713|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 22:55:04,713|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 22:55:04,713|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 22:55:04,713|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 22:55:04,713|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 22:55:04,713|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 22:55:04,714|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 22:55:04,714|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 22:55:04,714|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 22:55:04,714|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 22:55:04,714|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 22:55:04,715|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 22:55:04,715|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 22:55:04,715|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 22:55:04,715|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 22:55:04,716|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 22:55:04,716|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 22:55:04,716|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 22:55:04,716|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 22:55:04,716|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 22:55:13,422|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 23:02:19,632|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 23:02:20,057|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 23:02:20,058|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 23:02:20,058|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 23:02:20,058|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 23:02:20,058|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 23:02:20,058|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 23:02:20,059|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 23:02:20,059|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 23:02:20,059|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 23:02:20,059|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 23:02:20,059|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 23:02:20,059|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 23:02:20,059|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 23:02:20,059|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 23:02:20,059|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 23:02:20,060|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 23:02:20,060|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 23:02:20,060|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 23:02:20,061|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 23:02:20,061|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 23:02:20,061|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 23:02:20,061|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 23:02:20,061|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 23:02:20,062|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 23:02:30,379|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 23:05:47,499|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 23:05:47,878|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 23:05:47,879|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 23:05:47,879|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 23:05:47,879|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 23:05:47,879|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 23:05:47,879|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 23:05:47,879|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 23:05:47,880|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 23:05:47,880|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 23:05:47,880|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 23:05:47,880|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 23:05:47,880|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 23:05:47,880|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 23:05:47,881|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 23:05:47,881|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 23:05:47,881|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 23:05:47,881|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 23:05:47,881|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 23:05:47,882|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 23:05:47,882|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 23:05:47,882|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 23:05:47,882|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 23:05:47,882|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 23:05:47,882|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 23:05:58,080|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 23:07:10,729|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 23:07:11,159|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 23:07:11,160|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 23:07:11,160|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 23:07:11,160|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 23:07:11,160|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 23:07:11,160|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 23:07:11,160|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 23:07:11,160|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 23:07:11,161|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 23:07:11,161|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 23:07:11,161|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 23:07:11,161|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 23:07:11,161|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 23:07:11,161|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 23:07:11,161|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 23:07:11,162|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 23:07:11,162|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 23:07:11,162|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 23:07:11,163|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 23:07:11,163|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 23:07:11,163|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 23:07:11,163|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 23:07:11,163|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 23:07:11,163|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 23:07:20,403|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 23:10:37,620|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 23:10:38,013|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 23:10:38,013|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 23:10:38,015|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 23:10:38,016|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 23:10:38,016|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 23:10:38,016|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 23:10:38,016|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 23:10:38,016|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 23:10:38,017|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 23:10:38,017|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 23:10:38,017|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 23:10:38,017|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 23:10:38,017|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 23:10:46,786|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 23:11:31,430|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 23:11:31,824|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 23:11:31,824|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 23:11:31,824|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 23:11:31,824|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 23:11:31,825|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 23:11:31,825|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 23:11:31,825|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 23:11:31,825|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 23:11:31,825|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 23:11:31,825|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 23:11:31,826|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 23:11:31,826|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 23:11:31,826|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 23:11:31,826|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 23:11:31,826|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 23:11:31,826|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 23:11:31,827|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 23:11:31,827|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 23:11:31,827|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 23:11:31,827|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 23:11:31,827|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 23:11:31,828|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 23:11:31,828|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 23:11:31,828|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 23:11:40,694|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 23:13:42,000|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 23:13:42,418|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 23:13:42,419|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 23:13:42,419|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 23:13:42,419|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 23:13:42,419|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 23:13:42,419|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 23:13:42,419|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 23:13:42,419|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 23:13:42,420|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 23:13:42,420|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 23:13:42,420|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 23:13:42,420|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 23:13:42,420|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 23:13:42,420|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 23:13:42,421|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 23:13:42,421|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 23:13:42,421|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 23:13:42,421|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 23:13:42,421|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 23:13:42,422|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 23:13:42,422|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 23:13:42,422|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 23:13:42,422|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 23:13:42,422|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 23:13:51,132|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 23:20:48,816|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 23:20:49,208|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 23:20:49,209|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 23:20:49,209|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 23:20:49,209|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 23:20:49,209|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 23:20:49,209|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 23:20:49,209|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 23:20:49,210|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 23:20:49,210|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 23:20:49,210|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 23:20:49,210|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 23:20:49,210|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 23:20:49,210|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 23:20:49,211|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 23:20:49,211|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 23:20:49,211|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 23:20:49,212|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 23:20:49,212|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 23:20:49,212|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 23:20:49,212|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 23:20:49,212|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 23:20:49,212|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 23:20:49,212|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 23:20:49,213|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 23:20:57,855|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 23:21:57,992|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-16 23:21:58,367|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-16 23:21:58,368|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-16 23:21:58,368|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-16 23:21:58,368|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-16 23:21:58,368|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-16 23:21:58,368|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-16 23:21:58,369|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-16 23:21:58,369|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-16 23:21:58,369|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-16 23:21:58,369|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-16 23:21:58,369|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-16 23:21:58,369|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-16 23:21:58,369|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-16 23:21:58,370|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-16 23:21:58,370|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-16 23:21:58,371|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-16 23:21:58,371|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-16 23:21:58,371|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-16 23:21:58,371|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-16 23:21:58,372|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-16 23:21:58,372|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-16 23:21:58,372|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-16 23:21:58,372|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-16 23:21:58,372|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-16 23:22:07,533|ERROR|main|********************Robot Count:1000**************************
+2020-02-16 23:22:10,222|ERROR|main|refresh token：ya29.c.Ko8BvQe5u0pSm_7Jsbj45oqvc1Hid6TcpifFCi0Gj6wGcheuJfm9xEF4fcNx3PxhRsjTSLIywdDrOdjGUur4H1eJlvqwRD-6I363WUFie0HBxLvUD4o2blzFL0sWdo0icI8ecz5WS364sMKe2XrjSTkm1Q2G_oxLYJKFx1AJKE3usJuxx05m6d95ueJpmQjd6us
+2020-02-16 23:22:11,728|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2020-02-16 23:22:11,729|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2020-02-16 23:22:11,730|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2020-02-16 23:22:11,731|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2020-02-16 23:22:11,732|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2020-02-16 23:22:11,732|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2020-02-16 23:22:11,732|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2020-02-16 23:22:11,732|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2020-02-16 23:22:11,732|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2020-02-16 23:22:11,737|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2020-02-16 23:22:11,759|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2020-02-16 23:22:11,760|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2020-02-16 23:22:11,760|ERROR|main|****** Component:[com.game.component.ChargeComponent] has started successfully.******************
+2020-02-16 23:22:11,760|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2020-02-16 23:22:11,760|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2020-02-16 23:22:11,892|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2020-02-16 23:22:12,184|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2020-02-16 23:22:12,184|ERROR|main|****** All Component has started successfully.******************
+2020-02-16 23:22:12,184|ERROR|main|游戏服启动成功, 耗时 14 秒.

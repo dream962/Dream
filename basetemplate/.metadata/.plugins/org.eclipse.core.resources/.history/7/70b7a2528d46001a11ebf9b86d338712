@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<server>
+		<id>1</id><!-- 服务器ID -->
+		<address>64.64.226.90</address>
+		<ports>10007</ports><!-- 可配置多端口,目前GS配置一个即可,FS可监听多端口,逗号分隔 -->
+		<privateModulus>AIv9tT8w1f3NmLU94btc4vQzUi3b2prtn+1kzxq6/+aVKbH424eFYphP7VxXRknAeUs3P+I7hs7WY+BdJra7O4Hx0t45Om6vs4DNpFhS20U7R8pxLW0zc0VE+qr0gi9JnpxhIvfaNEfN1DhH2czqxgVYpGumL1GJApA1R+rD+OK3
+		</privateModulus>
+		<privateExponent>QJ40il2VeVjsk0RkLOMcU5JY7ZgdGQR0nNS6kGEe/CWAIIl5c93K+/lw2/3hEOwKUQDIuTm26USmx4rX8uML/ShtuiPImvbyQI3m6nbo3O0IWbVaMFIXd0R/Wh/JzUA00idf4l36h3cJZoJJ3IJsBxABv1yjKAkFP/3SdqxX4vk=
+		</privateExponent>
+		<languagePath>../CommonLib/language/Language-zh_cn.txt</languagePath>
+		<dirtyChar>../CommonLib/dirty</dirtyChar>
+		<chatFilter>../CommonLib/language/chatfilter.txt</chatFilter>
+		<randomNamePath>../CommonLib/names/names.xml</randomNamePath>
+		<configPath>config/excel</configPath>
+		<clientBattlePath>C:\\server\\fight\\project2\\GameServer\\config\\battle</clientBattlePath>
+		
+		<!--G:\project9\Y-配置表 -->
+
+		<!-- 111.230.144.210 106.75.147.215 -->
+		<accountServerIp>192.168.1.97</accountServerIp>
+		<accountServerPort>7300</accountServerPort>
+
+		<chargeServerIp>192.168.1.97</chargeServerIp>
+		<chargeServerPort>7400</chargeServerPort>
+
+		<centerServerIp>192.168.1.97</centerServerIp>
+		<centerServerPort>12200</centerServerPort>
+
+		<gmServerIp>0</gmServerIp>
+
+		<isDebug>0</isDebug>
+	</server>
+
+	<!-- 战斗服配置 -->
+	<fightProxy>
+		<publicModulus>AIv9tT8w1f3NmLU94btc4vQzUi3b2prtn+1kzxq6/+aVKbH424eFYphP7VxXRknAeUs3P+I7hs7WY+BdJra7O4Hx0t45Om6vs4DNpFhS20U7R8pxLW0zc0VE+qr0gi9JnpxhIvfaNEfN1DhH2czqxgVYpGumL1GJApA1R+rD+OK3
+		</publicModulus>
+		<publicExponent>AQAB</publicExponent>
+		<server id="1" desc="战斗服1" type="0" ip="192.168.1.47" isOpen="true" multiConnectionCount="1" ports="6001,6002,6003"></server>
+		<server id="2" desc="战斗服2" type="1" ip="192.168.1.47" isOpen="false" multiConnectionCount="2" ports="6001,6002,6003"></server>
+	</fightProxy>
+
+	<!-- 缓存配置 -->
+	<cacheServer>
+		<host>192.168.1.97</host>
+		<port>7180</port>
+		<password>daomu2</password>
+		<expiredTime desc="过期时间（小时）">720</expiredTime>
+		<syncInterval desc="定时保存时间300s">300</syncInterval>
+		<isCompress desc="value是否压缩">false</isCompress>
+		<dbCount desc="redis数据库个数">10</dbCount>
+		<maxIdle desc="连接池内空闲最大个数">20</maxIdle>
+		<minIdle desc="连接池内空闲最小个数">5</minIdle>
+		<maxTotal desc="连接池最大连接个数">1000</maxTotal>
+		<maxWaitMillis desc="连接最大的等待时间">10000</maxWaitMillis>
+		<connectionProperties>rewriteBatchedStatements=false</connectionProperties>
+	</cacheServer>
+
+	<!-- 数据库配置 -->
+	<database>
+		<privateModulus>AIv9tT8w1f3NmLU94btc4vQzUi3b2prtn+1kzxq6/+aVKbH424eFYphP7VxXRknAeUs3P+I7hs7WY+BdJra7O4Hx0t45Om6vs4DNpFhS20U7R8pxLW0zc0VE+qr0gi9JnpxhIvfaNEfN1DhH2czqxgVYpGumL1GJApA1R+rD+OK3
+		</privateModulus>
+		<privateExponent>QJ40il2VeVjsk0RkLOMcU5JY7ZgdGQR0nNS6kGEe/CWAIIl5c93K+/lw2/3hEOwKUQDIuTm26USmx4rX8uML/ShtuiPImvbyQI3m6nbo3O0IWbVaMFIXd0R/Wh/JzUA00idf4l36h3cJZoJJ3IJsBxABv1yjKAkFP/3SdqxX4vk=
+		</privateExponent>
+
+		<druid>
+			<db name="main">
+				<!-- 
+				106.12.25.131 jdbc:mysql://64.64.226.90:13620/db_jump?allowMultiQueries=true&amp;characterEncoding=utf8
+				root
+				jump_1%*$_root_game
+				   -->
+				<url>jdbc:mysql://106.12.25.131:13619/db_jump?allowMultiQueries=true&amp;characterEncoding=utf8</url>
+				<username>daomu2_admin</username>
+				<password>daomu2!@#</password>
+				<maxActive desc="">10</maxActive>
+				<initialSize desc="">2</initialSize>
+				<minIdle desc="">1</minIdle>
+				<filters desc="">stat</filters>
+				<maxWait desc="">1000</maxWait>
+			</db>
+		</druid>
+
+	</database>
+
+	<!-- web服配置 -->
+	<web>
+		<port>9082</port>
+		<serverThreadCount desc="jetty server 线程数量">100</serverThreadCount>
+		<resourcePath>./webapp</resourcePath>
+		<welcomeFile>index.html</welcomeFile>
+		<packages>com.game.web</packages>
+		<httpPublicKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDK0gZoLfD2pb3mklRMAETmqA5ddC4N7g4k0TnBIlHsM7M/3J7ZrsDrfWPFsdQhp+tTBpjUmM9BMV3awRLNaFn7sBxu+yL9FtEcgtzyqxg/dT2glc1KLb0FLR9LXljPJ95zqmDmZsJDmE2MxMq9HTNQ9BWwV9t6h3kTBLx8wwhthQIDAQAB
+		</httpPublicKey>
+		<isShowDirectory>true</isShowDirectory>
+		
+		<https>
+			<isOpen>false</isOpen>
+			<port>8443</port>
+			<jks>webapp/jetty.jks</jks>
+			<password>110mQT1f</password>
+		</https>
+
+		<mapping desc="第三方或者系统的配置servlet">
+			<servlet name="druid"
+				classPath="com.alibaba.druid.support.http.StatViewServlet" url="/druid/*" />
+		</mapping>
+	</web>
+
+</config>

@@ -1,0 +1,148 @@
+package com.game.test.echo;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import com.base.net.CommonMessage;
+import com.base.net.coder.CommonMessageDecoder;
+import com.base.net.coder.CommonMessageEncoder;
+import com.proto.login.gen.UserLoginMsg.UserLoginProto2;
+
+import io.jpower.kcp.netty.ChannelOptionHelper;
+import io.jpower.kcp.netty.UkcpChannel;
+import io.jpower.kcp.netty.UkcpChannelOption;
+import io.jpower.kcp.netty.UkcpClientChannel;
+import io.netty.bootstrap.Bootstrap;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelPipeline;
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.NioEventLoopGroup;
+
+/**
+ * Sends one message when a connection is open and echoes back any received
+ * data to the server.
+ *
+ * @author <a href="mailto:szhnet@gmail.com">szh</a>
+ */
+public final class EchoClient
+{
+    static final int CONV = Integer.parseInt(System.getProperty("conv", "10"));
+    static final String HOST = System.getProperty("host", "127.0.0.1");
+    static final int PORT = Integer.parseInt(System.getProperty("port", "6000"));
+    static final int SIZE = Integer.parseInt(System.getProperty("size", "256"));
+    public static AtomicInteger index = new AtomicInteger(0);
+
+    public static Map<Integer, KcpPlayer> map = new HashMap<>();
+
+    public static class KcpPlayer
+    {
+        public UkcpChannel channel;
+        public int id;
+
+        public KcpPlayer(int id)
+        {
+            this.id = id;
+        }
+
+        public boolean isConn()
+        {
+            if (channel != null && channel.isActive())
+                return true;
+
+            return false;
+        }
+
+        public void open(KcpPlayer player)
+        {
+            Thread thread = new Thread(() -> {
+                EventLoopGroup group = new NioEventLoopGroup();
+                try
+                {
+                    Bootstrap b = new Bootstrap();
+                    b.group(group).channel(UkcpClientChannel.class).handler(new ChannelInitializer<UkcpChannel>()
+                    {
+                        @Override
+                        public void initChannel(UkcpChannel ch) throws Exception
+                        {
+                            ChannelPipeline pipeline = ch.pipeline();
+
+                            pipeline.addLast("codec-d", new CommonMessageDecoder());
+                            pipeline.addLast("codec-e", new CommonMessageEncoder());
+                            pipeline.addLast(new EchoClientHandler(player));
+                        }
+                    });
+                    ChannelOptionHelper.nodelay(b, true, 20, 2, true).option(UkcpChannelOption.UKCP_MTU, 512);
+
+                    // Start the client.
+                    ChannelFuture f = b.connect(HOST, PORT).sync();
+
+                    // Wait until the connection is closed.
+                    f.channel().closeFuture().sync();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+                finally
+                {
+                    // Shut down the event loop to terminate all threads.
+                    group.shutdownGracefully();
+                }
+            });
+
+            thread.start();
+        }
+
+        public void send(CommonMessage message)
+        {
+            if (isConn())
+            {
+                channel.writeAndFlush(message);
+                System.err.println("send message:" + message.toString());
+            }
+        }
+
+        public void test()
+        {
+            Thread thread = new Thread(() -> {
+                while (true)
+                {
+                    if (isConn())
+                    {
+                        CommonMessage message = new CommonMessage(123);
+                        UserLoginProto2.Builder builder = UserLoginProto2.newBuilder();
+                        builder.setToken(id + "");
+                        message.setBody(builder.build().toByteArray());
+
+                        send(message);
+                    }
+
+                    try
+                    {
+                        Thread.sleep(1000);
+                    }
+                    catch (Exception e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+            });
+
+            thread.start();
+        }
+    }
+
+    public static void main(String[] args) throws Exception
+    {
+        for (int i = 1; i < 100; i++)
+        {
+            KcpPlayer player = new KcpPlayer(2);
+            player.open(player);
+
+            player.test();
+
+        }
+    }
+}

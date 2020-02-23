@@ -78,6 +78,9 @@ public enum ErrorCodeType
     Charge_Order_Check(112),
     /** 充值订单已经完成或者取消 */
     Charge_Order_Finish(113),
+
+    /** 账号已经绑定 */
+    Bind_Error(114),
     ;
 
     private int value;

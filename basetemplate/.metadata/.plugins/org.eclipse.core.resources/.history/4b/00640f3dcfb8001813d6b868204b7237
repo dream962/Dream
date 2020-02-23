@@ -1,0 +1,493 @@
+package com.game.scene;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import com.data.bean.SceneBean;
+import com.data.data.SceneData;
+import com.data.data.ScenePlayerData;
+import com.game.component.GameCacheComponent;
+import com.game.component.GamePlayerComponent;
+import com.game.component.WorldSceneDataComponent;
+import com.game.object.player.GamePlayer;
+import com.game.scene.map.IMapGraph;
+import com.game.scene.map.MapFindPath;
+import com.game.scene.map.PathFindFactory;
+import com.game.scene.map.PlayerMapGraph;
+import com.game.scene.map.SceneMapGraph;
+import com.google.protobuf.GeneratedMessage.Builder;
+import com.proto.command.UserCmdType.UserCmdOutType;
+import com.proto.map.gen.WorldMapMsg.ConfigFieldProto;
+import com.proto.map.gen.WorldMapMsg.ConfigGroupProto;
+import com.proto.map.gen.WorldMapMsg.ConfigMapProto;
+import com.proto.map.gen.WorldMapMsg.MapBornNode;
+import com.proto.world.gen.WorldOutMsg.WorldOpenFieldProtoOut;
+import com.util.print.LogFactory;
+
+/**
+ * 地图场景：一张地图就是一个场景
+ * 
+ * @author dream
+ *
+ */
+public class WorldScene implements Runnable
+{
+    /** 地图上土地信息 */
+    private Map<Integer, WorldField> fieldMap = new ConcurrentHashMap<>();
+    /** 地图分组数据 */
+    private List<WorldGroup> groupList = new ArrayList<>();
+    /** 地图寻路抽象数据 */
+    private SceneMapGraph map;
+    /** 地图出生点列表 */
+    private SceneBornData bornData = new SceneBornData();
+    /** 场景内自增ID（事件刷新ID等） */
+    private AtomicInteger index = new AtomicInteger(0);
+    /** 场景配置 */
+    private SceneBean sceneBean;
+    /** 场景缓存的信息 */
+    private SceneData sceneData;
+    /** 地图配置 */
+    private ConfigMapProto config;
+    /** 上次更新时间 */
+    private long lastUpdateTime;
+    /** 世界地图玩家列表 */
+    private Map<Long, ScenePlayer> playerMap = new ConcurrentHashMap<>();
+
+    /**
+     * 构造函数，创建时调用
+     * 
+     * @param sceneBean
+     * @param lineID
+     */
+    public WorldScene(SceneBean sceneBean, int lineID)
+    {
+        this.sceneBean = sceneBean;
+        this.sceneData = new SceneData();
+        this.sceneData.setCreateTime(new Date());
+        this.sceneData.setLineID(lineID);
+        this.sceneData.setPlayerCount(0);
+        this.sceneData.setAutoIndex(0);
+
+        this.lastUpdateTime = System.currentTimeMillis();
+        this.index.set(sceneData.getAutoIndex() + 100);
+    }
+
+    /**
+     * 构造函数，已经创建过再加载调用
+     * 
+     * @param sceneBean
+     * @param sceneData
+     */
+    public WorldScene(SceneBean sceneBean, SceneData sceneData)
+    {
+        this.sceneBean = sceneBean;
+        this.sceneData = sceneData;
+        this.lastUpdateTime = System.currentTimeMillis();
+        this.index.set(sceneData.getAutoIndex() + 100);
+    }
+
+    /********************************** 基础数据 ****************************************/
+
+    /**
+     * 场景分线ID
+     * 
+     * @return
+     */
+    public int getLineID()
+    {
+        return sceneData.getLineID();
+    }
+
+    /**
+     * 创建事件的唯一ID
+     * 
+     * @return
+     */
+    public int createTriggerIndex()
+    {
+        int result = index.incrementAndGet();
+        if (result == Integer.MAX_VALUE - 10000)
+            index.set(100);
+
+        return result;
+    }
+
+    public int getSceneID()
+    {
+        return sceneBean.getSceneID();
+    }
+
+    public SceneBean getSceneBean()
+    {
+        return sceneBean;
+    }
+
+    /**
+     * 上次更新时间
+     * 
+     * @return
+     */
+    public long getLastUpdateTime()
+    {
+        return lastUpdateTime;
+    }
+
+    /**
+     * 取得土地的信息
+     * 
+     * @param fieldID
+     * @return
+     */
+    public WorldField getField(int fieldID)
+    {
+        return fieldMap.get(fieldID);
+    }
+
+    /**
+     * 取得地块周围第n层的地块
+     * 
+     * @param fieldID：中心地块ID
+     * @param layer:层级
+     * @return
+     */
+    public List<WorldField> getFieldByLayer(int fieldID, int layer)
+    {
+        List<WorldField> list = new ArrayList<>();
+
+        WorldField center = fieldMap.get(fieldID);
+
+        List<Integer> nodes = null;
+        if (layer == 1)
+            nodes = WorldMathUtil.calLayer1(center.getProto().getMapX(), center.getProto().getMapY(), config.getColumn(), config.getRow());
+        else if (layer == 2)
+            nodes = WorldMathUtil.calLayer2(center.getProto().getMapX(), center.getProto().getMapY(), config.getColumn(), config.getRow());
+        else
+        {
+            LogFactory.error("World Field Layer is Over 2.layer:{}", layer);
+            nodes = new ArrayList<>();
+        }
+
+        for (int node : nodes)
+        {
+            WorldField field = fieldMap.get(node);
+            list.add(field);
+        }
+
+        return list;
+    }
+
+    /**
+     * 取得世界地图玩家
+     * 
+     * @param userID
+     * @return
+     */
+    public ScenePlayer getScenePlayer(long userID)
+    {
+        return playerMap.get(userID);
+    }
+
+    /**
+     * 取得所有玩家
+     * 
+     * @return
+     */
+    public List<ScenePlayer> getAllPlayer()
+    {
+        List<ScenePlayer> list = new ArrayList<>(playerMap.size());
+        list.addAll(playerMap.values());
+        return list;
+    }
+
+    /**
+     * 当前场景内玩家的最大等级
+     * 
+     * @return
+     */
+    public int getPlayerMaxLevel()
+    {
+        List<ScenePlayer> list = getAllPlayer();
+        int level = 0;
+        for (ScenePlayer scenePlayer : list)
+        {
+            if (scenePlayer.getPlayerLevel() > level)
+                level = scenePlayer.getPlayerLevel();
+        }
+        return level;
+    }
+
+    /**
+     * 当前场景内玩家的最小等级
+     * 
+     * @return
+     */
+    public int getPlayerMinLevel()
+    {
+        List<ScenePlayer> list = getAllPlayer();
+        int level = Integer.MAX_VALUE;
+        for (ScenePlayer scenePlayer : list)
+        {
+            if (scenePlayer.getPlayerLevel() < level)
+                level = scenePlayer.getPlayerLevel();
+        }
+        return level;
+    }
+
+    /********************************** 校验判断 ****************************************/
+
+    /**
+     * 是否可以出生新玩家
+     * 
+     * @return
+     */
+    public boolean isCanAddPlayer()
+    {
+        if (bornData.getLeftCount() > 0)
+            return true;
+
+        return false;
+    }
+
+    /**
+     * 检查是否是临近地块
+     * 
+     * @param field1
+     * @param field2
+     */
+    public boolean isNeighbor(int field1, int field2)
+    {
+        return map.isNeighbor(field1, field2);
+    }
+
+    /**
+     * 检查两点是否可以连通
+     * 
+     * @param mainCityID
+     * @param stopFieldID
+     * @return
+     */
+    public boolean isCanPath(int mainCityID, int stopFieldID)
+    {
+        MapFindPath path = PathFindFactory.findPath(mainCityID, stopFieldID, map);
+        return path.reachable;
+    }
+
+    /********************************** 系统功能 ****************************************/
+
+    /**
+     * 初始化世界地图场景
+     * 
+     * @param proto
+     * @return
+     */
+    public boolean init()
+    {
+        // 基础-地图
+        config = WorldSceneDataComponent.getSceneConfig(sceneBean.getSceneID());
+        map = new SceneMapGraph();
+        if (map.init(config))
+            return false;
+
+        // 基础-土地单元
+        List<ConfigFieldProto> fieldProtoList = config.getNodesList();
+        for (ConfigFieldProto node : fieldProtoList)
+        {
+            WorldField field = new WorldField(node);
+            fieldMap.put(node.getFieldID(), field);
+        }
+
+        // 基础-出生点单元
+        bornData.init(config.getBornNodesList());
+
+        // 基础-地图分组
+        List<ConfigGroupProto> groupProtoList = config.getGroupsList();
+        for (ConfigGroupProto group : groupProtoList)
+        {
+            WorldGroup worldGroup = new WorldGroup();
+            if (worldGroup.init(group, this))
+                groupList.add(worldGroup);
+            else
+            {
+                LogFactory.error("严重错误：地图分组信息初始化异常.sceneID:{},lineID:{},groupID:{}", getSceneID(), getLineID(), group.getGroupID());
+                return false;
+            }
+        }
+
+        // 地图所有玩家
+        List<ScenePlayerData> scenePlayerList=GameCacheComponent.getRemotePublic().getSceneAllPlayerList(sceneData.getSceneID(), sceneData.getLineID());
+        if(scenePlayerList==null)
+        {
+            
+        }
+        else
+        {
+            
+        }
+        // 基础 - 公共事件
+
+        // 玩家信息
+
+        // 更新到缓存
+        GameCacheComponent.getRemotePublic().updateSceneData(sceneData);
+
+        return true;
+    }
+
+    /**
+     * 定时刷新 3秒
+     */
+    @Override
+    public void run()
+    {
+        lastUpdateTime = System.currentTimeMillis();
+
+        // 更新场景内玩家逻辑
+        List<ScenePlayer> players = new ArrayList<>(playerMap.values());
+        for (ScenePlayer player : players)
+        {
+            player.update(lastUpdateTime);
+        }
+
+        // 更新分组的信息
+        for (WorldGroup group : groupList)
+        {
+            group.update(lastUpdateTime);
+        }
+    }
+
+    /**
+     * 定时刷新公共事件 偶数整点2小时
+     */
+    public void refreshPublicEvent()
+    {
+        for (WorldGroup group : groupList)
+        {
+            group.refreshPublicEvent();
+        }
+    }
+
+    /**
+     * 定时刷新私人事件 奇数整点 2小时
+     */
+    public void refreshPrivateEvent()
+    {
+        for (WorldGroup group : groupList)
+        {
+            group.refreshPrivateEvent();
+        }
+    }
+
+    /********************************** 逻辑功能 ****************************************/
+
+    /**
+     * 查找路径,只针对玩家开放的土地单元
+     * 
+     * @param startID
+     * @param endID
+     * @return
+     */
+    public List<Integer> findPath(long userID, int startID, int endID)
+    {
+        IMapGraph mapGraph = null;
+
+        ScenePlayer player = playerMap.get(userID);
+        if (player != null)
+            mapGraph = PlayerMapGraph.create(map, player);
+        else
+            mapGraph = map;
+
+        MapFindPath path = PathFindFactory.findPath(startID, endID, mapGraph);
+        if (path.reachable)
+        {
+            return path.getPathList();
+        }
+
+        return null;
+    }
+
+    /**
+     * 占领土地
+     * 
+     * @param player
+     * @param fieldID
+     */
+    public void ownField(GamePlayer player, int fieldID)
+    {
+        WorldField field = fieldMap.get(fieldID);
+        if (field != null && !field.isOwner(player.getUserID()))
+        {
+            field.playerOwner(player.getUserID());
+
+            WorldOpenFieldProtoOut.Builder builder = WorldOpenFieldProtoOut.newBuilder();
+            builder.setUserID(player.getUserID());
+            builder.setFieldID(fieldID);
+            sendToAll(UserCmdOutType.WORLD_OPEN_FIELD_RETURN_VALUE, builder, null);
+        }
+    }
+
+    /**
+     * 玩家出生。TODO：注册出生，还有迁移出生、升级出生等，或者扩展，或者其他方法。
+     * 
+     * @param player
+     * @return
+     */
+    public boolean born(GamePlayer player)
+    {
+        ScenePlayer scenePlayer = getScenePlayer(player.getUserID());
+        if (scenePlayer != null)
+        {
+            LogFactory.error("Scene Player Have Been Bornd.", player.getUserID(), sceneBean.getSceneID());
+            return false;
+        }
+
+        MapBornNode bornNode = bornData.choiceBornNode(player.getUserID());
+        if (bornNode == null)
+        {
+            LogFactory.error("Player Born Exception:born node is null.", player.getUserID(), sceneBean.getSceneID());
+            return false;
+        }
+
+        // 世界地图场景基础信息
+        ScenePlayerData playerData = new ScenePlayerData();
+        playerData.setSceneID(sceneBean.getSceneID());
+        playerData.setBornID(bornNode.getNodeID());
+        playerData.setCreateTime(new Date());
+        playerData.setLineID(getLineID());
+        playerData.setUserID(player.getUserID());
+        GameCacheComponent.getRemotePublic().updateScenePlayerData(playerData);
+
+        scenePlayer = new ScenePlayer(playerData, this);
+        playerMap.put(player.getUserID(), scenePlayer);
+
+        // 设置玩家的场景
+        player.setWorldScene(this);
+
+        boolean result = scenePlayer.born(playerData);
+        return result;
+    }
+
+    /********************************** 发送数据 ****************************************/
+
+    public void sendToAll(int code, Builder<?> builder, GamePlayer except)
+    {
+        List<GamePlayer> players = new ArrayList<>();
+        for (long userID : playerMap.keySet())
+        {
+            GamePlayer player = GamePlayerComponent.getPlayerByUserID(userID);
+            players.add(player);
+        }
+
+        for (GamePlayer player : players)
+        {
+            if (player == except)
+                continue;
+
+            player.sendMessage(code, builder);
+        }
+    }
+
+}

@@ -1,0 +1,107 @@
+package com.logic.map;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.proto.map.gen.WorldMapMsg.ConfigMapProto;
+import com.proto.map.gen.WorldMapMsg.ConfigNodeProto;
+import com.util.JsonUtil;
+
+public class MapGraph
+{
+    private Logger logger = LoggerFactory.getLogger(MapGraph.class);
+
+    /** 节点排列 */
+    private MapNode[][] nodes;
+    /** 列数 */
+    private int column;
+    /** 行数 */
+    private int row;
+    /** 格子边长 */
+    private int cell;
+
+    public int getCell()
+    {
+        return cell;
+    }
+
+    public MapNode getNode(int x, int y)
+    {
+        return nodes[y][x];
+    }
+
+    public MapNode getNode(int nodeID)
+    {
+        if (nodeID == 0)
+            return nodes[0][0];
+
+        int x = nodeID % column;
+        int y = nodeID / column;
+
+        // 整除取末尾
+        x = x == 0 ? column - 1 : x;
+        y = x == 0 ? y - 1 : y;
+
+        return nodes[y][x];
+    }
+
+    public boolean init(ConfigMapProto config)
+    {
+        column = config.getColumn();
+        row = config.getRow();
+        cell = config.getCell();
+        nodes = new MapNode[row][column];
+
+        List<ConfigNodeProto> list = config.getNodesList();
+        for (ConfigNodeProto proto : list)
+        {
+            int ny = proto.getNodeY();
+            int nx = proto.getNodeX();
+            nodes[ny][nx] = new MapNode(nx, ny);
+        }
+
+        return true;
+    }
+
+    /**
+     * 查找路径
+     * 
+     * @param startNode
+     * @param endNode
+     * @return
+     */
+    public MapFindPath find(int startNode, int endNode)
+    {
+        MapFindPath path = PathFindFactory.findPath(startNode, endNode, this);
+        return path;
+    }
+
+    public static void main(String[] args)
+    {
+        ConfigMapProto.Builder builder = ConfigMapProto.newBuilder();
+
+        for (int i = 1; i <= 16; i++)
+        {
+            ConfigNodeProto.Builder node = ConfigNodeProto.newBuilder();
+            node.setNodeID(i);
+            builder.addNodes(node);
+        }
+
+        ConfigMapProto proto = builder.build();
+        MapGraph graph = new MapGraph();
+        graph.init(proto);
+
+        MapFindPath path = graph.find(1, 7);
+        if (path != null)
+            System.err.println(JsonUtil.parseObjectToString(path));
+    }
+
+    public PathANode getPathNode(int begin)
+    {
+        MapNode node = getNode(begin);
+        PathANode aNode = new PathANode(node);
+        return aNode;
+    }
+}

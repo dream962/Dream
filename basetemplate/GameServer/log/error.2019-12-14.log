@@ -1,0 +1,1939 @@
+2019-12-14 21:38:17,191|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 21:38:17,768|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 21:38:17,769|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 21:38:17,769|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 21:38:17,770|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 21:38:17,770|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 21:38:17,770|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 21:38:17,770|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 21:38:17,771|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 21:38:17,771|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 21:38:17,771|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 21:38:17,771|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 21:38:17,771|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 21:38:17,772|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 21:38:17,772|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 21:38:17,772|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 21:38:17,773|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 21:38:17,773|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 21:38:17,773|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 21:38:17,773|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 21:38:17,773|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 21:38:17,773|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 21:38:17,774|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 21:38:17,774|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 21:38:22,516|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 21:38:24,292|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-14 21:38:24,292|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-14 21:38:24,292|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-14 21:38:24,292|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-14 21:38:24,292|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-14 21:38:24,292|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-14 21:38:24,292|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-14 21:38:24,292|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-14 21:38:24,292|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-14 21:38:24,299|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-14 21:38:24,339|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-14 21:38:24,340|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-14 21:38:24,340|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-14 21:38:24,340|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-14 21:38:24,340|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-14 21:38:24,506|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-14 21:38:24,737|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-14 21:38:24,738|ERROR|main|****** All Component has started successfully.******************
+2019-12-14 21:38:24,738|ERROR|main|游戏服启动成功, 耗时 7 秒.
+2019-12-14 21:46:25,063|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-14 21:47:34,913|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10109
+2019-12-14 21:52:29,136|ERROR|GamePlayer-Worker-10|AdRewardBean is Null.configID:0
+2019-12-14 22:41:24,350|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:51 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:41:34,355|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:52 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:41:44,346|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:53 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:41:54,337|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:54 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:42:04,345|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:55 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:42:14,337|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:56 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:42:24,343|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:57 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:42:34,349|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:58 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:42:44,341|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:59 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:42:54,345|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:60 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:43:04,335|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:61 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:43:14,341|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:62 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:43:24,348|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:63 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:43:34,337|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:64 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:43:44,343|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:65 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:43:54,350|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:66 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:44:04,340|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:67 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:44:14,346|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:68 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:44:24,335|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:69 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:44:34,342|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:70 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:44:44,348|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:71 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:44:54,337|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:72 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:45:04,343|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:73 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:45:14,334|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:74 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:45:24,340|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:75 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:45:34,346|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:76 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:45:44,336|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:77 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:45:54,343|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:78 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:46:04,349|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:79 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:46:14,338|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:80 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:46:24,344|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:81 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:46:34,351|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:82 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:46:44,341|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:83 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:46:54,347|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:84 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:47:04,337|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:85 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:47:14,343|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:86 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:47:24,348|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:87 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:47:34,338|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:88 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:47:44,345|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:89 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:47:54,334|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:90 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:48:04,340|ERROR|nioEventLoopGroup-3-2|SelfDrivenTaskQueue Add Count Over 100.size return.:91 - executing name:com.game.user.cmd.player.RankTypeCmd
+2019-12-14 22:48:43,318|ERROR|DefaultQuartzScheduler_Worker-2|执行语句insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?;花耗时间总时间 超过:18978ms,获取连接：635ms,执行sql:18343ms
+2019-12-14 22:56:02,214|ERROR|DefaultQuartzScheduler_Worker-3|执行语句insert into t_u_player(`UserID`, `PlayerName`, `AccountID`, `AccountName`, `CreateTime`, `LastLoginTime`, `Gold`, `Diamond`, `Money`, `HeaderID`, `AdExpireTime`, `WinCount`, `FailCount`, `RoleTypes`, `Modes`, `Theme`, `Headers`, `TimeTopScore`, `RaceTopScore`, `EndTopScore`, `TopLength`, `DonateValue`, `isCanUnlockCoinModeByAD`, `LastAdTime`, `AdTriggerCount`) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) on DUPLICATE KEY update `PlayerName`=?,`AccountID`=?,`AccountName`=?,`CreateTime`=?,`LastLoginTime`=?,`Gold`=?,`Diamond`=?,`Money`=?,`HeaderID`=?,`AdExpireTime`=?,`WinCount`=?,`FailCount`=?,`RoleTypes`=?,`Modes`=?,`Theme`=?,`Headers`=?,`TimeTopScore`=?,`RaceTopScore`=?,`EndTopScore`=?,`TopLength`=?,`DonateValue`=?,`isCanUnlockCoinModeByAD`=?,`LastAdTime`=?,`AdTriggerCount`=?;花耗时间总时间 超过:157874ms,获取连接：97531ms,执行sql:60343ms
+2019-12-14 22:56:09,787|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 22:56:10,294|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 22:56:10,294|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 22:56:10,295|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 22:56:10,295|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 22:56:10,295|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 22:56:10,295|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 22:56:10,295|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 22:56:10,295|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 22:56:10,295|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 22:56:10,296|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 22:56:10,296|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 22:56:10,296|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 22:56:10,296|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 22:56:10,296|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 22:56:10,296|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 22:56:10,297|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 22:56:10,297|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 22:56:10,298|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 22:56:10,298|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 22:56:10,298|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 22:56:10,298|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 22:56:10,299|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 22:56:10,299|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 22:56:50,978|ERROR|main|init datasource error, url: jdbc:mysql://64.64.226.90:13620/db_jump?allowMultiQueries=true&characterEncoding=utf8
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 39,188 milliseconds ago.  The last packet sent successfully to the server was 39,166 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 22:56:50,997|ERROR|main|{dataSource-1} init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 39,188 milliseconds ago.  The last packet sent successfully to the server was 39,166 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 22:56:50,998|ERROR|main|Exception:
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 39,188 milliseconds ago.  The last packet sent successfully to the server was 39,166 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 22:56:51,000|ERROR|main|
+java.lang.NullPointerException: null
+	at java.util.AbstractCollection.addAll(Unknown Source)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:38)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 22:56:51,001|ERROR|main|GameServer has started failed.
+2019-12-14 23:04:33,088|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:04:33,633|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:04:33,633|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:04:33,634|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:04:33,634|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:04:33,634|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:04:33,634|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:04:33,634|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:04:33,634|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:04:33,634|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:04:33,635|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:04:33,635|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:04:33,635|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:04:33,635|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:04:33,635|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:04:33,635|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:04:33,636|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:04:33,637|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:04:33,637|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:04:33,637|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:04:33,637|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:04:33,637|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:04:33,637|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:04:33,638|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:04:38,562|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 23:04:39,298|ERROR|main|执行脚本出错
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE a.TimeType=1' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1054)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3562)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3494)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2696)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2105)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2264)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2830)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_executeQuery(FilterEventAdapter.java:465)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2827)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeQuery(PreparedStatementProxyImpl.java:181)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:228)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:120)
+	at com.base.database.BaseDao.queryList(BaseDao.java:158)
+	at com.data.business.PlayerBusiness.queryRank(PlayerBusiness.java:77)
+	at com.game.component.RankComponent.initialize(RankComponent.java:63)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:93)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:04:39,493|ERROR|main|执行脚本出错
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE a.TimeType=2' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1054)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3562)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3494)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2696)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2105)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2264)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2830)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_executeQuery(FilterEventAdapter.java:465)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2827)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeQuery(PreparedStatementProxyImpl.java:181)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:228)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:120)
+	at com.base.database.BaseDao.queryList(BaseDao.java:158)
+	at com.data.business.PlayerBusiness.queryRank(PlayerBusiness.java:77)
+	at com.game.component.RankComponent.initialize(RankComponent.java:63)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:93)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:04:39,687|ERROR|main|执行脚本出错
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE a.TimeType=3' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1054)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3562)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3494)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2696)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2105)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2264)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2830)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_executeQuery(FilterEventAdapter.java:465)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2827)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeQuery(PreparedStatementProxyImpl.java:181)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:228)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:120)
+	at com.base.database.BaseDao.queryList(BaseDao.java:158)
+	at com.data.business.PlayerBusiness.queryRank(PlayerBusiness.java:77)
+	at com.game.component.RankComponent.initialize(RankComponent.java:63)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:93)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:04:40,351|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-14 23:04:40,351|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-14 23:04:40,351|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-14 23:04:40,351|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-14 23:04:40,352|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-14 23:04:40,352|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-14 23:04:40,352|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-14 23:04:40,352|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-14 23:04:40,352|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-14 23:04:40,356|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-14 23:04:40,398|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-14 23:04:40,399|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-14 23:04:40,399|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-14 23:04:40,399|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-14 23:04:40,399|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-14 23:04:40,580|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-14 23:04:40,832|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-14 23:04:40,833|ERROR|main|****** All Component has started successfully.******************
+2019-12-14 23:04:40,833|ERROR|main|游戏服启动成功, 耗时 7 秒.
+2019-12-14 23:05:19,297|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:05:19,823|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:05:19,824|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:05:19,825|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:05:19,825|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:05:19,825|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:05:19,825|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:05:19,825|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:05:19,826|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:05:19,826|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:05:19,826|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:05:19,826|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:05:19,827|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:05:19,827|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:05:19,827|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:05:19,827|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:05:19,828|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:05:19,828|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:05:19,828|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:05:19,828|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:05:19,829|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:05:19,829|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:05:19,829|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:05:19,829|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:05:24,654|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 23:05:25,401|ERROR|main|Resultset转成实体出错
+java.sql.SQLException: Column 'Order' not found.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1075)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:929)
+	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1145)
+	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2814)
+	at com.alibaba.druid.filter.FilterChainImpl.resultSet_getInt(FilterChainImpl.java:939)
+	at com.alibaba.druid.filter.FilterAdapter.resultSet_getInt(FilterAdapter.java:1644)
+	at com.alibaba.druid.filter.FilterChainImpl.resultSet_getInt(FilterChainImpl.java:937)
+	at com.alibaba.druid.proxy.jdbc.ResultSetProxyImpl.getInt(ResultSetProxyImpl.java:493)
+	at com.alibaba.druid.pool.DruidPooledResultSet.getInt(DruidPooledResultSet.java:293)
+	at com.data.dao.impl.RankInfoDaoImpl.rsToEntity(RankInfoDaoImpl.java:213)
+	at com.data.dao.impl.RankInfoDaoImpl.rsToEntity(RankInfoDaoImpl.java:1)
+	at com.base.database.BaseDao.rsToEntityList(BaseDao.java:248)
+	at com.base.database.BaseDao$4.readData(BaseDao.java:166)
+	at com.base.database.BaseDao$4.readData(BaseDao.java:1)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:121)
+	at com.base.database.BaseDao.queryList(BaseDao.java:158)
+	at com.data.business.PlayerBusiness.queryRank(PlayerBusiness.java:77)
+	at com.game.component.RankComponent.initialize(RankComponent.java:63)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:93)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:05:25,590|ERROR|main|Resultset转成实体出错
+java.sql.SQLException: Column 'Order' not found.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1075)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:929)
+	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1145)
+	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2814)
+	at com.alibaba.druid.filter.FilterChainImpl.resultSet_getInt(FilterChainImpl.java:939)
+	at com.alibaba.druid.filter.FilterAdapter.resultSet_getInt(FilterAdapter.java:1644)
+	at com.alibaba.druid.filter.FilterChainImpl.resultSet_getInt(FilterChainImpl.java:937)
+	at com.alibaba.druid.proxy.jdbc.ResultSetProxyImpl.getInt(ResultSetProxyImpl.java:493)
+	at com.alibaba.druid.pool.DruidPooledResultSet.getInt(DruidPooledResultSet.java:293)
+	at com.data.dao.impl.RankInfoDaoImpl.rsToEntity(RankInfoDaoImpl.java:213)
+	at com.data.dao.impl.RankInfoDaoImpl.rsToEntity(RankInfoDaoImpl.java:1)
+	at com.base.database.BaseDao.rsToEntityList(BaseDao.java:248)
+	at com.base.database.BaseDao$4.readData(BaseDao.java:166)
+	at com.base.database.BaseDao$4.readData(BaseDao.java:1)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:121)
+	at com.base.database.BaseDao.queryList(BaseDao.java:158)
+	at com.data.business.PlayerBusiness.queryRank(PlayerBusiness.java:77)
+	at com.game.component.RankComponent.initialize(RankComponent.java:63)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:93)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:05:25,778|ERROR|main|Resultset转成实体出错
+java.sql.SQLException: Column 'Order' not found.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1075)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:984)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:929)
+	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1145)
+	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2814)
+	at com.alibaba.druid.filter.FilterChainImpl.resultSet_getInt(FilterChainImpl.java:939)
+	at com.alibaba.druid.filter.FilterAdapter.resultSet_getInt(FilterAdapter.java:1644)
+	at com.alibaba.druid.filter.FilterChainImpl.resultSet_getInt(FilterChainImpl.java:937)
+	at com.alibaba.druid.proxy.jdbc.ResultSetProxyImpl.getInt(ResultSetProxyImpl.java:493)
+	at com.alibaba.druid.pool.DruidPooledResultSet.getInt(DruidPooledResultSet.java:293)
+	at com.data.dao.impl.RankInfoDaoImpl.rsToEntity(RankInfoDaoImpl.java:213)
+	at com.data.dao.impl.RankInfoDaoImpl.rsToEntity(RankInfoDaoImpl.java:1)
+	at com.base.database.BaseDao.rsToEntityList(BaseDao.java:248)
+	at com.base.database.BaseDao$4.readData(BaseDao.java:166)
+	at com.base.database.BaseDao$4.readData(BaseDao.java:1)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:121)
+	at com.base.database.BaseDao.queryList(BaseDao.java:158)
+	at com.data.business.PlayerBusiness.queryRank(PlayerBusiness.java:77)
+	at com.game.component.RankComponent.initialize(RankComponent.java:63)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:93)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:05:26,391|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-14 23:05:26,391|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-14 23:05:26,391|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-14 23:05:26,391|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-14 23:05:26,391|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-14 23:05:26,391|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-14 23:05:26,392|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-14 23:05:26,392|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-14 23:05:26,392|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-14 23:05:26,397|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-14 23:05:26,436|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-14 23:05:26,436|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-14 23:05:26,436|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-14 23:05:26,436|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-14 23:05:26,436|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-14 23:05:26,649|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-14 23:05:26,899|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-14 23:05:26,899|ERROR|main|****** All Component has started successfully.******************
+2019-12-14 23:05:26,900|ERROR|main|游戏服启动成功, 耗时 7 秒.
+2019-12-14 23:06:01,198|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:06:01,716|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:06:01,717|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:06:01,717|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:06:01,717|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:06:01,717|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:06:01,718|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:06:01,718|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:06:01,718|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:06:01,718|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:06:01,718|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:06:01,719|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:06:01,719|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:06:01,719|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:06:01,719|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:06:01,719|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:06:01,720|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:06:01,720|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:06:01,720|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:06:01,720|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:06:01,721|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:06:01,721|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:06:01,721|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:06:01,721|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:06:06,536|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 23:06:08,283|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-14 23:06:08,284|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-14 23:06:08,284|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-14 23:06:08,284|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-14 23:06:08,284|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-14 23:06:08,284|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-14 23:06:08,284|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-14 23:06:08,284|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-14 23:06:08,284|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-14 23:06:08,288|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-14 23:06:08,325|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-14 23:06:08,325|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-14 23:06:08,325|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-14 23:06:08,325|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-14 23:06:08,325|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-14 23:06:08,522|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-14 23:06:08,755|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-14 23:06:08,755|ERROR|main|****** All Component has started successfully.******************
+2019-12-14 23:06:08,755|ERROR|main|游戏服启动成功, 耗时 7 秒.
+2019-12-14 23:06:28,607|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-14 23:17:19,023|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:17:19,556|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:17:19,557|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:17:19,558|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:17:19,558|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:17:19,558|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:17:19,558|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:17:19,558|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:17:19,558|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:17:19,559|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:17:19,559|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:17:19,559|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:17:19,559|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:17:19,559|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:17:19,560|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:17:19,560|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:17:19,560|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:17:19,560|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:17:19,560|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:17:19,561|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:17:19,561|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:17:19,561|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:17:19,561|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:17:19,561|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:17:46,904|ERROR|main|init datasource error, url: jdbc:mysql://64.64.226.90:13620/db_jump?allowMultiQueries=true&characterEncoding=utf8
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 24,381 milliseconds ago.  The last packet sent successfully to the server was 24,380 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:17:47,812|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 23:17:48,506|ERROR|main|
+java.lang.IndexOutOfBoundsException: Index: 38, Size: 37
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.game.component.RankComponent.sort(RankComponent.java:185)
+	at com.game.component.RankComponent.initialize(RankComponent.java:70)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:93)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:17:48,507|ERROR|main|GameServer has started failed.
+2019-12-14 23:18:28,862|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:18:29,349|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:18:29,350|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:18:29,350|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:18:29,350|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:18:29,351|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:18:29,351|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:18:29,351|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:18:29,351|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:18:29,351|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:18:29,351|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:18:29,351|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:18:29,351|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:18:29,351|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:18:29,352|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:18:29,352|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:18:29,352|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:18:29,353|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:18:29,353|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:18:29,353|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:18:29,353|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:18:29,353|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:18:29,353|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:18:29,354|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:18:55,443|ERROR|main|init datasource error, url: jdbc:mysql://64.64.226.90:13620/db_jump?allowMultiQueries=true&characterEncoding=utf8
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 25,012 milliseconds ago.  The last packet sent successfully to the server was 24,968 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:18:55,464|ERROR|main|{dataSource-1} init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 25,012 milliseconds ago.  The last packet sent successfully to the server was 24,968 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:18:55,465|ERROR|main|Exception:
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 25,012 milliseconds ago.  The last packet sent successfully to the server was 24,968 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:18:55,466|ERROR|main|
+java.lang.NullPointerException: null
+	at java.util.AbstractCollection.addAll(Unknown Source)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:38)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:18:55,467|ERROR|main|GameServer has started failed.
+2019-12-14 23:19:07,018|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:19:07,499|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:19:07,500|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:19:07,500|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:19:07,500|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:19:07,500|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:19:07,501|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:19:07,501|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:19:07,501|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:19:07,501|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:19:07,501|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:19:07,502|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:19:07,502|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:19:07,502|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:19:07,502|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:19:07,502|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:19:07,503|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:19:07,503|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:19:07,503|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:19:07,503|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:19:07,504|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:19:07,504|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:19:07,504|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:19:07,504|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:19:33,295|ERROR|main|init datasource error, url: jdbc:mysql://64.64.226.90:13620/db_jump?allowMultiQueries=true&characterEncoding=utf8
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 24,690 milliseconds ago.  The last packet sent successfully to the server was 24,663 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:19:33,314|ERROR|main|{dataSource-1} init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 24,690 milliseconds ago.  The last packet sent successfully to the server was 24,663 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:19:33,315|ERROR|main|Exception:
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 24,690 milliseconds ago.  The last packet sent successfully to the server was 24,663 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:19:33,316|ERROR|main|
+java.lang.NullPointerException: null
+	at java.util.AbstractCollection.addAll(Unknown Source)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:38)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:19:33,316|ERROR|main|GameServer has started failed.
+2019-12-14 23:20:28,068|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:20:28,556|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:20:28,556|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:20:28,557|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:20:28,557|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:20:28,557|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:20:28,557|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:20:28,557|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:20:28,558|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:20:28,558|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:20:28,558|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:20:28,558|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:20:28,558|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:20:28,558|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:20:28,559|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:20:28,559|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:20:28,559|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:20:28,560|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:20:28,560|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:20:28,560|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:20:28,560|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:20:28,560|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:20:28,561|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:20:28,561|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:21:17,778|ERROR|main|init datasource error, url: jdbc:mysql://64.64.226.90:13620/db_jump?allowMultiQueries=true&characterEncoding=utf8
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 44,744 milliseconds ago.  The last packet sent successfully to the server was 44,719 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:21:17,790|ERROR|main|{dataSource-1} init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 44,744 milliseconds ago.  The last packet sent successfully to the server was 44,719 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:21:17,790|ERROR|main|Exception:
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 44,744 milliseconds ago.  The last packet sent successfully to the server was 44,719 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:21:17,791|ERROR|main|
+java.lang.NullPointerException: null
+	at java.util.AbstractCollection.addAll(Unknown Source)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:38)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:21:17,791|ERROR|main|GameServer has started failed.
+2019-12-14 23:21:25,557|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:21:26,054|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:21:26,055|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:21:26,055|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:21:26,055|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:21:26,055|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:21:26,056|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:21:26,056|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:21:26,056|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:21:26,056|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:21:26,057|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:21:26,057|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:21:26,057|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:21:26,057|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:21:26,057|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:21:26,057|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:21:26,058|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:21:26,058|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:21:26,058|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:21:26,058|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:21:26,058|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:21:26,059|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:21:26,059|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:21:26,059|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:21:30,868|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 23:21:32,543|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-14 23:21:32,543|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-14 23:21:32,543|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-14 23:21:32,543|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-14 23:21:32,543|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-14 23:21:32,544|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-14 23:21:32,544|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-14 23:21:32,544|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-14 23:21:32,544|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-14 23:21:32,548|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-14 23:21:32,583|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-14 23:21:32,584|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-14 23:21:32,584|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-14 23:21:32,584|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-14 23:21:32,584|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-14 23:21:32,750|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-14 23:21:32,975|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-14 23:21:32,976|ERROR|main|****** All Component has started successfully.******************
+2019-12-14 23:21:32,977|ERROR|main|游戏服启动成功, 耗时 7 秒.
+2019-12-14 23:22:15,926|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-14 23:34:21,805|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:34:22,300|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:34:22,300|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:34:22,300|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:34:22,301|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:34:22,301|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:34:22,301|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:34:22,301|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:34:22,301|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:34:22,301|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:34:22,301|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:34:22,301|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:34:22,301|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:34:22,302|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:34:22,302|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:34:22,302|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:34:22,302|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:34:22,302|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:34:22,302|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:34:22,303|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:34:22,303|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:34:22,303|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:34:22,303|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:34:22,304|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:34:27,094|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 23:35:19,924|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-14 23:35:19,924|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-14 23:35:19,924|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-14 23:35:19,924|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-14 23:35:19,924|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-14 23:35:19,924|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-14 23:35:19,924|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-14 23:35:19,924|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-14 23:35:19,924|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-14 23:35:19,928|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-14 23:35:19,968|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-14 23:35:19,968|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-14 23:35:19,968|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-14 23:35:19,968|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-14 23:35:19,968|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-14 23:35:20,145|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-14 23:35:20,363|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-14 23:35:20,364|ERROR|main|****** All Component has started successfully.******************
+2019-12-14 23:35:20,365|ERROR|main|游戏服启动成功, 耗时 58 秒.
+2019-12-14 23:35:31,568|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-14 23:39:59,856|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:40:00,398|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:40:00,399|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:40:00,399|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:40:00,399|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:40:00,400|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:40:00,400|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:40:00,400|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:40:00,400|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:40:00,400|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:40:00,401|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:40:00,401|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:40:00,401|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:40:00,401|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:40:00,401|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:40:00,401|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:40:00,402|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:40:00,402|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:40:00,403|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:40:00,403|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:40:00,403|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:40:00,403|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:40:00,403|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:40:00,403|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:40:26,226|ERROR|main|init datasource error, url: jdbc:mysql://64.64.226.90:13620/db_jump?allowMultiQueries=true&characterEncoding=utf8
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 24,734 milliseconds ago.  The last packet sent successfully to the server was 24,704 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:40:26,247|ERROR|main|{dataSource-1} init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 24,734 milliseconds ago.  The last packet sent successfully to the server was 24,704 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:40:26,249|ERROR|main|Exception:
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:149)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:143)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1515)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1578)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:859)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1227)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1223)
+	at com.base.database.pool.druid.DruidPool.getConnection(DruidPool.java:32)
+	at com.base.database.pool.DBHelper.openConn(DBHelper.java:295)
+	at com.base.database.pool.DBHelper.executeQuery(DBHelper.java:112)
+	at com.base.database.BaseDao.queryOneColumnData(BaseDao.java:284)
+	at com.data.business.PlayerBusiness.queryNameList(PlayerBusiness.java:51)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:37)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 24,734 milliseconds ago.  The last packet sent successfully to the server was 24,704 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3056)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2942)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3485)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1960)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2114)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2690)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2619)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1465)
+	at com.mysql.jdbc.ConnectionImpl.loadServerVariables(ConnectionImpl.java:3969)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3504)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2202)
+	... 27 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2500)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:2953)
+	... 37 common frames omitted
+2019-12-14 23:40:26,250|ERROR|main|
+java.lang.NullPointerException: null
+	at java.util.AbstractCollection.addAll(Unknown Source)
+	at com.logic.component.RobotComponent.initialize(RobotComponent.java:38)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:63)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-14 23:40:26,250|ERROR|main|GameServer has started failed.
+2019-12-14 23:47:34,079|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:47:34,587|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:47:34,588|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:47:34,588|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:47:34,588|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:47:34,589|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:47:34,589|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:47:34,589|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:47:34,589|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:47:34,589|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:47:34,589|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:47:34,589|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:47:34,589|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:47:34,590|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:47:34,590|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:47:34,590|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:47:34,590|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:47:34,590|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:47:34,591|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:47:34,591|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:47:34,591|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:47:34,591|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:47:34,591|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:47:34,591|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:47:36,685|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 23:50:34,589|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:50:35,133|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:50:35,133|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:50:35,133|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:50:35,134|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:50:35,134|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:50:35,134|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:50:35,134|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:50:35,134|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:50:35,134|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:50:35,134|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:50:35,135|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:50:35,135|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:50:35,135|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:50:35,135|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:50:35,135|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:50:35,136|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:50:35,136|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:50:35,136|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:50:35,137|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:50:35,137|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:50:35,137|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:50:35,137|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:50:35,137|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:50:37,248|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 23:50:43,883|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-14 23:50:43,884|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-14 23:50:43,884|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-14 23:50:43,884|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-14 23:50:43,884|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-14 23:50:43,884|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-14 23:50:43,884|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-14 23:50:43,884|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-14 23:50:43,884|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-14 23:50:43,890|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-14 23:50:43,927|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-14 23:50:43,927|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-14 23:50:43,928|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-14 23:50:43,928|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-14 23:50:43,928|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-14 23:50:44,101|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-14 23:50:44,323|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-14 23:50:44,323|ERROR|main|****** All Component has started successfully.******************
+2019-12-14 23:50:44,324|ERROR|main|游戏服启动成功, 耗时 9 秒.
+2019-12-14 23:50:54,238|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-14 23:58:33,677|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:58:34,229|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:58:34,229|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:58:34,229|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:58:34,230|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:58:34,230|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:58:34,230|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:58:34,230|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:58:34,230|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:58:34,230|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:58:34,230|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:58:34,230|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:58:34,231|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:58:34,231|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:58:34,231|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:58:34,231|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:58:34,232|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:58:34,233|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:58:34,233|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:58:34,233|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:58:34,233|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:58:34,233|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:58:34,233|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:58:34,234|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:58:36,338|ERROR|main|********************Robot Count:1000**************************
+2019-12-14 23:58:37,710|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-14 23:58:37,711|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-14 23:58:37,711|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-14 23:58:37,711|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-14 23:58:37,711|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-14 23:58:37,711|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-14 23:58:37,711|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-14 23:58:37,711|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-14 23:58:37,711|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-14 23:58:37,718|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-14 23:58:37,756|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-14 23:58:37,757|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-14 23:58:37,757|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-14 23:58:37,757|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-14 23:58:37,757|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-14 23:58:37,926|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-14 23:58:38,167|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-14 23:58:38,168|ERROR|main|****** All Component has started successfully.******************
+2019-12-14 23:58:38,168|ERROR|main|游戏服启动成功, 耗时 4 秒.
+2019-12-14 23:58:47,078|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-14 23:59:32,124|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-14 23:59:32,651|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-14 23:59:32,652|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-14 23:59:32,652|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-14 23:59:32,652|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-14 23:59:32,653|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-14 23:59:32,653|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-14 23:59:32,653|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-14 23:59:32,653|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-14 23:59:32,653|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-14 23:59:32,653|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-14 23:59:32,653|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-14 23:59:32,654|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-14 23:59:32,654|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-14 23:59:32,654|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-14 23:59:32,654|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-14 23:59:32,655|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-14 23:59:32,655|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-14 23:59:32,655|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-14 23:59:32,655|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-14 23:59:32,655|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-14 23:59:32,655|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-14 23:59:32,656|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-14 23:59:32,656|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-14 23:59:34,745|ERROR|main|********************Robot Count:1000**************************

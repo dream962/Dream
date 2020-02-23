@@ -1,0 +1,55 @@
+1532396896033	Delete element
+1532396906338	Delete element
+1532396947214	Move compilation unit
+1532397203646	Rename type 'WorldBlock'
+1532397234822	Rename type 'MapBlock'
+1532418545247	Rename local variable 'minStep'
+1532421068165	Rename method 'getMinStep'
+1532424760039	Rename type 'AStar'
+1532425599388	Delete element
+1532426326998	Delete element
+1532481928397	Rename package 'com.logic.graph'
+1532481960461	Copy compilation unit
+1532482535848	Delete element
+1532501119285	Delete element
+1532501133800	Delete element
+1532501136505	Delete element
+1532501138452	Delete element
+1532501141251	Delete element
+1532501160480	Delete element
+1532501172692	Delete element
+1532501173743	Delete element
+1532501174972	Delete element
+1532501176093	Delete element
+1532501178083	Delete element
+1532501193516	Delete element
+1532501200114	Delete element
+1532501204449	Delete element
+1532501210722	Delete element
+1532501213439	Delete element
+1532501218683	Delete element
+1532501220248	Delete element
+1532501224388	Delete element
+1532501226299	Delete element
+1532501236052	Delete element
+1532501240611	Delete element
+1532501243364	Delete element
+1532501249155	Delete element
+1532501252436	Delete element
+1532501261338	Delete element
+1532501264275	Delete element
+1532501267629	Delete element
+1532501279113	Delete element
+1532501308317	Delete element
+1532590043407	Copy compilation unit
+1532597268828	Delete element
+1532597276782	Delete element
+1532597278721	Delete element
+1532670522540	Copy compilation units
+1532671451890	Delete element
+1532671535003	Delete element
+1532672550028	Rename type 'AStar'
+1532672594972	Rename type 'ANode'
+1532672605546	Rename type 'MapAStar'
+1532677260517	Rename method 'diagonal'
+1532677292853	Rename field 'nodeGrid'

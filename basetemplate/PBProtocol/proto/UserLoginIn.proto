@@ -79,8 +79,8 @@ message RechargeVerifyProtoIn
 /** 关卡提前解锁*/
 message GameUnlockProtoIn
 {
-	required ModeType gameMode = 1;              //解锁的游戏类型
-	required bool unLockByAD = 2;               //通过广告解锁，只有金币模式才用到
+	optional ModeType gameMode = 1;              //解锁的游戏类型
+	optional bool unLockByAD = 2;               //通过广告解锁，只有金币模式才用到
 }
 
 /* 捐献物品*/

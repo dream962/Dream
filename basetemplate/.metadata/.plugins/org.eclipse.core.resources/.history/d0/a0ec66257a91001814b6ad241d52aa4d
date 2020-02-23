@@ -1,0 +1,64 @@
+package com.logic.map;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author dream
+ *
+ */
+public class PathANode
+{
+    /** 总的移动量 */
+    public float f;
+    /** 从起始点到当前node的移动量 */
+    public float g;
+    /** 从当前node到终点的估算值 */
+    public float h;
+    /** 地图节点 */
+    public MapNode node;
+    /** 父节点 */
+    public PathANode parent;
+    /** 距离 */
+    public int distance;
+
+    public PathANode(MapNode node)
+    {
+        this.node = node;
+    }
+
+    /** 得到此节点到另一节点的网格距离 */
+    public int getDistanceTo(PathANode targetNode)
+    {
+        int disX = targetNode.node.getPX() - node.getPX();
+        int disY = targetNode.node.getPY() - node.getPY();
+        distance = (int) Math.sqrt(disX * disX + disY * disY);
+        return distance;
+    }
+
+    public List<PathANode> getNeighbors(MapGraph map)
+    {
+        List<PathANode> list = new ArrayList<>();
+
+        int nodeX = node.getNodeX();
+        int nodeY = node.getNodeY();
+        
+        // 如果是偶数行
+        if(nodeY/2==0)
+        {
+            
+        }
+        else
+        {
+            MapNode node=map.getNode(nodeX, nodeY-1);
+            PathANode node1=new PathANode(node);
+            node=map.getNode(nodeX, nodeY-1);
+            node=map.getNode(nodeX, nodeY-1);
+            node=map.getNode(nodeX, nodeY-1);
+            node=map.getNode(nodeX, nodeY-1);
+            node=map.getNode(nodeX, nodeY-1);
+        }
+
+        return list;
+    }
+}

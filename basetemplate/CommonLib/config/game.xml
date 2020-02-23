@@ -2,7 +2,7 @@
 <config>
 	<server>
 		<id>1</id><!-- 服务器ID -->
-		<address>192.168.1.47</address>
+		<address>64.64.226.90</address>
 		<ports>10007</ports><!-- 可配置多端口,目前GS配置一个即可,FS可监听多端口,逗号分隔 -->
 		<privateModulus>AIv9tT8w1f3NmLU94btc4vQzUi3b2prtn+1kzxq6/+aVKbH424eFYphP7VxXRknAeUs3P+I7hs7WY+BdJra7O4Hx0t45Om6vs4DNpFhS20U7R8pxLW0zc0VE+qr0gi9JnpxhIvfaNEfN1DhH2czqxgVYpGumL1GJApA1R+rD+OK3
 		</privateModulus>
@@ -14,6 +14,7 @@
 		<randomNamePath>../CommonLib/names/names.xml</randomNamePath>
 		<configPath>config/excel</configPath>
 		<clientBattlePath>C:\\server\\fight\\project2\\GameServer\\config\\battle</clientBattlePath>
+		
 		<!--G:\project9\Y-配置表 -->
 
 		<!-- 111.230.144.210 106.75.147.215 -->
@@ -65,14 +66,17 @@
 
 		<druid>
 			<db name="main">
-				<!-- 106.12.25.131 -->
-				<url>jdbc:mysql://192.168.1.96:13619/db_jump?allowMultiQueries=true&amp;characterEncoding=utf8
-				</url>
-				<username>daomu2_admin</username>
-				<password>daomu2!@#</password>
-				<maxActive desc="">20</maxActive>
-				<initialSize desc="">10</initialSize>
-				<minIdle desc="">5</minIdle>
+				<!-- 
+				106.12.25.131 jdbc:mysql://64.64.226.90:13620/db_jump?allowMultiQueries=true&amp;characterEncoding=utf8
+				root
+				jump_1%*$_root_game
+				   -->
+				<url>jdbc:mysql://120.132.60.125:3307/db_jump?allowMultiQueries=true&amp;characterEncoding=utf8</url>
+                <username>daomu2_admin</username>
+                <password>daomu2!@#</password>
+				<maxActive desc="">10</maxActive>
+				<initialSize desc="">2</initialSize>
+				<minIdle desc="">1</minIdle>
 				<filters desc="">stat</filters>
 				<maxWait desc="">1000</maxWait>
 			</db>

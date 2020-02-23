@@ -23,6 +23,15 @@ public class PlayerBusiness
         return PlayerInfoFactory.getDao().query(sql, param);
     }
 
+    public static PlayerInfo getPlayerInfoByOpenID(String openID)
+    {
+        String sql = "SELECT * FROM t_u_player WHERE openid = ?;";
+        DBParamWrapper param = new DBParamWrapper();
+        param.put(openID);
+        PlayerInfo info = PlayerInfoFactory.getDao().query(sql, param);
+        return info;
+    }
+
     public static PlayerInfo queryPlayer(long userID)
     {
         String sql = "SELECT * FROM t_u_player WHERE UserID=?;";

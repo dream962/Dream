@@ -1,0 +1,413 @@
+2019-12-15 00:17:41,489|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-15 00:17:41,999|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-15 00:17:42,000|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-15 00:17:42,000|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-15 00:17:42,000|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-15 00:17:42,000|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-15 00:17:42,001|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-15 00:17:42,001|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-15 00:17:42,001|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-15 00:17:42,001|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-15 00:17:42,001|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-15 00:17:42,001|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-15 00:17:42,001|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-15 00:17:42,002|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-15 00:17:42,002|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-15 00:17:42,002|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-15 00:17:42,003|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-15 00:17:42,003|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-15 00:17:42,003|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-15 00:17:42,003|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-15 00:17:42,003|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-15 00:17:42,003|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-15 00:17:42,004|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-15 00:17:42,004|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-15 00:17:44,120|ERROR|main|********************Robot Count:1000**************************
+2019-12-15 00:17:50,876|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-15 00:17:50,877|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-15 00:17:50,877|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-15 00:17:50,877|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-15 00:17:50,877|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-15 00:17:50,877|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-15 00:17:50,877|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-15 00:17:50,877|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-15 00:17:50,877|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-15 00:17:50,882|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-15 00:17:50,919|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-15 00:17:50,919|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-15 00:17:50,919|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-15 00:17:50,919|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-15 00:17:50,919|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-15 00:17:51,085|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-15 00:17:51,335|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-15 00:17:51,335|ERROR|main|****** All Component has started successfully.******************
+2019-12-15 00:17:51,336|ERROR|main|游戏服启动成功, 耗时 9 秒.
+2019-12-15 00:18:01,006|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-15 00:21:46,001|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10109
+2019-12-15 12:00:57,893|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-15 12:00:58,297|ERROR|main|Path:config/excel\com.data.bean.AdvertiseBean.json -- class:com.data.bean.AdvertiseBean
+com.alibaba.fastjson.JSONException: syntax error, pos 14
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1295)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.parser.deserializer.StringFieldDeserializer.parseField(StringFieldDeserializer.java:32)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:74)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$InnerJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:86)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:330)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseRest(ASMJavaBeanDeserializer.java:100)
+	at Fastjson_ASM_AdvertiseBean_6.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:635)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:571)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:566)
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:347)
+	at com.util.JsonUtil.parseFileToListObject(JsonUtil.java:71)
+	at com.data.component.SystemDataComponent.reloadJsonFiles(SystemDataComponent.java:121)
+	at com.data.component.SystemDataComponent.initialize(SystemDataComponent.java:35)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:54)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-15 12:00:58,304|ERROR|main|Path:config/excel\com.data.bean.ChargeBean.json -- class:com.data.bean.ChargeBean
+com.alibaba.fastjson.JSONException: syntax error, pos 65
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1295)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.parser.deserializer.StringFieldDeserializer.parseField(StringFieldDeserializer.java:32)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:74)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$InnerJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:86)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:330)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseRest(ASMJavaBeanDeserializer.java:100)
+	at Fastjson_ASM_ChargeBean_14.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:635)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:571)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:566)
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:347)
+	at com.util.JsonUtil.parseFileToListObject(JsonUtil.java:71)
+	at com.data.component.SystemDataComponent.reloadJsonFiles(SystemDataComponent.java:121)
+	at com.data.component.SystemDataComponent.initialize(SystemDataComponent.java:35)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:54)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-15 12:00:58,313|ERROR|main|Path:config/excel\com.data.bean.ExchangeBean.json -- class:com.data.bean.ExchangeBean
+com.alibaba.fastjson.JSONException: syntax error, pos 90
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1295)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.parser.deserializer.StringFieldDeserializer.parseField(StringFieldDeserializer.java:32)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:74)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$InnerJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:86)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:330)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseRest(ASMJavaBeanDeserializer.java:100)
+	at Fastjson_ASM_ExchangeBean_20.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:635)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:571)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:566)
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:347)
+	at com.util.JsonUtil.parseFileToListObject(JsonUtil.java:71)
+	at com.data.component.SystemDataComponent.reloadJsonFiles(SystemDataComponent.java:121)
+	at com.data.component.SystemDataComponent.initialize(SystemDataComponent.java:35)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:54)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-15 12:00:58,368|ERROR|main|Path:config/excel\com.data.bean.UnlockBean.json -- class:com.data.bean.UnlockBean
+com.alibaba.fastjson.JSONException: syntax error, pos 69
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1295)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.parser.deserializer.StringFieldDeserializer.parseField(StringFieldDeserializer.java:32)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:74)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$InnerJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:86)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:330)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseRest(ASMJavaBeanDeserializer.java:100)
+	at Fastjson_ASM_UnlockBean_58.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:635)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:571)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:566)
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:347)
+	at com.util.JsonUtil.parseFileToListObject(JsonUtil.java:71)
+	at com.data.component.SystemDataComponent.reloadJsonFiles(SystemDataComponent.java:121)
+	at com.data.component.SystemDataComponent.initialize(SystemDataComponent.java:35)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:54)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-15 12:00:58,400|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-15 12:00:58,400|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-15 12:00:58,401|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-15 12:00:58,401|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-15 12:00:58,401|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-15 12:00:58,401|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-15 12:00:58,401|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-15 12:00:58,401|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-15 12:00:58,402|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-15 12:00:58,402|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-15 12:00:58,402|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-15 12:00:58,402|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-15 12:00:58,402|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-15 12:00:58,403|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-15 12:00:58,403|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-15 12:00:58,403|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-15 12:00:58,404|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-15 12:00:58,404|ERROR|main|Cannot find server property keep it default value.  -- win_diamond = 10
+2019-12-15 12:00:58,404|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-15 12:00:58,404|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-15 12:00:58,404|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-15 12:00:58,404|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-15 12:00:58,404|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-15 12:01:00,573|ERROR|main|********************Robot Count:1000**************************
+2019-12-15 12:01:01,879|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-15 12:01:01,879|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-15 12:01:01,879|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-15 12:01:01,879|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-15 12:01:01,879|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-15 12:01:01,879|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-15 12:01:01,879|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-15 12:01:01,879|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-15 12:01:01,879|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-15 12:01:01,883|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-15 12:01:01,923|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-15 12:01:01,923|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-15 12:01:01,924|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-15 12:01:01,924|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-15 12:01:01,924|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-15 12:01:02,216|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-15 12:01:02,449|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-15 12:01:02,449|ERROR|main|****** All Component has started successfully.******************
+2019-12-15 12:01:02,449|ERROR|main|游戏服启动成功, 耗时 4 秒.
+2019-12-15 12:01:42,726|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-15 12:03:42,802|ERROR|game-worker-pool|game update error:
+com.google.protobuf.UninitializedMessageException: Message missing required fields: winnerGetDonutCount
+	at com.google.protobuf.AbstractMessage$Builder.newUninitializedMessageException(AbstractMessage.java:770)
+	at com.proto.user.gen.UserOutMsg$GameOverProtoOut$Builder.build(UserOutMsg.java:11992)
+	at com.proto.user.gen.UserOutMsg$GameOverProtoOut$Builder.build(UserOutMsg.java:1)
+	at com.logic.object.AbstractGamePlayer.sendMessage(AbstractGamePlayer.java:123)
+	at com.logic.living.Player.sendMessage(Player.java:178)
+	at com.logic.game.PVPGame.gameover(PVPGame.java:241)
+	at com.logic.actions.CheckPVPGameStateAction.execute(CheckPVPGameStateAction.java:53)
+	at com.logic.game.AbstractGame.run(AbstractGame.java:326)
+	at com.logic.component.GameComponent$GameThread.run(GameComponent.java:54)
+2019-12-15 12:21:38,680|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10109
+2019-12-15 12:21:42,281|ERROR|GamePlayer-Worker-23|AdRewardBean is Null.configID:0
+2019-12-15 12:56:03,217|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-15 12:56:03,638|ERROR|main|Path:config/excel\com.data.bean.AdvertiseBean.json -- class:com.data.bean.AdvertiseBean
+com.alibaba.fastjson.JSONException: syntax error, pos 14
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1295)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.parser.deserializer.StringFieldDeserializer.parseField(StringFieldDeserializer.java:32)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:74)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$InnerJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:86)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:330)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseRest(ASMJavaBeanDeserializer.java:100)
+	at Fastjson_ASM_AdvertiseBean_6.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:635)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:571)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:566)
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:347)
+	at com.util.JsonUtil.parseFileToListObject(JsonUtil.java:71)
+	at com.data.component.SystemDataComponent.reloadJsonFiles(SystemDataComponent.java:121)
+	at com.data.component.SystemDataComponent.initialize(SystemDataComponent.java:35)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:54)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-15 12:56:03,645|ERROR|main|Path:config/excel\com.data.bean.ChargeBean.json -- class:com.data.bean.ChargeBean
+com.alibaba.fastjson.JSONException: syntax error, pos 65
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1295)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.parser.deserializer.StringFieldDeserializer.parseField(StringFieldDeserializer.java:32)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:74)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$InnerJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:86)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:330)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseRest(ASMJavaBeanDeserializer.java:100)
+	at Fastjson_ASM_ChargeBean_14.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:635)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:571)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:566)
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:347)
+	at com.util.JsonUtil.parseFileToListObject(JsonUtil.java:71)
+	at com.data.component.SystemDataComponent.reloadJsonFiles(SystemDataComponent.java:121)
+	at com.data.component.SystemDataComponent.initialize(SystemDataComponent.java:35)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:54)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-15 12:56:03,652|ERROR|main|Path:config/excel\com.data.bean.ExchangeBean.json -- class:com.data.bean.ExchangeBean
+com.alibaba.fastjson.JSONException: syntax error, pos 90
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1295)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.parser.deserializer.StringFieldDeserializer.parseField(StringFieldDeserializer.java:32)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:74)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$InnerJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:86)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:330)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseRest(ASMJavaBeanDeserializer.java:100)
+	at Fastjson_ASM_ExchangeBean_20.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:635)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:571)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:566)
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:347)
+	at com.util.JsonUtil.parseFileToListObject(JsonUtil.java:71)
+	at com.data.component.SystemDataComponent.reloadJsonFiles(SystemDataComponent.java:121)
+	at com.data.component.SystemDataComponent.initialize(SystemDataComponent.java:35)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:54)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-15 12:56:03,705|ERROR|main|Path:config/excel\com.data.bean.UnlockBean.json -- class:com.data.bean.UnlockBean
+com.alibaba.fastjson.JSONException: syntax error, pos 69
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1295)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1205)
+	at com.alibaba.fastjson.parser.deserializer.StringFieldDeserializer.parseField(StringFieldDeserializer.java:32)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:74)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$InnerJavaBeanDeserializer.parseField(ASMJavaBeanDeserializer.java:86)
+	at com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer.deserialze(JavaBeanDeserializer.java:330)
+	at com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer.parseRest(ASMJavaBeanDeserializer.java:100)
+	at Fastjson_ASM_UnlockBean_64.deserialze(Unknown Source)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:635)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:571)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:566)
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:347)
+	at com.util.JsonUtil.parseFileToListObject(JsonUtil.java:71)
+	at com.data.component.SystemDataComponent.reloadJsonFiles(SystemDataComponent.java:121)
+	at com.data.component.SystemDataComponent.initialize(SystemDataComponent.java:35)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:54)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:163)
+2019-12-15 12:56:03,738|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-15 12:56:03,738|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-15 12:56:03,739|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-15 12:56:03,739|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-15 12:56:03,739|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-15 12:56:03,739|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-15 12:56:03,739|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-15 12:56:03,739|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-15 12:56:03,740|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-15 12:56:03,740|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-15 12:56:03,740|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-15 12:56:03,740|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-15 12:56:03,740|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-15 12:56:03,741|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-15 12:56:03,741|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-15 12:56:03,741|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-15 12:56:03,741|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-15 12:56:03,742|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-15 12:56:03,742|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-15 12:56:03,742|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-15 12:56:03,742|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-15 12:56:03,742|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-15 12:56:05,961|ERROR|main|********************Robot Count:1000**************************
+2019-12-15 12:56:07,299|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-15 12:56:07,299|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-15 12:56:07,299|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-15 12:56:07,299|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-15 12:56:07,299|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-15 12:56:07,299|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-15 12:56:07,299|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-15 12:56:07,299|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-15 12:56:07,299|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-15 12:56:07,304|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-15 12:56:07,342|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-15 12:56:07,342|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-15 12:56:07,342|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-15 12:56:07,342|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-15 12:56:07,342|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-15 12:56:07,528|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-15 12:56:07,779|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-15 12:56:07,780|ERROR|main|****** All Component has started successfully.******************
+2019-12-15 12:56:07,780|ERROR|main|游戏服启动成功, 耗时 4 秒.
+2019-12-15 12:56:21,617|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2019-12-15 12:56:32,113|ERROR|GamePlayer-Worker-5|UnlockBean is Null.modeType:7
+2019-12-15 12:58:15,410|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2019-12-15 13:00:51,103|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2019-12-15 13:01:22,536|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2019-12-15 14:23:27,698|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2019-12-15 14:23:37,462|ERROR|GamePlayer-Worker-13|Exit Room.1,UserID:10109
+2019-12-15 14:23:38,191|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:23:41,193|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:23:44,194|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:23:47,195|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:23:50,197|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:23:53,199|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:23:56,200|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:23:59,201|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:02,203|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:05,204|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:08,206|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:11,207|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:14,209|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:17,211|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:20,212|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:23,212|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:26,214|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:29,215|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:32,217|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:35,217|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:24:38,218|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:25:28,515|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:26:13,339|ERROR|pool-1-thread-1|Exit Room.1,UserID:1
+2019-12-15 14:26:13,339|ERROR|pool-1-thread-1|Exit Room.0,UserID:10109
+2019-12-15 14:26:13,341|ERROR|pool-1-thread-1|
+java.lang.NullPointerException: null
+	at com.proto.user.gen.UserOutMsg$MatchPlayerDetail$Builder.setRoleType(UserOutMsg.java:4408)
+	at com.logic.room.BaseRoom.start(BaseRoom.java:109)
+	at com.logic.component.RoomComponent.createRoom(RoomComponent.java:109)
+	at com.logic.component.RoomComponent.pickPVP(RoomComponent.java:257)
+	at com.logic.component.RoomComponent.doPickUp(RoomComponent.java:145)
+	at com.logic.component.RoomComponent.lambda$0(RoomComponent.java:67)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2019-12-15 14:28:50,625|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10109
+2019-12-15 14:28:57,186|ERROR|GamePlayer-Worker-20|AdRewardBean is Null.configID:0
+2019-12-15 14:30:41,511|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2019-12-15 14:30:57,001|ERROR|GamePlayer-Worker-10|Exit Room.1,UserID:2
+2019-12-15 14:30:57,001|ERROR|GamePlayer-Worker-10|Exit Room.1,UserID:10109
+2019-12-15 14:32:21,302|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2019-12-15 14:34:02,473|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2019-12-15 14:34:07,808|ERROR|GamePlayer-Worker-23|Exit Room.1,UserID:2
+2019-12-15 14:34:07,809|ERROR|GamePlayer-Worker-23|Exit Room.1,UserID:10109
+2019-12-15 15:45:56,642|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2019-12-15 15:45:57,142|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2019-12-15 15:45:57,142|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2019-12-15 15:45:57,143|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2019-12-15 15:45:57,143|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2019-12-15 15:45:57,143|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2019-12-15 15:45:57,143|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2019-12-15 15:45:57,143|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2019-12-15 15:45:57,143|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2019-12-15 15:45:57,143|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2019-12-15 15:45:57,144|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2019-12-15 15:45:57,144|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2019-12-15 15:45:57,144|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2019-12-15 15:45:57,144|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2019-12-15 15:45:57,144|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2019-12-15 15:45:57,145|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2019-12-15 15:45:57,145|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2019-12-15 15:45:57,145|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2019-12-15 15:45:57,145|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2019-12-15 15:45:57,146|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2019-12-15 15:45:57,146|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2019-12-15 15:45:57,146|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2019-12-15 15:45:57,146|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2019-12-15 15:45:59,396|ERROR|main|********************Robot Count:1000**************************
+2019-12-15 15:46:00,744|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2019-12-15 15:46:00,744|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2019-12-15 15:46:00,744|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2019-12-15 15:46:00,744|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2019-12-15 15:46:00,744|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2019-12-15 15:46:00,744|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2019-12-15 15:46:00,744|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2019-12-15 15:46:00,744|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2019-12-15 15:46:00,744|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2019-12-15 15:46:00,750|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2019-12-15 15:46:00,785|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2019-12-15 15:46:00,785|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2019-12-15 15:46:00,785|ERROR|main|****** Component:[com.game.component.RewardDropComponent] has started successfully.******************
+2019-12-15 15:46:00,785|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2019-12-15 15:46:00,785|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2019-12-15 15:46:00,938|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2019-12-15 15:46:01,198|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2019-12-15 15:46:01,199|ERROR|main|****** All Component has started successfully.******************
+2019-12-15 15:46:01,199|ERROR|main|游戏服启动成功, 耗时 4 秒.

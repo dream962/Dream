@@ -260,6 +260,7 @@
 		
 		<!-- gameserver -->
 		<copydir src="${lib-out-min}" dest="${gameserver-out-min}/lib" excludes="${exclude-svn}" />
+		<copy file="${app-out}/config/game.xml" todir="${gameserver-out-min}/" />
 		<copy file="${gameserver-out}/${project-name}_gameserver_${app-version}.jar" todir="${gameserver-out-min}/" />
 	</target>
 

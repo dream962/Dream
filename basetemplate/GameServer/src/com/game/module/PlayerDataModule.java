@@ -65,7 +65,7 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
 
     public void refresh(boolean isSend)
     {
-        player.getPlayerInfo().setIsCanUnlockCoinModeByAD(false);
+        player.getPlayerInfo().setIsCanUnlockCoinModeByAD(true);
         player.getPlayerInfo().setLastAdTime(null);
         player.getPlayerInfo().setAdTriggerCount(0);
         if (isSend)
@@ -255,11 +255,11 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
 
         chargeInfo.setPurchaseToken(purchaseToken);
 
-        int code = 0;
-        int result = ChargeComponent.checkPay(chargeInfo.getConfigID() + "", purchaseToken);
-        if (result == 1)
+        int code = 1;
+        int result = ChargeComponent.checkPay(bean.getGoogleSKU(), purchaseToken);
+        if (result == 0)
         {
-            code = 1;
+            code = 0;
             // 完成
             chargeInfo.setOrderStatus(2);
 
@@ -268,12 +268,13 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
             player.addResource(ResourceType.TTQ.getValue(), ttq);
             player.getSenderModule().sendRes();
         }
-        else if (result == 2)
+        else if (result == 1)
         {
             // 取消
             chargeInfo.setOrderStatus(0);
+            player.sendErrorCode(ErrorCodeType.Charge_Order_Check, "");
         }
-        else if (result == -1)
+        else
         {
             player.sendErrorCode(ErrorCodeType.Charge_Order_Check, "");
         }

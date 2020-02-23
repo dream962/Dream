@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;GamePlayerAutoSaveJob.java&apos; to &apos;GameServer/src/com.game.job&apos;&#x0D;&#x0A;- Original project: &apos;GameServer&apos;&#x0D;&#x0A;- Destination element: &apos;GameServer/src/com.game.job&apos;&#x0D;&#x0A;- Original element: &apos;com.game.job.GamePlayerAutoSaveJob.java&apos;" description="Copy compilation unit" destination="/src&lt;com.game.job" element1="/src&lt;com.game.job{GamePlayerAutoSaveJob.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1577601550881" units="1" version="1.0"/>
+</session>

@@ -10,19 +10,19 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>.link3</name>
+			<name>.link0</name>
 			<type>2</type>
 			<location>G:/ehcache-2.6.6-distribution/ehcache-2.6.6/src</location>
 		</link>
 		<link>
-			<name>.link4</name>
+			<name>.link3</name>
 			<type>2</type>
-			<location>C:/Users/dream/.groovy/greclipse/global_dsld_support</location>
+			<location>C:/Users/admin/.groovy/greclipse/global_dsld_support</location>
 		</link>
 		<link>
-			<name>.link5</name>
+			<name>.link4</name>
 			<type>2</type>
-			<location>C:/soft/eclipse/plugins/org.codehaus.groovy_2.5.0.xx-201712082046-e45/plugin_dsld_support</location>
+			<location>D:/soft/eclipse/plugins/org.codehaus.groovy_2.5.0.xx-201806261338-e45/plugin_dsld_support</location>
 		</link>
 	</linkedResources>
 </projectDescription>

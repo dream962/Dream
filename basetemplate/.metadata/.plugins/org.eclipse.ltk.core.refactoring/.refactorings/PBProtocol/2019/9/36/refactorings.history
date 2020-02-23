@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;GameInProto.proto&apos; to &apos;GameInProto.proto&apos;&#x0D;&#x0A;- Original project: &apos;PBProtocol&apos;&#x0D;&#x0A;- Destination element: &apos;GameInProto.proto&apos;&#x0D;&#x0A;- Original element: &apos;GameInProto.proto&apos;" description="Copy file" element1="proto/GameInProto.proto" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1567646218706" target="/PBProtocol/proto/GameInProto.proto" units="0" version="1.0"/>
+</session>

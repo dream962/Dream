@@ -7,6 +7,7 @@ import "CommonOut.proto";
 message LoginInfoProtoOut
 {
 	required int32 userID=1;						//玩家ID
+	required string playerName = 2;					//玩家名字
 	required int32 winCount = 3;					//胜利次数（联机玩法中的胜利）
 	required int32 failCount = 4;					//失败次数（联机玩法中的失败）
 	required int32 diamondCount = 7;				//玩家拥有钻石数
@@ -19,10 +20,9 @@ message LoginInfoProtoOut
 	required bool isRemoveAd = 14;                  //是否出广告
 	required int64 timelimitTopScore = 15;          //限时模式的最佳成绩（限时模式中跳得的最大值）
 	required int64 raceTopScore = 16;               //竞速模式的最佳成绩（竞速模式中上发的毫秒值最小的）
-	required bool isCanUnlockCoinModeByAD = 17;     //是否可以通过广告解锁金币模式
+	required bool isCanUnlockCoinModeByAD = 17;     //是否可以通过广告解锁金币模式(true:可以；false：已经解锁过）
 	repeated int32 unlockHeadID = 18;               //已解锁的头像ID
 	required int64 triggerADLeftTime = 19;          //本次可触发广告的剩余时间
-	//required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
 	required int64 todayTriggerADCount = 20;        //今日已触发广告的次数
 	required int64 globalTopScore = 21;             //全局最佳成绩
 	required bool isBinded = 22;                    //是否已绑定谷歌账号
@@ -289,4 +289,10 @@ message ChangeRoleTypeProtoOut
 {
 	required int32 userID = 1;				//玩家ID
 	required RoleType roleType = 2;         //角色类型
+}
+
+/** 匹配房间退出 */
+message ExitBoutProtoOut
+{
+	required int32 userID = 1;				//退出玩家的UserID
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="upload-uploadserver" name="daomu2" basedir="../.">
+<project default="deploy-all" name="daomu2" basedir="../.">
 	<!-- <project default="deploy-all" name="daomu2" basedir="../."> -->
 	<description>
 		维护工具自动编译打包脚本
@@ -34,17 +34,17 @@
 	<property name="exclude-local" value="*.propertieslocal" />
 
 	<!--输入变量定义-->
-	<property name="config" value="${basedir}/UploadServer/config" />
-	<property name="libs" value="${basedir}/UploadServer/lib" />
+	<property name="config" value="${basedir}/ManagerServer/config" />
+	<property name="libs" value="${basedir}/ManagerServer/lib" />
 
-	<property name="uploadserver" value="${basedir}/UploadServer" />
+	<property name="uploadserver" value="${basedir}/ManagerServer" />
 
 	<!--定义最终文件输出路径-->
 	<property name="lib-out" value="${basedir}/deploy/lib" />
 	<property name="lib-out-min" value="${basedir}/deploy/lib-min" />
 	<property name="app-out" value="${basedir}/deploy/app" />
-	<property name="uploadserver-out" value="${app-out}/uploadserver" />
-	<property name="uploadserver-out-min" value="${app-out}/uploadserver-min" />
+	<property name="uploadserver-out" value="${app-out}/managerserver" />
+	<property name="uploadserver-out-min" value="${app-out}/managerserver-min" />
 
 	<path id="lib-out">
 		<fileset dir="${basedir}/deploy/lib">
@@ -74,7 +74,7 @@
 	<target name="deploy-basic" depends="init">
 		<copydir src="${libs}" dest="${lib-out}" />
 		<copydir src="${uploadserver}/config" dest="${uploadserver-out}/config" excludes="upload.xml" />
-		<copy file="${uploadserver}/config/upload.xml" tofile="${app-out}/config/upload.xml" overwrite="true" />
+		<copy file="${uploadserver}/config/config.xml" tofile="${app-out}/config/config.xml" overwrite="true" />
 	</target>
 
 	<!-- 编译UploadServer -->
@@ -88,39 +88,23 @@
 	<target name="deploy-uploadserver" depends="compile-uploadserver">
 		<copydir src="${lib-out}" dest="${uploadserver-out}/lib" excludes="${exclude-svn}" />
 		<!-- <copydir src="${commonservice}/lib" dest="${uploadserver-out}/lib" excludes="${exclude-svn}" /> -->
-		<copy file="${app-out}/config/upload.xml" todir="${uploadserver-out}/" />
-		<replace file="${uploadserver-out}/upload.xml" token="${myhost}" value="${host}" />
+		<copy file="${app-out}/config/config.xml" todir="${uploadserver-out}/" />
+		<replace file="${uploadserver-out}/config.xml" token="${myhost}" value="${host}" />
 
 		<copy file="${uploadserver}/sh/uploadserver.sh" todir="${uploadserver-out}/" />
 		<copydir src="${uploadserver}/web" dest="${uploadserver-out}/web" excludes="${exclude-svn}" />
 
-		<replace file="${uploadserver-out}/upload.xml" token="D:\\develop\\work\\fight\\UploadServer\\web" value="/root/daomu2/servers/uploadserver/web" />
-		<replace file="${uploadserver-out}/upload.xml" token="192.168.1.97" value="192.168.1.97" />
+		<replace file="${uploadserver-out}/config.xml" token="D:\\develop\\work\\fight\\UploadServer\\web" value="/root/daomu2/servers/uploadserver/web" />
+		<replace file="${uploadserver-out}/config.xml" token="192.168.1.97" value="192.168.1.97" />
 		<jar basedir="${uploadserver}/bin" destfile="${uploadserver-out}/${project-name}_uploadserver_${app-version}.jar">
 			<manifest>
-				<attribute name="Main-Class" value="com.upload.UploadServer" />
+				<attribute name="Main-Class" value="com.upload.ManagerServer" />
 			</manifest>
 		</jar>
 	</target>
 
 	<!--deploy-all -->
 	<target name="deploy-all" depends="deploy-uploadserver">
-	</target>
-
-	<!-- 上传uploadserver -->
-	<target name="upload-uploadserver" depends="deploy-all">
-		<echo>==========================start upload==========================
-		</echo>
-
-		<!-- 上传ChargeServer到 FTP 服务器 -->
-		<mkdir dir="${uploadserver-out}" />
-		<scp port="${port}" todir="${user}:${password}@${uploadserverdir}" trust="true" verbose="true">
-			<fileset dir="${uploadserver-out}">
-			</fileset>
-		</scp>
-
-		<echo>==========================end upload============================
-		</echo>
 	</target>
 
 </project>

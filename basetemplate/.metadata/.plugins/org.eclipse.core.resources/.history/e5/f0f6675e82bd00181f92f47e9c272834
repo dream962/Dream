@@ -1,0 +1,19 @@
+package com.game.scene.city;
+
+import com.data.info.CityInfo;
+import com.game.scene.ScenePlayer;
+
+public class BaseCity extends AbstractCity
+{
+    public BaseCity(ScenePlayer player, CityInfo cityInfo)
+    {
+        super(player, cityInfo);
+    }
+
+    @Override
+    public boolean init()
+    {
+        // TODO Auto-generated method stub
+        return false;
+    }
+}

@@ -26,7 +26,7 @@ import com.util.print.LogFactory;
 
 /**
  * 游戏玩家主类
- * 
+ *
  * @author dream
  *
  */
@@ -165,7 +165,7 @@ public class GamePlayer extends AbstractGamePlayer
 
     /**
      * 是否是强制断线
-     * 
+     *
      * @param isForceKick
      */
     @Override
@@ -269,6 +269,8 @@ public class GamePlayer extends AbstractGamePlayer
                 LogFactory.error("Module Relogin Exception:" + module.getClass().getName(), e);
             }
         }
+
+        LogFactory.error("玩家登陆完成:{},{}", getUserID(), getNickName());
 
         // 保存时间初始化
         saveTime = System.currentTimeMillis() + GamePropertiesComponent.SAVE_PLAYER_TIME;
@@ -466,11 +468,5 @@ public class GamePlayer extends AbstractGamePlayer
         }
 
         getSenderModule().sendRes();
-    }
-
-    @Override
-    public void onExitBout()
-    {
-        getRoomModule().exitRoom(0);
     }
 }

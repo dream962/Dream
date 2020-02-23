@@ -79,16 +79,19 @@ public class LoginAccountServlet extends PlayerHandlerServlet
         }
 
         // 自定义名字注册的判断名字是否重复
-        if (userInfo == null || StringUtil.isNullOrEmpty(requestInfo.openID))
+        if (userInfo == null)
         {
-            boolean isUserNameUsed = AccountCacheComponent.getCacheUser().checkUserName(requestInfo.name);
-            if (isUserNameUsed)
+            if(StringUtil.isNullOrEmpty(requestInfo.openID))
             {
-                Res res = new Res();
-                res.name = requestInfo.name;
-                res.error = "error";
-                String msg = gson.toJson(res);
-                return gson.toJson(new RetInfo(ErrorCodeType.Success, "", msg));
+                boolean isUserNameUsed = AccountCacheComponent.getCacheUser().checkUserName(requestInfo.name);
+                if (isUserNameUsed)
+                {
+                    Res res = new Res();
+                    res.name = requestInfo.name;
+                    res.error = "error";
+                    String msg = gson.toJson(res);
+                    return gson.toJson(new RetInfo(ErrorCodeType.Success, "", msg));
+                }
             }
 
             userInfo = new UserData();
@@ -96,7 +99,15 @@ public class LoginAccountServlet extends PlayerHandlerServlet
             userInfo.setUserID(userID);
             userInfo.setLastLoginDate(new Date());
             userInfo.setRegisterDate(new Date());
-            userInfo.setUserName(requestInfo.name);
+            // openID->gName;machineCode->UserName
+            if (!StringUtil.isNullOrEmpty(requestInfo.openID))
+                userInfo.setGName(requestInfo.name);
+            else
+            {
+                if (!StringUtil.isNullOrEmpty(requestInfo.machinecode))
+                    userInfo.setUserName(requestInfo.name);
+            }
+
             userInfo.setOpenID(requestInfo.openID);
             userInfo.setMachineCode(requestInfo.machinecode);
 

@@ -29,6 +29,33 @@ public final class UserOutMsg {
      */
     int getUserID();
 
+    // required string playerName = 2;
+    /**
+     * <code>required string playerName = 2;</code>
+     *
+     * <pre>
+     *玩家名字
+     * </pre>
+     */
+    boolean hasPlayerName();
+    /**
+     * <code>required string playerName = 2;</code>
+     *
+     * <pre>
+     *玩家名字
+     * </pre>
+     */
+    java.lang.String getPlayerName();
+    /**
+     * <code>required string playerName = 2;</code>
+     *
+     * <pre>
+     *玩家名字
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPlayerNameBytes();
+
     // required int32 winCount = 3;
     /**
      * <code>required int32 winCount = 3;</code>
@@ -274,7 +301,7 @@ public final class UserOutMsg {
      * <code>required bool isCanUnlockCoinModeByAD = 17;</code>
      *
      * <pre>
-     *是否可以通过广告解锁金币模式
+     *是否可以通过广告解锁金币模式(true:可以；false：已经解锁过）
      * </pre>
      */
     boolean hasIsCanUnlockCoinModeByAD();
@@ -282,7 +309,7 @@ public final class UserOutMsg {
      * <code>required bool isCanUnlockCoinModeByAD = 17;</code>
      *
      * <pre>
-     *是否可以通过广告解锁金币模式
+     *是否可以通过广告解锁金币模式(true:可以；false：已经解锁过）
      * </pre>
      */
     boolean getIsCanUnlockCoinModeByAD();
@@ -336,7 +363,7 @@ public final class UserOutMsg {
      * <code>required int64 todayTriggerADCount = 20;</code>
      *
      * <pre>
-     *required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
+     *今日已触发广告的次数
      * </pre>
      */
     boolean hasTodayTriggerADCount();
@@ -344,7 +371,7 @@ public final class UserOutMsg {
      * <code>required int64 todayTriggerADCount = 20;</code>
      *
      * <pre>
-     *required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
+     *今日已触发广告的次数
      * </pre>
      */
     long getTodayTriggerADCount();
@@ -517,33 +544,38 @@ public final class UserOutMsg {
               userID_ = input.readInt32();
               break;
             }
-            case 24: {
+            case 18: {
               bitField0_ |= 0x00000002;
+              playerName_ = input.readBytes();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
               winCount_ = input.readInt32();
               break;
             }
             case 32: {
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               failCount_ = input.readInt32();
               break;
             }
             case 56: {
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               diamondCount_ = input.readInt32();
               break;
             }
             case 64: {
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               donutCount_ = input.readInt32();
               break;
             }
             case 72: {
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               endlessTopScore_ = input.readInt64();
               break;
             }
             case 80: {
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               headID_ = input.readInt32();
               break;
             }
@@ -553,9 +585,9 @@ public final class UserOutMsg {
               if (value == null) {
                 unknownFields.mergeVarintField(11, rawValue);
               } else {
-                if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                   unlockRoleType_ = new java.util.ArrayList<com.proto.common.gen.CommonOutMsg.RoleType>();
-                  mutable_bitField0_ |= 0x00000080;
+                  mutable_bitField0_ |= 0x00000100;
                 }
                 unlockRoleType_.add(value);
               }
@@ -570,9 +602,9 @@ public final class UserOutMsg {
                 if (value == null) {
                   unknownFields.mergeVarintField(11, rawValue);
                 } else {
-                  if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                  if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                     unlockRoleType_ = new java.util.ArrayList<com.proto.common.gen.CommonOutMsg.RoleType>();
-                    mutable_bitField0_ |= 0x00000080;
+                    mutable_bitField0_ |= 0x00000100;
                   }
                   unlockRoleType_.add(value);
                 }
@@ -586,9 +618,9 @@ public final class UserOutMsg {
               if (value == null) {
                 unknownFields.mergeVarintField(12, rawValue);
               } else {
-                if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
                   unlockTheme_ = new java.util.ArrayList<com.proto.common.gen.CommonOutMsg.PlatformTheme>();
-                  mutable_bitField0_ |= 0x00000100;
+                  mutable_bitField0_ |= 0x00000200;
                 }
                 unlockTheme_.add(value);
               }
@@ -603,9 +635,9 @@ public final class UserOutMsg {
                 if (value == null) {
                   unknownFields.mergeVarintField(12, rawValue);
                 } else {
-                  if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                  if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
                     unlockTheme_ = new java.util.ArrayList<com.proto.common.gen.CommonOutMsg.PlatformTheme>();
-                    mutable_bitField0_ |= 0x00000100;
+                    mutable_bitField0_ |= 0x00000200;
                   }
                   unlockTheme_.add(value);
                 }
@@ -619,9 +651,9 @@ public final class UserOutMsg {
               if (value == null) {
                 unknownFields.mergeVarintField(13, rawValue);
               } else {
-                if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
                   unlockGameMode_ = new java.util.ArrayList<com.proto.common.gen.CommonOutMsg.ModeType>();
-                  mutable_bitField0_ |= 0x00000200;
+                  mutable_bitField0_ |= 0x00000400;
                 }
                 unlockGameMode_.add(value);
               }
@@ -636,9 +668,9 @@ public final class UserOutMsg {
                 if (value == null) {
                   unknownFields.mergeVarintField(13, rawValue);
                 } else {
-                  if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                  if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
                     unlockGameMode_ = new java.util.ArrayList<com.proto.common.gen.CommonOutMsg.ModeType>();
-                    mutable_bitField0_ |= 0x00000200;
+                    mutable_bitField0_ |= 0x00000400;
                   }
                   unlockGameMode_.add(value);
                 }
@@ -647,29 +679,29 @@ public final class UserOutMsg {
               break;
             }
             case 112: {
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               isRemoveAd_ = input.readBool();
               break;
             }
             case 120: {
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               timelimitTopScore_ = input.readInt64();
               break;
             }
             case 128: {
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               raceTopScore_ = input.readInt64();
               break;
             }
             case 136: {
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000800;
               isCanUnlockCoinModeByAD_ = input.readBool();
               break;
             }
             case 144: {
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
                 unlockHeadID_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00004000;
+                mutable_bitField0_ |= 0x00008000;
               }
               unlockHeadID_.add(input.readInt32());
               break;
@@ -677,9 +709,9 @@ public final class UserOutMsg {
             case 146: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000) && input.getBytesUntilLimit() > 0) {
+              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000) && input.getBytesUntilLimit() > 0) {
                 unlockHeadID_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00004000;
+                mutable_bitField0_ |= 0x00008000;
               }
               while (input.getBytesUntilLimit() > 0) {
                 unlockHeadID_.add(input.readInt32());
@@ -688,42 +720,42 @@ public final class UserOutMsg {
               break;
             }
             case 152: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00001000;
               triggerADLeftTime_ = input.readInt64();
               break;
             }
             case 160: {
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00002000;
               todayTriggerADCount_ = input.readInt64();
               break;
             }
             case 168: {
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00004000;
               globalTopScore_ = input.readInt64();
               break;
             }
             case 176: {
-              bitField0_ |= 0x00004000;
+              bitField0_ |= 0x00008000;
               isBinded_ = input.readBool();
               break;
             }
             case 184: {
-              bitField0_ |= 0x00008000;
+              bitField0_ |= 0x00010000;
               buyRemoveAdYear_ = input.readInt32();
               break;
             }
             case 192: {
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00020000;
               buyRemoveAdMonth_ = input.readInt32();
               break;
             }
             case 200: {
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00040000;
               buyRemoveAdDay_ = input.readInt32();
               break;
             }
             case 208: {
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00080000;
               leftRemoveAdDay_ = input.readInt32();
               break;
             }
@@ -735,16 +767,16 @@ public final class UserOutMsg {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
           unlockRoleType_ = java.util.Collections.unmodifiableList(unlockRoleType_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
           unlockTheme_ = java.util.Collections.unmodifiableList(unlockTheme_);
         }
-        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
           unlockGameMode_ = java.util.Collections.unmodifiableList(unlockGameMode_);
         }
-        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
           unlockHeadID_ = java.util.Collections.unmodifiableList(unlockHeadID_);
         }
         this.unknownFields = unknownFields.build();
@@ -803,6 +835,61 @@ public final class UserOutMsg {
       return userID_;
     }
 
+    // required string playerName = 2;
+    public static final int PLAYERNAME_FIELD_NUMBER = 2;
+    private java.lang.Object playerName_;
+    /**
+     * <code>required string playerName = 2;</code>
+     *
+     * <pre>
+     *玩家名字
+     * </pre>
+     */
+    public boolean hasPlayerName() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string playerName = 2;</code>
+     *
+     * <pre>
+     *玩家名字
+     * </pre>
+     */
+    public java.lang.String getPlayerName() {
+      java.lang.Object ref = playerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          playerName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string playerName = 2;</code>
+     *
+     * <pre>
+     *玩家名字
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPlayerNameBytes() {
+      java.lang.Object ref = playerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        playerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     // required int32 winCount = 3;
     public static final int WINCOUNT_FIELD_NUMBER = 3;
     private int winCount_;
@@ -814,7 +901,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasWinCount() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+      return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
      * <code>required int32 winCount = 3;</code>
@@ -838,7 +925,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasFailCount() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
      * <code>required int32 failCount = 4;</code>
@@ -862,7 +949,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasDiamondCount() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
+      return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
      * <code>required int32 diamondCount = 7;</code>
@@ -886,7 +973,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasDonutCount() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
+      return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
      * <code>required int32 donutCount = 8;</code>
@@ -910,7 +997,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasEndlessTopScore() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
+      return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
      * <code>required int64 endlessTopScore = 9;</code>
@@ -934,7 +1021,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasHeadID() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
+      return ((bitField0_ & 0x00000080) == 0x00000080);
     }
     /**
      * <code>required int32 headID = 10;</code>
@@ -1060,7 +1147,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasIsRemoveAd() {
-      return ((bitField0_ & 0x00000080) == 0x00000080);
+      return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
      * <code>required bool isRemoveAd = 14;</code>
@@ -1084,7 +1171,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasTimelimitTopScore() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
+      return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
      * <code>required int64 timelimitTopScore = 15;</code>
@@ -1108,7 +1195,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasRaceTopScore() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
+      return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
      * <code>required int64 raceTopScore = 16;</code>
@@ -1128,17 +1215,17 @@ public final class UserOutMsg {
      * <code>required bool isCanUnlockCoinModeByAD = 17;</code>
      *
      * <pre>
-     *是否可以通过广告解锁金币模式
+     *是否可以通过广告解锁金币模式(true:可以；false：已经解锁过）
      * </pre>
      */
     public boolean hasIsCanUnlockCoinModeByAD() {
-      return ((bitField0_ & 0x00000400) == 0x00000400);
+      return ((bitField0_ & 0x00000800) == 0x00000800);
     }
     /**
      * <code>required bool isCanUnlockCoinModeByAD = 17;</code>
      *
      * <pre>
-     *是否可以通过广告解锁金币模式
+     *是否可以通过广告解锁金币模式(true:可以；false：已经解锁过）
      * </pre>
      */
     public boolean getIsCanUnlockCoinModeByAD() {
@@ -1191,7 +1278,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasTriggerADLeftTime() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
+      return ((bitField0_ & 0x00001000) == 0x00001000);
     }
     /**
      * <code>required int64 triggerADLeftTime = 19;</code>
@@ -1211,17 +1298,17 @@ public final class UserOutMsg {
      * <code>required int64 todayTriggerADCount = 20;</code>
      *
      * <pre>
-     *required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
+     *今日已触发广告的次数
      * </pre>
      */
     public boolean hasTodayTriggerADCount() {
-      return ((bitField0_ & 0x00001000) == 0x00001000);
+      return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
      * <code>required int64 todayTriggerADCount = 20;</code>
      *
      * <pre>
-     *required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
+     *今日已触发广告的次数
      * </pre>
      */
     public long getTodayTriggerADCount() {
@@ -1239,7 +1326,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasGlobalTopScore() {
-      return ((bitField0_ & 0x00002000) == 0x00002000);
+      return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
      * <code>required int64 globalTopScore = 21;</code>
@@ -1263,7 +1350,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasIsBinded() {
-      return ((bitField0_ & 0x00004000) == 0x00004000);
+      return ((bitField0_ & 0x00008000) == 0x00008000);
     }
     /**
      * <code>required bool isBinded = 22;</code>
@@ -1287,7 +1374,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasBuyRemoveAdYear() {
-      return ((bitField0_ & 0x00008000) == 0x00008000);
+      return ((bitField0_ & 0x00010000) == 0x00010000);
     }
     /**
      * <code>required int32 buyRemoveAdYear = 23;</code>
@@ -1311,7 +1398,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasBuyRemoveAdMonth() {
-      return ((bitField0_ & 0x00010000) == 0x00010000);
+      return ((bitField0_ & 0x00020000) == 0x00020000);
     }
     /**
      * <code>required int32 buyRemoveAdMonth = 24;</code>
@@ -1335,7 +1422,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasBuyRemoveAdDay() {
-      return ((bitField0_ & 0x00020000) == 0x00020000);
+      return ((bitField0_ & 0x00040000) == 0x00040000);
     }
     /**
      * <code>required int32 buyRemoveAdDay = 25;</code>
@@ -1359,7 +1446,7 @@ public final class UserOutMsg {
      * </pre>
      */
     public boolean hasLeftRemoveAdDay() {
-      return ((bitField0_ & 0x00040000) == 0x00040000);
+      return ((bitField0_ & 0x00080000) == 0x00080000);
     }
     /**
      * <code>required int32 leftRemoveAdDay = 26;</code>
@@ -1374,6 +1461,7 @@ public final class UserOutMsg {
 
     private void initFields() {
       userID_ = 0;
+      playerName_ = "";
       winCount_ = 0;
       failCount_ = 0;
       diamondCount_ = 0;
@@ -1403,6 +1491,10 @@ public final class UserOutMsg {
       if (isInitialized != -1) return isInitialized == 1;
 
       if (!hasUserID()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPlayerName()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1489,21 +1581,24 @@ public final class UserOutMsg {
         output.writeInt32(1, userID_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(3, winCount_);
+        output.writeBytes(2, getPlayerNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(4, failCount_);
+        output.writeInt32(3, winCount_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt32(7, diamondCount_);
+        output.writeInt32(4, failCount_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeInt32(8, donutCount_);
+        output.writeInt32(7, diamondCount_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt64(9, endlessTopScore_);
+        output.writeInt32(8, donutCount_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt64(9, endlessTopScore_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         output.writeInt32(10, headID_);
       }
       for (int i = 0; i < unlockRoleType_.size(); i++) {
@@ -1515,43 +1610,43 @@ public final class UserOutMsg {
       for (int i = 0; i < unlockGameMode_.size(); i++) {
         output.writeEnum(13, unlockGameMode_.get(i).getNumber());
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeBool(14, isRemoveAd_);
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeInt64(15, timelimitTopScore_);
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeInt64(16, raceTopScore_);
       }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeBool(17, isCanUnlockCoinModeByAD_);
       }
       for (int i = 0; i < unlockHeadID_.size(); i++) {
         output.writeInt32(18, unlockHeadID_.get(i));
       }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
         output.writeInt64(19, triggerADLeftTime_);
       }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeInt64(20, todayTriggerADCount_);
       }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeInt64(21, globalTopScore_);
       }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
         output.writeBool(22, isBinded_);
       }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         output.writeInt32(23, buyRemoveAdYear_);
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         output.writeInt32(24, buyRemoveAdMonth_);
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         output.writeInt32(25, buyRemoveAdDay_);
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         output.writeInt32(26, leftRemoveAdDay_);
       }
       getUnknownFields().writeTo(output);
@@ -1569,25 +1664,29 @@ public final class UserOutMsg {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, winCount_);
+          .computeBytesSize(2, getPlayerNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, failCount_);
+          .computeInt32Size(3, winCount_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, diamondCount_);
+          .computeInt32Size(4, failCount_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, donutCount_);
+          .computeInt32Size(7, diamondCount_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(9, endlessTopScore_);
+          .computeInt32Size(8, donutCount_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, endlessTopScore_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(10, headID_);
       }
@@ -1618,19 +1717,19 @@ public final class UserOutMsg {
         size += dataSize;
         size += 1 * unlockGameMode_.size();
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(14, isRemoveAd_);
       }
-      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(15, timelimitTopScore_);
       }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(16, raceTopScore_);
       }
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(17, isCanUnlockCoinModeByAD_);
       }
@@ -1643,35 +1742,35 @@ public final class UserOutMsg {
         size += dataSize;
         size += 2 * getUnlockHeadIDList().size();
       }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(19, triggerADLeftTime_);
       }
-      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(20, todayTriggerADCount_);
       }
-      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(21, globalTopScore_);
       }
-      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(22, isBinded_);
       }
-      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(23, buyRemoveAdYear_);
       }
-      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(24, buyRemoveAdMonth_);
       }
-      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(25, buyRemoveAdDay_);
       }
-      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(26, leftRemoveAdDay_);
       }
@@ -1797,50 +1896,52 @@ public final class UserOutMsg {
         super.clear();
         userID_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        winCount_ = 0;
+        playerName_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        failCount_ = 0;
+        winCount_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
-        diamondCount_ = 0;
+        failCount_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
-        donutCount_ = 0;
+        diamondCount_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
-        endlessTopScore_ = 0L;
+        donutCount_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        headID_ = 0;
+        endlessTopScore_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000040);
-        unlockRoleType_ = java.util.Collections.emptyList();
+        headID_ = 0;
         bitField0_ = (bitField0_ & ~0x00000080);
-        unlockTheme_ = java.util.Collections.emptyList();
+        unlockRoleType_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000100);
-        unlockGameMode_ = java.util.Collections.emptyList();
+        unlockTheme_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000200);
-        isRemoveAd_ = false;
+        unlockGameMode_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000400);
-        timelimitTopScore_ = 0L;
+        isRemoveAd_ = false;
         bitField0_ = (bitField0_ & ~0x00000800);
-        raceTopScore_ = 0L;
+        timelimitTopScore_ = 0L;
         bitField0_ = (bitField0_ & ~0x00001000);
-        isCanUnlockCoinModeByAD_ = false;
+        raceTopScore_ = 0L;
         bitField0_ = (bitField0_ & ~0x00002000);
-        unlockHeadID_ = java.util.Collections.emptyList();
+        isCanUnlockCoinModeByAD_ = false;
         bitField0_ = (bitField0_ & ~0x00004000);
-        triggerADLeftTime_ = 0L;
+        unlockHeadID_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00008000);
-        todayTriggerADCount_ = 0L;
+        triggerADLeftTime_ = 0L;
         bitField0_ = (bitField0_ & ~0x00010000);
-        globalTopScore_ = 0L;
+        todayTriggerADCount_ = 0L;
         bitField0_ = (bitField0_ & ~0x00020000);
-        isBinded_ = false;
+        globalTopScore_ = 0L;
         bitField0_ = (bitField0_ & ~0x00040000);
-        buyRemoveAdYear_ = 0;
+        isBinded_ = false;
         bitField0_ = (bitField0_ & ~0x00080000);
-        buyRemoveAdMonth_ = 0;
+        buyRemoveAdYear_ = 0;
         bitField0_ = (bitField0_ & ~0x00100000);
-        buyRemoveAdDay_ = 0;
+        buyRemoveAdMonth_ = 0;
         bitField0_ = (bitField0_ & ~0x00200000);
-        leftRemoveAdDay_ = 0;
+        buyRemoveAdDay_ = 0;
         bitField0_ = (bitField0_ & ~0x00400000);
+        leftRemoveAdDay_ = 0;
+        bitField0_ = (bitField0_ & ~0x00800000);
         return this;
       }
 
@@ -1876,93 +1977,97 @@ public final class UserOutMsg {
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.winCount_ = winCount_;
+        result.playerName_ = playerName_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.failCount_ = failCount_;
+        result.winCount_ = winCount_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.diamondCount_ = diamondCount_;
+        result.failCount_ = failCount_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.donutCount_ = donutCount_;
+        result.diamondCount_ = diamondCount_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.endlessTopScore_ = endlessTopScore_;
+        result.donutCount_ = donutCount_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.headID_ = headID_;
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
-          unlockRoleType_ = java.util.Collections.unmodifiableList(unlockRoleType_);
-          bitField0_ = (bitField0_ & ~0x00000080);
-        }
-        result.unlockRoleType_ = unlockRoleType_;
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
-          unlockTheme_ = java.util.Collections.unmodifiableList(unlockTheme_);
-          bitField0_ = (bitField0_ & ~0x00000100);
-        }
-        result.unlockTheme_ = unlockTheme_;
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
-          unlockGameMode_ = java.util.Collections.unmodifiableList(unlockGameMode_);
-          bitField0_ = (bitField0_ & ~0x00000200);
-        }
-        result.unlockGameMode_ = unlockGameMode_;
-        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+        result.endlessTopScore_ = endlessTopScore_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000080;
         }
-        result.isRemoveAd_ = isRemoveAd_;
+        result.headID_ = headID_;
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          unlockRoleType_ = java.util.Collections.unmodifiableList(unlockRoleType_);
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.unlockRoleType_ = unlockRoleType_;
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          unlockTheme_ = java.util.Collections.unmodifiableList(unlockTheme_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.unlockTheme_ = unlockTheme_;
+        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          unlockGameMode_ = java.util.Collections.unmodifiableList(unlockGameMode_);
+          bitField0_ = (bitField0_ & ~0x00000400);
+        }
+        result.unlockGameMode_ = unlockGameMode_;
         if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000100;
         }
-        result.timelimitTopScore_ = timelimitTopScore_;
+        result.isRemoveAd_ = isRemoveAd_;
         if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
           to_bitField0_ |= 0x00000200;
         }
-        result.raceTopScore_ = raceTopScore_;
+        result.timelimitTopScore_ = timelimitTopScore_;
         if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
           to_bitField0_ |= 0x00000400;
         }
-        result.isCanUnlockCoinModeByAD_ = isCanUnlockCoinModeByAD_;
-        if (((bitField0_ & 0x00004000) == 0x00004000)) {
-          unlockHeadID_ = java.util.Collections.unmodifiableList(unlockHeadID_);
-          bitField0_ = (bitField0_ & ~0x00004000);
-        }
-        result.unlockHeadID_ = unlockHeadID_;
-        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+        result.raceTopScore_ = raceTopScore_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
           to_bitField0_ |= 0x00000800;
         }
-        result.triggerADLeftTime_ = triggerADLeftTime_;
+        result.isCanUnlockCoinModeByAD_ = isCanUnlockCoinModeByAD_;
+        if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          unlockHeadID_ = java.util.Collections.unmodifiableList(unlockHeadID_);
+          bitField0_ = (bitField0_ & ~0x00008000);
+        }
+        result.unlockHeadID_ = unlockHeadID_;
         if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
           to_bitField0_ |= 0x00001000;
         }
-        result.todayTriggerADCount_ = todayTriggerADCount_;
+        result.triggerADLeftTime_ = triggerADLeftTime_;
         if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
           to_bitField0_ |= 0x00002000;
         }
-        result.globalTopScore_ = globalTopScore_;
+        result.todayTriggerADCount_ = todayTriggerADCount_;
         if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
           to_bitField0_ |= 0x00004000;
         }
-        result.isBinded_ = isBinded_;
+        result.globalTopScore_ = globalTopScore_;
         if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
           to_bitField0_ |= 0x00008000;
         }
-        result.buyRemoveAdYear_ = buyRemoveAdYear_;
+        result.isBinded_ = isBinded_;
         if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00010000;
         }
-        result.buyRemoveAdMonth_ = buyRemoveAdMonth_;
+        result.buyRemoveAdYear_ = buyRemoveAdYear_;
         if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
           to_bitField0_ |= 0x00020000;
         }
-        result.buyRemoveAdDay_ = buyRemoveAdDay_;
+        result.buyRemoveAdMonth_ = buyRemoveAdMonth_;
         if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
           to_bitField0_ |= 0x00040000;
+        }
+        result.buyRemoveAdDay_ = buyRemoveAdDay_;
+        if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
+          to_bitField0_ |= 0x00080000;
         }
         result.leftRemoveAdDay_ = leftRemoveAdDay_;
         result.bitField0_ = to_bitField0_;
@@ -1983,6 +2088,11 @@ public final class UserOutMsg {
         if (other == com.proto.user.gen.UserOutMsg.LoginInfoProtoOut.getDefaultInstance()) return this;
         if (other.hasUserID()) {
           setUserID(other.getUserID());
+        }
+        if (other.hasPlayerName()) {
+          bitField0_ |= 0x00000002;
+          playerName_ = other.playerName_;
+          onChanged();
         }
         if (other.hasWinCount()) {
           setWinCount(other.getWinCount());
@@ -2005,7 +2115,7 @@ public final class UserOutMsg {
         if (!other.unlockRoleType_.isEmpty()) {
           if (unlockRoleType_.isEmpty()) {
             unlockRoleType_ = other.unlockRoleType_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureUnlockRoleTypeIsMutable();
             unlockRoleType_.addAll(other.unlockRoleType_);
@@ -2015,7 +2125,7 @@ public final class UserOutMsg {
         if (!other.unlockTheme_.isEmpty()) {
           if (unlockTheme_.isEmpty()) {
             unlockTheme_ = other.unlockTheme_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensureUnlockThemeIsMutable();
             unlockTheme_.addAll(other.unlockTheme_);
@@ -2025,7 +2135,7 @@ public final class UserOutMsg {
         if (!other.unlockGameMode_.isEmpty()) {
           if (unlockGameMode_.isEmpty()) {
             unlockGameMode_ = other.unlockGameMode_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureUnlockGameModeIsMutable();
             unlockGameMode_.addAll(other.unlockGameMode_);
@@ -2047,7 +2157,7 @@ public final class UserOutMsg {
         if (!other.unlockHeadID_.isEmpty()) {
           if (unlockHeadID_.isEmpty()) {
             unlockHeadID_ = other.unlockHeadID_;
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00008000);
           } else {
             ensureUnlockHeadIDIsMutable();
             unlockHeadID_.addAll(other.unlockHeadID_);
@@ -2084,6 +2194,10 @@ public final class UserOutMsg {
 
       public final boolean isInitialized() {
         if (!hasUserID()) {
+          
+          return false;
+        }
+        if (!hasPlayerName()) {
           
           return false;
         }
@@ -2230,6 +2344,104 @@ public final class UserOutMsg {
         return this;
       }
 
+      // required string playerName = 2;
+      private java.lang.Object playerName_ = "";
+      /**
+       * <code>required string playerName = 2;</code>
+       *
+       * <pre>
+       *玩家名字
+       * </pre>
+       */
+      public boolean hasPlayerName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string playerName = 2;</code>
+       *
+       * <pre>
+       *玩家名字
+       * </pre>
+       */
+      public java.lang.String getPlayerName() {
+        java.lang.Object ref = playerName_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          playerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string playerName = 2;</code>
+       *
+       * <pre>
+       *玩家名字
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPlayerNameBytes() {
+        java.lang.Object ref = playerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          playerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string playerName = 2;</code>
+       *
+       * <pre>
+       *玩家名字
+       * </pre>
+       */
+      public Builder setPlayerName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        playerName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string playerName = 2;</code>
+       *
+       * <pre>
+       *玩家名字
+       * </pre>
+       */
+      public Builder clearPlayerName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        playerName_ = getDefaultInstance().getPlayerName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string playerName = 2;</code>
+       *
+       * <pre>
+       *玩家名字
+       * </pre>
+       */
+      public Builder setPlayerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        playerName_ = value;
+        onChanged();
+        return this;
+      }
+
       // required int32 winCount = 3;
       private int winCount_ ;
       /**
@@ -2240,7 +2452,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasWinCount() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
        * <code>required int32 winCount = 3;</code>
@@ -2260,7 +2472,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setWinCount(int value) {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         winCount_ = value;
         onChanged();
         return this;
@@ -2273,7 +2485,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearWinCount() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         winCount_ = 0;
         onChanged();
         return this;
@@ -2289,7 +2501,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasFailCount() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>required int32 failCount = 4;</code>
@@ -2309,7 +2521,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setFailCount(int value) {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         failCount_ = value;
         onChanged();
         return this;
@@ -2322,7 +2534,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearFailCount() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         failCount_ = 0;
         onChanged();
         return this;
@@ -2338,7 +2550,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasDiamondCount() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>required int32 diamondCount = 7;</code>
@@ -2358,7 +2570,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setDiamondCount(int value) {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         diamondCount_ = value;
         onChanged();
         return this;
@@ -2371,7 +2583,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearDiamondCount() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         diamondCount_ = 0;
         onChanged();
         return this;
@@ -2387,7 +2599,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasDonutCount() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
        * <code>required int32 donutCount = 8;</code>
@@ -2407,7 +2619,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setDonutCount(int value) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         donutCount_ = value;
         onChanged();
         return this;
@@ -2420,7 +2632,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearDonutCount() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         donutCount_ = 0;
         onChanged();
         return this;
@@ -2436,7 +2648,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasEndlessTopScore() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+        return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
        * <code>required int64 endlessTopScore = 9;</code>
@@ -2456,7 +2668,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setEndlessTopScore(long value) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         endlessTopScore_ = value;
         onChanged();
         return this;
@@ -2469,7 +2681,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearEndlessTopScore() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         endlessTopScore_ = 0L;
         onChanged();
         return this;
@@ -2485,7 +2697,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasHeadID() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
        * <code>required int32 headID = 10;</code>
@@ -2505,7 +2717,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setHeadID(int value) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         headID_ = value;
         onChanged();
         return this;
@@ -2518,7 +2730,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearHeadID() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         headID_ = 0;
         onChanged();
         return this;
@@ -2528,9 +2740,9 @@ public final class UserOutMsg {
       private java.util.List<com.proto.common.gen.CommonOutMsg.RoleType> unlockRoleType_ =
         java.util.Collections.emptyList();
       private void ensureUnlockRoleTypeIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
           unlockRoleType_ = new java.util.ArrayList<com.proto.common.gen.CommonOutMsg.RoleType>(unlockRoleType_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
         }
       }
       /**
@@ -2619,7 +2831,7 @@ public final class UserOutMsg {
        */
       public Builder clearUnlockRoleType() {
         unlockRoleType_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -2628,9 +2840,9 @@ public final class UserOutMsg {
       private java.util.List<com.proto.common.gen.CommonOutMsg.PlatformTheme> unlockTheme_ =
         java.util.Collections.emptyList();
       private void ensureUnlockThemeIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
           unlockTheme_ = new java.util.ArrayList<com.proto.common.gen.CommonOutMsg.PlatformTheme>(unlockTheme_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
         }
       }
       /**
@@ -2719,7 +2931,7 @@ public final class UserOutMsg {
        */
       public Builder clearUnlockTheme() {
         unlockTheme_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -2728,9 +2940,9 @@ public final class UserOutMsg {
       private java.util.List<com.proto.common.gen.CommonOutMsg.ModeType> unlockGameMode_ =
         java.util.Collections.emptyList();
       private void ensureUnlockGameModeIsMutable() {
-        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
           unlockGameMode_ = new java.util.ArrayList<com.proto.common.gen.CommonOutMsg.ModeType>(unlockGameMode_);
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000400;
         }
       }
       /**
@@ -2819,7 +3031,7 @@ public final class UserOutMsg {
        */
       public Builder clearUnlockGameMode() {
         unlockGameMode_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -2834,7 +3046,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasIsRemoveAd() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
+        return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
        * <code>required bool isRemoveAd = 14;</code>
@@ -2854,7 +3066,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setIsRemoveAd(boolean value) {
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         isRemoveAd_ = value;
         onChanged();
         return this;
@@ -2867,7 +3079,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearIsRemoveAd() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         isRemoveAd_ = false;
         onChanged();
         return this;
@@ -2883,7 +3095,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasTimelimitTopScore() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
+        return ((bitField0_ & 0x00001000) == 0x00001000);
       }
       /**
        * <code>required int64 timelimitTopScore = 15;</code>
@@ -2903,7 +3115,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setTimelimitTopScore(long value) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         timelimitTopScore_ = value;
         onChanged();
         return this;
@@ -2916,7 +3128,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearTimelimitTopScore() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         timelimitTopScore_ = 0L;
         onChanged();
         return this;
@@ -2932,7 +3144,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasRaceTopScore() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
+        return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
        * <code>required int64 raceTopScore = 16;</code>
@@ -2952,7 +3164,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setRaceTopScore(long value) {
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         raceTopScore_ = value;
         onChanged();
         return this;
@@ -2965,7 +3177,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearRaceTopScore() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         raceTopScore_ = 0L;
         onChanged();
         return this;
@@ -2977,17 +3189,17 @@ public final class UserOutMsg {
        * <code>required bool isCanUnlockCoinModeByAD = 17;</code>
        *
        * <pre>
-       *是否可以通过广告解锁金币模式
+       *是否可以通过广告解锁金币模式(true:可以；false：已经解锁过）
        * </pre>
        */
       public boolean hasIsCanUnlockCoinModeByAD() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
+        return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
        * <code>required bool isCanUnlockCoinModeByAD = 17;</code>
        *
        * <pre>
-       *是否可以通过广告解锁金币模式
+       *是否可以通过广告解锁金币模式(true:可以；false：已经解锁过）
        * </pre>
        */
       public boolean getIsCanUnlockCoinModeByAD() {
@@ -2997,11 +3209,11 @@ public final class UserOutMsg {
        * <code>required bool isCanUnlockCoinModeByAD = 17;</code>
        *
        * <pre>
-       *是否可以通过广告解锁金币模式
+       *是否可以通过广告解锁金币模式(true:可以；false：已经解锁过）
        * </pre>
        */
       public Builder setIsCanUnlockCoinModeByAD(boolean value) {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         isCanUnlockCoinModeByAD_ = value;
         onChanged();
         return this;
@@ -3010,11 +3222,11 @@ public final class UserOutMsg {
        * <code>required bool isCanUnlockCoinModeByAD = 17;</code>
        *
        * <pre>
-       *是否可以通过广告解锁金币模式
+       *是否可以通过广告解锁金币模式(true:可以；false：已经解锁过）
        * </pre>
        */
       public Builder clearIsCanUnlockCoinModeByAD() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         isCanUnlockCoinModeByAD_ = false;
         onChanged();
         return this;
@@ -3023,9 +3235,9 @@ public final class UserOutMsg {
       // repeated int32 unlockHeadID = 18;
       private java.util.List<java.lang.Integer> unlockHeadID_ = java.util.Collections.emptyList();
       private void ensureUnlockHeadIDIsMutable() {
-        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
           unlockHeadID_ = new java.util.ArrayList<java.lang.Integer>(unlockHeadID_);
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00008000;
          }
       }
       /**
@@ -3109,7 +3321,7 @@ public final class UserOutMsg {
        */
       public Builder clearUnlockHeadID() {
         unlockHeadID_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         onChanged();
         return this;
       }
@@ -3124,7 +3336,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasTriggerADLeftTime() {
-        return ((bitField0_ & 0x00008000) == 0x00008000);
+        return ((bitField0_ & 0x00010000) == 0x00010000);
       }
       /**
        * <code>required int64 triggerADLeftTime = 19;</code>
@@ -3144,7 +3356,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setTriggerADLeftTime(long value) {
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00010000;
         triggerADLeftTime_ = value;
         onChanged();
         return this;
@@ -3157,7 +3369,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearTriggerADLeftTime() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         triggerADLeftTime_ = 0L;
         onChanged();
         return this;
@@ -3169,17 +3381,17 @@ public final class UserOutMsg {
        * <code>required int64 todayTriggerADCount = 20;</code>
        *
        * <pre>
-       *required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
+       *今日已触发广告的次数
        * </pre>
        */
       public boolean hasTodayTriggerADCount() {
-        return ((bitField0_ & 0x00010000) == 0x00010000);
+        return ((bitField0_ & 0x00020000) == 0x00020000);
       }
       /**
        * <code>required int64 todayTriggerADCount = 20;</code>
        *
        * <pre>
-       *required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
+       *今日已触发广告的次数
        * </pre>
        */
       public long getTodayTriggerADCount() {
@@ -3189,11 +3401,11 @@ public final class UserOutMsg {
        * <code>required int64 todayTriggerADCount = 20;</code>
        *
        * <pre>
-       *required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
+       *今日已触发广告的次数
        * </pre>
        */
       public Builder setTodayTriggerADCount(long value) {
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         todayTriggerADCount_ = value;
         onChanged();
         return this;
@@ -3202,11 +3414,11 @@ public final class UserOutMsg {
        * <code>required int64 todayTriggerADCount = 20;</code>
        *
        * <pre>
-       *required int64 triggerADLastTime = 19;          //上次客户端触发奖励广告的时间点
+       *今日已触发广告的次数
        * </pre>
        */
       public Builder clearTodayTriggerADCount() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         todayTriggerADCount_ = 0L;
         onChanged();
         return this;
@@ -3222,7 +3434,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasGlobalTopScore() {
-        return ((bitField0_ & 0x00020000) == 0x00020000);
+        return ((bitField0_ & 0x00040000) == 0x00040000);
       }
       /**
        * <code>required int64 globalTopScore = 21;</code>
@@ -3242,7 +3454,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setGlobalTopScore(long value) {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         globalTopScore_ = value;
         onChanged();
         return this;
@@ -3255,7 +3467,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearGlobalTopScore() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         globalTopScore_ = 0L;
         onChanged();
         return this;
@@ -3271,7 +3483,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasIsBinded() {
-        return ((bitField0_ & 0x00040000) == 0x00040000);
+        return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
        * <code>required bool isBinded = 22;</code>
@@ -3291,7 +3503,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setIsBinded(boolean value) {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         isBinded_ = value;
         onChanged();
         return this;
@@ -3304,7 +3516,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearIsBinded() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         isBinded_ = false;
         onChanged();
         return this;
@@ -3320,7 +3532,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasBuyRemoveAdYear() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
+        return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
        * <code>required int32 buyRemoveAdYear = 23;</code>
@@ -3340,7 +3552,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setBuyRemoveAdYear(int value) {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         buyRemoveAdYear_ = value;
         onChanged();
         return this;
@@ -3353,7 +3565,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearBuyRemoveAdYear() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         buyRemoveAdYear_ = 0;
         onChanged();
         return this;
@@ -3369,7 +3581,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasBuyRemoveAdMonth() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
+        return ((bitField0_ & 0x00200000) == 0x00200000);
       }
       /**
        * <code>required int32 buyRemoveAdMonth = 24;</code>
@@ -3389,7 +3601,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setBuyRemoveAdMonth(int value) {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00200000;
         buyRemoveAdMonth_ = value;
         onChanged();
         return this;
@@ -3402,7 +3614,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearBuyRemoveAdMonth() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         buyRemoveAdMonth_ = 0;
         onChanged();
         return this;
@@ -3418,7 +3630,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasBuyRemoveAdDay() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
+        return ((bitField0_ & 0x00400000) == 0x00400000);
       }
       /**
        * <code>required int32 buyRemoveAdDay = 25;</code>
@@ -3438,7 +3650,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setBuyRemoveAdDay(int value) {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00400000;
         buyRemoveAdDay_ = value;
         onChanged();
         return this;
@@ -3451,7 +3663,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearBuyRemoveAdDay() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         buyRemoveAdDay_ = 0;
         onChanged();
         return this;
@@ -3467,7 +3679,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public boolean hasLeftRemoveAdDay() {
-        return ((bitField0_ & 0x00400000) == 0x00400000);
+        return ((bitField0_ & 0x00800000) == 0x00800000);
       }
       /**
        * <code>required int32 leftRemoveAdDay = 26;</code>
@@ -3487,7 +3699,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder setLeftRemoveAdDay(int value) {
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x00800000;
         leftRemoveAdDay_ = value;
         onChanged();
         return this;
@@ -3500,7 +3712,7 @@ public final class UserOutMsg {
        * </pre>
        */
       public Builder clearLeftRemoveAdDay() {
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x00800000);
         leftRemoveAdDay_ = 0;
         onChanged();
         return this;
@@ -29455,6 +29667,450 @@ public final class UserOutMsg {
     // @@protoc_insertion_point(class_scope:ChangeRoleTypeProtoOut)
   }
 
+  public interface ExitBoutProtoOutOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 userID = 1;
+    /**
+     * <code>required int32 userID = 1;</code>
+     *
+     * <pre>
+     *退出玩家的UserID
+     * </pre>
+     */
+    boolean hasUserID();
+    /**
+     * <code>required int32 userID = 1;</code>
+     *
+     * <pre>
+     *退出玩家的UserID
+     * </pre>
+     */
+    int getUserID();
+  }
+  /**
+   * Protobuf type {@code ExitBoutProtoOut}
+   *
+   * <pre>
+   ** 匹配房间退出 
+   * </pre>
+   */
+  public static final class ExitBoutProtoOut extends
+      com.google.protobuf.GeneratedMessage
+      implements ExitBoutProtoOutOrBuilder {
+    // Use ExitBoutProtoOut.newBuilder() to construct.
+    private ExitBoutProtoOut(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private ExitBoutProtoOut(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final ExitBoutProtoOut defaultInstance;
+    public static ExitBoutProtoOut getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public ExitBoutProtoOut getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ExitBoutProtoOut(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              userID_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.proto.user.gen.UserOutMsg.internal_static_ExitBoutProtoOut_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.proto.user.gen.UserOutMsg.internal_static_ExitBoutProtoOut_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.proto.user.gen.UserOutMsg.ExitBoutProtoOut.class, com.proto.user.gen.UserOutMsg.ExitBoutProtoOut.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<ExitBoutProtoOut> PARSER =
+        new com.google.protobuf.AbstractParser<ExitBoutProtoOut>() {
+      public ExitBoutProtoOut parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ExitBoutProtoOut(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExitBoutProtoOut> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 userID = 1;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userID_;
+    /**
+     * <code>required int32 userID = 1;</code>
+     *
+     * <pre>
+     *退出玩家的UserID
+     * </pre>
+     */
+    public boolean hasUserID() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 userID = 1;</code>
+     *
+     * <pre>
+     *退出玩家的UserID
+     * </pre>
+     */
+    public int getUserID() {
+      return userID_;
+    }
+
+    private void initFields() {
+      userID_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUserID()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, userID_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userID_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.proto.user.gen.UserOutMsg.ExitBoutProtoOut prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ExitBoutProtoOut}
+     *
+     * <pre>
+     ** 匹配房间退出 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.proto.user.gen.UserOutMsg.ExitBoutProtoOutOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.proto.user.gen.UserOutMsg.internal_static_ExitBoutProtoOut_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.proto.user.gen.UserOutMsg.internal_static_ExitBoutProtoOut_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.proto.user.gen.UserOutMsg.ExitBoutProtoOut.class, com.proto.user.gen.UserOutMsg.ExitBoutProtoOut.Builder.class);
+      }
+
+      // Construct using com.proto.user.gen.UserOutMsg.ExitBoutProtoOut.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        userID_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.proto.user.gen.UserOutMsg.internal_static_ExitBoutProtoOut_descriptor;
+      }
+
+      public com.proto.user.gen.UserOutMsg.ExitBoutProtoOut getDefaultInstanceForType() {
+        return com.proto.user.gen.UserOutMsg.ExitBoutProtoOut.getDefaultInstance();
+      }
+
+      public com.proto.user.gen.UserOutMsg.ExitBoutProtoOut build() {
+        com.proto.user.gen.UserOutMsg.ExitBoutProtoOut result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.proto.user.gen.UserOutMsg.ExitBoutProtoOut buildPartial() {
+        com.proto.user.gen.UserOutMsg.ExitBoutProtoOut result = new com.proto.user.gen.UserOutMsg.ExitBoutProtoOut(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userID_ = userID_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.proto.user.gen.UserOutMsg.ExitBoutProtoOut) {
+          return mergeFrom((com.proto.user.gen.UserOutMsg.ExitBoutProtoOut)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.proto.user.gen.UserOutMsg.ExitBoutProtoOut other) {
+        if (other == com.proto.user.gen.UserOutMsg.ExitBoutProtoOut.getDefaultInstance()) return this;
+        if (other.hasUserID()) {
+          setUserID(other.getUserID());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUserID()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.proto.user.gen.UserOutMsg.ExitBoutProtoOut parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.proto.user.gen.UserOutMsg.ExitBoutProtoOut) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 userID = 1;
+      private int userID_ ;
+      /**
+       * <code>required int32 userID = 1;</code>
+       *
+       * <pre>
+       *退出玩家的UserID
+       * </pre>
+       */
+      public boolean hasUserID() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 userID = 1;</code>
+       *
+       * <pre>
+       *退出玩家的UserID
+       * </pre>
+       */
+      public int getUserID() {
+        return userID_;
+      }
+      /**
+       * <code>required int32 userID = 1;</code>
+       *
+       * <pre>
+       *退出玩家的UserID
+       * </pre>
+       */
+      public Builder setUserID(int value) {
+        bitField0_ |= 0x00000001;
+        userID_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 userID = 1;</code>
+       *
+       * <pre>
+       *退出玩家的UserID
+       * </pre>
+       */
+      public Builder clearUserID() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userID_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ExitBoutProtoOut)
+    }
+
+    static {
+      defaultInstance = new ExitBoutProtoOut(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:ExitBoutProtoOut)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_LoginInfoProtoOut_descriptor;
   private static
@@ -29610,6 +30266,11 @@ public final class UserOutMsg {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ChangeRoleTypeProtoOut_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_ExitBoutProtoOut_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ExitBoutProtoOut_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29619,102 +30280,103 @@ public final class UserOutMsg {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022UserLoginOut.proto\032\017CommonOut.proto\"\310\004" +
-      "\n\021LoginInfoProtoOut\022\016\n\006userID\030\001 \002(\005\022\020\n\010w" +
-      "inCount\030\003 \002(\005\022\021\n\tfailCount\030\004 \002(\005\022\024\n\014diam" +
-      "ondCount\030\007 \002(\005\022\022\n\ndonutCount\030\010 \002(\005\022\027\n\017en" +
-      "dlessTopScore\030\t \002(\003\022\016\n\006headID\030\n \002(\005\022!\n\016u" +
-      "nlockRoleType\030\013 \003(\0162\t.RoleType\022#\n\013unlock" +
-      "Theme\030\014 \003(\0162\016.PlatformTheme\022!\n\016unlockGam" +
-      "eMode\030\r \003(\0162\t.ModeType\022\022\n\nisRemoveAd\030\016 \002" +
-      "(\010\022\031\n\021timelimitTopScore\030\017 \002(\003\022\024\n\014raceTop" +
-      "Score\030\020 \002(\003\022\037\n\027isCanUnlockCoinModeByAD\030\021",
-      " \002(\010\022\024\n\014unlockHeadID\030\022 \003(\005\022\031\n\021triggerADL" +
-      "eftTime\030\023 \002(\003\022\033\n\023todayTriggerADCount\030\024 \002" +
-      "(\003\022\026\n\016globalTopScore\030\025 \002(\003\022\020\n\010isBinded\030\026" +
-      " \002(\010\022\027\n\017buyRemoveAdYear\030\027 \002(\005\022\030\n\020buyRemo" +
-      "veAdMonth\030\030 \002(\005\022\026\n\016buyRemoveAdDay\030\031 \002(\005\022" +
-      "\027\n\017leftRemoveAdDay\030\032 \002(\005\"\"\n\014PingProtoOut" +
-      "\022\022\n\nserverTime\030\001 \002(\003\"\241\001\n\021MatchPlayerDeta" +
-      "il\022\020\n\010userName\030\001 \002(\t\022\033\n\010roleType\030\002 \002(\0162\t" +
-      ".RoleType\022\016\n\006userID\030\003 \002(\003\022\016\n\006headID\030\004 \002(" +
-      "\003\022\014\n\004posX\030\005 \002(\002\022\014\n\004posY\030\006 \002(\002\022\014\n\004posZ\030\007 ",
-      "\002(\002\022\023\n\013isRoomOwner\030\010 \001(\010\"`\n\023RandomMatchP" +
-      "rotoOut\022#\n\007players\030\001 \003(\0132\022.MatchPlayerDe" +
-      "tail\022$\n\014platformType\030\002 \002(\0162\016.PlatformThe" +
-      "me\"u\n\020MatchMapProtoOut\022\023\n\013totalLength\030\001 " +
-      "\002(\005\022\r\n\005begin\030\002 \002(\005\022\013\n\003end\030\003 \002(\005\0220\n\014platf" +
-      "ormList\030\004 \003(\0132\032.PlatformGroupInfoProtoOu" +
-      "t\"\277\001\n\031PlatformGroupInfoProtoOut\022+\n\014platf" +
-      "ormInfo\030\001 \002(\0132\025.PlatformInfoProtoOut\0223\n\024" +
-      "spikeDirPlatformInfo\030\002 \001(\0132\025.PlatformInf" +
-      "oProtoOut\022\r\n\005level\030\003 \001(\005\0221\n\022platformInfo",
-      "Extral\030\004 \001(\0132\025.PlatformInfoProtoOut\"4\n\010T" +
-      "estData\022(\n\004data\030\001 \003(\0132\032.PlatformGroupInf" +
-      "oProtoOut\"\267\001\n\024PlatformInfoProtoOut\022#\n\014pl" +
-      "atformType\030\001 \002(\0162\r.PlatformType\022\014\n\004posX\030" +
-      "\002 \002(\002\022\014\n\004posY\030\003 \002(\002\022\014\n\004posZ\030\004 \002(\002\022\025\n\robs" +
-      "tacleIndex\030\005 \002(\005\022\023\n\013obstacleDir\030\006 \002(\005\022\022\n" +
-      "\nhasDiamond\030\007 \002(\010\022\020\n\010fallTime\030\010 \001(\002\"^\n\021E" +
-      "nemyJumpProtoOut\022\022\n\nisLeftJump\030\001 \002(\010\022\021\n\t" +
-      "jumpIndex\030\002 \002(\005\022\020\n\010multiple\030\003 \002(\002\022\020\n\010pla" +
-      "yerID\030\004 \002(\005\">\n\023EnemyBeKillProtoOut\022\025\n\rpl",
-      "atformIndex\030\001 \002(\005\022\020\n\010playerID\030\002 \002(\005\"\214\001\n\020" +
-      "GameOverProtoOut\022\r\n\005isWin\030\001 \002(\010\022\026\n\016playe" +
-      "rWinCount\030\002 \002(\005\022\025\n\renemyWinCount\030\003 \002(\005\022\035" +
-      "\n\025winnerGetDiamondCount\030\004 \002(\005\022\033\n\023winnerG" +
-      "etDonutCount\030\005 \002(\005\"+\n\026GetInviteAgainProt" +
-      "oOut\022\021\n\tenemyName\030\001 \002(\t\"@\n\031InviteAgainRe" +
-      "turnProtoOut\022\021\n\tenemyName\030\001 \002(\t\022\020\n\010isPer" +
-      "mit\030\002 \002(\010\"7\n\020RechargeProtoOut\022\020\n\010orderNu" +
-      "m\030\001 \002(\t\022\021\n\tproductID\030\002 \002(\t\"\376\003\n\017ResourceR" +
-      "efresh\022\020\n\010winCount\030\001 \001(\005\022\021\n\tfailCount\030\002 ",
-      "\001(\005\022\024\n\014diamondCount\030\003 \001(\005\022\022\n\ndonutCount\030" +
-      "\004 \001(\005\022\027\n\017endlessTopScore\030\005 \001(\003\022!\n\016unlock" +
-      "RoleType\030\006 \003(\0162\t.RoleType\022#\n\013unlockTheme" +
-      "\030\007 \003(\0162\016.PlatformTheme\022!\n\016unlockGameMode" +
-      "\030\010 \003(\0162\t.ModeType\022\022\n\nisRemoveAd\030\t \001(\010\022\031\n" +
-      "\021timelimitTopScore\030\n \002(\003\022\024\n\014raceTopScore" +
-      "\030\013 \002(\003\022\037\n\027isCanUnlockCoinModeByAD\030\014 \002(\010\022" +
-      "\016\n\006headID\030\r \002(\005\022\024\n\014unlockHeadID\030\016 \003(\005\022\026\n" +
-      "\016globalTopScore\030\017 \002(\003\022\020\n\010isBinded\030\020 \002(\010\022" +
-      "\027\n\017buyRemoveAdYear\030\021 \002(\005\022\030\n\020buyRemoveAdM",
-      "onth\030\022 \002(\005\022\026\n\016buyRemoveAdDay\030\023 \002(\005\022\027\n\017le" +
-      "ftRemoveAdDay\030\024 \002(\005\"K\n\024RankBaseInfoProto" +
-      "Out\022\033\n\010rankType\030\001 \002(\0162\t.RankType\022\026\n\016tota" +
-      "lRankIndex\030\002 \002(\003\"K\n\030RankBaseInfoListProt" +
-      "oOut\022/\n\020rankBaseInfoList\030\001 \003(\0132\025.RankBas" +
-      "eInfoProtoOut\"\\\n\020RankInfoProtoOut\022\021\n\tran" +
-      "kIndex\030\001 \002(\005\022\016\n\006headID\030\002 \002(\005\022\020\n\010nickName" +
-      "\030\003 \002(\t\022\023\n\013resultValue\030\004 \002(\003\"\323\001\n\024RankInfo" +
-      "ListProtoOut\022\033\n\010rankType\030\001 \002(\0162\t.RankTyp" +
-      "e\022#\n\010rankList\030\002 \003(\0132\021.RankInfoProtoOut\022)",
-      "\n\016playerRankInfo\030\003 \002(\0132\021.RankInfoProtoOu" +
-      "t\022#\n\014rankTimeType\030\004 \002(\0162\r.RankTimeType\022)" +
-      "\n\017rankSectionType\030\005 \002(\0162\020.RankSectionTyp" +
-      "e\"J\n\020RewardADProtoOut\022\031\n\021triggerADLeftTi" +
-      "me\030\001 \002(\003\022\033\n\023todayTriggerADCount\030\002 \002(\003\"D\n" +
-      "\020RoomInfoProtoOut\022\016\n\006roomID\030\001 \002(\005\022\020\n\010roo" +
-      "mName\030\002 \002(\t\022\016\n\006length\030\003 \002(\005\"R\n\024RoomListI" +
-      "nfoProtoOut\022\'\n\014roomInfoList\030\001 \003(\0132\021.Room" +
-      "InfoProtoOut\022\021\n\troomCount\030\002 \002(\005\"\251\001\n\026Room" +
-      "PlayerInfoProtoOut\022\016\n\006roomID\030\001 \002(\005\022$\n\021ro",
-      "omOwnerRoleType\030\002 \002(\0162\t.RoleType\022!\n\016room" +
-      "erRoleType\030\003 \002(\0162\t.RoleType\022\024\n\014roomerSta" +
-      "tus\030\004 \002(\005\022\016\n\006length\030\005 \002(\005\022\020\n\010roomName\030\006 " +
-      "\002(\t\"$\n\021ErrorCodeProtoOut\022\017\n\007errorID\030\001 \002(" +
-      "\005\"1\n\031RoomerReadyStatusProtoOut\022\024\n\014roomer" +
-      "Status\030\001 \002(\005\"L\n\022DonateItemProtoOut\022\016\n\006it" +
-      "emID\030\001 \002(\005\022\021\n\titemCount\030\002 \002(\005\022\023\n\013consume" +
-      "Type\030\003 \002(\005\"6\n\024ChangeHeaderProtoOut\022\016\n\006us" +
-      "erID\030\001 \002(\005\022\016\n\006header\030\002 \002(\005\"@\n\026RechargeVe" +
-      "rifyProtoOut\022\014\n\004code\030\001 \002(\005\022\030\n\020rechargeCo",
-      "nfigID\030\002 \002(\005\"9\n\024ExchangeItemProtoOut\022\016\n\006" +
-      "itemID\030\001 \002(\005\022\021\n\titemCount\030\002 \002(\005\",\n\020Remov" +
-      "eAdProtoOut\022\030\n\020removeAdConfigID\030\001 \002(\005\"E\n" +
-      "\026ChangeRoleTypeProtoOut\022\016\n\006userID\030\001 \002(\005\022" +
-      "\033\n\010roleType\030\002 \002(\0162\t.RoleTypeB \n\022com.prot" +
-      "o.user.genB\nUserOutMsg"
+      "\n\022UserLoginOut.proto\032\017CommonOut.proto\"\334\004" +
+      "\n\021LoginInfoProtoOut\022\016\n\006userID\030\001 \002(\005\022\022\n\np" +
+      "layerName\030\002 \002(\t\022\020\n\010winCount\030\003 \002(\005\022\021\n\tfai" +
+      "lCount\030\004 \002(\005\022\024\n\014diamondCount\030\007 \002(\005\022\022\n\ndo" +
+      "nutCount\030\010 \002(\005\022\027\n\017endlessTopScore\030\t \002(\003\022" +
+      "\016\n\006headID\030\n \002(\005\022!\n\016unlockRoleType\030\013 \003(\0162" +
+      "\t.RoleType\022#\n\013unlockTheme\030\014 \003(\0162\016.Platfo" +
+      "rmTheme\022!\n\016unlockGameMode\030\r \003(\0162\t.ModeTy" +
+      "pe\022\022\n\nisRemoveAd\030\016 \002(\010\022\031\n\021timelimitTopSc" +
+      "ore\030\017 \002(\003\022\024\n\014raceTopScore\030\020 \002(\003\022\037\n\027isCan",
+      "UnlockCoinModeByAD\030\021 \002(\010\022\024\n\014unlockHeadID" +
+      "\030\022 \003(\005\022\031\n\021triggerADLeftTime\030\023 \002(\003\022\033\n\023tod" +
+      "ayTriggerADCount\030\024 \002(\003\022\026\n\016globalTopScore" +
+      "\030\025 \002(\003\022\020\n\010isBinded\030\026 \002(\010\022\027\n\017buyRemoveAdY" +
+      "ear\030\027 \002(\005\022\030\n\020buyRemoveAdMonth\030\030 \002(\005\022\026\n\016b" +
+      "uyRemoveAdDay\030\031 \002(\005\022\027\n\017leftRemoveAdDay\030\032" +
+      " \002(\005\"\"\n\014PingProtoOut\022\022\n\nserverTime\030\001 \002(\003" +
+      "\"\241\001\n\021MatchPlayerDetail\022\020\n\010userName\030\001 \002(\t" +
+      "\022\033\n\010roleType\030\002 \002(\0162\t.RoleType\022\016\n\006userID\030" +
+      "\003 \002(\003\022\016\n\006headID\030\004 \002(\003\022\014\n\004posX\030\005 \002(\002\022\014\n\004p",
+      "osY\030\006 \002(\002\022\014\n\004posZ\030\007 \002(\002\022\023\n\013isRoomOwner\030\010" +
+      " \001(\010\"`\n\023RandomMatchProtoOut\022#\n\007players\030\001" +
+      " \003(\0132\022.MatchPlayerDetail\022$\n\014platformType" +
+      "\030\002 \002(\0162\016.PlatformTheme\"u\n\020MatchMapProtoO" +
+      "ut\022\023\n\013totalLength\030\001 \002(\005\022\r\n\005begin\030\002 \002(\005\022\013" +
+      "\n\003end\030\003 \002(\005\0220\n\014platformList\030\004 \003(\0132\032.Plat" +
+      "formGroupInfoProtoOut\"\277\001\n\031PlatformGroupI" +
+      "nfoProtoOut\022+\n\014platformInfo\030\001 \002(\0132\025.Plat" +
+      "formInfoProtoOut\0223\n\024spikeDirPlatformInfo" +
+      "\030\002 \001(\0132\025.PlatformInfoProtoOut\022\r\n\005level\030\003",
+      " \001(\005\0221\n\022platformInfoExtral\030\004 \001(\0132\025.Platf" +
+      "ormInfoProtoOut\"4\n\010TestData\022(\n\004data\030\001 \003(" +
+      "\0132\032.PlatformGroupInfoProtoOut\"\267\001\n\024Platfo" +
+      "rmInfoProtoOut\022#\n\014platformType\030\001 \002(\0162\r.P" +
+      "latformType\022\014\n\004posX\030\002 \002(\002\022\014\n\004posY\030\003 \002(\002\022" +
+      "\014\n\004posZ\030\004 \002(\002\022\025\n\robstacleIndex\030\005 \002(\005\022\023\n\013" +
+      "obstacleDir\030\006 \002(\005\022\022\n\nhasDiamond\030\007 \002(\010\022\020\n" +
+      "\010fallTime\030\010 \001(\002\"^\n\021EnemyJumpProtoOut\022\022\n\n" +
+      "isLeftJump\030\001 \002(\010\022\021\n\tjumpIndex\030\002 \002(\005\022\020\n\010m" +
+      "ultiple\030\003 \002(\002\022\020\n\010playerID\030\004 \002(\005\">\n\023Enemy",
+      "BeKillProtoOut\022\025\n\rplatformIndex\030\001 \002(\005\022\020\n" +
+      "\010playerID\030\002 \002(\005\"\214\001\n\020GameOverProtoOut\022\r\n\005" +
+      "isWin\030\001 \002(\010\022\026\n\016playerWinCount\030\002 \002(\005\022\025\n\re" +
+      "nemyWinCount\030\003 \002(\005\022\035\n\025winnerGetDiamondCo" +
+      "unt\030\004 \002(\005\022\033\n\023winnerGetDonutCount\030\005 \002(\005\"+" +
+      "\n\026GetInviteAgainProtoOut\022\021\n\tenemyName\030\001 " +
+      "\002(\t\"@\n\031InviteAgainReturnProtoOut\022\021\n\tenem" +
+      "yName\030\001 \002(\t\022\020\n\010isPermit\030\002 \002(\010\"7\n\020Recharg" +
+      "eProtoOut\022\020\n\010orderNum\030\001 \002(\t\022\021\n\tproductID" +
+      "\030\002 \002(\t\"\376\003\n\017ResourceRefresh\022\020\n\010winCount\030\001",
+      " \001(\005\022\021\n\tfailCount\030\002 \001(\005\022\024\n\014diamondCount\030" +
+      "\003 \001(\005\022\022\n\ndonutCount\030\004 \001(\005\022\027\n\017endlessTopS" +
+      "core\030\005 \001(\003\022!\n\016unlockRoleType\030\006 \003(\0162\t.Rol" +
+      "eType\022#\n\013unlockTheme\030\007 \003(\0162\016.PlatformThe" +
+      "me\022!\n\016unlockGameMode\030\010 \003(\0162\t.ModeType\022\022\n" +
+      "\nisRemoveAd\030\t \001(\010\022\031\n\021timelimitTopScore\030\n" +
+      " \002(\003\022\024\n\014raceTopScore\030\013 \002(\003\022\037\n\027isCanUnloc" +
+      "kCoinModeByAD\030\014 \002(\010\022\016\n\006headID\030\r \002(\005\022\024\n\014u" +
+      "nlockHeadID\030\016 \003(\005\022\026\n\016globalTopScore\030\017 \002(" +
+      "\003\022\020\n\010isBinded\030\020 \002(\010\022\027\n\017buyRemoveAdYear\030\021",
+      " \002(\005\022\030\n\020buyRemoveAdMonth\030\022 \002(\005\022\026\n\016buyRem" +
+      "oveAdDay\030\023 \002(\005\022\027\n\017leftRemoveAdDay\030\024 \002(\005\"" +
+      "K\n\024RankBaseInfoProtoOut\022\033\n\010rankType\030\001 \002(" +
+      "\0162\t.RankType\022\026\n\016totalRankIndex\030\002 \002(\003\"K\n\030" +
+      "RankBaseInfoListProtoOut\022/\n\020rankBaseInfo" +
+      "List\030\001 \003(\0132\025.RankBaseInfoProtoOut\"\\\n\020Ran" +
+      "kInfoProtoOut\022\021\n\trankIndex\030\001 \002(\005\022\016\n\006head" +
+      "ID\030\002 \002(\005\022\020\n\010nickName\030\003 \002(\t\022\023\n\013resultValu" +
+      "e\030\004 \002(\003\"\323\001\n\024RankInfoListProtoOut\022\033\n\010rank" +
+      "Type\030\001 \002(\0162\t.RankType\022#\n\010rankList\030\002 \003(\0132",
+      "\021.RankInfoProtoOut\022)\n\016playerRankInfo\030\003 \002" +
+      "(\0132\021.RankInfoProtoOut\022#\n\014rankTimeType\030\004 " +
+      "\002(\0162\r.RankTimeType\022)\n\017rankSectionType\030\005 " +
+      "\002(\0162\020.RankSectionType\"J\n\020RewardADProtoOu" +
+      "t\022\031\n\021triggerADLeftTime\030\001 \002(\003\022\033\n\023todayTri" +
+      "ggerADCount\030\002 \002(\003\"D\n\020RoomInfoProtoOut\022\016\n" +
+      "\006roomID\030\001 \002(\005\022\020\n\010roomName\030\002 \002(\t\022\016\n\006lengt" +
+      "h\030\003 \002(\005\"R\n\024RoomListInfoProtoOut\022\'\n\014roomI" +
+      "nfoList\030\001 \003(\0132\021.RoomInfoProtoOut\022\021\n\troom" +
+      "Count\030\002 \002(\005\"\251\001\n\026RoomPlayerInfoProtoOut\022\016",
+      "\n\006roomID\030\001 \002(\005\022$\n\021roomOwnerRoleType\030\002 \002(" +
+      "\0162\t.RoleType\022!\n\016roomerRoleType\030\003 \002(\0162\t.R" +
+      "oleType\022\024\n\014roomerStatus\030\004 \002(\005\022\016\n\006length\030" +
+      "\005 \002(\005\022\020\n\010roomName\030\006 \002(\t\"$\n\021ErrorCodeProt" +
+      "oOut\022\017\n\007errorID\030\001 \002(\005\"1\n\031RoomerReadyStat" +
+      "usProtoOut\022\024\n\014roomerStatus\030\001 \002(\005\"L\n\022Dona" +
+      "teItemProtoOut\022\016\n\006itemID\030\001 \002(\005\022\021\n\titemCo" +
+      "unt\030\002 \002(\005\022\023\n\013consumeType\030\003 \002(\005\"6\n\024Change" +
+      "HeaderProtoOut\022\016\n\006userID\030\001 \002(\005\022\016\n\006header" +
+      "\030\002 \002(\005\"@\n\026RechargeVerifyProtoOut\022\014\n\004code",
+      "\030\001 \002(\005\022\030\n\020rechargeConfigID\030\002 \002(\005\"9\n\024Exch" +
+      "angeItemProtoOut\022\016\n\006itemID\030\001 \002(\005\022\021\n\titem" +
+      "Count\030\002 \002(\005\",\n\020RemoveAdProtoOut\022\030\n\020remov" +
+      "eAdConfigID\030\001 \002(\005\"E\n\026ChangeRoleTypeProto" +
+      "Out\022\016\n\006userID\030\001 \002(\005\022\033\n\010roleType\030\002 \002(\0162\t." +
+      "RoleType\"\"\n\020ExitBoutProtoOut\022\016\n\006userID\030\001" +
+      " \002(\005B \n\022com.proto.user.genB\nUserOutMsg"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -29726,7 +30388,7 @@ public final class UserOutMsg {
           internal_static_LoginInfoProtoOut_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_LoginInfoProtoOut_descriptor,
-              new java.lang.String[] { "UserID", "WinCount", "FailCount", "DiamondCount", "DonutCount", "EndlessTopScore", "HeadID", "UnlockRoleType", "UnlockTheme", "UnlockGameMode", "IsRemoveAd", "TimelimitTopScore", "RaceTopScore", "IsCanUnlockCoinModeByAD", "UnlockHeadID", "TriggerADLeftTime", "TodayTriggerADCount", "GlobalTopScore", "IsBinded", "BuyRemoveAdYear", "BuyRemoveAdMonth", "BuyRemoveAdDay", "LeftRemoveAdDay", });
+              new java.lang.String[] { "UserID", "PlayerName", "WinCount", "FailCount", "DiamondCount", "DonutCount", "EndlessTopScore", "HeadID", "UnlockRoleType", "UnlockTheme", "UnlockGameMode", "IsRemoveAd", "TimelimitTopScore", "RaceTopScore", "IsCanUnlockCoinModeByAD", "UnlockHeadID", "TriggerADLeftTime", "TodayTriggerADCount", "GlobalTopScore", "IsBinded", "BuyRemoveAdYear", "BuyRemoveAdMonth", "BuyRemoveAdDay", "LeftRemoveAdDay", });
           internal_static_PingProtoOut_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_PingProtoOut_fieldAccessorTable = new
@@ -29907,6 +30569,12 @@ public final class UserOutMsg {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_ChangeRoleTypeProtoOut_descriptor,
               new java.lang.String[] { "UserID", "RoleType", });
+          internal_static_ExitBoutProtoOut_descriptor =
+            getDescriptor().getMessageTypes().get(31);
+          internal_static_ExitBoutProtoOut_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_ExitBoutProtoOut_descriptor,
+              new java.lang.String[] { "UserID", });
           return null;
         }
       };

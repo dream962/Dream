@@ -68,7 +68,19 @@ public class ServerComponent extends AbstractComponent
         {
             noticeLock.readLock().unlock();
         }
+    }
 
+    public static List<CommonData> getCommonDataList()
+    {
+        noticeLock.readLock().lock();
+        try
+        {
+            return new ArrayList<>(commonDataList);
+        }
+        finally
+        {
+            noticeLock.readLock().unlock();
+        }
     }
 
     public static String addNotice(CommonData data)

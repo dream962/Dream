@@ -1,9 +1,5 @@
 package com.upload.component;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executors;
@@ -29,7 +25,7 @@ public class DataComponent extends AbstractComponent
     public boolean initialize()
     {
         scheduler = Executors.newSingleThreadScheduledExecutor();
-        scheduler.scheduleWithFixedDelay(() -> refreshServerList(), 0, 20, TimeUnit.SECONDS);
+        scheduler.scheduleWithFixedDelay(() -> refreshServerList(), 0, 60, TimeUnit.SECONDS);
         return true;
     }
 
@@ -104,12 +100,11 @@ public class DataComponent extends AbstractComponent
         LogFactory.error("定时任务:刷新信息开始");
         try
         {
-            String url = GlobalConfigComponent.getConfig().server.url;
-            String userName = GlobalConfigComponent.getConfig().server.username;
-            String password = GlobalConfigComponent.getConfig().server.password;
-
+            String url = GlobalConfigComponent.getConfig().server.serverUrl;
+            url = url + "/getNotice";
+            String json = HttpUtil.doGet(url);
             // 公告列表
-            List<NoticeData> list = getNoticeList(url, userName, password);
+            List<NoticeData> list = JsonUtil.parseJsonToListObject(json, NoticeData.class);
             if (list != null && !list.isEmpty())
             {
                 lock.writeLock().lock();
@@ -133,44 +128,4 @@ public class DataComponent extends AbstractComponent
 
         return true;
     }
-
-    private static List<NoticeData> getNoticeList(String url, String user, String password)
-    {
-        // 声明Connection对象
-        Connection con;
-        // 驱动程序名
-        String driver = "com.mysql.jdbc.Driver";
-
-        List<NoticeData> list = new ArrayList<>();
-        try
-        {
-            // 加载驱动程序
-            Class.forName(driver);
-            // 1.getConnection()方法，连接MySQL数据库！！
-            con = DriverManager.getConnection(url, user, password);
-            Statement statement = con.createStatement();
-            String sql = "SELECT * FROM t_p_common;";
-            ResultSet rs = statement.executeQuery(sql);
-
-            while (rs.next())
-            {
-                NoticeData data = new NoticeData();
-                data.setNoticeType(rs.getInt("NoticeType"));
-                data.setLanguageType(rs.getString("LanguageType"));
-                data.setNoticeMessage(rs.getString("NoticeMessage"));
-
-                list.add(data);
-            }
-            rs.close();
-            con.close();
-        }
-        catch (Exception e)
-        {
-            LogFactory.error("", e);
-            return null;
-        }
-
-        return list;
-    }
-
 }

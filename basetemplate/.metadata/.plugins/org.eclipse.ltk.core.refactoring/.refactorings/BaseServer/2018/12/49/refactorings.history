@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename enum constant &apos;Scene_Field_Opend&apos; of &apos;com.base.code.ErrorCodeType&apos; to &apos;Scene_Area_Opend&apos;&#x0D;&#x0A;- Original project: &apos;BaseServer&apos;&#x0D;&#x0A;- Original element: &apos;com.base.code.ErrorCodeType.Scene_Field_Opend&apos;&#x0D;&#x0A;- Renamed element: &apos;com.base.code.ErrorCodeType.Scene_Area_Opend&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename enum constant &apos;Scene_Field_Opend&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.enum.constant" input="/src&lt;com.base.code{ErrorCodeType.java[ErrorCodeType^Scene_Field_Opend" name="Scene_Area_Opend" references="true" setter="false" stamp="1543820763242" textual="false" version="1.0"/>
+</session>

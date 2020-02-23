@@ -1,0 +1,894 @@
+2020-02-22 10:35:04,952|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-22 10:35:05,531|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-22 10:35:05,532|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-22 10:35:05,533|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-22 10:35:05,533|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-22 10:35:05,533|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-22 10:35:05,533|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-22 10:35:05,534|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-22 10:35:05,534|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-22 10:35:05,534|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-22 10:35:05,534|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-22 10:35:05,535|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-22 10:35:05,535|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-22 10:35:05,535|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-22 10:35:05,535|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-22 10:35:05,535|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-22 10:35:05,536|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-22 10:35:05,536|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-22 10:35:05,536|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-22 10:35:05,536|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-22 10:35:05,536|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-22 10:35:05,536|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-22 10:35:05,537|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-22 10:35:05,537|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-22 10:35:05,537|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-22 10:35:07,153|ERROR|main|********************Robot Count:1000**************************
+2020-02-22 10:36:44,127|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: Connection reset
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted
+2020-02-22 10:38:19,534|ERROR|main|
+java.io.IOException: Error getting access token for service account: Connection reset
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.initialize(ChargeComponent.java:66)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:87)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:243)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 6 common frames omitted
+2020-02-22 10:38:20,389|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2020-02-22 10:38:20,389|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2020-02-22 10:38:20,389|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2020-02-22 10:38:20,389|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2020-02-22 10:38:20,389|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2020-02-22 10:38:20,389|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2020-02-22 10:38:20,389|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2020-02-22 10:38:20,389|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2020-02-22 10:38:20,389|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2020-02-22 10:38:20,393|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2020-02-22 10:38:20,452|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2020-02-22 10:38:20,452|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2020-02-22 10:38:20,452|ERROR|main|****** Component:[com.game.component.ChargeComponent] has started successfully.******************
+2020-02-22 10:38:20,453|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2020-02-22 10:38:20,453|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2020-02-22 10:38:20,638|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2020-02-22 10:38:21,033|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2020-02-22 10:38:21,033|ERROR|main|****** All Component has started successfully.******************
+2020-02-22 10:38:21,034|ERROR|main|游戏服启动成功, 耗时 196 秒.
+2020-02-22 10:54:51,794|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2020-02-22 10:54:51,803|ERROR|GamePlayer-Worker-1|玩家登陆完成:10002,@dtest1
+2020-02-22 10:58:34,765|ERROR|nioEventLoopGroup-3-1|AbstractUserCmd:com.game.user.cmd.common.UserPingCmd execute overtime. time:4318
+2020-02-22 10:58:41,970|ERROR|nioEventLoopGroup-3-1|AbstractUserCmd:com.game.user.cmd.common.UserPingCmd execute overtime. time:1516
+2020-02-22 11:00:20,872|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10002
+2020-02-22 11:00:24,121|ERROR|GamePlayer-Worker-11|AdRewardBean is Null.configID:0
+2020-02-22 11:00:56,059|ERROR|GamePlayer-Worker-11|玩家登陆完成:10002,@dtest1
+2020-02-22 11:03:07,599|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10002
+2020-02-22 11:03:12,183|ERROR|GamePlayer-Worker-5|AdRewardBean is Null.configID:0
+2020-02-22 11:03:19,505|ERROR|GamePlayer-Worker-5|玩家登陆完成:10002,@dtest1
+2020-02-22 11:03:27,809|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10002
+2020-02-22 11:04:10,091|ERROR|GamePlayer-Worker-9|AdRewardBean is Null.configID:0
+2020-02-22 11:04:10,093|ERROR|GamePlayer-Worker-9|玩家登陆完成:10003,@dtest9
+2020-02-22 11:04:31,759|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10003
+2020-02-22 11:05:01,443|ERROR|GamePlayer-Worker-15|AdRewardBean is Null.configID:0
+2020-02-22 11:05:01,443|ERROR|GamePlayer-Worker-15|玩家登陆完成:10003,@dtest9
+2020-02-22 11:05:12,078|ERROR|GamePlayer-Worker-18|Disconnect Exit Room.null,UserID:10003
+2020-02-22 11:05:12,130|ERROR|GamePlayer-Worker-18|AdRewardBean is Null.configID:0
+2020-02-22 11:05:12,131|ERROR|GamePlayer-Worker-18|玩家登陆完成:10003,@dtest9
+2020-02-22 11:06:01,816|ERROR|GamePlayer-Worker-25|AdRewardBean is Null.configID:0
+2020-02-22 11:06:01,817|ERROR|GamePlayer-Worker-25|玩家登陆完成:10004,@dtest8
+2020-02-22 11:06:53,416|ERROR|GamePlayer-Worker-18|异常
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: unLockByAD
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$GameUnlockProtoIn.parseFrom(UserInMsg.java:7066)
+	at com.game.user.cmd.common.UnlockGameCmd.execute(UnlockGameCmd.java:32)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 11:07:48,894|ERROR|main|Please input the global config path.default:../CommonLib/config/game.xml
+2020-02-22 11:07:49,389|ERROR|main|Cannot find server property keep it default value.  -- log_save_interval = 300
+2020-02-22 11:07:49,390|ERROR|main|Cannot find server property keep it default value.  -- monitor_job = */5 * * * * ?
+2020-02-22 11:07:49,390|ERROR|main|Cannot find server property keep it default value.  -- job_ping_player = 10
+2020-02-22 11:07:49,391|ERROR|main|Cannot find server property keep it default value.  -- game_update_slow = 30000
+2020-02-22 11:07:49,391|ERROR|main|Cannot find server property keep it default value.  -- game_player_ping_interval = 5000
+2020-02-22 11:07:49,391|ERROR|main|Cannot find server property keep it default value.  -- job_ping_fight = 5
+2020-02-22 11:07:49,391|ERROR|main|Cannot find server property keep it default value.  -- job_save_player = 30
+2020-02-22 11:07:49,391|ERROR|main|Cannot find server property keep it default value.  -- refresh_token = 1800
+2020-02-22 11:07:49,391|ERROR|main|Cannot find server property keep it default value.  -- save_player_time = 300
+2020-02-22 11:07:49,391|ERROR|main|Cannot find server property keep it default value.  -- job_corn_refresh = 1 0 0 * * ? *
+2020-02-22 11:07:49,391|ERROR|main|Cannot find server property keep it default value.  -- job_rank_refresh = 0 0 4 * * ? *
+2020-02-22 11:07:49,392|ERROR|main|Cannot find server property keep it default value.  -- ping_max_time = 300
+2020-02-22 11:07:49,392|ERROR|main|Cannot find server property keep it default value.  -- room_max_count = 3000
+2020-02-22 11:07:49,392|ERROR|main|Cannot find server property keep it default value.  -- sunday_refresh = 0 0 0 ? * 1 *
+2020-02-22 11:07:49,392|ERROR|main|Cannot find server property keep it default value.  -- month_refresh = 0 0 0 1 * ? *
+2020-02-22 11:07:49,393|ERROR|main|Cannot find server property keep it default value.  -- monitor_room_interval = 60
+2020-02-22 11:07:49,393|ERROR|main|Cannot find server property keep it default value.  -- fight_player_ping_interval = 3
+2020-02-22 11:07:49,393|ERROR|main|Cannot find server property keep it default value.  -- battle_game_time = 2400000
+2020-02-22 11:07:49,393|ERROR|main|Cannot find server property keep it default value.  -- line_base_count = 5
+2020-02-22 11:07:49,394|ERROR|main|Cannot find server property keep it default value.  -- base_success = 70
+2020-02-22 11:07:49,394|ERROR|main|Cannot find server property keep it default value.  -- base_success_rate = 2
+2020-02-22 11:07:49,394|ERROR|main|Cannot find server property keep it default value.  -- challengeUnlockCount = 200
+2020-02-22 11:07:49,394|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemID = 102
+2020-02-22 11:07:49,394|ERROR|main|Cannot find server property keep it default value.  -- unlockChallengeItemCount = 50
+2020-02-22 11:07:50,968|ERROR|main|********************Robot Count:1000**************************
+2020-02-22 11:08:59,500|ERROR|main|
+java.io.IOException: Error getting access token for service account: Connection reset
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.initialize(ChargeComponent.java:66)
+	at com.base.component.ComponentManager.addComponent(ComponentManager.java:54)
+	at com.game.GameServer.loadComponent(GameServer.java:87)
+	at com.base.server.BaseServer.start(BaseServer.java:20)
+	at com.game.GameServer.main(GameServer.java:236)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 6 common frames omitted
+2020-02-22 11:09:00,335|ERROR|main|****** Component:[com.base.database.DBPoolComponent] has started successfully.******************
+2020-02-22 11:09:00,335|ERROR|main|****** Component:[com.data.component.SystemDataComponent] has started successfully.******************
+2020-02-22 11:09:00,335|ERROR|main|****** Component:[com.data.component.GamePropertiesComponent] has started successfully.******************
+2020-02-22 11:09:00,335|ERROR|main|****** Component:[com.base.component.SimpleScheduleComponent] has started successfully.******************
+2020-02-22 11:09:00,335|ERROR|main|****** Component:[com.logic.component.RobotComponent] has started successfully.******************
+2020-02-22 11:09:00,335|ERROR|main|****** Component:[com.game.component.GamePlayerComponent] has started successfully.******************
+2020-02-22 11:09:00,335|ERROR|main|****** Component:[com.logic.cmd.GameCommandComponent] has started successfully.******************
+2020-02-22 11:09:00,335|ERROR|main|****** Component:[com.base.timer.QuartzComponent] has started successfully.******************
+2020-02-22 11:09:00,335|ERROR|main|****** Component:[com.logic.component.RoomComponent] has started successfully.******************
+2020-02-22 11:09:00,341|ERROR|main|****** Component:[com.logic.component.GameComponent] has started successfully.******************
+2020-02-22 11:09:00,384|ERROR|main|****** Component:[com.game.component.GameJobComponent] has started successfully.******************
+2020-02-22 11:09:00,384|ERROR|main|****** Component:[com.base.component.ScriptComponent] has started successfully.******************
+2020-02-22 11:09:00,385|ERROR|main|****** Component:[com.game.component.ChargeComponent] has started successfully.******************
+2020-02-22 11:09:00,385|ERROR|main|****** Component:[com.game.component.UserCommandComponent] has started successfully.******************
+2020-02-22 11:09:00,385|ERROR|main|****** Component:[com.game.component.RankComponent] has started successfully.******************
+2020-02-22 11:09:00,558|ERROR|main|****** Component:[com.base.web.WebComponent] has started successfully.******************
+2020-02-22 11:09:00,878|ERROR|main|****** Component:[com.game.component.GameServerNettyComponent] has started successfully.******************
+2020-02-22 11:09:00,878|ERROR|main|****** All Component has started successfully.******************
+2020-02-22 11:09:00,878|ERROR|main|游戏服启动成功, 耗时 71 秒.
+2020-02-22 11:09:01,433|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: Connection reset
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted
+2020-02-22 11:09:31,110|ERROR|GamePlayer-Worker-1|AdRewardBean is Null.configID:0
+2020-02-22 11:09:31,118|ERROR|GamePlayer-Worker-1|玩家登陆完成:10003,@dtest9
+2020-02-22 11:10:14,006|ERROR|GamePlayer-Worker-12|AdRewardBean is Null.configID:0
+2020-02-22 11:10:14,007|ERROR|GamePlayer-Worker-12|玩家登陆完成:10004,@dtest8
+2020-02-22 11:13:15,242|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2020-02-22 11:15:22,177|ERROR|nioEventLoopGroup-3-2|Disconnect Exit Room.null,UserID:10004
+2020-02-22 11:16:48,106|ERROR|GamePlayer-Worker-7|AdRewardBean is Null.configID:0
+2020-02-22 11:16:48,107|ERROR|GamePlayer-Worker-7|玩家登陆完成:10004,@dtest8
+2020-02-22 11:17:00,364|ERROR|GamePlayer-Worker-12|Exit Room.1,UserID:10003
+2020-02-22 11:18:26,337|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2020-02-22 11:32:43,371|ERROR|GamePlayer-Worker-4|Exit Room.0,UserID:10004
+2020-02-22 11:38:06,976|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2020-02-22 11:39:49,510|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2020-02-22 11:43:45,321|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: connect timed out
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted
+2020-02-22 11:44:47,824|ERROR|nioEventLoopGroup-3-3|Disconnect Exit Room.null,UserID:10004
+2020-02-22 11:44:47,912|ERROR|game-worker-pool|NetRewardBean is Null.length:200
+2020-02-22 11:45:00,752|ERROR|nioEventLoopGroup-3-1|Disconnect Exit Room.null,UserID:10003
+2020-02-22 11:45:05,030|ERROR|GamePlayer-Worker-21|AdRewardBean is Null.configID:0
+2020-02-22 11:45:05,030|ERROR|GamePlayer-Worker-21|玩家登陆完成:10004,@dtest8
+2020-02-22 12:03:01,102|ERROR|GamePlayer-Worker-12|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:02,826|ERROR|GamePlayer-Worker-11|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:03,622|ERROR|GamePlayer-Worker-14|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:04,102|ERROR|GamePlayer-Worker-13|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:04,516|ERROR|GamePlayer-Worker-16|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:04,864|ERROR|GamePlayer-Worker-15|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:07,499|ERROR|GamePlayer-Worker-20|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:08,146|ERROR|GamePlayer-Worker-19|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:08,625|ERROR|GamePlayer-Worker-23|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:09,122|ERROR|GamePlayer-Worker-21|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:09,304|ERROR|GamePlayer-Worker-22|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:09,486|ERROR|GamePlayer-Worker-1|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:09,636|ERROR|GamePlayer-Worker-24|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:09,784|ERROR|GamePlayer-Worker-25|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:03:09,950|ERROR|GamePlayer-Worker-2|
+com.google.protobuf.InvalidProtocolBufferException: Message missing required fields: byAdDonate, consumeType
+	at com.google.protobuf.UninitializedMessageException.asInvalidProtocolBufferException(UninitializedMessageException.java:81)
+	at com.google.protobuf.AbstractParser.checkMessageInitialized(AbstractParser.java:71)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:176)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:188)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:193)
+	at com.google.protobuf.AbstractParser.parseFrom(AbstractParser.java:49)
+	at com.proto.user.gen.UserInMsg$DonateItemProtoIn.parseFrom(UserInMsg.java:7736)
+	at com.game.user.cmd.player.DonateCmd.execute(DonateCmd.java:31)
+	at com.game.user.cmd.UserCmdTask.execute(UserCmdTask.java:33)
+	at com.base.executor.AbstractTask.run(AbstractTask.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-02-22 12:04:01,549|ERROR|nioEventLoopGroup-3-4|Disconnect Exit Room.null,UserID:10004
+2020-02-22 12:13:51,860|ERROR|GamePlayer-Worker-8|玩家登陆完成:10004,@dtest8
+2020-02-22 12:15:16,139|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: Connection reset
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted
+2020-02-22 12:45:57,884|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: Connection reset
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted
+2020-02-22 13:17:48,454|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: connect timed out
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted
+2020-02-22 13:48:48,650|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: Connection reset
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted
+2020-02-22 14:21:27,038|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: connect timed out
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted
+2020-02-22 14:52:19,948|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: Connection reset
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted
+2020-02-22 14:59:30,387|ERROR|DefaultQuartzScheduler_Worker-5|Job quartzGroup.job_save_player threw an unhandled Exception: 
+java.lang.NoSuchMethodError: com.data.info.PlayerInfo.getOpenID()Ljava/lang/String;
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:132)
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:1)
+	at com.data.business.PlayerBusiness.addOrUpdatePlayer(PlayerBusiness.java:36)
+	at com.game.object.player.GamePlayer.save(GamePlayer.java:133)
+	at com.game.object.player.GamePlayer.jobSave(GamePlayer.java:110)
+	at com.game.component.GamePlayerComponent.save(GamePlayerComponent.java:165)
+	at com.game.job.GamePlayerAutoSaveJob.execute(GamePlayerAutoSaveJob.java:21)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2020-02-22 14:59:30,388|ERROR|DefaultQuartzScheduler_Worker-5|Job (quartzGroup.job_save_player threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NoSuchMethodError: com.data.info.PlayerInfo.getOpenID()Ljava/lang/String;
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:132)
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:1)
+	at com.data.business.PlayerBusiness.addOrUpdatePlayer(PlayerBusiness.java:36)
+	at com.game.object.player.GamePlayer.save(GamePlayer.java:133)
+	at com.game.object.player.GamePlayer.jobSave(GamePlayer.java:110)
+	at com.game.component.GamePlayerComponent.save(GamePlayerComponent.java:165)
+	at com.game.job.GamePlayerAutoSaveJob.execute(GamePlayerAutoSaveJob.java:21)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+2020-02-22 15:04:30,388|ERROR|DefaultQuartzScheduler_Worker-5|Job quartzGroup.job_save_player threw an unhandled Exception: 
+java.lang.NoSuchMethodError: com.data.info.PlayerInfo.getOpenID()Ljava/lang/String;
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:132)
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:1)
+	at com.data.business.PlayerBusiness.addOrUpdatePlayer(PlayerBusiness.java:36)
+	at com.game.object.player.GamePlayer.save(GamePlayer.java:133)
+	at com.game.object.player.GamePlayer.jobSave(GamePlayer.java:110)
+	at com.game.component.GamePlayerComponent.save(GamePlayerComponent.java:165)
+	at com.game.job.GamePlayerAutoSaveJob.execute(GamePlayerAutoSaveJob.java:21)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2020-02-22 15:04:30,389|ERROR|DefaultQuartzScheduler_Worker-5|Job (quartzGroup.job_save_player threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NoSuchMethodError: com.data.info.PlayerInfo.getOpenID()Ljava/lang/String;
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:132)
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:1)
+	at com.data.business.PlayerBusiness.addOrUpdatePlayer(PlayerBusiness.java:36)
+	at com.game.object.player.GamePlayer.save(GamePlayer.java:133)
+	at com.game.object.player.GamePlayer.jobSave(GamePlayer.java:110)
+	at com.game.component.GamePlayerComponent.save(GamePlayerComponent.java:165)
+	at com.game.job.GamePlayerAutoSaveJob.execute(GamePlayerAutoSaveJob.java:21)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+2020-02-22 15:09:30,388|ERROR|DefaultQuartzScheduler_Worker-6|Job quartzGroup.job_save_player threw an unhandled Exception: 
+java.lang.NoSuchMethodError: com.data.info.PlayerInfo.getOpenID()Ljava/lang/String;
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:132)
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:1)
+	at com.data.business.PlayerBusiness.addOrUpdatePlayer(PlayerBusiness.java:36)
+	at com.game.object.player.GamePlayer.save(GamePlayer.java:133)
+	at com.game.object.player.GamePlayer.jobSave(GamePlayer.java:110)
+	at com.game.component.GamePlayerComponent.save(GamePlayerComponent.java:165)
+	at com.game.job.GamePlayerAutoSaveJob.execute(GamePlayerAutoSaveJob.java:21)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2020-02-22 15:09:30,390|ERROR|DefaultQuartzScheduler_Worker-6|Job (quartzGroup.job_save_player threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NoSuchMethodError: com.data.info.PlayerInfo.getOpenID()Ljava/lang/String;
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:132)
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:1)
+	at com.data.business.PlayerBusiness.addOrUpdatePlayer(PlayerBusiness.java:36)
+	at com.game.object.player.GamePlayer.save(GamePlayer.java:133)
+	at com.game.object.player.GamePlayer.jobSave(GamePlayer.java:110)
+	at com.game.component.GamePlayerComponent.save(GamePlayerComponent.java:165)
+	at com.game.job.GamePlayerAutoSaveJob.execute(GamePlayerAutoSaveJob.java:21)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+2020-02-22 15:15:00,386|ERROR|DefaultQuartzScheduler_Worker-9|Job quartzGroup.job_save_player threw an unhandled Exception: 
+java.lang.NoSuchMethodError: com.data.info.PlayerInfo.getOpenID()Ljava/lang/String;
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:132)
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:1)
+	at com.data.business.PlayerBusiness.addOrUpdatePlayer(PlayerBusiness.java:36)
+	at com.game.object.player.GamePlayer.save(GamePlayer.java:133)
+	at com.game.object.player.GamePlayer.jobSave(GamePlayer.java:110)
+	at com.game.component.GamePlayerComponent.save(GamePlayerComponent.java:165)
+	at com.game.job.GamePlayerAutoSaveJob.execute(GamePlayerAutoSaveJob.java:21)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2020-02-22 15:15:00,386|ERROR|DefaultQuartzScheduler_Worker-9|Job (quartzGroup.job_save_player threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NoSuchMethodError: com.data.info.PlayerInfo.getOpenID()Ljava/lang/String;
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:132)
+	at com.data.dao.impl.PlayerInfoDaoImpl.addOrUpdate(PlayerInfoDaoImpl.java:1)
+	at com.data.business.PlayerBusiness.addOrUpdatePlayer(PlayerBusiness.java:36)
+	at com.game.object.player.GamePlayer.save(GamePlayer.java:133)
+	at com.game.object.player.GamePlayer.jobSave(GamePlayer.java:110)
+	at com.game.component.GamePlayerComponent.save(GamePlayerComponent.java:165)
+	at com.game.job.GamePlayerAutoSaveJob.execute(GamePlayerAutoSaveJob.java:21)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+2020-02-22 15:16:24,231|ERROR|nioEventLoopGroup-3-5|Disconnect Exit Room.null,UserID:10004
+2020-02-22 15:23:38,168|ERROR|refresh-token-1|
+java.io.IOException: Error getting access token for service account: Connection reset
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:444)
+	at com.game.component.ChargeComponent.refreshToken(ChargeComponent.java:91)
+	at com.game.component.ChargeComponent.lambda$0(ChargeComponent.java:59)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(Unknown Source)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:108)
+	at com.google.api.client.http.javanet.NetHttpRequest.execute(NetHttpRequest.java:79)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:995)
+	at com.google.auth.oauth2.ServiceAccountCredentials.refreshAccessToken(ServiceAccountCredentials.java:441)
+	... 9 common frames omitted

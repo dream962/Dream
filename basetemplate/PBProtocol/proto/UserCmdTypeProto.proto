@@ -30,6 +30,7 @@ enum UserCmdInType
 	RECHARGE_VERIFY = 25;                           //充值验证                              RechargeVerifyProtoIn
 	BIND_ACCOUNT = 26;                              //绑定账号                              BindAccountProtoIn
 	CHANGE_ROLE_TYPE = 27;                          //回合中修改角色类型                    ChangeRoleTypeProtoIn
+	EXIT_BOUT = 28;                       			//退出回合                            空
 
 	CHEAT_ADD_ITEM = 1000;                           //作弊协议，添加物品                   CheatAddItemProtoIn
 
@@ -37,8 +38,6 @@ enum UserCmdInType
 	USER_JUMP = 10003;      						//上发我方跳动            				PlayerJumpProtoIn
 	USER_KILL = 10005;      						//上发我方中途死亡     					PlayerBeKillProtoIn
 	USER_SURRENDER = 10006;                         //上发我方投降认输                      空
-
-	EXIT_BOUT = 10010;                       		//退出回合                              空
 
 	GET_ROOM_LIST = 10020;                          //获取房间列表                          GetRoomListProtoIn
 	CREATE_ROOM = 10021;                            //创建房间                              CreateRoomProtoIn
@@ -76,16 +75,14 @@ enum UserCmdOutType
 	REMOVE_AD_RETURN = 22;                          //购买去广告回调                      RemoveAdProtoOut
 	CHANGE_HEADER=23;								//更改头像				ChangeHeaderProtoOut
 	CHANGE_ROLETYPE_RETURN = 24;                    //回合中修改角色类型返回              ChangeRoleTypeProtoOut
+	EXIT_BOUT_RETURN = 25;                       	//退出回合                            	  ExitBoutProtoOut
 
 	ERROR_CODE_RETURN = 1000;                       //错误码                              ErrorCodeProtoOut
-
 
 	START_GAME = 10002;        						//开始游戏                            空
 	ENEMY_JUMP = 10004;         					//下行敌方跳动                     	  EnemyJumpProtoOut
 	ENEMY_KILL = 10006;         					//下行敌方中途死亡              	  EnemyBeKillProtoOut
 	GAME_OVER = 10008;          					//游戏结果                            GameOverProtoOut
-
-	EXIT_BOUT_RETURN = 10010;                       //退出回合                            空
 
 	GET_ROOM_LIST_RETURN = 10020;                   //获取房间列表回调                    RoomListInfoProtoOut
 	CREATE_ROOM_RETURN = 10021;                     //创建房间回调                        RoomInfoProtoOut
