@@ -32,6 +32,8 @@ public class ChangeRoleCmd extends AbstractUserCmd
             builder.setUserID(player.getUserID());
             builder.setRoleType(type);
 
+            player.getRoomModule().setRoleType(type);
+
             if (player.getRoomModule().getCurrentRoom() != null)
             {
                 player.getRoomModule().getCurrentRoom().sendToAll(builder, UserCmdOutType.CHANGE_ROLETYPE_RETURN_VALUE);

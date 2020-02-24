@@ -172,6 +172,10 @@ public class PVPGame extends AbstractGame
             // 时间超过1分钟开始
             if (loadingStartTime > 0 && System.currentTimeMillis() - loadingStartTime > 60000)
             {
+                for (Player player : list)
+                {
+                    player.setProgress(101);
+                }
                 result = true;
             }
         }

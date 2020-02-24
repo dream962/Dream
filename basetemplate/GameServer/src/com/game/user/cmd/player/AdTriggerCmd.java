@@ -64,6 +64,8 @@ public class AdTriggerCmd extends AbstractUserCmd
             builder.setTodayTriggerADCount(player.getPlayerInfo().getAdTriggerCount());
 
             player.sendMessage(UserCmdOutType.REWARD_AD_RETURN_VALUE, builder);
+
+            player.getSenderModule().sendRes();
         }
         catch (Exception e)
         {

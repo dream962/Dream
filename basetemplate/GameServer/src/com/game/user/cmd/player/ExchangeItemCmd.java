@@ -39,7 +39,6 @@ public class ExchangeItemCmd extends AbstractUserCmd
 
             player.removeResource(bean.getConsumeItemID(), bean.getConsumeItemCount());
             player.addResource(bean.getTargetItemID(), bean.getTargetItemCount());
-
             player.getSenderModule().sendRes();
 
             ExchangeItemProtoOut.Builder builder = ExchangeItemProtoOut.newBuilder();

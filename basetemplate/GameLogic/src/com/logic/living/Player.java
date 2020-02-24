@@ -14,6 +14,7 @@ import com.proto.user.gen.UserOutMsg.EnemyBeKillProtoOut;
 import com.proto.user.gen.UserOutMsg.EnemyJumpProtoOut;
 import com.proto.user.gen.UserOutMsg.PlatformGroupInfoProtoOut;
 import com.util.ThreadSafeRandom;
+import com.util.print.LogFactory;
 import com.util.print.PrintFactory;
 
 /**
@@ -135,6 +136,7 @@ public class Player
     public void setProgress(int progress)
     {
         this.progress = progress;
+        LogFactory.error("player{} progress：{}", getGamePlayer().getNickName(), progress);
     }
 
     public AbstractGame getGame()
