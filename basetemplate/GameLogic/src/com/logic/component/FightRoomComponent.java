@@ -96,9 +96,9 @@ public class FightRoomComponent extends AbstractComponent
     public static FightRoom createRoom(AbstractGamePlayer player, String roomName, int length, RoleType type)
     {
         ModeType modeType = ModeType.Room;
-        if (length == 500)
+        if (length == 300)
             modeType = ModeType.Room2;
-        else if (length == 1000)
+        else if (length == 500)
             modeType = ModeType.Room3;
 
         FightRoom room = new FightRoom(createRoomID(), length, modeType);

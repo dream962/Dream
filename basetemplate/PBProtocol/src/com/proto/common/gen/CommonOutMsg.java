@@ -180,7 +180,7 @@ public final class CommonOutMsg {
      * <code>RandomMatch = 6;</code>
      *
      * <pre>
-     *随机匹配(200)
+     *随机匹配(100)
      * </pre>
      */
     RandomMatch(5, 6),
@@ -188,7 +188,7 @@ public final class CommonOutMsg {
      * <code>RandomMatch2 = 7;</code>
      *
      * <pre>
-     *随机匹配(500)
+     *随机匹配(300)
      * </pre>
      */
     RandomMatch2(6, 7),
@@ -196,7 +196,7 @@ public final class CommonOutMsg {
      * <code>RandomMatch3 = 8;</code>
      *
      * <pre>
-     *随机匹配(1000)
+     *随机匹配(500)
      * </pre>
      */
     RandomMatch3(7, 8),
@@ -214,7 +214,7 @@ public final class CommonOutMsg {
      * <code>Room2 = 10;</code>
      *
      * <pre>
-     *房间模式(500)
+     *房间模式(300)
      * </pre>
      */
     Room2(9, 10),
@@ -222,7 +222,7 @@ public final class CommonOutMsg {
      * <code>Room3 = 11;</code>
      *
      * <pre>
-     *房间模式(1000)
+     *房间模式(500)
      * </pre>
      */
     Room3(10, 11),
@@ -296,7 +296,7 @@ public final class CommonOutMsg {
      * <code>RandomMatch = 6;</code>
      *
      * <pre>
-     *随机匹配(200)
+     *随机匹配(100)
      * </pre>
      */
     public static final int RandomMatch_VALUE = 6;
@@ -304,7 +304,7 @@ public final class CommonOutMsg {
      * <code>RandomMatch2 = 7;</code>
      *
      * <pre>
-     *随机匹配(500)
+     *随机匹配(300)
      * </pre>
      */
     public static final int RandomMatch2_VALUE = 7;
@@ -312,7 +312,7 @@ public final class CommonOutMsg {
      * <code>RandomMatch3 = 8;</code>
      *
      * <pre>
-     *随机匹配(1000)
+     *随机匹配(500)
      * </pre>
      */
     public static final int RandomMatch3_VALUE = 8;
@@ -330,7 +330,7 @@ public final class CommonOutMsg {
      * <code>Room2 = 10;</code>
      *
      * <pre>
-     *房间模式(500)
+     *房间模式(300)
      * </pre>
      */
     public static final int Room2_VALUE = 10;
@@ -338,7 +338,7 @@ public final class CommonOutMsg {
      * <code>Room3 = 11;</code>
      *
      * <pre>
-     *房间模式(1000)
+     *房间模式(500)
      * </pre>
      */
     public static final int Room3_VALUE = 11;

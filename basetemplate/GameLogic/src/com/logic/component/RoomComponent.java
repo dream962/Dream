@@ -1,7 +1,6 @@
 package com.logic.component;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -103,9 +102,9 @@ public class RoomComponent extends AbstractComponent
     public static BaseRoom createRoom(AbstractGamePlayer red, AbstractGamePlayer blue, int missionType)
     {
         ModeType modeType = ModeType.RandomMatch;
-        if (missionType == 500)
+        if (missionType == 300)
             modeType = ModeType.RandomMatch2;
-        else if (missionType == 1000)
+        else if (missionType == 500)
             modeType = ModeType.RandomMatch3;
 
         BaseRoom room = new BaseRoom(createRoomID(), missionType, modeType);
@@ -290,7 +289,7 @@ public class RoomComponent extends AbstractComponent
         synchronized (matchPlayers)
         {
             player.getRoomModule().setBeginMatchTime(System.currentTimeMillis());
-            matchPlayers.computeIfAbsent(length, k -> new HashMap<>()).put(player.getUserID(), player);
+            matchPlayers.computeIfAbsent(length, k -> new ConcurrentHashMap<>()).put(player.getUserID(), player);
         }
     }
 
