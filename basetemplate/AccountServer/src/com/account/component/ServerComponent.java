@@ -49,25 +49,25 @@ public class ServerComponent extends AbstractComponent
         return true;
     }
 
-    public static String getContent(int type, String languageType)
+    public static List<CommonData> getContent(int type, String languageType)
     {
+        List<CommonData> list = new ArrayList<>();
         noticeLock.readLock().lock();
         try
         {
             for (CommonData data : commonDataList)
             {
-                if (data.getNoticeType() == type && data.getLanguageType() == languageType)
+                if (data.getNoticeType() == type && data.getLanguageType().equalsIgnoreCase(languageType))
                 {
-                    return data.getNoticeMessage();
+                    list.add(data);
                 }
             }
-
-            return "game notice.";
         }
         finally
         {
             noticeLock.readLock().unlock();
         }
+        return list;
     }
 
     public static List<CommonData> getCommonDataList()
@@ -91,7 +91,8 @@ public class ServerComponent extends AbstractComponent
             boolean isContain = false;
             for (CommonData temp : commonDataList)
             {
-                if (data.getNoticeType() == temp.getNoticeType() && data.getLanguageType() == temp.getLanguageType())
+                if (data.getNoticeType() == temp.getNoticeType() && data.getLanguageType() == temp.getLanguageType()
+                        && data.getID() == temp.getID())
                 {
                     temp.setNoticeMessage(data.getNoticeMessage());
                     CommonDataFactory.getDao().addOrUpdate(temp);
@@ -113,14 +114,14 @@ public class ServerComponent extends AbstractComponent
         }
     }
 
-    public static String removeNotice(String languageType, int noticeType)
+    public static String removeNotice(int id)
     {
         noticeLock.writeLock().lock();
         try
         {
             for (CommonData temp : commonDataList)
             {
-                if (noticeType == temp.getNoticeType() && languageType.equalsIgnoreCase(temp.getLanguageType()))
+                if (id == temp.getID())
                 {
                     commonDataList.remove(temp);
                     CommonDataFactory.getDao().delete(temp);

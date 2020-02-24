@@ -23,11 +23,6 @@ public class AddNoticeServlet extends PlayerHandlerServlet
 {
     private static final long serialVersionUID = 4744757610406809052L;
 
-    static class Res
-    {
-        public String result;
-    }
-
     @Override
     public String execute(String jsonString, HttpServletRequest request, HttpServletResponse response)
     {

@@ -2508,4 +2508,68 @@ web服务器添加Servlet:com.alibaba.druid.support.http.StatViewServlet
 web服务器启动--端口9000
 |2020-02-22 16:11:59,492|INFO |qtp71706941-31Caller+0	 at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)
 {dataSource-1} inited
+|2020-02-24 15:12:11,773|INFO |mainCaller+0	 at com.upload.ManagerServer.main(ManagerServer.java:20)
+ManagerServer is starting...
+|2020-02-24 15:12:12,169|INFO |mainCaller+0	 at com.upload.database.DBPoolComponent.initWithDbXML(DBPoolComponent.java:173)
+初始化 druid db pool：db_jump_manager
+|2020-02-24 15:12:12,823|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:133)
+web服务器添加Servlet:com.alibaba.druid.support.http.StatViewServlet
+|2020-02-24 15:12:12,850|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:163)
+web服务器启动--端口9000
+|2020-02-24 15:12:45,639|INFO |qtp1604002113-17Caller+0	 at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)
+{dataSource-1} inited
+|2020-02-24 15:59:17,469|INFO |mainCaller+0	 at com.upload.ManagerServer.main(ManagerServer.java:20)
+ManagerServer is starting...
+|2020-02-24 15:59:17,751|INFO |mainCaller+0	 at com.upload.database.DBPoolComponent.initWithDbXML(DBPoolComponent.java:173)
+初始化 druid db pool：db_jump_manager
+|2020-02-24 15:59:18,717|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:133)
+web服务器添加Servlet:com.alibaba.druid.support.http.StatViewServlet
+|2020-02-24 15:59:18,757|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:163)
+web服务器启动--端口9000
+|2020-02-24 15:59:49,039|INFO |qtp1604002113-17Caller+0	 at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)
+{dataSource-1} inited
+|2020-02-24 16:00:24,654|INFO |mainCaller+0	 at com.upload.ManagerServer.main(ManagerServer.java:20)
+ManagerServer is starting...
+|2020-02-24 16:00:24,857|INFO |mainCaller+0	 at com.upload.database.DBPoolComponent.initWithDbXML(DBPoolComponent.java:173)
+初始化 druid db pool：db_jump_manager
+|2020-02-24 16:00:25,269|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:133)
+web服务器添加Servlet:com.alibaba.druid.support.http.StatViewServlet
+|2020-02-24 16:00:25,292|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:163)
+web服务器启动--端口9000
+|2020-02-24 16:00:39,779|INFO |qtp1604002113-17Caller+0	 at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)
+{dataSource-1} inited
+|2020-02-24 16:13:34,664|INFO |mainCaller+0	 at com.upload.ManagerServer.main(ManagerServer.java:20)
+ManagerServer is starting...
+|2020-02-24 16:13:34,877|INFO |mainCaller+0	 at com.upload.database.DBPoolComponent.initWithDbXML(DBPoolComponent.java:173)
+初始化 druid db pool：db_jump_manager
+|2020-02-24 16:13:35,363|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:133)
+web服务器添加Servlet:com.alibaba.druid.support.http.StatViewServlet
+|2020-02-24 16:13:35,378|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:163)
+web服务器启动--端口9000
+|2020-02-24 16:14:00,085|INFO |qtp1604002113-19Caller+0	 at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:785)
+{dataSource-1} inited
+|2020-02-24 17:06:17,611|INFO |mainCaller+0	 at com.upload.ManagerServer.main(ManagerServer.java:20)
+ManagerServer is starting...
+|2020-02-24 17:06:17,866|INFO |mainCaller+0	 at com.upload.database.DBPoolComponent.initWithDbXML(DBPoolComponent.java:173)
+初始化 druid db pool：db_jump_manager
+|2020-02-24 17:06:18,428|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:133)
+web服务器添加Servlet:com.alibaba.druid.support.http.StatViewServlet
+|2020-02-24 17:06:18,448|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:163)
+web服务器启动--端口9000
+|2020-02-24 17:07:21,033|INFO |mainCaller+0	 at com.upload.ManagerServer.main(ManagerServer.java:20)
+ManagerServer is starting...
+|2020-02-24 17:07:21,262|INFO |mainCaller+0	 at com.upload.database.DBPoolComponent.initWithDbXML(DBPoolComponent.java:173)
+初始化 druid db pool：db_jump_manager
+|2020-02-24 17:07:21,706|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:133)
+web服务器添加Servlet:com.alibaba.druid.support.http.StatViewServlet
+|2020-02-24 17:07:21,721|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:163)
+web服务器启动--端口9000
+|2020-02-24 17:07:26,241|INFO |mainCaller+0	 at com.upload.ManagerServer.main(ManagerServer.java:20)
+ManagerServer is starting...
+|2020-02-24 17:07:26,508|INFO |mainCaller+0	 at com.upload.database.DBPoolComponent.initWithDbXML(DBPoolComponent.java:173)
+初始化 druid db pool：db_jump_manager
+|2020-02-24 17:07:27,038|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:133)
+web服务器添加Servlet:com.alibaba.druid.support.http.StatViewServlet
+|2020-02-24 17:07:27,069|INFO |mainCaller+0	 at com.upload.component.WebComponent.initialize(WebComponent.java:163)
+web服务器启动--端口9000
 |

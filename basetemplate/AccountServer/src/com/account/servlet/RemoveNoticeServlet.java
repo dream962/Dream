@@ -24,8 +24,7 @@ public class RemoveNoticeServlet extends PlayerHandlerServlet
 
     static class Req
     {
-        public String languageType;
-        public int noticeType;
+        public int id;
     }
 
     @Override
@@ -35,7 +34,7 @@ public class RemoveNoticeServlet extends PlayerHandlerServlet
         String content = "fail";
         if (req != null)
         {
-            content = ServerComponent.removeNotice(req.languageType, req.noticeType);
+            content = ServerComponent.removeNotice(req.id);
         }
 
         return content;

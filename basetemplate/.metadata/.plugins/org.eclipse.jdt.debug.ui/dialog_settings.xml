@@ -10,7 +10,7 @@
 		<item value="412" key="SashWeightTree"/>
 		<item value="587" key="SashWeightDetails"/>
 		<item value="614" key="WIDTH"/>
-		<item value="218" key="HEIGHT"/>
+		<item value="440" key="HEIGHT"/>
 	</section>
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item value="true" key="ShowStatusLine"/>

@@ -35,10 +35,12 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 	public boolean add(CommonData commonData)
 	{
 		boolean result = false;
-		String sql = "insert into t_p_common(`NoticeType`, `LanguageType`, `NoticeMessage`) values(?, ?, ?);";
+		String sql = "insert into t_p_common(`NoticeType`, `LanguageType`, `ID`, `Title`, `NoticeMessage`) values(?, ?, ?, ?, ?);";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.INTEGER,commonData.getNoticeType());
 		params.put(Types.VARCHAR,commonData.getLanguageType());
+		params.put(Types.INTEGER,commonData.getID());
+		params.put(Types.VARCHAR,commonData.getTitle());
 		params.put(Types.VARCHAR,commonData.getNoticeMessage());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
@@ -48,11 +50,13 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 	public boolean update(CommonData commonData)
 	{
 		boolean result = false;
-		String sql = "update t_p_common set `NoticeMessage`=? where `NoticeType`=? and `LanguageType`=?;";
+		String sql = "update t_p_common set `Title`=?, `NoticeMessage`=? where `NoticeType`=? and `LanguageType`=? and `ID`=?;";
 		DBParamWrapper params = new DBParamWrapper();
+		params.put(Types.VARCHAR,commonData.getTitle());
 		params.put(Types.VARCHAR,commonData.getNoticeMessage());
 		params.put(Types.INTEGER,commonData.getNoticeType());
 		params.put(Types.VARCHAR,commonData.getLanguageType());
+		params.put(Types.INTEGER,commonData.getID());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
 	}
@@ -61,10 +65,11 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 	public boolean delete(CommonData commonData)
 	{
 		boolean result = false;
-		String sql = "delete from t_p_common where `NoticeType`=? and `LanguageType`=?;";
+		String sql = "delete from t_p_common where `NoticeType`=? and `LanguageType`=? and `ID`=?;";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.INTEGER,commonData.getNoticeType());
 		params.put(Types.VARCHAR,commonData.getLanguageType());
+		params.put(Types.INTEGER,commonData.getID());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
 	}
@@ -73,11 +78,14 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 	public boolean addOrUpdate(CommonData commonData)
 	{
 		boolean result = false;
-		String sql = "insert into t_p_common(`NoticeType`, `LanguageType`, `NoticeMessage`) values(?, ?, ?) on DUPLICATE KEY update `NoticeMessage`=?;";
+		String sql = "insert into t_p_common(`NoticeType`, `LanguageType`, `ID`, `Title`, `NoticeMessage`) values(?, ?, ?, ?, ?) on DUPLICATE KEY update `Title`=?,`NoticeMessage`=?;";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.INTEGER,commonData.getNoticeType());
 		params.put(Types.VARCHAR,commonData.getLanguageType());
+		params.put(Types.INTEGER,commonData.getID());
+		params.put(Types.VARCHAR,commonData.getTitle());
 		params.put(Types.VARCHAR,commonData.getNoticeMessage());
+		params.put(Types.VARCHAR,commonData.getTitle());
 		params.put(Types.VARCHAR,commonData.getNoticeMessage());
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
@@ -87,11 +95,11 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 	public boolean deleteByKey(Object... ids)
 	{
 		boolean result = false;
-		String sql = "delete from t_p_common where `NoticeType`=? and `LanguageType`=?;";
+		String sql = "delete from t_p_common where `NoticeType`=? and `LanguageType`=? and `ID`=?;";
 		DBParamWrapper params = new DBParamWrapper();
 		params.put(Types.INTEGER,ids[0]);
-		params.put(Types.INTEGER,ids[1]);
-		params.put(Types.VARCHAR,ids[2]);
+		params.put(Types.VARCHAR,ids[1]);
+		params.put(Types.INTEGER,ids[2]);
 		result = getDBHelper().execNoneQuery(sql, params) > -1 ? true : false;
 		return result;
 	}
@@ -99,10 +107,11 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 	@Override
 	public CommonData getByKey(Object... ids)
 	{
-		String sql = "select * from t_p_common where `KeyID`=? and `NoticeType`=? and `LanguageType`=?;";
+		String sql = "select * from t_p_common where `NoticeType`=? and `LanguageType`=? and `ID`=?;";
 		DBParamWrapper params = new DBParamWrapper();
-		params.put(Types.INTEGER,ids[1]);
-		params.put(Types.VARCHAR,ids[2]);
+		params.put(Types.INTEGER,ids[0]);
+		params.put(Types.VARCHAR,ids[1]);
+		params.put(Types.INTEGER,ids[2]);
 		CommonData commonData = query(sql, params);		return commonData;
 	}
 
@@ -119,7 +128,7 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 	{
 		if (commonDatas == null || commonDatas.isEmpty())
 			return new int[1];
-		String sql = "insert into t_p_common(`NoticeType`, `LanguageType`, `NoticeMessage`) values(?, ?, ?) on DUPLICATE KEY update `NoticeMessage`=?;";
+		String sql = "insert into t_p_common(`NoticeType`, `LanguageType`, `ID`, `Title`, `NoticeMessage`) values(?, ?, ?, ?, ?) on DUPLICATE KEY update `Title`=?,`NoticeMessage`=?;";
 		int[] effectedRows = getDBHelper().sqlBatch(sql, commonDatas, new DataExecutor<int[]>()
 			{
 				@Override
@@ -132,7 +141,10 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 						DBParamWrapper params = new DBParamWrapper();
 						params.put(Types.INTEGER,commonData.getNoticeType());
 						params.put(Types.VARCHAR,commonData.getLanguageType());
+						params.put(Types.INTEGER,commonData.getID());
+						params.put(Types.VARCHAR,commonData.getTitle());
 						params.put(Types.VARCHAR,commonData.getNoticeMessage());
+						params.put(Types.VARCHAR,commonData.getTitle());
 						params.put(Types.VARCHAR,commonData.getNoticeMessage());
 						statement = getDBHelper().prepareCommand(statement,params.getParams());
 						statement.addBatch();
@@ -146,7 +158,7 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 	@Override
 	public int[] deleteBatch(List<CommonData> commonDatas)
 	{
-		String sql = "delete from t_p_common where `NoticeType`=? and `LanguageType`=?;";
+		String sql = "delete from t_p_common where `NoticeType`=? and `LanguageType`=? and `ID`=?;";
 		int[] effectedRows = getDBHelper().sqlBatch(sql, commonDatas, new DataExecutor<int[]>()
 		{
 			@Override
@@ -160,6 +172,7 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 					DBParamWrapper params = new DBParamWrapper();
 					params.put(Types.INTEGER,commonData.getNoticeType());
 					params.put(Types.VARCHAR,commonData.getLanguageType());
+					params.put(Types.INTEGER,commonData.getID());
 					statement = getDBHelper().prepareCommand(statement,params.getParams());
 					statement.addBatch();
 				}
@@ -174,6 +187,8 @@ public class CommonDataDaoImpl extends BaseDao<CommonData> implements ICommonDat
 		CommonData commonData = new CommonData();
 		commonData.setNoticeType(rs.getInt("NoticeType"));
 		commonData.setLanguageType(rs.getString("LanguageType"));
+		commonData.setID(rs.getInt("ID"));
+		commonData.setTitle(rs.getString("Title"));
 		commonData.setNoticeMessage(rs.getString("NoticeMessage"));
 		return commonData;
 	}

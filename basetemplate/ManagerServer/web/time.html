@@ -73,6 +73,8 @@
 						<thead>
 							<tr>
 								<th>选择</th>
+								<th>ID</th>
+								<th>标题</th>
 								<th>类型</th>
 								<th>语言</th>
 								<th>内容</th>
@@ -92,11 +94,28 @@
 								<form id="dataForm" action="" method="post">
 									<table cellpadding="0" cellspacing="0">
 										<tr>
+											<th width="100">公告ID:</th>
+											<td width="250">
+												<div class="txtbox floatL" style="width:255px;">
+													<input type="text" style="width:250px;" placeholder="" id="notice_id">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th width="100">公告标题:</th>
+											<td width="250">
+												<div class="txtbox floatL" style="width:255px;">
+													<input type="text" style="width:250px;" placeholder="" id="notice_title">
+												</div>
+											</td>
+										</tr>
+										<tr>
 											<th width="100">公告类型:</th>
 											<td width="150">
 												<div class="txtbox floatL" style="width:255px;">
-													<input type="text" style="width:250px;" placeholder="" id="notice_type">1:系统公告2:首页公告
+													<input type="text" style="width:250px;" placeholder="" id="notice_type">
 												</div>
+												<span style="color:red;font-size:10px">(1:系统公告2:首页公告)</span>
 											</td>
 										</tr>
 										<tr>
@@ -167,11 +186,13 @@
 							noticeType = "<font color='green'>首页公告</font>";
 						}
 						$("#datagrid").append("<tr class='dataGrid' id='tr" + index + "'><td><input type='checkbox' id='ci" +
-							index + "' onclick='chooseTr(" + index + ")' class='isChoose' value='" + value.noticeType+"|"+value.languageType +"' />" +
+							index + "' onclick='chooseTr(" + index + ")' class='isChoose' value='" + value.iD +"' />" +
+							"</td><td>" + value.iD +
+							"</td><td>" + value.title +
 							"</td><td>" + noticeType +
 							"</td><td>" + value.languageType +
 							"</td><td style='width: 280px;'>" + value.noticeMessage +
-							"</td><td>" + "<a href='javascript:void(0)' onclick='editServer(" + value.noticeType +",\"" + value.languageType +"\",\"" + value.noticeMessage + "\")'>修改</a>" +
+							"</td><td>" + "<a href='javascript:void(0)' onclick='editServer(" + value.noticeType +","+value.iD+",\""+value.title + "\",\"" + value.languageType +"\",\"" + value.noticeMessage + "\")'>修改</a>" +
 							"</td></tr>"
 						);
 					})
@@ -220,10 +241,12 @@
 			}
 
 			/* 编辑信息*/
-			function editServer(noticeType,languageType,noticeMessage) {
+			function editServer(noticeType,iD,title,languageType,noticeMessage) {
 				$("#notice_type").val(noticeType);
 				$("#notice_language").val(languageType);
 				$("#notice_content").val(noticeMessage);
+				$("#notice_title").val(title);
+				$("#notice_id").val(iD);
 
 				$("#pop").show();
 			}
@@ -239,10 +262,14 @@
 				var type = $("#notice_type").val();
 				var language = $("#notice_language").val();
 				var content = $("#notice_content").val();
+				var title = $("#notice_title").val();
+				var id = $("#notice_id").val();
 
 				$("#pop").show();
 				var updateServerUrl = port + "/addNotice?params={'noticeType':" + type 
 				+ ",'languageType':'" + language
+				+ "','iD':" + id
+				+ ",'title':'" + title
 				+ "','noticeMessage':'" + content + "'}";
 				$.getJSON(updateServerUrl, function(data) {
 					if (data.code == 0) {

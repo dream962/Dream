@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<server>
-		<serverUrl>http://64.64.226.90:80</serverUrl>
+		<serverUrl>http://192.168.1.47:9002</serverUrl>
 	</server>
 	<database>
 		<druid>
 			<db area="" name="db_jump_manager">
-				<url>jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&amp;characterEncoding=UTF-8</url>
-				<username>root</username>
-				<password>jump_1%*$_root_game</password>
+				<url>jdbc:mysql://192.168.1.96:13619/db_jump_manager?allowMultiQueries=true&amp;characterEncoding=UTF-8</url>
+				<username>daomu2_admin</username>
+				<password>daomu2!@#</password>
 				<maxActive desc="">5</maxActive>
 				<initialSize desc="">2</initialSize>
 				<minIdle desc="">1</minIdle>

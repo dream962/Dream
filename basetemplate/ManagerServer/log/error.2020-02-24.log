@@ -1,0 +1,1376 @@
+2020-02-24 15:12:11,782|ERROR|main|Please input the config path.
+2020-02-24 15:12:12,408|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 15:12:12,851|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2020-02-24 15:12:12,851|ERROR|main|****************** Component:[com.upload.component.DataComponent] has started successfully.******************
+2020-02-24 15:12:13,039|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 15:12:13,315|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2020-02-24 15:12:13,316|ERROR|main|****************** All Component has started successfully.******************
+2020-02-24 15:12:13,317|ERROR|main|ManagerServer has started successfully, taken 1546 millis.
+2020-02-24 15:12:45,620|ERROR|qtp1604002113-17|init datasource error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056) [druid-1.0.29.jar:1.0.29]
+	at com.upload.database.pool.druid.DruidPool.getConnection(DruidPool.java:35) [bin/:na]
+	at com.upload.database.pool.DBHelper.openConn(DBHelper.java:337) [bin/:na]
+	at com.upload.database.pool.DBHelper.executeQuery(DBHelper.java:117) [bin/:na]
+	at com.upload.database.BaseDao.query(BaseDao.java:83) [bin/:na]
+	at com.upload.data.business.StaffBusiness.getStaffBean(StaffBusiness.java:33) [bin/:na]
+	at com.upload.web.servlet.login.LoginServlet.execute(LoginServlet.java:60) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 54 common frames omitted
+2020-02-24 15:12:45,638|ERROR|qtp1604002113-17|{dataSource-1} init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056) [druid-1.0.29.jar:1.0.29]
+	at com.upload.database.pool.druid.DruidPool.getConnection(DruidPool.java:35) [bin/:na]
+	at com.upload.database.pool.DBHelper.openConn(DBHelper.java:337) [bin/:na]
+	at com.upload.database.pool.DBHelper.executeQuery(DBHelper.java:117) [bin/:na]
+	at com.upload.database.BaseDao.query(BaseDao.java:83) [bin/:na]
+	at com.upload.data.business.StaffBusiness.getStaffBean(StaffBusiness.java:33) [bin/:na]
+	at com.upload.web.servlet.login.LoginServlet.execute(LoginServlet.java:60) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 54 common frames omitted
+2020-02-24 15:12:45,640|ERROR|qtp1604002113-17|Exception:
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056) ~[druid-1.0.29.jar:1.0.29]
+	at com.upload.database.pool.druid.DruidPool.getConnection(DruidPool.java:35) ~[bin/:na]
+	at com.upload.database.pool.DBHelper.openConn(DBHelper.java:337) [bin/:na]
+	at com.upload.database.pool.DBHelper.executeQuery(DBHelper.java:117) [bin/:na]
+	at com.upload.database.BaseDao.query(BaseDao.java:83) [bin/:na]
+	at com.upload.data.business.StaffBusiness.getStaffBean(StaffBusiness.java:33) [bin/:na]
+	at com.upload.web.servlet.login.LoginServlet.execute(LoginServlet.java:60) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 54 common frames omitted
+2020-02-24 15:12:47,110|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:12:48,617|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:12:50,117|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:12:51,603|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:12:53,080|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:12:54,559|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:12:56,026|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:12:57,511|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor5.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor5.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:12:58,988|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor5.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor5.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:13:00,455|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor5.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor5.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:13:01,934|ERROR|Druid-ConnectionPool-Create-1420364774|create connection error, url: jdbc:mysql://64.64.226.90:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor5.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor5.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 15:59:17,475|ERROR|main|Please input the config path.
+2020-02-24 15:59:17,949|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 15:59:18,757|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2020-02-24 15:59:18,758|ERROR|main|****************** Component:[com.upload.component.DataComponent] has started successfully.******************
+2020-02-24 15:59:18,980|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 15:59:19,120|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2020-02-24 15:59:19,120|ERROR|main|****************** All Component has started successfully.******************
+2020-02-24 15:59:19,120|ERROR|main|ManagerServer has started successfully, taken 1653 millis.
+2020-02-24 15:59:49,004|ERROR|qtp1604002113-17|init datasource error, url: jdbc:mysql://192.168.196:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056) [druid-1.0.29.jar:1.0.29]
+	at com.upload.database.pool.druid.DruidPool.getConnection(DruidPool.java:35) [bin/:na]
+	at com.upload.database.pool.DBHelper.openConn(DBHelper.java:337) [bin/:na]
+	at com.upload.database.pool.DBHelper.executeQuery(DBHelper.java:117) [bin/:na]
+	at com.upload.database.BaseDao.query(BaseDao.java:83) [bin/:na]
+	at com.upload.data.business.StaffBusiness.getStaffBean(StaffBusiness.java:33) [bin/:na]
+	at com.upload.web.servlet.login.LoginServlet.execute(LoginServlet.java:60) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 54 common frames omitted
+2020-02-24 15:59:49,039|ERROR|qtp1604002113-17|{dataSource-1} init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060) [druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056) [druid-1.0.29.jar:1.0.29]
+	at com.upload.database.pool.druid.DruidPool.getConnection(DruidPool.java:35) [bin/:na]
+	at com.upload.database.pool.DBHelper.openConn(DBHelper.java:337) [bin/:na]
+	at com.upload.database.pool.DBHelper.executeQuery(DBHelper.java:117) [bin/:na]
+	at com.upload.database.BaseDao.query(BaseDao.java:83) [bin/:na]
+	at com.upload.data.business.StaffBusiness.getStaffBean(StaffBusiness.java:33) [bin/:na]
+	at com.upload.web.servlet.login.LoginServlet.execute(LoginServlet.java:60) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 54 common frames omitted
+2020-02-24 15:59:49,041|ERROR|qtp1604002113-17|Exception:
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:734) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1060) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1056) ~[druid-1.0.29.jar:1.0.29]
+	at com.upload.database.pool.druid.DruidPool.getConnection(DruidPool.java:35) ~[bin/:na]
+	at com.upload.database.pool.DBHelper.openConn(DBHelper.java:337) [bin/:na]
+	at com.upload.database.pool.DBHelper.executeQuery(DBHelper.java:117) [bin/:na]
+	at com.upload.database.BaseDao.query(BaseDao.java:83) [bin/:na]
+	at com.upload.data.business.StaffBusiness.getStaffBean(StaffBusiness.java:33) [bin/:na]
+	at com.upload.web.servlet.login.LoginServlet.execute(LoginServlet.java:60) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 54 common frames omitted
+2020-02-24 16:00:10,044|ERROR|Druid-ConnectionPool-Create-2002464816|create connection error, url: jdbc:mysql://192.168.196:13619/db_jump_manager?allowMultiQueries=true&characterEncoding=UTF-8, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2260) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:787) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:49) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:357) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:220) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1463) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1525) ~[druid-1.0.29.jar:1.0.29]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2100) ~[druid-1.0.29.jar:1.0.29]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_60]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_60]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_60]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422) ~[na:1.8.0_60]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1122) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:344) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2181) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 15 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_60]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_60]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_60]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_60]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_60]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_60]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0_60]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:293) ~[mysql-connector-java-5.1.12-bin.jar:na]
+	... 16 common frames omitted
+2020-02-24 16:00:18,981|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:00:19,318|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:00:24,661|ERROR|main|Please input the config path.
+2020-02-24 16:00:25,029|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:00:25,293|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2020-02-24 16:00:25,293|ERROR|main|****************** Component:[com.upload.component.DataComponent] has started successfully.******************
+2020-02-24 16:00:25,478|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:00:25,578|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2020-02-24 16:00:25,578|ERROR|main|****************** All Component has started successfully.******************
+2020-02-24 16:00:25,578|ERROR|main|ManagerServer has started successfully, taken 927 millis.
+2020-02-24 16:01:25,500|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:01:25,836|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:02:25,839|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:02:26,187|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:03:26,189|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:03:26,519|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:04:26,521|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:04:26,844|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:05:26,847|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:05:27,170|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:06:27,171|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:06:27,508|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:07:27,512|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:07:27,843|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:08:27,845|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:08:28,177|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:09:28,179|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:09:28,508|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:10:28,510|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:10:28,834|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:11:28,835|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:11:29,160|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:12:29,161|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:12:29,492|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:13:29,494|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:13:29,825|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:13:34,669|ERROR|main|Please input the config path.
+2020-02-24 16:13:35,029|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:13:35,354|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:13:35,378|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2020-02-24 16:13:35,378|ERROR|main|****************** Component:[com.upload.component.DataComponent] has started successfully.******************
+2020-02-24 16:13:35,681|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2020-02-24 16:13:35,682|ERROR|main|****************** All Component has started successfully.******************
+2020-02-24 16:13:35,682|ERROR|main|ManagerServer has started successfully, taken 1020 millis.
+2020-02-24 16:14:35,357|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:14:35,368|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:15:35,370|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:15:35,376|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:16:35,378|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:16:35,387|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:17:35,388|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:17:35,395|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:18:35,396|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:18:35,403|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:19:35,405|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:19:35,415|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:20:35,416|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:20:35,422|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:21:35,424|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:21:35,430|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:22:35,431|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:22:35,438|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:23:35,439|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:23:35,450|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:24:35,452|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:24:35,459|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:25:35,461|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:25:35,469|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:26:35,470|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:26:35,476|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:27:35,477|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:27:35,483|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:28:35,484|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:28:35,494|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:29:35,495|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:29:35,506|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:30:35,508|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:30:35,513|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:31:35,520|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:31:35,526|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:32:19,606|ERROR|qtp1604002113-16|127.0.0.1--请求异常:action(deleteNotice) params({'keys':'undefined'})
+java.lang.NumberFormatException: For input string: "undefined"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_60]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[na:1.8.0_60]
+	at java.lang.Integer.valueOf(Integer.java:766) ~[na:1.8.0_60]
+	at com.upload.web.servlet.notice.NoticeDeleteServlet.execute(NoticeDeleteServlet.java:37) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doGet(BaseHandlerServlet.java:52) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+2020-02-24 16:32:35,528|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:32:35,533|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:32:43,883|ERROR|qtp1604002113-16|127.0.0.1--请求异常:action(deleteNotice) params({'keys':'undefined'})
+java.lang.NumberFormatException: For input string: "undefined"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_60]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[na:1.8.0_60]
+	at java.lang.Integer.valueOf(Integer.java:766) ~[na:1.8.0_60]
+	at com.upload.web.servlet.notice.NoticeDeleteServlet.execute(NoticeDeleteServlet.java:37) ~[bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doPost(BaseHandlerServlet.java:93) [bin/:na]
+	at com.upload.web.servlet.BaseHandlerServlet.doGet(BaseHandlerServlet.java:52) [bin/:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687) [servlet-api-3.1.jar:3.1.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) [servlet-api-3.1.jar:3.1.0]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:838) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:543) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481) [jetty-servlet-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.Server.handle(Server.java:564) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:318) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251) [jetty-server-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124) [jetty-io-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:122) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecutingExecutionStrategy.invoke(ExecutingExecutionStrategy.java:58) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:201) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:133) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590) [jetty-util-9.4.0.v20161208.jar:9.4.0.v20161208]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_60]
+2020-02-24 16:33:35,535|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:33:35,545|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:34:35,546|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:34:35,555|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 16:35:35,557|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 16:35:35,563|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 17:06:17,617|ERROR|main|Please input the config path.
+2020-02-24 17:06:18,051|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 17:06:18,298|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 17:06:18,448|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2020-02-24 17:06:18,449|ERROR|main|****************** Component:[com.upload.component.DataComponent] has started successfully.******************
+2020-02-24 17:06:18,808|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2020-02-24 17:06:18,809|ERROR|main|****************** All Component has started successfully.******************
+2020-02-24 17:06:18,809|ERROR|main|ManagerServer has started successfully, taken 1200 millis.
+2020-02-24 17:07:21,040|ERROR|main|Please input the config path.
+2020-02-24 17:07:21,426|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 17:07:21,590|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束
+2020-02-24 17:07:21,722|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2020-02-24 17:07:21,722|ERROR|main|****************** Component:[com.upload.component.DataComponent] has started successfully.******************
+2020-02-24 17:07:22,012|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2020-02-24 17:07:22,013|ERROR|main|****************** All Component has started successfully.******************
+2020-02-24 17:07:22,013|ERROR|main|ManagerServer has started successfully, taken 982 millis.
+2020-02-24 17:07:26,245|ERROR|main|Please input the config path.
+2020-02-24 17:07:26,690|ERROR|pool-1-thread-1|定时任务:刷新信息开始
+2020-02-24 17:07:27,070|ERROR|main|****************** Component:[com.upload.database.DBPoolComponent] has started successfully.******************
+2020-02-24 17:07:27,070|ERROR|main|****************** Component:[com.upload.component.DataComponent] has started successfully.******************
+2020-02-24 17:07:27,418|ERROR|main|****************** Component:[com.upload.component.WebComponent] has started successfully.******************
+2020-02-24 17:07:27,418|ERROR|main|****************** All Component has started successfully.******************
+2020-02-24 17:07:27,418|ERROR|main|ManagerServer has started successfully, taken 1179 millis.
+2020-02-24 17:07:41,655|ERROR|pool-1-thread-1|定时任务:刷新服务器信息结束

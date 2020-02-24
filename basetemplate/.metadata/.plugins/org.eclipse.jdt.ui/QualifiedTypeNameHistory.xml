@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.upload.util.StringUtil"/>
-<fullyQualifiedTypeName name="com.data.account.business.SystemBusiness"/>
 <fullyQualifiedTypeName name="com.data.account.business.SeqType"/>
 <fullyQualifiedTypeName name="com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
@@ -26,9 +24,7 @@
 <fullyQualifiedTypeName name="com.data.account.cache.AccountCacheComponent"/>
 <fullyQualifiedTypeName name="com.data.account.data.UserData"/>
 <fullyQualifiedTypeName name="com.game.component.RankComponent"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.data.info.RankInfo"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.data.bean.NetRewardBean"/>
 <fullyQualifiedTypeName name="com.data.bean.factory.NetRewardBeanFactory"/>
 <fullyQualifiedTypeName name="com.data.type.ResourceType"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
 <fullyQualifiedTypeName name="com.util.print.LogFactory"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.data.account.data.CommonData"/>
+<fullyQualifiedTypeName name="com.account.servlet.NoticeServlet.ResDetail"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

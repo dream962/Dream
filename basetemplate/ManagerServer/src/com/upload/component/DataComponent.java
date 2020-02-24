@@ -41,11 +41,13 @@ public class DataComponent extends AbstractComponent
         boolean isContain = false;
         for (NoticeData temp : noticeList)
         {
-            if (data.getNoticeType() == temp.getNoticeType() && data.getLanguageType().equalsIgnoreCase(temp.getLanguageType()))
+            if (data.getNoticeType() == temp.getNoticeType() && data.getLanguageType().equalsIgnoreCase(temp.getLanguageType())
+                    && data.getID() == temp.getID())
             {
                 temp.setLanguageType(data.getLanguageType());
                 temp.setNoticeMessage(data.getNoticeMessage());
                 temp.setNoticeType(data.getNoticeType());
+                temp.setTitle(data.getTitle());
 
                 isContain = true;
                 break;
@@ -65,11 +67,11 @@ public class DataComponent extends AbstractComponent
         return result;
     }
 
-    public static String removeNotice(int noticeType, String languageType)
+    public static String removeNotice(int ID)
     {
         for (NoticeData data : noticeList)
         {
-            if (data.getNoticeType() == noticeType && data.getLanguageType().equalsIgnoreCase(languageType))
+            if (data.getID() == ID)
             {
                 noticeList.remove(data);
                 break;
@@ -78,7 +80,7 @@ public class DataComponent extends AbstractComponent
 
         String url = GlobalConfigComponent.getConfig().server.serverUrl;
 
-        String reqUrl = url + "/removeNotice?params={'noticeType':" + noticeType + ",'languageType':'" + languageType + "'}";
+        String reqUrl = url + "/removeNotice?params={'id':" + ID + "}";
         String result = HttpUtil.doGet(reqUrl, 120000);
         return result;
     }

@@ -17,6 +17,36 @@ public final class NoticeData
      */
     private String noticeMessage;
 
+    /**
+     * ID
+     */
+    private int iD;
+
+    /**
+     * 标题
+     */
+    private String title;
+
+    public int getID()
+    {
+        return iD;
+    }
+
+    public void setID(int iD)
+    {
+        this.iD = iD;
+    }
+
+    public String getTitle()
+    {
+        return title;
+    }
+
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+
     public NoticeData()
     {
         super();

@@ -34,11 +34,10 @@ public class NoticeDeleteServlet extends BaseHandlerServlet
         String[] keys = req.keys.split("\\,");
         for (String key : keys)
         {
-            String[] v = key.split("\\|");
-            int type = Integer.valueOf(v[0]);
-            String language = v[1];
-            result = DataComponent.removeNotice(type, language);
+            int id = Integer.valueOf(key);
+            result = DataComponent.removeNotice(id);
         }
+
         if (result.equalsIgnoreCase("success"))
             return gson.toJson(new ResponseInfo(ResponseCode.SUCCESS, result));
         else

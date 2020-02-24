@@ -21,6 +21,16 @@ public final class CommonData extends ChangedObject
 	private String languageType;
 
 	/**
+	 * ID
+	 */
+	private int iD;
+
+	/**
+	 * 标题
+	 */
+	private String title;
+
+	/**
 	 * 公告
 	 */
 	private String noticeMessage;
@@ -83,6 +93,57 @@ public final class CommonData extends ChangedObject
 	}
 
 	/**
+	 * ID
+	 */
+	public int getID()
+	{
+		return iD;
+	}
+
+	/**
+	 * ID
+	 */
+	public void setID(int iD)
+	{
+		if(iD != this.iD)
+		{
+			this.iD = iD;
+			setChanged(true);
+		}
+	}
+
+	/**
+	 * 标题
+	 */
+	public String getTitle()
+	{
+		return title;
+	}
+
+	/**
+	 * 标题
+	 */
+	public void setTitle(String title)
+	{
+		if(title != null)
+		{
+			if(!title.equals(this.title))
+			{
+				this.title = title;
+				setChanged(true);
+			}
+		}
+		else
+		{
+			if(title != this.title)
+			{
+				this.title = title;
+				setChanged(true);
+			}
+		}
+	}
+
+	/**
 	 * 公告
 	 */
 	public String getNoticeMessage()
@@ -122,6 +183,8 @@ public final class CommonData extends ChangedObject
 		CommonData clone = new CommonData();
 		clone.setNoticeType(this.getNoticeType());
 		clone.setLanguageType(this.getLanguageType());
+		clone.setID(this.getID());
+		clone.setTitle(this.getTitle());
 		clone.setNoticeMessage(this.getNoticeMessage());
 		return clone;
 	}
@@ -133,6 +196,8 @@ public final class CommonData extends ChangedObject
 	{
 		this.setNoticeType(info.getNoticeType());
 		this.setLanguageType(info.getLanguageType());
+		this.setID(info.getID());
+		this.setTitle(info.getTitle());
 		this.setNoticeMessage(info.getNoticeMessage());
 	}
 

@@ -3,6 +3,9 @@
  */
 package com.account.servlet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -11,6 +14,7 @@ import com.account.entity.RetInfo;
 import com.base.code.ErrorCodeType;
 import com.base.web.PlayerHandlerServlet;
 import com.base.web.WebHandleAnnotation;
+import com.data.account.data.CommonData;
 import com.util.JsonUtil;
 
 /**
@@ -26,27 +30,44 @@ public class NoticeServlet extends PlayerHandlerServlet
 
     static class Req
     {
-        public int noticeType;
+        public int noticeType;// 1:系统公告2:首页公告
         public String languageType;
+    }
+
+    static class ResDetail
+    {
+        public String content;
+        public String title;
+        public int id;
     }
 
     static class Res
     {
-        public String content;
+        public int type;// 类型 1:系统公告2:首页公告
+        public List<ResDetail> info = new ArrayList<>();
     }
 
     @Override
     public String execute(String jsonString, HttpServletRequest request, HttpServletResponse response)
     {
+        Res res = new Res();
+
         Req req = JsonUtil.parseStringToObject(jsonString, Req.class);
-        String content = "";
         if (req != null)
         {
-            content = ServerComponent.getContent(req.noticeType, req.languageType);
+            List<CommonData> list = ServerComponent.getContent(req.noticeType, req.languageType);
+            for (CommonData d : list)
+            {
+                ResDetail detail = new ResDetail();
+                detail.id = d.getID();
+                detail.content = d.getNoticeMessage();
+                detail.title = d.getTitle();
+                res.info.add(detail);
+            }
+
+            res.type = req.noticeType;
         }
 
-        Res res = new Res();
-        res.content = content;
         String msg = gson.toJson(res);
         return gson.toJson(new RetInfo(ErrorCodeType.Success, "", msg));
     }
