@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;ExcelToJsonTool&apos;" deleteContents="true" description="Delete resource &apos;ExcelToJsonTool&apos;" element1="/ExcelToJsonTool" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1543218100079"/>&#x0A;<refactoring comment="Rename resource &apos;press&apos; to &apos;Press&apos;" description="Rename resource &apos;press&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/press" name="Press" stamp="1543234414246" updateReferences="true"/>
-</session>

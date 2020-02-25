@@ -1,3 +1,6 @@
-
-basetemplate/.metadata/.log
-basetemplate/.metadata/.log
+basetemplate/.metadata/
+basetemplate/.recommenders/
+bin/
+log/
+*.class
+*.class

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;StartGameServer.bat&apos; to &apos;bat&apos;&#x0D;&#x0A;- Original project: &apos;CommonLib&apos;&#x0D;&#x0A;- Destination element: &apos;bat&apos;&#x0D;&#x0A;- Original element: &apos;StartGameServer.bat&apos;" description="Copy file" element1="bat/StartGameServer.bat" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1544605472685" target="/CommonLib/bat" units="0" version="1.0"/>
-</session>

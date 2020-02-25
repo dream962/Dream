@@ -124,7 +124,7 @@ public abstract class AbstractRoom
     public abstract void stop();
 
     /**
-     * 取得随机的主题
+     * 取得随机的主题,必须是双方都有的主题,然后随机
      * 
      * @return
      */

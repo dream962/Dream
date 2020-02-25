@@ -1,8 +1,0 @@
-function intTobytes(value) {
-	var a = new Uint8Array(4)
-	a[3] = (value >> 24) & 0xFF
-	a[2] = (value >> 16) & 0xFF
-	a[1] = (value >> 8) & 0xFF
-	a[0] = value & 0xFF
-	return a;
-}

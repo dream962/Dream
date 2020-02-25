@@ -1,8 +1,0 @@
-1568770867026	Rename type 'GameStartCmd'
-1568774873117	Rename type 'GameOverCmd'
-1568774882295	Rename type 'USERJUMPCmd'
-1568775045140	Copy compilation unit
-1568778520920	Rename field 'gameStopListener'
-1568795683224	Copy compilation unit
-1568860408028	Rename method 'spawnPlatform'
-1569036577449	Delete element

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename method &apos;com.data.storage.ExcelFactory.createXmlFile(...)&apos; to &apos;createJsonFile&apos;&#x0D;&#x0A;- Original project: &apos;CommonData&apos;&#x0D;&#x0A;- Original element: &apos;com.data.storage.ExcelFactory.createXmlFile(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;com.data.storage.ExcelFactory.createJsonFile(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;createXmlFile&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;com.data.storage{ExcelFactory.java[ExcelFactory~createXmlFile~QString;~QString;~QString;" name="createJsonFile" references="true" stamp="1529918675458" version="1.0"/>
-</session>

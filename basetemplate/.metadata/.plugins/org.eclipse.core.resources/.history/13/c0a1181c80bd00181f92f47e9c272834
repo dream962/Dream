@@ -1,6 +1,0 @@
-package com.game.scene.city;
-
-public class BaseCity extends AbstractCity
-{
-
-}

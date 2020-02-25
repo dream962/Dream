@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;RoomComponent.java&apos; to &apos;GameLogic/src/com.logic.component&apos;&#x0D;&#x0A;- Original project: &apos;GameLogic&apos;&#x0D;&#x0A;- Destination element: &apos;GameLogic/src/com.logic.component&apos;&#x0D;&#x0A;- Original element: &apos;com.logic.component.RoomComponent.java&apos;" description="Copy compilation unit" destination="/src&lt;com.logic.component" element1="/src&lt;com.logic.component{RoomComponent.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1575463082949" units="1" version="1.0"/>
-</session>

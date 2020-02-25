@@ -1,9 +1,0 @@
-package com.logic.map;
-
-public class PathFindFactory
-{
-    public static MapFindPath findPath(int start, int end, MapGraph map)
-    {
-        return null;
-    }
-}

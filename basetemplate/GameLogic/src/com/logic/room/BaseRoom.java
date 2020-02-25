@@ -55,8 +55,6 @@ public class BaseRoom extends AbstractRoom
 
             // 匹配的长度
             int length = getMissionType();
-            // 必须是双方都有的
-
             // 匹配的主题
             PlatformTheme theme = PlatformTheme.valueOf(getRandomTheme());
             // 生成的地块
@@ -65,6 +63,7 @@ public class BaseRoom extends AbstractRoom
             MatchMapProtoOut.Builder builder2 = MatchMapProtoOut.newBuilder();
             builder2.setTotalLength(length);
             builder2.setBegin(0);
+            // 防止数据量过大,分包发
             if (map.size() <= 200)
             {
                 builder2.setEnd(map.size() - 1);

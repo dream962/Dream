@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;kcp&apos;&#x0D;&#x0A;- Original project: &apos;kcp&apos;&#x0D;&#x0A;- Original element: &apos;kcp/src/io.test.example&apos;&#x0D;&#x0A;- Delete subpackages" description="Delete element" element1="/src&lt;io.test.example.rtt" element2="/src&lt;io.test.example.echo" element3="/src&lt;io.test.example" element4="/src&lt;io.test" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1529653329013" subPackages="true" version="1.0"/>
-</session>
