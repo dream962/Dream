@@ -266,6 +266,12 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
             // 添加物品
             int ttq = bean.getChargeIngot();
             player.addResource(ResourceType.TTQ.getValue(), ttq);
+
+            if (bean.getChargeRoleID() > 0)
+            {
+                player.addRoleType(bean.getChargeRoleID());
+            }
+
             player.getSenderModule().sendRes();
         }
         else if (result == 1)
