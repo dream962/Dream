@@ -1,5 +1,7 @@
 package com.upload.component;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executors;
@@ -62,6 +64,14 @@ public class DataComponent extends AbstractComponent
         String url = GlobalConfigComponent.getConfig().server.serverUrl;
 
         String json = JsonUtil.parseObjectToString(data);
+        try
+        {
+            json = URLEncoder.encode(json, "UTF-8");
+        }
+        catch (UnsupportedEncodingException e)
+        {
+            LogFactory.error("", e);
+        }
         String reqUrl = url + "/addNotice?params=" + json;
         String result = HttpUtil.doGet(reqUrl, 120000);
         return result;
