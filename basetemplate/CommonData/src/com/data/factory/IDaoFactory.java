@@ -8,6 +8,6 @@ public interface IDaoFactory
     /** 游戏主库 */
     static final DBHelper mainHelper = DBPoolComponent.getDBHelper(DatabaseType.DB_MAIN);
 
-    /** 数据集市 */
-    static final DBHelper martHelper = DBPoolComponent.getDBHelper(DatabaseType.DB_MART);
+    /** 游戏主库 */
+    static final DBHelper logHelper = DBPoolComponent.getDBHelper(DatabaseType.DB_MAIN);
 }

@@ -137,13 +137,21 @@ public final class CommonOutMsg {
   public enum ModeType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <code>NONE = 0;</code>
+     *
+     * <pre>
+     *空
+     * </pre>
+     */
+    NONE(0, 0),
+    /**
      * <code>NormalMode = 1;</code>
      *
      * <pre>
      *正常模式
      * </pre>
      */
-    NormalMode(0, 1),
+    NormalMode(1, 1),
     /**
      * <code>Coin = 2;</code>
      *
@@ -151,7 +159,7 @@ public final class CommonOutMsg {
      *金币
      * </pre>
      */
-    Coin(1, 2),
+    Coin(2, 2),
     /**
      * <code>EndLess = 3;</code>
      *
@@ -159,7 +167,7 @@ public final class CommonOutMsg {
      *无尽
      * </pre>
      */
-    EndLess(2, 3),
+    EndLess(3, 3),
     /**
      * <code>TimeLimit = 4;</code>
      *
@@ -167,7 +175,7 @@ public final class CommonOutMsg {
      *限时
      * </pre>
      */
-    TimeLimit(3, 4),
+    TimeLimit(4, 4),
     /**
      * <code>RAC = 5;</code>
      *
@@ -175,7 +183,7 @@ public final class CommonOutMsg {
      *竞速
      * </pre>
      */
-    RAC(4, 5),
+    RAC(5, 5),
     /**
      * <code>RandomMatch = 6;</code>
      *
@@ -183,7 +191,7 @@ public final class CommonOutMsg {
      *随机匹配(100)
      * </pre>
      */
-    RandomMatch(5, 6),
+    RandomMatch(6, 6),
     /**
      * <code>RandomMatch2 = 7;</code>
      *
@@ -191,7 +199,7 @@ public final class CommonOutMsg {
      *随机匹配(300)
      * </pre>
      */
-    RandomMatch2(6, 7),
+    RandomMatch2(7, 7),
     /**
      * <code>RandomMatch3 = 8;</code>
      *
@@ -199,7 +207,7 @@ public final class CommonOutMsg {
      *随机匹配(500)
      * </pre>
      */
-    RandomMatch3(7, 8),
+    RandomMatch3(8, 8),
     /**
      * <code>Room = 9;</code>
      *
@@ -209,7 +217,7 @@ public final class CommonOutMsg {
      *LAN3         = 11;          //局域网(1000)
      * </pre>
      */
-    Room(8, 9),
+    Room(9, 9),
     /**
      * <code>Room2 = 10;</code>
      *
@@ -217,7 +225,7 @@ public final class CommonOutMsg {
      *房间模式(300)
      * </pre>
      */
-    Room2(9, 10),
+    Room2(10, 10),
     /**
      * <code>Room3 = 11;</code>
      *
@@ -225,7 +233,7 @@ public final class CommonOutMsg {
      *房间模式(500)
      * </pre>
      */
-    Room3(10, 11),
+    Room3(11, 11),
     /**
      * <code>RandomProp = 12;</code>
      *
@@ -233,7 +241,7 @@ public final class CommonOutMsg {
      *随机道具
      * </pre>
      */
-    RandomProp(11, 12),
+    RandomProp(12, 12),
     /**
      * <code>Challenge = 13;</code>
      *
@@ -241,7 +249,7 @@ public final class CommonOutMsg {
      *挑战模式
      * </pre>
      */
-    Challenge(12, 13),
+    Challenge(13, 13),
     /**
      * <code>Online = 14;</code>
      *
@@ -249,9 +257,17 @@ public final class CommonOutMsg {
      *联网模式
      * </pre>
      */
-    Online(13, 14),
+    Online(14, 14),
     ;
 
+    /**
+     * <code>NONE = 0;</code>
+     *
+     * <pre>
+     *空
+     * </pre>
+     */
+    public static final int NONE_VALUE = 0;
     /**
      * <code>NormalMode = 1;</code>
      *
@@ -372,6 +388,7 @@ public final class CommonOutMsg {
 
     public static ModeType valueOf(int value) {
       switch (value) {
+        case 0: return NONE;
         case 1: return NormalMode;
         case 2: return Coin;
         case 3: return EndLess;
@@ -1365,24 +1382,24 @@ public final class CommonOutMsg {
   static {
     java.lang.String[] descriptorData = {
       "\n\017CommonOut.proto*0\n\014PlatformType\022\n\n\006Nor" +
-      "mal\020\000\022\t\n\005Theme\020\001\022\t\n\005Spike\020\002*\311\001\n\010ModeType" +
-      "\022\016\n\nNormalMode\020\001\022\010\n\004Coin\020\002\022\013\n\007EndLess\020\003\022" +
-      "\r\n\tTimeLimit\020\004\022\007\n\003RAC\020\005\022\017\n\013RandomMatch\020\006" +
-      "\022\020\n\014RandomMatch2\020\007\022\020\n\014RandomMatch3\020\010\022\010\n\004" +
-      "Room\020\t\022\t\n\005Room2\020\n\022\t\n\005Room3\020\013\022\016\n\nRandomPr" +
-      "op\020\014\022\r\n\tChallenge\020\r\022\n\n\006Online\020\016*_\n\rPlatf" +
-      "ormTheme\022\t\n\005Grass\020\001\022\n\n\006Desert\020\002\022\n\n\006Fores" +
-      "t\020\003\022\n\n\006Winter\020\004\022\t\n\005Ocean\020\005\022\t\n\005Polar\020\006\022\t\n" +
-      "\005Space\020\007*t\n\010RoleType\022\t\n\005Whale\020\001\022\007\n\003Fox\020\002",
-      "\022\t\n\005Panda\020\003\022\010\n\004Lion\020\004\022\010\n\004Seal\020\005\022\010\n\004Crab\020" +
-      "\006\022\014\n\010Scorpion\020\007\022\013\n\007Monster\020\010\022\007\n\003UFO\020\t\022\007\n" +
-      "\003Pig\020\n*Y\n\010RankType\022\013\n\007Endless\020\001\022\r\n\tTimel" +
-      "imit\020\002\022\010\n\004RACE\020\003\022\007\n\003Net\020\004\022\017\n\013GoodPersion" +
-      "\020\005\022\r\n\tRoomMatch\020\006*.\n\014RankTimeType\022\010\n\004Wee" +
-      "k\020\001\022\t\n\005Month\020\002\022\t\n\005Total\020\003*(\n\017RankSection" +
-      "Type\022\t\n\005World\020\001\022\n\n\006Friend\020\002*$\n\014RankPageT" +
-      "ype\022\010\n\004Main\020\001\022\n\n\006Detail\020\002B$\n\024com.proto.c" +
-      "ommon.genB\014CommonOutMsg"
+      "mal\020\000\022\t\n\005Theme\020\001\022\t\n\005Spike\020\002*\323\001\n\010ModeType" +
+      "\022\010\n\004NONE\020\000\022\016\n\nNormalMode\020\001\022\010\n\004Coin\020\002\022\013\n\007" +
+      "EndLess\020\003\022\r\n\tTimeLimit\020\004\022\007\n\003RAC\020\005\022\017\n\013Ran" +
+      "domMatch\020\006\022\020\n\014RandomMatch2\020\007\022\020\n\014RandomMa" +
+      "tch3\020\010\022\010\n\004Room\020\t\022\t\n\005Room2\020\n\022\t\n\005Room3\020\013\022\016" +
+      "\n\nRandomProp\020\014\022\r\n\tChallenge\020\r\022\n\n\006Online\020" +
+      "\016*_\n\rPlatformTheme\022\t\n\005Grass\020\001\022\n\n\006Desert\020" +
+      "\002\022\n\n\006Forest\020\003\022\n\n\006Winter\020\004\022\t\n\005Ocean\020\005\022\t\n\005" +
+      "Polar\020\006\022\t\n\005Space\020\007*t\n\010RoleType\022\t\n\005Whale\020",
+      "\001\022\007\n\003Fox\020\002\022\t\n\005Panda\020\003\022\010\n\004Lion\020\004\022\010\n\004Seal\020" +
+      "\005\022\010\n\004Crab\020\006\022\014\n\010Scorpion\020\007\022\013\n\007Monster\020\010\022\007" +
+      "\n\003UFO\020\t\022\007\n\003Pig\020\n*Y\n\010RankType\022\013\n\007Endless\020" +
+      "\001\022\r\n\tTimelimit\020\002\022\010\n\004RACE\020\003\022\007\n\003Net\020\004\022\017\n\013G" +
+      "oodPersion\020\005\022\r\n\tRoomMatch\020\006*.\n\014RankTimeT" +
+      "ype\022\010\n\004Week\020\001\022\t\n\005Month\020\002\022\t\n\005Total\020\003*(\n\017R" +
+      "ankSectionType\022\t\n\005World\020\001\022\n\n\006Friend\020\002*$\n" +
+      "\014RankPageType\022\010\n\004Main\020\001\022\n\n\006Detail\020\002B$\n\024c" +
+      "om.proto.common.genB\014CommonOutMsg"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

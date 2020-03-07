@@ -50,13 +50,21 @@ public final class UserCmdType {
      */
     RANDOMMATCH(3, 4),
     /**
+     * <code>USER_GAME_BEGIN = 5;</code>
+     *
+     * <pre>
+     *单机玩法游戏开始                     GameBeginProtoIn
+     * </pre>
+     */
+    USER_GAME_BEGIN(4, 5),
+    /**
      * <code>INVITE_AGAIN = 7;</code>
      *
      * <pre>
      *邀请对方再来一局                          空
      * </pre>
      */
-    INVITE_AGAIN(4, 7),
+    INVITE_AGAIN(5, 7),
     /**
      * <code>INVITE_AGAIN_BACK = 8;</code>
      *
@@ -64,7 +72,7 @@ public final class UserCmdType {
      *回应对方的邀请                        InviteBackProtoIn
      * </pre>
      */
-    INVITE_AGAIN_BACK(5, 8),
+    INVITE_AGAIN_BACK(6, 8),
     /**
      * <code>USER_LEADERBOARD = 9;</code>
      *
@@ -72,7 +80,7 @@ public final class UserCmdType {
      *获取排行榜                            RankInfoProtoIn
      * </pre>
      */
-    USER_LEADERBOARD(6, 9),
+    USER_LEADERBOARD(7, 9),
     /**
      * <code>RECHARGE = 10;</code>
      *
@@ -80,7 +88,7 @@ public final class UserCmdType {
      *充值                                  RechargeProtoIn
      * </pre>
      */
-    RECHARGE(7, 10),
+    RECHARGE(8, 10),
     /**
      * <code>GAME_UNLOCK = 11;</code>
      *
@@ -88,7 +96,7 @@ public final class UserCmdType {
      *关卡提前解锁                          GameUnlockProtoIn
      * </pre>
      */
-    GAME_UNLOCK(8, 11),
+    GAME_UNLOCK(9, 11),
     /**
      * <code>DONATE_ITEM = 12;</code>
      *
@@ -96,7 +104,7 @@ public final class UserCmdType {
      *捐献物品                              DonateItemProtoIn
      * </pre>
      */
-    DONATE_ITEM(9, 12),
+    DONATE_ITEM(10, 12),
     /**
      * <code>EXCHANGE_ITEM = 13;</code>
      *
@@ -104,7 +112,7 @@ public final class UserCmdType {
      *兑换物品                              ExchangeItemProtoIn
      * </pre>
      */
-    EXCHANGE_ITEM(10, 13),
+    EXCHANGE_ITEM(11, 13),
     /**
      * <code>MATCHCANCEL = 15;</code>
      *
@@ -112,7 +120,7 @@ public final class UserCmdType {
      *取消匹配								空
      * </pre>
      */
-    MATCHCANCEL(11, 15),
+    MATCHCANCEL(12, 15),
     /**
      * <code>UNLOCKROLE = 16;</code>
      *
@@ -120,7 +128,7 @@ public final class UserCmdType {
      *解锁角色                              UnlockRoleProtoIn
      * </pre>
      */
-    UNLOCKROLE(12, 16),
+    UNLOCKROLE(13, 16),
     /**
      * <code>UNLOCKPLATFORM = 17;</code>
      *
@@ -128,7 +136,7 @@ public final class UserCmdType {
      *解锁地块主题                          UnlockPlatformProtoIn
      * </pre>
      */
-    UNLOCKPLATFORM(13, 17),
+    UNLOCKPLATFORM(14, 17),
     /**
      * <code>REMOVE_AD = 18;</code>
      *
@@ -136,7 +144,7 @@ public final class UserCmdType {
      *移除广告                              RemoveAdProtoIn
      * </pre>
      */
-    REMOVE_AD(14, 18),
+    REMOVE_AD(15, 18),
     /**
      * <code>CONSUME_ITEM_REVIVE = 19;</code>
      *
@@ -144,7 +152,7 @@ public final class UserCmdType {
      *消耗物品复活                          ConsumeItemReviveProtoIn
      * </pre>
      */
-    CONSUME_ITEM_REVIVE(15, 19),
+    CONSUME_ITEM_REVIVE(16, 19),
     /**
      * <code>UNLOCK_COIN_BY_AD = 20;</code>
      *
@@ -152,7 +160,7 @@ public final class UserCmdType {
      *通过广告解锁金币模式标志位            空
      * </pre>
      */
-    UNLOCK_COIN_BY_AD(16, 20),
+    UNLOCK_COIN_BY_AD(17, 20),
     /**
      * <code>USER_LEADERBOARD_BASE = 21;</code>
      *
@@ -160,7 +168,7 @@ public final class UserCmdType {
      *排行版基础信息                        空
      * </pre>
      */
-    USER_LEADERBOARD_BASE(17, 21),
+    USER_LEADERBOARD_BASE(18, 21),
     /**
      * <code>SET_HEADID = 22;</code>
      *
@@ -168,7 +176,7 @@ public final class UserCmdType {
      *设置头像ID                            HeadIDProtoIn
      * </pre>
      */
-    SET_HEADID(18, 22),
+    SET_HEADID(19, 22),
     /**
      * <code>UNLOCKHEADID = 23;</code>
      *
@@ -176,7 +184,7 @@ public final class UserCmdType {
      *解锁头像ID							HeadIDProtoIn
      * </pre>
      */
-    UNLOCKHEADID(19, 23),
+    UNLOCKHEADID(20, 23),
     /**
      * <code>TRIGGER_REWARD_AD = 24;</code>
      *
@@ -184,7 +192,7 @@ public final class UserCmdType {
      *触发观看奖励广告                      空
      * </pre>
      */
-    TRIGGER_REWARD_AD(20, 24),
+    TRIGGER_REWARD_AD(21, 24),
     /**
      * <code>RECHARGE_VERIFY = 25;</code>
      *
@@ -192,7 +200,7 @@ public final class UserCmdType {
      *充值验证                              RechargeVerifyProtoIn
      * </pre>
      */
-    RECHARGE_VERIFY(21, 25),
+    RECHARGE_VERIFY(22, 25),
     /**
      * <code>BIND_ACCOUNT = 26;</code>
      *
@@ -200,7 +208,7 @@ public final class UserCmdType {
      *绑定账号                              BindAccountProtoIn
      * </pre>
      */
-    BIND_ACCOUNT(22, 26),
+    BIND_ACCOUNT(23, 26),
     /**
      * <code>CHANGE_ROLE_TYPE = 27;</code>
      *
@@ -208,7 +216,7 @@ public final class UserCmdType {
      *回合中修改角色类型                    ChangeRoleTypeProtoIn
      * </pre>
      */
-    CHANGE_ROLE_TYPE(23, 27),
+    CHANGE_ROLE_TYPE(24, 27),
     /**
      * <code>EXIT_BOUT = 28;</code>
      *
@@ -216,7 +224,7 @@ public final class UserCmdType {
      *退出回合                            空
      * </pre>
      */
-    EXIT_BOUT(24, 28),
+    EXIT_BOUT(25, 28),
     /**
      * <code>CHEAT_ADD_ITEM = 1000;</code>
      *
@@ -224,7 +232,7 @@ public final class UserCmdType {
      *作弊协议，添加物品                   CheatAddItemProtoIn
      * </pre>
      */
-    CHEAT_ADD_ITEM(25, 1000),
+    CHEAT_ADD_ITEM(26, 1000),
     /**
      * <code>LOAD_FINISHI = 10001;</code>
      *
@@ -232,7 +240,7 @@ public final class UserCmdType {
      *场景加载完毕         					空
      * </pre>
      */
-    LOAD_FINISHI(26, 10001),
+    LOAD_FINISHI(27, 10001),
     /**
      * <code>USER_JUMP = 10003;</code>
      *
@@ -240,7 +248,7 @@ public final class UserCmdType {
      *上发我方跳动            				PlayerJumpProtoIn
      * </pre>
      */
-    USER_JUMP(27, 10003),
+    USER_JUMP(28, 10003),
     /**
      * <code>USER_KILL = 10005;</code>
      *
@@ -248,7 +256,7 @@ public final class UserCmdType {
      *上发我方中途死亡     					PlayerBeKillProtoIn
      * </pre>
      */
-    USER_KILL(28, 10005),
+    USER_KILL(29, 10005),
     /**
      * <code>USER_SURRENDER = 10006;</code>
      *
@@ -256,7 +264,7 @@ public final class UserCmdType {
      *上发我方投降认输                      空
      * </pre>
      */
-    USER_SURRENDER(29, 10006),
+    USER_SURRENDER(30, 10006),
     /**
      * <code>GET_ROOM_LIST = 10020;</code>
      *
@@ -264,7 +272,7 @@ public final class UserCmdType {
      *获取房间列表                          GetRoomListProtoIn
      * </pre>
      */
-    GET_ROOM_LIST(30, 10020),
+    GET_ROOM_LIST(31, 10020),
     /**
      * <code>CREATE_ROOM = 10021;</code>
      *
@@ -272,7 +280,7 @@ public final class UserCmdType {
      *创建房间                              CreateRoomProtoIn
      * </pre>
      */
-    CREATE_ROOM(31, 10021),
+    CREATE_ROOM(32, 10021),
     /**
      * <code>JOIN_ROOM = 10022;</code>
      *
@@ -280,7 +288,7 @@ public final class UserCmdType {
      *加入房间                              RoomIDProtoIn
      * </pre>
      */
-    JOIN_ROOM(32, 10022),
+    JOIN_ROOM(33, 10022),
     /**
      * <code>DISMISS_ROOM = 10023;</code>
      *
@@ -288,7 +296,7 @@ public final class UserCmdType {
      *解散房间                              空
      * </pre>
      */
-    DISMISS_ROOM(33, 10023),
+    DISMISS_ROOM(34, 10023),
     /**
      * <code>EXIT_ROOM = 10024;</code>
      *
@@ -296,7 +304,7 @@ public final class UserCmdType {
      *退出房间                              空
      * </pre>
      */
-    EXIT_ROOM(34, 10024),
+    EXIT_ROOM(35, 10024),
     /**
      * <code>READY_ROOM = 10025;</code>
      *
@@ -304,7 +312,7 @@ public final class UserCmdType {
      *房员准备                              空
      * </pre>
      */
-    READY_ROOM(35, 10025),
+    READY_ROOM(36, 10025),
     /**
      * <code>START_ROOM = 10026;</code>
      *
@@ -312,7 +320,7 @@ public final class UserCmdType {
      *房主开始游戏                          空
      * </pre>
      */
-    START_ROOM(36, 10026),
+    START_ROOM(37, 10026),
     ;
 
     /**
@@ -347,6 +355,14 @@ public final class UserCmdType {
      * </pre>
      */
     public static final int RANDOMMATCH_VALUE = 4;
+    /**
+     * <code>USER_GAME_BEGIN = 5;</code>
+     *
+     * <pre>
+     *单机玩法游戏开始                     GameBeginProtoIn
+     * </pre>
+     */
+    public static final int USER_GAME_BEGIN_VALUE = 5;
     /**
      * <code>INVITE_AGAIN = 7;</code>
      *
@@ -621,6 +637,7 @@ public final class UserCmdType {
         case 2: return USER_PING;
         case 3: return USER_GAME_END;
         case 4: return RANDOMMATCH;
+        case 5: return USER_GAME_BEGIN;
         case 7: return INVITE_AGAIN;
         case 8: return INVITE_AGAIN_BACK;
         case 9: return USER_LEADERBOARD;
@@ -1445,46 +1462,46 @@ public final class UserCmdType {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026UserCmdTypeProto.proto*\300\005\n\rUserCmdInTy" +
+      "\n\026UserCmdTypeProto.proto*\325\005\n\rUserCmdInTy" +
       "pe\022\016\n\nUSER_LOGIN\020\001\022\r\n\tUSER_PING\020\002\022\021\n\rUSE" +
-      "R_GAME_END\020\003\022\017\n\013RANDOMMATCH\020\004\022\020\n\014INVITE_" +
-      "AGAIN\020\007\022\025\n\021INVITE_AGAIN_BACK\020\010\022\024\n\020USER_L" +
-      "EADERBOARD\020\t\022\014\n\010RECHARGE\020\n\022\017\n\013GAME_UNLOC" +
-      "K\020\013\022\017\n\013DONATE_ITEM\020\014\022\021\n\rEXCHANGE_ITEM\020\r\022" +
-      "\017\n\013MATCHCANCEL\020\017\022\016\n\nUNLOCKROLE\020\020\022\022\n\016UNLO" +
-      "CKPLATFORM\020\021\022\r\n\tREMOVE_AD\020\022\022\027\n\023CONSUME_I" +
-      "TEM_REVIVE\020\023\022\025\n\021UNLOCK_COIN_BY_AD\020\024\022\031\n\025U" +
-      "SER_LEADERBOARD_BASE\020\025\022\016\n\nSET_HEADID\020\026\022\020",
-      "\n\014UNLOCKHEADID\020\027\022\025\n\021TRIGGER_REWARD_AD\020\030\022" +
-      "\023\n\017RECHARGE_VERIFY\020\031\022\020\n\014BIND_ACCOUNT\020\032\022\024" +
-      "\n\020CHANGE_ROLE_TYPE\020\033\022\r\n\tEXIT_BOUT\020\034\022\023\n\016C" +
-      "HEAT_ADD_ITEM\020\350\007\022\021\n\014LOAD_FINISHI\020\221N\022\016\n\tU" +
-      "SER_JUMP\020\223N\022\016\n\tUSER_KILL\020\225N\022\023\n\016USER_SURR" +
-      "ENDER\020\226N\022\022\n\rGET_ROOM_LIST\020\244N\022\020\n\013CREATE_R" +
-      "OOM\020\245N\022\016\n\tJOIN_ROOM\020\246N\022\021\n\014DISMISS_ROOM\020\247" +
-      "N\022\016\n\tEXIT_ROOM\020\250N\022\017\n\nREADY_ROOM\020\251N\022\017\n\nST" +
-      "ART_ROOM\020\252N*\370\005\n\016UserCmdOutType\022\025\n\021USER_L" +
-      "OGIN_RESULT\020\001\022\017\n\013PING_RESULT\020\002\022\026\n\022RANDOM",
-      "MATCH_RESULT\020\003\022\032\n\026RANDOMMATCH_RESULT_MAP" +
-      "\020\004\022\024\n\020GET_INVITE_AGAIN\020\007\022\027\n\023INVITE_AGAIN" +
-      "_RETURN\020\010\022\026\n\022LEADERBOARD_RETURN\020\t\022\023\n\017REC" +
-      "HARGE_RESULT\020\n\022\r\n\tKICK_USER\020\014\022\023\n\017UPDATE_" +
-      "RESOURCE\020\r\022\033\n\027LEADERBOARD_BASE_RETURN\020\016\022" +
-      "\022\n\016UNLOCK_SUCCESS\020\017\022\024\n\020REWARD_AD_RETURN\020" +
-      "\020\022\017\n\013ROOM_RESULT\020\021\022\023\n\017ROOM_RESULT_MAP\020\022\022" +
-      "\026\n\022DONATE_ITEM_RETURN\020\023\022\032\n\026RECHARGE_VERI" +
-      "FY_RETURN\020\024\022\030\n\024EXCHANGE_ITEM_RETURN\020\025\022\024\n" +
-      "\020REMOVE_AD_RETURN\020\026\022\021\n\rCHANGE_HEADER\020\027\022\032",
-      "\n\026CHANGE_ROLETYPE_RETURN\020\030\022\024\n\020EXIT_BOUT_" +
-      "RETURN\020\031\022\026\n\021ERROR_CODE_RETURN\020\350\007\022\017\n\nSTAR" +
-      "T_GAME\020\222N\022\017\n\nENEMY_JUMP\020\224N\022\017\n\nENEMY_KILL" +
-      "\020\226N\022\016\n\tGAME_OVER\020\230N\022\031\n\024GET_ROOM_LIST_RET" +
-      "URN\020\244N\022\027\n\022CREATE_ROOM_RETURN\020\245N\022\034\n\027ROOM_" +
-      "PLAYER_INFO_RETURN\020\246N\022\030\n\023DISMISS_ROOM_RE" +
-      "TURN\020\247N\022\025\n\020EXIT_ROOM_RETURN\020\250N\022\026\n\021READY_" +
-      "ROOM_RETURN\020\251N**\n\013GameCmdType\022\014\n\007TWO_MIN" +
-      "\020\220N\022\r\n\007TWO_MAX\020\240\234\001B \n\021com.proto.commandB" +
-      "\013UserCmdType"
+      "R_GAME_END\020\003\022\017\n\013RANDOMMATCH\020\004\022\023\n\017USER_GA" +
+      "ME_BEGIN\020\005\022\020\n\014INVITE_AGAIN\020\007\022\025\n\021INVITE_A" +
+      "GAIN_BACK\020\010\022\024\n\020USER_LEADERBOARD\020\t\022\014\n\010REC" +
+      "HARGE\020\n\022\017\n\013GAME_UNLOCK\020\013\022\017\n\013DONATE_ITEM\020" +
+      "\014\022\021\n\rEXCHANGE_ITEM\020\r\022\017\n\013MATCHCANCEL\020\017\022\016\n" +
+      "\nUNLOCKROLE\020\020\022\022\n\016UNLOCKPLATFORM\020\021\022\r\n\tREM" +
+      "OVE_AD\020\022\022\027\n\023CONSUME_ITEM_REVIVE\020\023\022\025\n\021UNL" +
+      "OCK_COIN_BY_AD\020\024\022\031\n\025USER_LEADERBOARD_BAS",
+      "E\020\025\022\016\n\nSET_HEADID\020\026\022\020\n\014UNLOCKHEADID\020\027\022\025\n" +
+      "\021TRIGGER_REWARD_AD\020\030\022\023\n\017RECHARGE_VERIFY\020" +
+      "\031\022\020\n\014BIND_ACCOUNT\020\032\022\024\n\020CHANGE_ROLE_TYPE\020" +
+      "\033\022\r\n\tEXIT_BOUT\020\034\022\023\n\016CHEAT_ADD_ITEM\020\350\007\022\021\n" +
+      "\014LOAD_FINISHI\020\221N\022\016\n\tUSER_JUMP\020\223N\022\016\n\tUSER" +
+      "_KILL\020\225N\022\023\n\016USER_SURRENDER\020\226N\022\022\n\rGET_ROO" +
+      "M_LIST\020\244N\022\020\n\013CREATE_ROOM\020\245N\022\016\n\tJOIN_ROOM" +
+      "\020\246N\022\021\n\014DISMISS_ROOM\020\247N\022\016\n\tEXIT_ROOM\020\250N\022\017" +
+      "\n\nREADY_ROOM\020\251N\022\017\n\nSTART_ROOM\020\252N*\370\005\n\016Use" +
+      "rCmdOutType\022\025\n\021USER_LOGIN_RESULT\020\001\022\017\n\013PI",
+      "NG_RESULT\020\002\022\026\n\022RANDOMMATCH_RESULT\020\003\022\032\n\026R" +
+      "ANDOMMATCH_RESULT_MAP\020\004\022\024\n\020GET_INVITE_AG" +
+      "AIN\020\007\022\027\n\023INVITE_AGAIN_RETURN\020\010\022\026\n\022LEADER" +
+      "BOARD_RETURN\020\t\022\023\n\017RECHARGE_RESULT\020\n\022\r\n\tK" +
+      "ICK_USER\020\014\022\023\n\017UPDATE_RESOURCE\020\r\022\033\n\027LEADE" +
+      "RBOARD_BASE_RETURN\020\016\022\022\n\016UNLOCK_SUCCESS\020\017" +
+      "\022\024\n\020REWARD_AD_RETURN\020\020\022\017\n\013ROOM_RESULT\020\021\022" +
+      "\023\n\017ROOM_RESULT_MAP\020\022\022\026\n\022DONATE_ITEM_RETU" +
+      "RN\020\023\022\032\n\026RECHARGE_VERIFY_RETURN\020\024\022\030\n\024EXCH" +
+      "ANGE_ITEM_RETURN\020\025\022\024\n\020REMOVE_AD_RETURN\020\026",
+      "\022\021\n\rCHANGE_HEADER\020\027\022\032\n\026CHANGE_ROLETYPE_R" +
+      "ETURN\020\030\022\024\n\020EXIT_BOUT_RETURN\020\031\022\026\n\021ERROR_C" +
+      "ODE_RETURN\020\350\007\022\017\n\nSTART_GAME\020\222N\022\017\n\nENEMY_" +
+      "JUMP\020\224N\022\017\n\nENEMY_KILL\020\226N\022\016\n\tGAME_OVER\020\230N" +
+      "\022\031\n\024GET_ROOM_LIST_RETURN\020\244N\022\027\n\022CREATE_RO" +
+      "OM_RETURN\020\245N\022\034\n\027ROOM_PLAYER_INFO_RETURN\020" +
+      "\246N\022\030\n\023DISMISS_ROOM_RETURN\020\247N\022\025\n\020EXIT_ROO" +
+      "M_RETURN\020\250N\022\026\n\021READY_ROOM_RETURN\020\251N**\n\013G" +
+      "ameCmdType\022\014\n\007TWO_MIN\020\220N\022\r\n\007TWO_MAX\020\240\234\001B" +
+      " \n\021com.proto.commandB\013UserCmdType"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

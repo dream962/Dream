@@ -8,8 +8,13 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import com.base.component.AbstractComponent;
 import com.base.net.CommonMessage;
+import com.data.business.PlayerBusiness;
+import com.data.info.PlayerInfo;
+import com.data.log.ResourceLog;
+import com.data.log.factory.ResourceLogFactory;
 import com.game.object.player.GamePlayer;
 import com.google.protobuf.GeneratedMessage.Builder;
+import com.util.StringUtil;
 import com.util.print.LogFactory;
 
 /**
@@ -23,6 +28,8 @@ public class GamePlayerComponent extends AbstractComponent
     private static Map<Long, GamePlayer> gamePlayerMap = new HashMap<>();
 
     private static ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+
+    private static List<ResourceLog> resourceList = new ArrayList<>();
 
     public static void addPlayer(long userID, GamePlayer player)
     {
@@ -48,22 +55,6 @@ public class GamePlayerComponent extends AbstractComponent
         {
             lock.writeLock().unlock();
         }
-    }
-
-    /**
-     * 获取在线玩家（玩家下线但是服务器会保存问题）
-     * 
-     * @return
-     */
-    public static int getOnlineCount()
-    {
-        List<GamePlayer> players = getAllPlayer();
-
-        players.removeIf((player) -> {
-            return !player.getNetworkModule().isConnect();
-        });
-
-        return players.size();
     }
 
     /**
@@ -165,6 +156,15 @@ public class GamePlayerComponent extends AbstractComponent
                 player.jobSave();
             }
 
+            List<ResourceLog> resourceLogs = new ArrayList<>();
+            synchronized (resourceList)
+            {
+                resourceLogs.addAll(resourceList);
+                resourceList.clear();
+            }
+
+            ResourceLogFactory.getDao().addOrUpdateBatch(resourceLogs);
+
             if (System.currentTimeMillis() - time > 5000)
             {
                 LogFactory.warn(String.format("GamePlayerComponent : save player spend too much time -- %d", System.currentTimeMillis() - time));
@@ -196,4 +196,74 @@ public class GamePlayerComponent extends AbstractComponent
         }
     }
 
+    public static void addResourceLog(ResourceLog log)
+    {
+        synchronized (resourceList)
+        {
+            resourceList.add(log);
+        }
+    }
+
+    public static boolean deletePlayer(int userID)
+    {
+        try
+        {
+            GamePlayer player = GamePlayerComponent.getPlayerByUserID(userID);
+            if (player != null)
+            {
+                removePlayer(userID);
+                player.disconnect(player.getNetworkModule().getClientConnection(), true);
+            }
+
+            RankComponent.removePlauer(userID);
+
+            PlayerBusiness.removePlayer(userID);
+            return true;
+        }
+        catch (Exception e)
+        {
+            LogFactory.error("", e);
+            return false;
+        }
+    }
+
+    public static List<PlayerInfo> getPlayerByName(String name)
+    {
+        List<PlayerInfo> list = new ArrayList<>();
+
+        lock.readLock().lock();
+        try
+        {
+            for (GamePlayer player2 : gamePlayerMap.values())
+            {
+                if (StringUtil.isNumber(name))
+                {
+                    if (player2.getUserID() == Integer.valueOf(name))
+                    {
+                        list.add(player2.getPlayerInfo());
+                    }
+                }
+                else
+                {
+                    if (player2.getNickName().equalsIgnoreCase(name) ||
+                            player2.getPlayerInfo().getAccountName().equalsIgnoreCase(name) ||
+                            player2.getPlayerInfo().getAccuntGName().equalsIgnoreCase(name))
+                    {
+                        list.add(player2.getPlayerInfo());
+                    }
+                }
+            }
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+
+        List<PlayerInfo> playerInfos = PlayerBusiness.getPlayerInfoByName(name);
+        if (playerInfos != null)
+        {
+            list.addAll(playerInfos);
+        }
+        return list;
+    }
 }

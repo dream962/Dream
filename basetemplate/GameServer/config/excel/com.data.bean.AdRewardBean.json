@@ -1,37 +1,37 @@
 [
 	{
-	"rewardItemID":102,
-	"rewardItemCount":1,
+	"rewardItemID":101,
+	"rewardItemCount":10,
 	"configID":1,
 	"durationCount":3
 	},
 	{
-	"rewardItemID":102,
-	"rewardItemCount":1,
+	"rewardItemID":101,
+	"rewardItemCount":20,
 	"configID":2,
 	"durationCount":10
 	},
 	{
-	"rewardItemID":102,
-	"rewardItemCount":1,
+	"rewardItemID":101,
+	"rewardItemCount":30,
 	"configID":3,
 	"durationCount":30
 	},
 	{
-	"rewardItemID":102,
-	"rewardItemCount":1,
+	"rewardItemID":101,
+	"rewardItemCount":40,
 	"configID":4,
 	"durationCount":60
 	},
 	{
-	"rewardItemID":102,
-	"rewardItemCount":2,
+	"rewardItemID":101,
+	"rewardItemCount":50,
 	"configID":5,
 	"durationCount":240
 	},
 	{
-	"rewardItemID":102,
-	"rewardItemCount":3,
+	"rewardItemID":101,
+	"rewardItemCount":60,
 	"configID":6,
 	"durationCount":720
 	}

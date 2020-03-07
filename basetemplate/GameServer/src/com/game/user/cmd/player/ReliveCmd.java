@@ -3,6 +3,7 @@ package com.game.user.cmd.player;
 import com.base.code.ErrorCodeType;
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemRemoveType;
 import com.game.object.player.GamePlayer;
 import com.game.user.cmd.AbstractUserCmd;
 import com.proto.command.UserCmdType.UserCmdInType;
@@ -33,7 +34,7 @@ public class ReliveCmd extends AbstractUserCmd
                 return;
             }
 
-            player.removeResource(itemID, count);
+            player.removeResource(itemID, count, ItemRemoveType.REVIVE);
 
             player.getSenderModule().sendRes();
         }

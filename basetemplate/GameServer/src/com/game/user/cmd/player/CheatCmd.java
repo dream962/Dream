@@ -2,6 +2,7 @@ package com.game.user.cmd.player;
 
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemAddType;
 import com.game.object.player.GamePlayer;
 import com.game.user.cmd.AbstractUserCmd;
 import com.proto.command.UserCmdType.UserCmdInType;
@@ -26,7 +27,7 @@ public class CheatCmd extends AbstractUserCmd
             int itemID = proto.getItemID();
             int itemCount = proto.getItemCount();
 
-            player.addResource(itemID, itemCount);
+            player.addResource(itemID, itemCount, ItemAddType.CHEAT);
 
             player.getSenderModule().sendRes();
         }

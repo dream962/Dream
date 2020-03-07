@@ -81,6 +81,12 @@ public enum ErrorCodeType
 
     /** 账号已经绑定 */
     Bind_Error(114),
+
+    /** 游戏验证失败,此次游戏记录无效 */
+    GAME_ERROR(115),
+
+    /** 版本太低,必须更新新版本 */
+    VERSION_ERROR(116),
     ;
 
     private int value;

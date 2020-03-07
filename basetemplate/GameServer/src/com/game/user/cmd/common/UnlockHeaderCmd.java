@@ -3,6 +3,7 @@ package com.game.user.cmd.common;
 import com.base.code.ErrorCodeType;
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemRemoveType;
 import com.data.bean.HeaderBean;
 import com.data.bean.factory.HeaderBeanFactory;
 import com.game.object.player.GamePlayer;
@@ -41,7 +42,7 @@ public class UnlockHeaderCmd extends AbstractUserCmd
                 return;
             }
 
-            player.removeResource(bean.getConsumeItemID(), bean.getConsumeItemCount());
+            player.removeResource(bean.getConsumeItemID(), bean.getConsumeItemCount(), ItemRemoveType.UNLOCKHEADID);
 
             player.addHeader(headerID);
 

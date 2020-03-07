@@ -71,9 +71,9 @@
 				root
 				jump_1%*$_root_game
 				   -->
-				<url>jdbc:mysql://120.132.60.125:3307/db_jump?allowMultiQueries=true&amp;characterEncoding=utf8</url>
-                <username>daomu2_admin</username>
-                <password>daomu2!@#</password>
+				<url>jdbc:mysql://192.168.1.96:13619/db_jump?allowMultiQueries=true&amp;characterEncoding=utf8</url>
+				<username>daomu2_admin</username>
+				<password>daomu2!@#</password>
 				<maxActive desc="">10</maxActive>
 				<initialSize desc="">2</initialSize>
 				<minIdle desc="">1</minIdle>
@@ -103,8 +103,7 @@
 		</https>
 
 		<mapping desc="第三方或者系统的配置servlet">
-			<servlet name="druid"
-				classPath="com.alibaba.druid.support.http.StatViewServlet" url="/druid/*" />
+			<servlet name="druid" classPath="com.alibaba.druid.support.http.StatViewServlet" url="/druid/*" />
 		</mapping>
 	</web>
 

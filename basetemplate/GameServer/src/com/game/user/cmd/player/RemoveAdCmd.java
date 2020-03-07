@@ -6,6 +6,7 @@ import java.util.Date;
 import com.base.code.ErrorCodeType;
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemRemoveType;
 import com.data.bean.AdvertiseBean;
 import com.data.bean.factory.AdvertiseBeanFactory;
 import com.game.object.player.GamePlayer;
@@ -47,7 +48,7 @@ public class RemoveAdCmd extends AbstractUserCmd
                 return;
             }
 
-            player.removeResource(bean.getConsumeID(), bean.getConsumeCount());
+            player.removeResource(bean.getConsumeID(), bean.getConsumeCount(), ItemRemoveType.REMOVE_AD);
 
             Date expireTime = player.getPlayerInfo().getAdExpireTime();
             if (expireTime == null || expireTime.getTime() < new Date().getTime())

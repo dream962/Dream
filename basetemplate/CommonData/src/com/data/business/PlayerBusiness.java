@@ -1,5 +1,6 @@
 package com.data.business;
 
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,6 +13,7 @@ import com.data.factory.RankInfoFactory;
 import com.data.info.ChargeInfo;
 import com.data.info.PlayerInfo;
 import com.data.info.RankInfo;
+import com.util.StringUtil;
 
 public class PlayerBusiness
 {
@@ -123,9 +125,17 @@ public class PlayerBusiness
         return RankInfoFactory.getDao().execute(sql, param);
     }
 
-    public static boolean addOrUpdateCharge(ChargeInfo info)
+    public static boolean addOrUpdateChargeList(List<ChargeInfo> list)
     {
-        return ChargeInfoFactory.getDao().addOrUpdate(info);
+        int[] result = ChargeInfoFactory.getDao().addOrUpdateBatch(list);
+        if (result != null)
+        {
+            for (ChargeInfo info : list)
+            {
+                info.setChanged(false);
+            }
+        }
+        return true;
     }
 
     public static ChargeInfo getChargeInfo(int userID, String orderID)
@@ -143,5 +153,33 @@ public class PlayerBusiness
         String sql = "SELECT * FROM t_u_charge WHERE OrderStatus=1;";
         List<ChargeInfo> infos = ChargeInfoFactory.getDao().queryList(sql);
         return infos;
+    }
+
+    public static void removePlayer(int userID)
+    {
+        PlayerInfoFactory.getDao().deleteByKey(userID);
+
+        String sql = "delete from t_u_rank where `UserID`=?;";
+        DBParamWrapper params = new DBParamWrapper();
+        params.put(Types.INTEGER, userID);
+
+        RankInfoFactory.getDao().execute(sql, params);
+    }
+
+    public static List<PlayerInfo> getPlayerInfoByName(String name)
+    {
+        if (StringUtil.isNumber(name))
+        {
+            String sql = "SELECT * FROM t_u_player WHERE userid=?;";
+            DBParamWrapper param = new DBParamWrapper();
+            param.put(name);
+            return PlayerInfoFactory.getDao().queryList(sql, param);
+        }
+        else
+        {
+            String sql = "SELECT * FROM t_u_player WHERE PlayerName LIKE '%" + name + "%' or AccountName like '%" + name + "%' or accuntGName like '%" + name + "%';";
+            DBParamWrapper param = new DBParamWrapper();
+            return PlayerInfoFactory.getDao().queryList(sql, param);
+        }
     }
 }

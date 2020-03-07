@@ -67,10 +67,6 @@
 								<th>服务器ID</th>
 								<th>服务器名</th>
 								<th>数据库IP</th>
-								<th>游戏库</th>
-								<th>日志库</th>
-								<th>上次更新时间</th>
-								<th>服务器状态</th>
 							</tr>
 						</thead>
 						<tbody id="datagrid">
@@ -83,8 +79,7 @@
 				<div class="selectbox floatL" style="width:100px;">
 					<select class="select" style="height: 30px;" id="selectBox_db">
 						<option value="1" selected>游戏库</option>
-						<option value="2">日志库</option>
-						<option value="3">统计库</option>
+						<option value="2">账号库</option>
 					</select>
 				</div>
 				</br></br>
@@ -159,9 +154,6 @@
 							$("#datagrid").append("<tr><td>" + value.serverID +
 								"</td><td>" + value.serverName +
 								"</td><td>" + value.dbIp +
-								"</td><td>" + value.dbGameName +
-								"</td><td>" + value.dbLogName +
-								"</td><td>" + value.lastUpdateTime +
 								"</td><td>" + st +
 								"</td></tr>"
 							);

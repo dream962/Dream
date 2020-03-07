@@ -5,6 +5,7 @@ import java.util.Date;
 import com.base.code.ErrorCodeType;
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemAddType;
 import com.data.bean.AdRewardBean;
 import com.data.bean.factory.AdRewardBeanFactory;
 import com.game.object.player.GamePlayer;
@@ -55,7 +56,7 @@ public class AdTriggerCmd extends AbstractUserCmd
             player.getPlayerInfo().setAdTriggerCount(count);
             player.getPlayerInfo().setLastAdTime(new Date());
 
-            player.addResource(bean.getRewardItemID(), bean.getRewardItemCount());
+            player.addResource(bean.getRewardItemID(), bean.getRewardItemCount(), ItemAddType.AD);
 
             RewardADProtoOut.Builder builder = RewardADProtoOut.newBuilder();
 

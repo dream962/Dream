@@ -2,8 +2,10 @@ package com.game.user.cmd.common;
 
 import java.util.List;
 
+import com.base.code.ErrorCodeType;
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemAddType;
 import com.data.bean.UnlockBean;
 import com.data.bean.factory.UnlockBeanFactory;
 import com.data.type.ResourceType;
@@ -33,7 +35,7 @@ public class GameEndCmd extends AbstractUserCmd
             GameOverProtoIn proto = GameOverProtoIn.parseFrom(packet.getBody());
             ModeType type = proto.getGameType();
             int value = (int) proto.getEndValue();
-            int diamond = proto.getDiamondCount();
+            int count = proto.getDiamondCount();
 
             RankType rankType = RankType.Endless;
             switch (type)
@@ -62,8 +64,15 @@ public class GameEndCmd extends AbstractUserCmd
                 break;
             }
 
+            boolean result = player.getDataModule().endGame(type, value, count);
+            if (result == false)
+            {
+                player.sendErrorCode(ErrorCodeType.GAME_ERROR, "");
+                return;
+            }
+
             player.getDataModule().addRank(rankType, value);
-            player.addResource(ResourceType.COIN.getValue(), diamond);
+            player.addResource(ResourceType.COIN.getValue(), count, ItemAddType.GAME.getValue() * 10000 + type.getNumber());
 
             player.onGameOver(type, value, 0, 0);
 

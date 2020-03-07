@@ -11,38 +11,21 @@ public enum ItemRemoveType
     /** 空 */
     NONE(0, "空"),
 
-    /** 物品使用 */
-    USE(1, "物品使用 "),
+    DONATE(101, "DONATE"),
 
-    /** 建筑创建 */
-    BUILDING_CREATE(10, "建筑创建"),
-    /** 建筑升级 */
-    BUILDING_UPDATE(11, "建筑升级"),
-    /** 人口自然增长 */
-    BUILDING_POLULACE(12, "人口自然增长"),
-    /** 工业生产 */
-    BUILDING_INDUSTRY_PRODUCT(13, "工业生产"),
-    /** 招募居民 */
-    BUILDING_POLULACE_CALL(14, "招募居民"),
-    /** 招募士兵 */
-    BUILDING_SOLDIER_CALL(15, "招募士兵"),
-    /** 抽卡花费 */
-    HERO_CARD(16, "抽卡花费"),
-    /** 科技加速 */
-    SCIENCE_SPEED(17, "科技加速"),
-    
-    /** 一键侦查迷雾 */
-    ARMY_EXPLORE(30, "一键侦查迷雾"),
+    EXCHANGE(102, "EXCHANGE"),
 
-    /** 任务 */
-    TASK_QUICK_COMPLETE(100, "任务 "),
+    REVIVE(103, "REVIVE"),
 
-    /** 任务刷新 */
-    TASK_REFRESH(101, "任务刷新 "),
+    REMOVE_AD(104, "REMOVE_AD"),
 
-    /** 任务完成 */
-    TASK_FINISH(102, "任务完成 "),
+    GAME_UNLOCK(105, "GAME_UNLOCK"),
 
+    UNLOCKHEADID(106, "UNLOCKHEADID"),
+
+    UNLOCKROLE(107, "UNLOCKROLE"),
+
+    UNLOCKPLATFORM(108, "UNLOCKPLATFORM"),
     ;
 
     private byte value;

@@ -3,6 +3,8 @@ package com.game.user.cmd.player;
 import com.base.code.ErrorCodeType;
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemAddType;
+import com.data.bag.ItemRemoveType;
 import com.data.bean.ExchangeBean;
 import com.data.bean.factory.ExchangeBeanFactory;
 import com.game.object.player.GamePlayer;
@@ -37,8 +39,8 @@ public class ExchangeItemCmd extends AbstractUserCmd
                 return;
             }
 
-            player.removeResource(bean.getConsumeItemID(), bean.getConsumeItemCount());
-            player.addResource(bean.getTargetItemID(), bean.getTargetItemCount());
+            player.removeResource(bean.getConsumeItemID(), bean.getConsumeItemCount(), ItemRemoveType.EXCHANGE);
+            player.addResource(bean.getTargetItemID(), bean.getTargetItemCount(), ItemAddType.EXCHANGE);
             player.getSenderModule().sendRes();
 
             ExchangeItemProtoOut.Builder builder = ExchangeItemProtoOut.newBuilder();

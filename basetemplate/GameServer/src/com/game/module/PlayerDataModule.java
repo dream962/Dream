@@ -7,9 +7,11 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.base.code.ErrorCodeType;
+import com.data.bag.ItemAddType;
 import com.data.bean.ChargeBean;
 import com.data.bean.factory.ChargeBeanFactory;
 import com.data.business.PlayerBusiness;
+import com.data.component.GamePropertiesComponent;
 import com.data.info.ChargeInfo;
 import com.data.info.FriendInfo;
 import com.data.info.RankInfo;
@@ -19,12 +21,14 @@ import com.game.component.RankComponent;
 import com.game.object.player.GamePlayer;
 import com.logic.object.module.AbstractPlayerModule;
 import com.proto.command.UserCmdType.UserCmdOutType;
+import com.proto.common.gen.CommonOutMsg.ModeType;
 import com.proto.common.gen.CommonOutMsg.RankTimeType;
 import com.proto.common.gen.CommonOutMsg.RankType;
 import com.proto.user.gen.UserOutMsg.RechargeProtoOut;
 import com.proto.user.gen.UserOutMsg.RechargeVerifyProtoOut;
 import com.util.TimeUtil;
 import com.util.UuidUtil;
+import com.util.print.LogFactory;
 
 /**
  * 玩家数据模块
@@ -38,6 +42,12 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
     private Map<String, RankInfo> rankInfoMap = new ConcurrentHashMap<String, RankInfo>();
 
     private Map<Integer, FriendInfo> friendMap = new ConcurrentHashMap<>();
+
+    /** 当前类型 */
+    private ModeType currentType;
+
+    /** 当前类型开始时间 */
+    private long typeBeginTime = Long.MAX_VALUE;
 
     public PlayerDataModule(GamePlayer player)
     {
@@ -230,7 +240,12 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
         if (chargeInfo == null)
         {
             chargeInfo = PlayerBusiness.getChargeInfo(player.getUserID(), orderID);
-            ChargeComponent.addChargeInfo(chargeInfo);
+            if (chargeInfo != null)
+                ChargeComponent.addChargeInfo(chargeInfo);
+        }
+        else
+        {
+            LogFactory.error("check order null.orderID:{}", orderID);
         }
 
         if (chargeInfo == null)
@@ -265,7 +280,7 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
 
             // 添加物品
             int ttq = bean.getChargeIngot();
-            player.addResource(ResourceType.TTQ.getValue(), ttq);
+            player.addResource(ResourceType.TTQ.getValue(), ttq, ItemAddType.CHARGE);
 
             if (bean.getChargeRoleID() > 0)
             {
@@ -291,5 +306,55 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
         builder.setRechargeConfigID(chargeInfo.getConfigID());
 
         player.sendMessage(UserCmdOutType.RECHARGE_VERIFY_RETURN_VALUE, builder);
+    }
+
+    public void beginGame(ModeType type)
+    {
+        currentType = type;
+        typeBeginTime = System.currentTimeMillis();
+    }
+
+    public boolean endGame(ModeType type, int value, int count)
+    {
+        int time = (int) (System.currentTimeMillis() - typeBeginTime);
+        if (currentType.getNumber() != type.getNumber() || time <= 0)
+        {
+            LogFactory.error("游戏验证失败.client:{},server:{},", type.name(), currentType.name());
+            return false;
+        }
+
+        int length = 0;
+        if (type == ModeType.RAC)
+        {
+            length = time / 2;
+            // 时间减半并且小于10秒的判断失败
+            if (value < time / 2 && value < 10000)
+            {
+                LogFactory.error("游戏验证失败.client:{},server:{},mode:{},time:{}", value, time / 2, type.name(), time);
+                return false;
+            }
+        }
+        else
+        {
+            length = (int) ((time / GamePropertiesComponent.BASE_STEP_TIME) * GamePropertiesComponent.BASE_STEP_TIME_RATE);
+            if (value > length)
+            {
+                LogFactory.error("长度验证失败.client:{},server:{},mode:{},time:{},coin:{}", value, length, type.name(), time, count);
+                return false;
+            }
+
+            if (count >= length / 2 && count > 10)
+            {
+                LogFactory.error("长度验证失败,金币数量不对.client:{},server:{},mode:{},time:{},coin:{}", value, length, type.name(), time, count);
+                return false;
+            }
+        }
+
+        LogFactory.error("长度验证成功.client:{},server:{},mode:{},time:{},coin:{},begin:{},end:{}",
+                value, length, type.name(), time, count, TimeUtil.getDateFormat(new Date(typeBeginTime)), TimeUtil.getDateFormat(new Date(System.currentTimeMillis())));
+
+        currentType = ModeType.NONE;
+        typeBeginTime = Long.MAX_VALUE;
+        return true;
     }
 }

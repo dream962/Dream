@@ -2,7 +2,7 @@
 	{
 	"targetItemID":102,
 	"itemPeculiarity":0,
-	"consumeItemCount":100,
+	"consumeItemCount":99,
 	"iconResource":"ic_shelves_donuts_1",
 	"targetItemCount":1,
 	"configID":1,
@@ -12,7 +12,7 @@
 	{
 	"targetItemID":102,
 	"itemPeculiarity":0,
-	"consumeItemCount":199,
+	"consumeItemCount":179,
 	"iconResource":"ic_shelves_donuts_2",
 	"targetItemCount":2,
 	"configID":2,
@@ -22,7 +22,7 @@
 	{
 	"targetItemID":102,
 	"itemPeculiarity":2,
-	"consumeItemCount":399,
+	"consumeItemCount":339,
 	"iconResource":"ic_shelves_donuts_4",
 	"targetItemCount":4,
 	"configID":3,
@@ -32,7 +32,7 @@
 	{
 	"targetItemID":102,
 	"itemPeculiarity":0,
-	"consumeItemCount":999,
+	"consumeItemCount":799,
 	"iconResource":"ic_shelves_donuts_5",
 	"targetItemCount":10,
 	"configID":4,
@@ -42,7 +42,7 @@
 	{
 	"targetItemID":102,
 	"itemPeculiarity":0,
-	"consumeItemCount":1599,
+	"consumeItemCount":1199,
 	"iconResource":"ic_shelves_donuts_6",
 	"targetItemCount":16,
 	"configID":5,
@@ -52,7 +52,7 @@
 	{
 	"targetItemID":102,
 	"itemPeculiarity":1,
-	"consumeItemCount":2999,
+	"consumeItemCount":2099,
 	"iconResource":"ic_shelves_donuts_7",
 	"targetItemCount":30,
 	"configID":6,

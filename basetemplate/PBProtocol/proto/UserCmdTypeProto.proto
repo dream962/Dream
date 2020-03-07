@@ -10,6 +10,7 @@ enum UserCmdInType
     USER_PING = 2;									//Ping协议								PingProtoIn
 	USER_GAME_END = 3;                              //单机玩法游戏结果                      GameOverProtoIn
 	RANDOMMATCH = 4;                           	    //随机玩家                              RandomMatchProtoIn
+	USER_GAME_BEGIN = 5;                             //单机玩法游戏开始                     GameBeginProtoIn
 	INVITE_AGAIN = 7;                               //邀请对方再来一局                          空
 	INVITE_AGAIN_BACK = 8;                          //回应对方的邀请                        InviteBackProtoIn
 	USER_LEADERBOARD = 9;                           //获取排行榜                            RankInfoProtoIn

@@ -15,8 +15,10 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import com.base.component.AbstractComponent;
 import com.data.account.data.CommonData;
 import com.data.account.data.ServerData;
+import com.data.account.data.VersionData;
 import com.data.account.factory.CommonDataFactory;
 import com.data.account.factory.ServerDataFactory;
+import com.data.account.factory.VersionDataFactory;
 import com.util.ThreadPoolUtil;
 import com.util.print.LogFactory;
 
@@ -36,7 +38,12 @@ public class ServerComponent extends AbstractComponent
     /** 公告 */
     private static List<CommonData> commonDataList = new ArrayList<>();
 
+    /** 版本 */
+    private static List<VersionData> versionList = new ArrayList<>();
+
     private static ReadWriteLock noticeLock = new ReentrantReadWriteLock();
+
+    private static ReadWriteLock lock = new ReentrantReadWriteLock();
 
     @Override
     public boolean initialize()
@@ -44,9 +51,70 @@ public class ServerComponent extends AbstractComponent
         schedule = ThreadPoolUtil.singleScheduledExecutor("account-server");
         schedule.scheduleAtFixedRate(() -> updateServer(), 30, 30, TimeUnit.SECONDS);
 
+        List<VersionData> versionTemps = VersionDataFactory.getDao().listAll();
+        if (versionTemps != null)
+            versionList.addAll(versionTemps);
+
         // 初始化服务器列表
         updateServer();
+
         return true;
+    }
+
+    public static List<VersionData> getVersionList()
+    {
+        lock.readLock().lock();
+        try
+        {
+            return new ArrayList<VersionData>(versionList);
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+    }
+
+    public static boolean getVersionForce(int version)
+    {
+        lock.readLock().lock();
+        try
+        {
+            for (VersionData data : versionList)
+            {
+                if (data.getVersionID() > version)
+                {
+                    if (data.getIsForce())
+                        return true;
+                }
+            }
+
+            return false;
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+    }
+
+    public static int getMaxVersion()
+    {
+        int max = 0;
+        lock.readLock().lock();
+        try
+        {
+            for (VersionData data : versionList)
+            {
+                if (data.getVersionID() > max)
+                {
+                    max = data.getVersionID();
+                }
+            }
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+        return max;
     }
 
     public static List<CommonData> getContent(int type, String languageType)
@@ -146,6 +214,21 @@ public class ServerComponent extends AbstractComponent
                 serverMap.put(p.getServerID(), p);
             });
 
+            List<VersionData> versionTemps = VersionDataFactory.getDao().listAll();
+            lock.writeLock().lock();
+            try
+            {
+                if (versionTemps != null)
+                {
+                    versionList.clear();
+                    versionList.addAll(versionTemps);
+                }
+            }
+            finally
+            {
+                lock.writeLock().unlock();
+            }
+
             List<CommonData> dataList = CommonDataFactory.getDao().queryList("select * from t_p_common");
             if (dataList != null)
             {
@@ -201,9 +284,64 @@ public class ServerComponent extends AbstractComponent
         return data1;
     }
 
+    public static List<ServerData> getServerList()
+    {
+        List<ServerData> list = new ArrayList<>();
+        list.addAll(serverMap.values());
+        return list;
+    }
+
     @Override
     public void stop()
     {
         serverMap.clear();
+    }
+
+    public static boolean addOrUpdateVersion(VersionData data)
+    {
+        lock.writeLock().lock();
+        try
+        {
+            for (VersionData v : versionList)
+            {
+                if (v.getVersionID() == data.getVersionID())
+                {
+                    v.setIsForce(data.getIsForce());
+                    v.setVersionDesc(data.getVersionDesc());
+                    VersionDataFactory.getDao().addOrUpdate(v);
+                    return true;
+                }
+            }
+
+            versionList.add(data);
+
+            return VersionDataFactory.getDao().addOrUpdate(data);
+        }
+        finally
+        {
+            lock.writeLock().unlock();
+        }
+    }
+
+    public static boolean deleteVersion(int version)
+    {
+        lock.writeLock().lock();
+        try
+        {
+            for (VersionData v : versionList)
+            {
+                if (v.getVersionID() == version)
+                {
+                    versionList.remove(v);
+                    return VersionDataFactory.getDao().deleteByKey(version);
+                }
+            }
+
+            return VersionDataFactory.getDao().deleteByKey(version);
+        }
+        finally
+        {
+            lock.writeLock().unlock();
+        }
     }
 }

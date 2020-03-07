@@ -3,6 +3,7 @@ package com.game.user.cmd.common;
 import com.base.code.ErrorCodeType;
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemRemoveType;
 import com.data.bean.MapBean;
 import com.data.bean.factory.MapBeanFactory;
 import com.game.object.player.GamePlayer;
@@ -43,7 +44,7 @@ public class UnlockThemeCmd extends AbstractUserCmd
                 return;
             }
 
-            player.removeResource(bean.getItemID(), bean.getCount());
+            player.removeResource(bean.getItemID(), bean.getCount(), ItemRemoveType.UNLOCKPLATFORM);
 
             player.addThemeType(type.getNumber());
 

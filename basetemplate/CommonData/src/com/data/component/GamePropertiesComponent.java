@@ -36,11 +36,9 @@ public class GamePropertiesComponent extends AbstractComponent
     public static int GAME_PLAYER_PING_INTERVAL;
     @ConfigPropertyAnnotation(key = "job_ping_fight", defaultValue = "5", description = "每5秒ping一次战斗服", type = Integer.class)
     public static int JOB_PING_FIGHT;
-    @ConfigPropertyAnnotation(key = "job_save_player", defaultValue = "30", description = "定时器保存玩家时间间隔（秒）", type = Integer.class)
+    @ConfigPropertyAnnotation(key = "job_save_player", defaultValue = "5", description = "定时器保存玩家时间间隔（秒）", type = Integer.class)
     public static int JOB_SAVE_PLAYER;
-    @ConfigPropertyAnnotation(key = "refresh_token", defaultValue = "1800", description = "定时更新token", type = Integer.class)
-    public static int REFRESH_TOKEN;
-    @ConfigPropertyAnnotation(key = "save_player_time", defaultValue = "300", description = "每5分钟同步一次玩家信息（秒）", type = Integer.class)
+    @ConfigPropertyAnnotation(key = "save_player_time", defaultValue = "120", description = "每2分钟同步一次玩家信息（秒）", type = Integer.class)
     public static int SAVE_PLAYER_TIME;
     @ConfigPropertyAnnotation(key = "job_corn_refresh", defaultValue = "1 0 0 * * ? *", description = "每天凌晨刷新用户信息", type = String.class)
     public static String JOB_CORN_REFRESH;
@@ -63,6 +61,12 @@ public class GamePropertiesComponent extends AbstractComponent
 
     @ConfigPropertyAnnotation(key = "line_base_count", defaultValue = "5", description = "每日基础次数", type = Integer.class)
     public static int LINE_BASE_COUNT;
+
+    @ConfigPropertyAnnotation(key = "base_step_time", defaultValue = "500", description = "每一层跳跃时间", type = Integer.class)
+    public static int BASE_STEP_TIME;
+
+    @ConfigPropertyAnnotation(key = "base_step_time_rate", defaultValue = "1.5", description = "相差比率", type = Float.class)
+    public static float BASE_STEP_TIME_RATE;
 
     @ConfigPropertyAnnotation(key = "base_success", defaultValue = "70", description = "每一层成功概率", type = Integer.class)
     public static int BASE_SUCCESS;

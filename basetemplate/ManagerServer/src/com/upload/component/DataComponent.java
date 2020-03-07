@@ -11,6 +11,8 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import com.upload.data.data.NoticeData;
+import com.upload.data.data.ServerData;
+import com.upload.data.data.VersionData;
 import com.upload.util.HttpUtil;
 import com.upload.util.JsonUtil;
 import com.upload.util.LogFactory;
@@ -18,6 +20,10 @@ import com.upload.util.LogFactory;
 public class DataComponent extends AbstractComponent
 {
     private static List<NoticeData> noticeList = new ArrayList<>();
+
+    private static List<VersionData> versionList = new ArrayList<>();
+
+    private static List<ServerData> serverList = new ArrayList<>();
 
     private static ScheduledExecutorService scheduler;
 
@@ -31,34 +37,94 @@ public class DataComponent extends AbstractComponent
         return true;
     }
 
+    public static List<ServerData> getServerData()
+    {
+        List<ServerData> list = new ArrayList<>();
+
+        lock.readLock().lock();
+        try
+        {
+            for (ServerData data : serverList)
+            {
+                if (data.getState() == 1)
+                {
+                    list.add(data);
+                }
+            }
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+
+        return list;
+    }
+
+    public static ServerData getServerData(int serverID)
+    {
+        lock.readLock().lock();
+        try
+        {
+            for (ServerData data : serverList)
+            {
+                if (data.getServerID() == serverID)
+                {
+                    return data;
+                }
+            }
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+
+        return null;
+    }
+
     public static List<NoticeData> getAllNoticeList()
     {
-        List<NoticeData> list = new ArrayList<>();
-        list.addAll(noticeList);
-        return list;
+        lock.readLock().lock();
+        try
+        {
+            List<NoticeData> list = new ArrayList<>();
+            list.addAll(noticeList);
+            return list;
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
     }
 
     public static String addOrUpdateNotice(NoticeData data)
     {
-        boolean isContain = false;
-        for (NoticeData temp : noticeList)
+        lock.writeLock().lock();
+        try
         {
-            if (data.getNoticeType() == temp.getNoticeType() && data.getLanguageType().equalsIgnoreCase(temp.getLanguageType())
-                    && data.getID() == temp.getID())
+            boolean isContain = false;
+            for (NoticeData temp : noticeList)
             {
-                temp.setLanguageType(data.getLanguageType());
-                temp.setNoticeMessage(data.getNoticeMessage());
-                temp.setNoticeType(data.getNoticeType());
-                temp.setTitle(data.getTitle());
+                if (data.getNoticeType() == temp.getNoticeType() && data.getLanguageType().equalsIgnoreCase(temp.getLanguageType())
+                        && data.getID() == temp.getID())
+                {
+                    temp.setLanguageType(data.getLanguageType());
+                    temp.setNoticeMessage(data.getNoticeMessage());
+                    temp.setNoticeType(data.getNoticeType());
+                    temp.setTitle(data.getTitle());
 
-                isContain = true;
-                break;
+                    isContain = true;
+                    break;
+                }
+            }
+
+            if (isContain == false)
+            {
+                noticeList.add(data);
             }
         }
-
-        if (isContain == false)
+        finally
         {
-            noticeList.add(data);
+            lock.writeLock().unlock();
         }
 
         String url = GlobalConfigComponent.getConfig().server.serverUrl;
@@ -79,18 +145,100 @@ public class DataComponent extends AbstractComponent
 
     public static String removeNotice(int ID)
     {
-        for (NoticeData data : noticeList)
+        lock.writeLock().lock();
+        try
         {
-            if (data.getID() == ID)
+            for (NoticeData data : noticeList)
             {
-                noticeList.remove(data);
-                break;
+                if (data.getID() == ID)
+                {
+                    noticeList.remove(data);
+                    break;
+                }
             }
+        }
+        finally
+        {
+            lock.writeLock().unlock();
         }
 
         String url = GlobalConfigComponent.getConfig().server.serverUrl;
 
         String reqUrl = url + "/removeNotice?params={'id':" + ID + "}";
+        String result = HttpUtil.doGet(reqUrl, 120000);
+        return result;
+    }
+
+    public static List<VersionData> getAllVersionList()
+    {
+        lock.readLock().lock();
+        try
+        {
+            List<VersionData> list = new ArrayList<>();
+            list.addAll(versionList);
+            return list;
+        }
+        finally
+        {
+            lock.readLock().unlock();
+        }
+    }
+
+    public static String addOrUpdateVersion(VersionData data)
+    {
+        lock.writeLock().lock();
+        try
+        {
+            boolean isContain = false;
+            for (VersionData temp : versionList)
+            {
+                if (data.getVersionID() == temp.getVersionID())
+                {
+                    temp.setVersionDesc(data.getVersionDesc());
+                    temp.setIsForce(data.getIsForce());
+                    isContain = true;
+                    break;
+                }
+            }
+
+            if (isContain == false)
+            {
+                versionList.add(data);
+            }
+        }
+        finally
+        {
+            lock.writeLock().unlock();
+        }
+
+        String url = GlobalConfigComponent.getConfig().server.serverUrl;
+        String json = JsonUtil.parseObjectToString(data);
+        String reqUrl = url + "/updateVersion?params=" + json;
+        String result = HttpUtil.doGet(reqUrl, 120000);
+        return result;
+    }
+
+    public static String removeVersion(int version)
+    {
+        lock.writeLock().lock();
+        try
+        {
+            for (VersionData data : versionList)
+            {
+                if (data.getVersionID() == version)
+                {
+                    versionList.remove(data);
+                    break;
+                }
+            }
+        }
+        finally
+        {
+            lock.writeLock().unlock();
+        }
+
+        String url = GlobalConfigComponent.getConfig().server.serverUrl;
+        String reqUrl = url + "/delVersion?params={'versionID':" + version + "}";
         String result = HttpUtil.doGet(reqUrl, 120000);
         return result;
     }
@@ -113,8 +261,8 @@ public class DataComponent extends AbstractComponent
         try
         {
             String url = GlobalConfigComponent.getConfig().server.serverUrl;
-            url = url + "/getNotice";
-            String json = HttpUtil.doGet(url);
+            String noticeUrl = url + "/getNotice";
+            String json = HttpUtil.doGet(noticeUrl);
             // 公告列表
             List<NoticeData> list = JsonUtil.parseJsonToListObject(json, NoticeData.class);
             if (list != null && !list.isEmpty())
@@ -124,6 +272,42 @@ public class DataComponent extends AbstractComponent
                 {
                     noticeList.clear();
                     noticeList.addAll(list);
+                }
+                finally
+                {
+                    lock.writeLock().unlock();
+                }
+            }
+
+            String versionUrl = url + "/getVersionList";
+            String versionJson = HttpUtil.doGet(versionUrl);
+            // 版本列表
+            List<VersionData> versionListTemp = JsonUtil.parseJsonToListObject(versionJson, VersionData.class);
+            if (versionListTemp != null && !versionListTemp.isEmpty())
+            {
+                lock.writeLock().lock();
+                try
+                {
+                    versionList.clear();
+                    versionList.addAll(versionListTemp);
+                }
+                finally
+                {
+                    lock.writeLock().unlock();
+                }
+            }
+
+            String serverUrl = url + "/getServerList";
+            String serverJson = HttpUtil.doGet(serverUrl);
+            // 服务器列表
+            List<ServerData> serverListTemp = JsonUtil.parseJsonToListObject(serverJson, ServerData.class);
+            if (serverListTemp != null && !serverListTemp.isEmpty())
+            {
+                lock.writeLock().lock();
+                try
+                {
+                    serverList.clear();
+                    serverList.addAll(serverListTemp);
                 }
                 finally
                 {

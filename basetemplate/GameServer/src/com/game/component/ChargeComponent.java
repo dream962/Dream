@@ -131,13 +131,13 @@ public class ChargeComponent extends AbstractComponent
                 }
                 else
                 {
-                    LogFactory.error("checkPay Exception.result:{}, URL:{}", result, url);
+                    LogFactory.error("checkPay Exception1.result:{}, URL:{}", result, url);
                     return -1;
                 }
             }
             else
             {
-                LogFactory.error("checkPay Exception. URL:{},Result:{}", url, result);
+                LogFactory.error("checkPay Exception2. URL:{},Result:{}", url, result);
             }
         }
         catch (Exception e)
@@ -202,20 +202,27 @@ public class ChargeComponent extends AbstractComponent
     @Override
     public void stop()
     {
+        save();
         refreshJob.shutdown();
     }
 
+    /**
+     * 定时保存
+     */
     public static void save()
     {
         List<ChargeInfo> list2 = new ArrayList<>();
         if (!chargeInfoMap.isEmpty())
-            list2.addAll(chargeInfoMap.values());
-
-        for (ChargeInfo info : list2)
         {
-            if (info.isChanged())
-                PlayerBusiness.addOrUpdateCharge(info);
+            for (ChargeInfo info : chargeInfoMap.values())
+            {
+                if (info.isChanged())
+                    list2.add(info);
+            }
         }
+
+        if (!list2.isEmpty())
+            PlayerBusiness.addOrUpdateChargeList(list2);
     }
 
     public static void addChargeInfo(ChargeInfo info)
@@ -235,7 +242,6 @@ public class ChargeComponent extends AbstractComponent
         Access_Token = "ya29.c.Ko8BvQfZo-qiOLPjOJWkvORG5DrcjBjisyCCreSBj_FRvv6B5cY0z8TvJibsq_DUPI30FXaxu9lcMbdA0ieLjyEV1X85f9gUmkeV_vrJ5kOupEOTa5IalxwgYz1d5VF5tuDMTg_wzwszymlsr5qZZejwDPxg2sc2m1v0j1n1yOeHNqeYRx5LtZv70b8GbRRu1vM";
         int a = checkPay(googleSKU, purchaseToken);
         System.err.println(a);
-        // getAccessToken1();
     }
 
     public static void getAccessToken1()

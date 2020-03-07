@@ -1,56 +1,86 @@
 [
 	{
 	"googleSKU":"whalerun_0.99",
+	"chargeIngotID":102,
 	"chargeValue":0.99,
+	"isShowInList":1,
 	"itemPeculiarity":0,
 	"iconResource":"ic_shelves_donuts_2",
 	"configID":1,
+	"chargeRoleID":0,
 	"chargeIngot":60,
 	"freePercent":0
 	},
 	{
 	"googleSKU":"whalerun_1.99",
+	"chargeIngotID":102,
 	"chargeValue":1.99,
+	"isShowInList":1,
 	"itemPeculiarity":0,
 	"iconResource":"ic_shelves_donuts_3",
 	"configID":2,
+	"chargeRoleID":0,
 	"chargeIngot":144,
 	"freePercent":20
 	},
 	{
 	"googleSKU":"whalerun_3.99",
+	"chargeIngotID":102,
 	"chargeValue":3.99,
+	"isShowInList":1,
 	"itemPeculiarity":2,
 	"iconResource":"ic_shelves_donuts_4",
 	"configID":3,
+	"chargeRoleID":0,
 	"chargeIngot":312,
 	"freePercent":30
 	},
 	{
 	"googleSKU":"whalerun_9.99",
+	"chargeIngotID":102,
 	"chargeValue":9.99,
+	"isShowInList":1,
 	"itemPeculiarity":0,
 	"iconResource":"ic_shelves_donuts_5",
 	"configID":4,
+	"chargeRoleID":0,
 	"chargeIngot":840,
 	"freePercent":40
 	},
 	{
 	"googleSKU":"whalerun_15.99",
+	"chargeIngotID":102,
 	"chargeValue":15.99,
+	"isShowInList":1,
 	"itemPeculiarity":0,
 	"iconResource":"ic_shelves_donuts_6",
 	"configID":5,
+	"chargeRoleID":0,
 	"chargeIngot":1440,
 	"freePercent":50
 	},
 	{
 	"googleSKU":"whalerun_29.99",
+	"chargeIngotID":102,
 	"chargeValue":29.99,
+	"isShowInList":1,
 	"itemPeculiarity":1,
 	"iconResource":"ic_shelves_donuts_7",
 	"configID":6,
+	"chargeRoleID":0,
 	"chargeIngot":2880,
 	"freePercent":60
+	},
+	{
+	"googleSKU":"annie_2.99",
+	"chargeIngotID":0,
+	"chargeValue":2.99,
+	"isShowInList":0,
+	"itemPeculiarity":0,
+	"iconResource":"",
+	"configID":7,
+	"chargeRoleID":10,
+	"chargeIngot":0,
+	"freePercent":0
 	}
 ]

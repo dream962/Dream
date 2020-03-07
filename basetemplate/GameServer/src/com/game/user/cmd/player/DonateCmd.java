@@ -2,6 +2,7 @@ package com.game.user.cmd.player;
 
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemRemoveType;
 import com.game.component.RankComponent;
 import com.game.object.player.GamePlayer;
 import com.game.user.cmd.AbstractUserCmd;
@@ -35,7 +36,7 @@ public class DonateCmd extends AbstractUserCmd
             int consumeType = proto.getConsumeType();
 
             if (byad == false)
-                player.removeResource(itemID, count);
+                player.removeResource(itemID, count, ItemRemoveType.DONATE);
 
             int value = player.getPlayerInfo().getDonateValue() + count;
             player.getPlayerInfo().setDonateValue(value);

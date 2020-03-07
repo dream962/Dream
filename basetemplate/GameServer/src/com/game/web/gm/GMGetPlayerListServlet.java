@@ -1,28 +1,32 @@
-package com.game.web;
+package com.game.web.gm;
+
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.base.component.ScriptComponent;
 import com.base.web.PlayerHandlerServlet;
 import com.base.web.WebHandleAnnotation;
+import com.data.info.PlayerInfo;
+import com.game.component.GamePlayerComponent;
 import com.google.gson.JsonObject;
+import com.util.JsonUtil;
 import com.util.print.LogFactory;
 
 /**
- * 修改脚本
+ * 查询玩家信息
  * 
  * @author dream
  *
  */
-@WebHandleAnnotation(cmdName = "/gm/script", description = "")
-public class PlayerScriptServlet extends PlayerHandlerServlet
+@WebHandleAnnotation(cmdName = "/gm/getPlayerList", description = "")
+public class GMGetPlayerListServlet extends PlayerHandlerServlet
 {
     private static final long serialVersionUID = 1;
 
     public static class Req
     {
-        public String script;
+        public String name;
     }
 
     @Override
@@ -31,13 +35,16 @@ public class PlayerScriptServlet extends PlayerHandlerServlet
         try
         {
             JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
-            String script = jsonObject.get("script").getAsString();
+            String name = jsonObject.get("name").getAsString();
 
+            List<PlayerInfo> playerInfos = GamePlayerComponent.getPlayerByName(name);
             String result = "";
-            if (result != null)
-                result = ScriptComponent.evaluate(script);
+            if (playerInfos != null)
+                result = JsonUtil.parseObjectToString(playerInfos);
+            else
+                result = "";
 
-            return gson.toJson(new RetInfo(RetCode.OK, "脚本完成:" + result));
+            return result;
         }
         catch (Exception e)
         {

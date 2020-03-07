@@ -447,4 +447,35 @@ public class RankComponent extends AbstractComponent
 
         player.sendMessage(UserCmdOutType.LEADERBOARD_BASE_RETURN_VALUE, builder);
     }
+
+    /**
+     * 移除玩家
+     * 
+     * @param userID
+     */
+    public static void removePlauer(int userID)
+    {
+        for (Entry<Integer, Map<Integer, List<RankInfo>>> e1 : rankMap.entrySet())
+        {
+            if (e1.getValue() != null)
+            {
+                for (Entry<Integer, List<RankInfo>> e2 : e1.getValue().entrySet())
+                {
+                    if (e2.getValue() != null)
+                    {
+                        for (RankInfo e3 : e2.getValue())
+                        {
+                            if (e3.getUserID() == userID)
+                            {
+                                e2.getValue().remove(e3);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        genProto();
+    }
 }

@@ -5,8 +5,11 @@ import java.util.Date;
 import java.util.List;
 
 import com.base.net.client.IClientConnection;
+import com.data.bag.ItemAddType;
+import com.data.bag.ItemRemoveType;
 import com.data.business.PlayerBusiness;
 import com.data.component.GamePropertiesComponent;
+import com.data.log.ResourceLog;
 import com.data.type.ResourceType;
 import com.game.component.GamePlayerComponent;
 import com.game.module.PlayerCmdQueueModule;
@@ -297,34 +300,74 @@ public class GamePlayer extends AbstractGamePlayer
         return false;
     }
 
-    public void addResource(int type, int count)
+    public void addResource(int itemID, int count, ItemAddType type)
     {
-        if (type == ResourceType.COIN.getValue())
+        if (itemID == ResourceType.COIN.getValue())
         {
             getPlayerInfo().setGold(getPlayerInfo().getGold() + count);
         }
 
-        if (type == ResourceType.TTQ.getValue())
+        if (itemID == ResourceType.TTQ.getValue())
         {
             getPlayerInfo().setMoney(getPlayerInfo().getMoney() + count);
         }
+
+        ResourceLog log = new ResourceLog();
+        log.setAddTime(new Date());
+        log.setItemCount(count);
+        log.setUserID(getUserID());
+        log.setItemID(itemID);
+        log.setAddType(type.getValue());
+
+        GamePlayerComponent.addResourceLog(log);
     }
 
-    public void removeResource(int type, int count)
+    public void addResource(int itemID, int count, int type)
     {
-        if (type == ResourceType.COIN.getValue())
+        if (itemID == ResourceType.COIN.getValue())
+        {
+            getPlayerInfo().setGold(getPlayerInfo().getGold() + count);
+        }
+
+        if (itemID == ResourceType.TTQ.getValue())
+        {
+            getPlayerInfo().setMoney(getPlayerInfo().getMoney() + count);
+        }
+
+        ResourceLog log = new ResourceLog();
+        log.setAddTime(new Date());
+        log.setItemCount(count);
+        log.setUserID(getUserID());
+        log.setItemID(itemID);
+        log.setAddType(type);
+
+        GamePlayerComponent.addResourceLog(log);
+    }
+
+    public void removeResource(int itemID, int count, ItemRemoveType type)
+    {
+        if (itemID == ResourceType.COIN.getValue())
         {
             int gold = getPlayerInfo().getGold() - count;
             gold = gold < 0 ? 0 : gold;
             getPlayerInfo().setGold(gold);
         }
 
-        if (type == ResourceType.TTQ.getValue())
+        if (itemID == ResourceType.TTQ.getValue())
         {
             int money = getPlayerInfo().getMoney() - count;
             money = money < 0 ? 0 : money;
             getPlayerInfo().setMoney(money);
         }
+
+        ResourceLog log = new ResourceLog();
+        log.setAddTime(new Date());
+        log.setItemCount(count);
+        log.setUserID(getUserID());
+        log.setItemID(itemID);
+        log.setAddType(-type.getValue());
+
+        GamePlayerComponent.addResourceLog(log);
     }
 
     public void addGameModeType(int type)

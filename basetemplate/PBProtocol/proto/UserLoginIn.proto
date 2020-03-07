@@ -27,6 +27,12 @@ message PingProtoIn
 	optional int64 serverTime = 1;			//服务器时间
 }
 
+/*单机玩法开始*/
+message GameBeginProtoIn
+{
+	required ModeType gameType = 1;         //单机玩法类型（练习, 金币，无尽， 限时  竞速）
+}
+
 /*单机玩法的结果*/
 message GameOverProtoIn
 {

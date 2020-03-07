@@ -5,6 +5,7 @@ import java.util.List;
 import com.base.code.ErrorCodeType;
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
+import com.data.bag.ItemRemoveType;
 import com.data.bean.UnlockBean;
 import com.data.bean.factory.UnlockBeanFactory;
 import com.game.object.player.GamePlayer;
@@ -49,7 +50,7 @@ public class UnlockGameCmd extends AbstractUserCmd
                     return;
                 }
 
-                player.removeResource(bean.getItemID(), bean.getItemCount());
+                player.removeResource(bean.getItemID(), bean.getItemCount(), ItemRemoveType.GAME_UNLOCK);
             }
             else
             {

@@ -12,6 +12,7 @@ enum PlatformType
 //玩法模式类型
 enum ModeType
 {
+	NONE 	 	= 0;           //空
     NormalMode 	 = 1;           //正常模式
     Coin 		 = 2;           //金币
     EndLess 	 = 3;           //无尽

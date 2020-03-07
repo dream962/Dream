@@ -38,6 +38,7 @@ public class LoginAccountServlet extends PlayerHandlerServlet
         public String name;// openID->gName;machineCode->UserName
         public String openID;
         public String machinecode;
+        public int version; // 当前版本
     }
 
     static class Res
@@ -48,6 +49,8 @@ public class LoginAccountServlet extends PlayerHandlerServlet
         public int webPort;
         public String name;
         public String error;
+        public boolean isForce; // 是否强制更新
+        public int maxVersion;  // 当前最高版本
     }
 
     @Override
@@ -81,7 +84,7 @@ public class LoginAccountServlet extends PlayerHandlerServlet
         // 自定义名字注册的判断名字是否重复
         if (userInfo == null)
         {
-            if(StringUtil.isNullOrEmpty(requestInfo.openID))
+            if (StringUtil.isNullOrEmpty(requestInfo.openID))
             {
                 boolean isUserNameUsed = AccountCacheComponent.getCacheUser().checkUserName(requestInfo.name);
                 if (isUserNameUsed)
@@ -134,8 +137,18 @@ public class LoginAccountServlet extends PlayerHandlerServlet
         res.name = requestInfo.name;
         res.error = "success";
 
+        res.isForce = ServerComponent.getVersionForce(requestInfo.version);
+        res.maxVersion = ServerComponent.getMaxVersion();
+
+        // 强制更新,下发空
+        if (res.isForce && res.maxVersion > 0)
+        {
+            res.gamePort = 0;
+            res.ip = "";
+        }
+
         System.err.println("account:" + res.name + "," + requestInfo.openID + ",userID:" + userInfo.getUserID() + ",machineCode:"
-                + userInfo.getMachineCode());
+                + userInfo.getMachineCode() + ",force:" + res.isForce + ",ip:" + res.ip);
 
         String msg = gson.toJson(res);
         return gson.toJson(new RetInfo(ErrorCodeType.Success, "", msg));

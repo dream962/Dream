@@ -2555,6 +2555,459 @@ public final class UserInMsg {
     // @@protoc_insertion_point(class_scope:PingProtoIn)
   }
 
+  public interface GameBeginProtoInOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required .ModeType gameType = 1;
+    /**
+     * <code>required .ModeType gameType = 1;</code>
+     *
+     * <pre>
+     *单机玩法类型（练习, 金币，无尽， 限时  竞速）
+     * </pre>
+     */
+    boolean hasGameType();
+    /**
+     * <code>required .ModeType gameType = 1;</code>
+     *
+     * <pre>
+     *单机玩法类型（练习, 金币，无尽， 限时  竞速）
+     * </pre>
+     */
+    com.proto.common.gen.CommonOutMsg.ModeType getGameType();
+  }
+  /**
+   * Protobuf type {@code GameBeginProtoIn}
+   *
+   * <pre>
+   *单机玩法开始
+   * </pre>
+   */
+  public static final class GameBeginProtoIn extends
+      com.google.protobuf.GeneratedMessage
+      implements GameBeginProtoInOrBuilder {
+    // Use GameBeginProtoIn.newBuilder() to construct.
+    private GameBeginProtoIn(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private GameBeginProtoIn(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final GameBeginProtoIn defaultInstance;
+    public static GameBeginProtoIn getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public GameBeginProtoIn getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GameBeginProtoIn(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.proto.common.gen.CommonOutMsg.ModeType value = com.proto.common.gen.CommonOutMsg.ModeType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                gameType_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.proto.user.gen.UserInMsg.internal_static_GameBeginProtoIn_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.proto.user.gen.UserInMsg.internal_static_GameBeginProtoIn_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.proto.user.gen.UserInMsg.GameBeginProtoIn.class, com.proto.user.gen.UserInMsg.GameBeginProtoIn.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<GameBeginProtoIn> PARSER =
+        new com.google.protobuf.AbstractParser<GameBeginProtoIn>() {
+      public GameBeginProtoIn parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GameBeginProtoIn(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GameBeginProtoIn> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required .ModeType gameType = 1;
+    public static final int GAMETYPE_FIELD_NUMBER = 1;
+    private com.proto.common.gen.CommonOutMsg.ModeType gameType_;
+    /**
+     * <code>required .ModeType gameType = 1;</code>
+     *
+     * <pre>
+     *单机玩法类型（练习, 金币，无尽， 限时  竞速）
+     * </pre>
+     */
+    public boolean hasGameType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .ModeType gameType = 1;</code>
+     *
+     * <pre>
+     *单机玩法类型（练习, 金币，无尽， 限时  竞速）
+     * </pre>
+     */
+    public com.proto.common.gen.CommonOutMsg.ModeType getGameType() {
+      return gameType_;
+    }
+
+    private void initFields() {
+      gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasGameType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, gameType_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, gameType_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.proto.user.gen.UserInMsg.GameBeginProtoIn parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.proto.user.gen.UserInMsg.GameBeginProtoIn prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GameBeginProtoIn}
+     *
+     * <pre>
+     *单机玩法开始
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.proto.user.gen.UserInMsg.GameBeginProtoInOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.proto.user.gen.UserInMsg.internal_static_GameBeginProtoIn_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.proto.user.gen.UserInMsg.internal_static_GameBeginProtoIn_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.proto.user.gen.UserInMsg.GameBeginProtoIn.class, com.proto.user.gen.UserInMsg.GameBeginProtoIn.Builder.class);
+      }
+
+      // Construct using com.proto.user.gen.UserInMsg.GameBeginProtoIn.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.proto.user.gen.UserInMsg.internal_static_GameBeginProtoIn_descriptor;
+      }
+
+      public com.proto.user.gen.UserInMsg.GameBeginProtoIn getDefaultInstanceForType() {
+        return com.proto.user.gen.UserInMsg.GameBeginProtoIn.getDefaultInstance();
+      }
+
+      public com.proto.user.gen.UserInMsg.GameBeginProtoIn build() {
+        com.proto.user.gen.UserInMsg.GameBeginProtoIn result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.proto.user.gen.UserInMsg.GameBeginProtoIn buildPartial() {
+        com.proto.user.gen.UserInMsg.GameBeginProtoIn result = new com.proto.user.gen.UserInMsg.GameBeginProtoIn(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.gameType_ = gameType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.proto.user.gen.UserInMsg.GameBeginProtoIn) {
+          return mergeFrom((com.proto.user.gen.UserInMsg.GameBeginProtoIn)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.proto.user.gen.UserInMsg.GameBeginProtoIn other) {
+        if (other == com.proto.user.gen.UserInMsg.GameBeginProtoIn.getDefaultInstance()) return this;
+        if (other.hasGameType()) {
+          setGameType(other.getGameType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasGameType()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.proto.user.gen.UserInMsg.GameBeginProtoIn parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.proto.user.gen.UserInMsg.GameBeginProtoIn) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required .ModeType gameType = 1;
+      private com.proto.common.gen.CommonOutMsg.ModeType gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
+      /**
+       * <code>required .ModeType gameType = 1;</code>
+       *
+       * <pre>
+       *单机玩法类型（练习, 金币，无尽， 限时  竞速）
+       * </pre>
+       */
+      public boolean hasGameType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .ModeType gameType = 1;</code>
+       *
+       * <pre>
+       *单机玩法类型（练习, 金币，无尽， 限时  竞速）
+       * </pre>
+       */
+      public com.proto.common.gen.CommonOutMsg.ModeType getGameType() {
+        return gameType_;
+      }
+      /**
+       * <code>required .ModeType gameType = 1;</code>
+       *
+       * <pre>
+       *单机玩法类型（练习, 金币，无尽， 限时  竞速）
+       * </pre>
+       */
+      public Builder setGameType(com.proto.common.gen.CommonOutMsg.ModeType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        gameType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .ModeType gameType = 1;</code>
+       *
+       * <pre>
+       *单机玩法类型（练习, 金币，无尽， 限时  竞速）
+       * </pre>
+       */
+      public Builder clearGameType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:GameBeginProtoIn)
+    }
+
+    static {
+      defaultInstance = new GameBeginProtoIn(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:GameBeginProtoIn)
+  }
+
   public interface GameOverProtoInOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
@@ -2801,7 +3254,7 @@ public final class UserInMsg {
     }
 
     private void initFields() {
-      gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NormalMode;
+      gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
       endValue_ = 0L;
       diamondCount_ = 0;
     }
@@ -2979,7 +3432,7 @@ public final class UserInMsg {
 
       public Builder clear() {
         super.clear();
-        gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NormalMode;
+        gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
         bitField0_ = (bitField0_ & ~0x00000001);
         endValue_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -3090,7 +3543,7 @@ public final class UserInMsg {
       private int bitField0_;
 
       // required .ModeType gameType = 1;
-      private com.proto.common.gen.CommonOutMsg.ModeType gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NormalMode;
+      private com.proto.common.gen.CommonOutMsg.ModeType gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
       /**
        * <code>required .ModeType gameType = 1;</code>
        *
@@ -3136,7 +3589,7 @@ public final class UserInMsg {
        */
       public Builder clearGameType() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NormalMode;
+        gameType_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
         onChanged();
         return this;
       }
@@ -6992,7 +7445,7 @@ public final class UserInMsg {
     }
 
     private void initFields() {
-      gameMode_ = com.proto.common.gen.CommonOutMsg.ModeType.NormalMode;
+      gameMode_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
       unLockByAD_ = false;
     }
     private byte memoizedIsInitialized = -1;
@@ -7150,7 +7603,7 @@ public final class UserInMsg {
 
       public Builder clear() {
         super.clear();
-        gameMode_ = com.proto.common.gen.CommonOutMsg.ModeType.NormalMode;
+        gameMode_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
         bitField0_ = (bitField0_ & ~0x00000001);
         unLockByAD_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -7240,7 +7693,7 @@ public final class UserInMsg {
       private int bitField0_;
 
       // optional .ModeType gameMode = 1;
-      private com.proto.common.gen.CommonOutMsg.ModeType gameMode_ = com.proto.common.gen.CommonOutMsg.ModeType.NormalMode;
+      private com.proto.common.gen.CommonOutMsg.ModeType gameMode_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
       /**
        * <code>optional .ModeType gameMode = 1;</code>
        *
@@ -7286,7 +7739,7 @@ public final class UserInMsg {
        */
       public Builder clearGameMode() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        gameMode_ = com.proto.common.gen.CommonOutMsg.ModeType.NormalMode;
+        gameMode_ = com.proto.common.gen.CommonOutMsg.ModeType.NONE;
         onChanged();
         return this;
       }
@@ -14539,6 +14992,11 @@ public final class UserInMsg {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_PingProtoIn_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_GameBeginProtoIn_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_GameBeginProtoIn_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_GameOverProtoIn_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -14657,42 +15115,43 @@ public final class UserInMsg {
       "\002 \001(\t\022\014\n\004keys\030\003 \003(\005\"[\n\022BindAccountProtoI" +
       "n\022\014\n\004name\030\001 \002(\t\022\023\n\013machinecode\030\002 \002(\t\022\022\n\n" +
       "googleName\030\003 \002(\t\022\016\n\006openID\030\004 \002(\t\"!\n\013Ping" +
-      "ProtoIn\022\022\n\nserverTime\030\001 \001(\003\"V\n\017GameOverP" +
-      "rotoIn\022\033\n\010gameType\030\001 \002(\0162\t.ModeType\022\020\n\010e" +
-      "ndValue\030\002 \002(\003\022\024\n\014diamondCount\030\003 \002(\005\"H\n\022R" +
-      "andomMatchProtoIn\022\025\n\rplatformCount\030\001 \002(\005" +
-      "\022\033\n\010roleType\030\002 \002(\0162\t.RoleType\"L\n\021PlayerJ",
-      "umpProtoIn\022\022\n\nisLeftJump\030\001 \002(\010\022\020\n\010multip" +
-      "le\030\002 \002(\002\022\021\n\tjumpIndex\030\003 \002(\005\",\n\023PlayerBeK" +
-      "illProtoIn\022\025\n\rplatformIndex\030\001 \002(\005\"%\n\021Inv" +
-      "iteBackProtoIn\022\020\n\010isPermit\030\001 \002(\010\"+\n\017Rech" +
-      "argeProtoIn\022\030\n\020rechargeConfigID\030\001 \001(\005\"R\n" +
-      "\025RechargeVerifyProtoIn\022\017\n\007orderID\030\001 \002(\t\022" +
-      "\021\n\tproductID\030\002 \002(\t\022\025\n\rpurchaseToken\030\003 \002(" +
-      "\t\"D\n\021GameUnlockProtoIn\022\033\n\010gameMode\030\001 \001(\016" +
-      "2\t.ModeType\022\022\n\nunLockByAD\030\002 \001(\010\"_\n\021Donat" +
-      "eItemProtoIn\022\016\n\006itemID\030\001 \002(\005\022\021\n\titemCoun",
-      "t\030\002 \002(\005\022\022\n\nbyAdDonate\030\003 \002(\010\022\023\n\013consumeTy" +
-      "pe\030\004 \002(\005\"/\n\023ExchangeItemProtoIn\022\030\n\020excha" +
-      "ngeConfigID\030\001 \002(\005\"0\n\021UnlockRoleProtoIn\022\033" +
-      "\n\010roleType\030\001 \002(\0162\t.RoleType\">\n\025UnlockPla" +
-      "tformProtoIn\022%\n\rplatformTheme\030\001 \002(\0162\016.Pl" +
-      "atformTheme\"+\n\017RemoveAdProtoIn\022\030\n\020remove" +
-      "AdConfigID\030\001 \002(\005\"=\n\030ConsumeItemRevivePro" +
-      "toIn\022\016\n\006itemID\030\001 \002(\005\022\021\n\titemCount\030\002 \002(\005\"" +
-      "8\n\023CheatAddItemProtoIn\022\016\n\006itemID\030\001 \002(\005\022\021" +
-      "\n\titemCount\030\002 \002(\005\"~\n\017RankInfoProtoIn\022\033\n\010",
-      "rankType\030\001 \002(\0162\t.RankType\022#\n\014rankTimeTyp" +
-      "e\030\002 \002(\0162\r.RankTimeType\022)\n\017rankSectionTyp" +
-      "e\030\003 \002(\0162\020.RankSectionType\"\037\n\rHeadIDProto" +
-      "In\022\016\n\006headID\030\001 \002(\005\".\n\022GetRoomListProtoIn" +
-      "\022\030\n\020roomIdOrRoomName\030\001 \002(\t\"R\n\021CreateRoom" +
-      "ProtoIn\022\020\n\010roomName\030\001 \002(\t\022\016\n\006length\030\002 \002(" +
-      "\005\022\033\n\010roleType\030\003 \002(\0162\t.RoleType\"<\n\rRoomID" +
-      "ProtoIn\022\016\n\006roomID\030\001 \002(\005\022\033\n\010roleType\030\002 \002(" +
-      "\0162\t.RoleType\"4\n\025ChangeRoleTypeProtoIn\022\033\n" +
-      "\010roleType\030\001 \002(\0162\t.RoleTypeB\037\n\022com.proto.",
-      "user.genB\tUserInMsg"
+      "ProtoIn\022\022\n\nserverTime\030\001 \001(\003\"/\n\020GameBegin" +
+      "ProtoIn\022\033\n\010gameType\030\001 \002(\0162\t.ModeType\"V\n\017" +
+      "GameOverProtoIn\022\033\n\010gameType\030\001 \002(\0162\t.Mode" +
+      "Type\022\020\n\010endValue\030\002 \002(\003\022\024\n\014diamondCount\030\003" +
+      " \002(\005\"H\n\022RandomMatchProtoIn\022\025\n\rplatformCo",
+      "unt\030\001 \002(\005\022\033\n\010roleType\030\002 \002(\0162\t.RoleType\"L" +
+      "\n\021PlayerJumpProtoIn\022\022\n\nisLeftJump\030\001 \002(\010\022" +
+      "\020\n\010multiple\030\002 \002(\002\022\021\n\tjumpIndex\030\003 \002(\005\",\n\023" +
+      "PlayerBeKillProtoIn\022\025\n\rplatformIndex\030\001 \002" +
+      "(\005\"%\n\021InviteBackProtoIn\022\020\n\010isPermit\030\001 \002(" +
+      "\010\"+\n\017RechargeProtoIn\022\030\n\020rechargeConfigID" +
+      "\030\001 \001(\005\"R\n\025RechargeVerifyProtoIn\022\017\n\007order" +
+      "ID\030\001 \002(\t\022\021\n\tproductID\030\002 \002(\t\022\025\n\rpurchaseT" +
+      "oken\030\003 \002(\t\"D\n\021GameUnlockProtoIn\022\033\n\010gameM" +
+      "ode\030\001 \001(\0162\t.ModeType\022\022\n\nunLockByAD\030\002 \001(\010",
+      "\"_\n\021DonateItemProtoIn\022\016\n\006itemID\030\001 \002(\005\022\021\n" +
+      "\titemCount\030\002 \002(\005\022\022\n\nbyAdDonate\030\003 \002(\010\022\023\n\013" +
+      "consumeType\030\004 \002(\005\"/\n\023ExchangeItemProtoIn" +
+      "\022\030\n\020exchangeConfigID\030\001 \002(\005\"0\n\021UnlockRole" +
+      "ProtoIn\022\033\n\010roleType\030\001 \002(\0162\t.RoleType\">\n\025" +
+      "UnlockPlatformProtoIn\022%\n\rplatformTheme\030\001" +
+      " \002(\0162\016.PlatformTheme\"+\n\017RemoveAdProtoIn\022" +
+      "\030\n\020removeAdConfigID\030\001 \002(\005\"=\n\030ConsumeItem" +
+      "ReviveProtoIn\022\016\n\006itemID\030\001 \002(\005\022\021\n\titemCou" +
+      "nt\030\002 \002(\005\"8\n\023CheatAddItemProtoIn\022\016\n\006itemI",
+      "D\030\001 \002(\005\022\021\n\titemCount\030\002 \002(\005\"~\n\017RankInfoPr" +
+      "otoIn\022\033\n\010rankType\030\001 \002(\0162\t.RankType\022#\n\014ra" +
+      "nkTimeType\030\002 \002(\0162\r.RankTimeType\022)\n\017rankS" +
+      "ectionType\030\003 \002(\0162\020.RankSectionType\"\037\n\rHe" +
+      "adIDProtoIn\022\016\n\006headID\030\001 \002(\005\".\n\022GetRoomLi" +
+      "stProtoIn\022\030\n\020roomIdOrRoomName\030\001 \002(\t\"R\n\021C" +
+      "reateRoomProtoIn\022\020\n\010roomName\030\001 \002(\t\022\016\n\006le" +
+      "ngth\030\002 \002(\005\022\033\n\010roleType\030\003 \002(\0162\t.RoleType\"" +
+      "<\n\rRoomIDProtoIn\022\016\n\006roomID\030\001 \002(\005\022\033\n\010role" +
+      "Type\030\002 \002(\0162\t.RoleType\"4\n\025ChangeRoleTypeP",
+      "rotoIn\022\033\n\010roleType\030\001 \002(\0162\t.RoleTypeB\037\n\022c" +
+      "om.proto.user.genB\tUserInMsg"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -14717,128 +15176,134 @@ public final class UserInMsg {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_PingProtoIn_descriptor,
               new java.lang.String[] { "ServerTime", });
-          internal_static_GameOverProtoIn_descriptor =
+          internal_static_GameBeginProtoIn_descriptor =
             getDescriptor().getMessageTypes().get(3);
+          internal_static_GameBeginProtoIn_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_GameBeginProtoIn_descriptor,
+              new java.lang.String[] { "GameType", });
+          internal_static_GameOverProtoIn_descriptor =
+            getDescriptor().getMessageTypes().get(4);
           internal_static_GameOverProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_GameOverProtoIn_descriptor,
               new java.lang.String[] { "GameType", "EndValue", "DiamondCount", });
           internal_static_RandomMatchProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(4);
+            getDescriptor().getMessageTypes().get(5);
           internal_static_RandomMatchProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_RandomMatchProtoIn_descriptor,
               new java.lang.String[] { "PlatformCount", "RoleType", });
           internal_static_PlayerJumpProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(5);
+            getDescriptor().getMessageTypes().get(6);
           internal_static_PlayerJumpProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_PlayerJumpProtoIn_descriptor,
               new java.lang.String[] { "IsLeftJump", "Multiple", "JumpIndex", });
           internal_static_PlayerBeKillProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(6);
+            getDescriptor().getMessageTypes().get(7);
           internal_static_PlayerBeKillProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_PlayerBeKillProtoIn_descriptor,
               new java.lang.String[] { "PlatformIndex", });
           internal_static_InviteBackProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(7);
+            getDescriptor().getMessageTypes().get(8);
           internal_static_InviteBackProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_InviteBackProtoIn_descriptor,
               new java.lang.String[] { "IsPermit", });
           internal_static_RechargeProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(8);
+            getDescriptor().getMessageTypes().get(9);
           internal_static_RechargeProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_RechargeProtoIn_descriptor,
               new java.lang.String[] { "RechargeConfigID", });
           internal_static_RechargeVerifyProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(9);
+            getDescriptor().getMessageTypes().get(10);
           internal_static_RechargeVerifyProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_RechargeVerifyProtoIn_descriptor,
               new java.lang.String[] { "OrderID", "ProductID", "PurchaseToken", });
           internal_static_GameUnlockProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(10);
+            getDescriptor().getMessageTypes().get(11);
           internal_static_GameUnlockProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_GameUnlockProtoIn_descriptor,
               new java.lang.String[] { "GameMode", "UnLockByAD", });
           internal_static_DonateItemProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(11);
+            getDescriptor().getMessageTypes().get(12);
           internal_static_DonateItemProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_DonateItemProtoIn_descriptor,
               new java.lang.String[] { "ItemID", "ItemCount", "ByAdDonate", "ConsumeType", });
           internal_static_ExchangeItemProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(12);
+            getDescriptor().getMessageTypes().get(13);
           internal_static_ExchangeItemProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_ExchangeItemProtoIn_descriptor,
               new java.lang.String[] { "ExchangeConfigID", });
           internal_static_UnlockRoleProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(13);
+            getDescriptor().getMessageTypes().get(14);
           internal_static_UnlockRoleProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_UnlockRoleProtoIn_descriptor,
               new java.lang.String[] { "RoleType", });
           internal_static_UnlockPlatformProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(14);
+            getDescriptor().getMessageTypes().get(15);
           internal_static_UnlockPlatformProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_UnlockPlatformProtoIn_descriptor,
               new java.lang.String[] { "PlatformTheme", });
           internal_static_RemoveAdProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(15);
+            getDescriptor().getMessageTypes().get(16);
           internal_static_RemoveAdProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_RemoveAdProtoIn_descriptor,
               new java.lang.String[] { "RemoveAdConfigID", });
           internal_static_ConsumeItemReviveProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(16);
+            getDescriptor().getMessageTypes().get(17);
           internal_static_ConsumeItemReviveProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_ConsumeItemReviveProtoIn_descriptor,
               new java.lang.String[] { "ItemID", "ItemCount", });
           internal_static_CheatAddItemProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(17);
+            getDescriptor().getMessageTypes().get(18);
           internal_static_CheatAddItemProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_CheatAddItemProtoIn_descriptor,
               new java.lang.String[] { "ItemID", "ItemCount", });
           internal_static_RankInfoProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(18);
+            getDescriptor().getMessageTypes().get(19);
           internal_static_RankInfoProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_RankInfoProtoIn_descriptor,
               new java.lang.String[] { "RankType", "RankTimeType", "RankSectionType", });
           internal_static_HeadIDProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(19);
+            getDescriptor().getMessageTypes().get(20);
           internal_static_HeadIDProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_HeadIDProtoIn_descriptor,
               new java.lang.String[] { "HeadID", });
           internal_static_GetRoomListProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(20);
+            getDescriptor().getMessageTypes().get(21);
           internal_static_GetRoomListProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_GetRoomListProtoIn_descriptor,
               new java.lang.String[] { "RoomIdOrRoomName", });
           internal_static_CreateRoomProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(21);
+            getDescriptor().getMessageTypes().get(22);
           internal_static_CreateRoomProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_CreateRoomProtoIn_descriptor,
               new java.lang.String[] { "RoomName", "Length", "RoleType", });
           internal_static_RoomIDProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(22);
+            getDescriptor().getMessageTypes().get(23);
           internal_static_RoomIDProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_RoomIDProtoIn_descriptor,
               new java.lang.String[] { "RoomID", "RoleType", });
           internal_static_ChangeRoleTypeProtoIn_descriptor =
-            getDescriptor().getMessageTypes().get(23);
+            getDescriptor().getMessageTypes().get(24);
           internal_static_ChangeRoleTypeProtoIn_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_ChangeRoleTypeProtoIn_descriptor,

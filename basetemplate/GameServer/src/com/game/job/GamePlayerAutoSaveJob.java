@@ -5,6 +5,7 @@ import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
+import com.game.component.ChargeComponent;
 import com.game.component.GamePlayerComponent;
 
 /**
@@ -19,5 +20,6 @@ public class GamePlayerAutoSaveJob implements Job
     public void execute(JobExecutionContext arg0) throws JobExecutionException
     {
         GamePlayerComponent.save();
+        ChargeComponent.save();
     }
 }

@@ -46,10 +46,6 @@ public class GameJobComponent extends AbstractComponent
         QuartzComponent.deleteJob("job_save_player");
         QuartzComponent.addForEverDelayJob("job_save_player", GamePlayerAutoSaveJob.class, GamePropertiesComponent.JOB_SAVE_PLAYER);
 
-        // 刷新支付
-        QuartzComponent.deleteJob("refresh_token");
-        QuartzComponent.addForEverDelayJob("refresh_token", GamePlayerAutoSaveJob.class, GamePropertiesComponent.REFRESH_TOKEN);
-
         return true;
     }
 
