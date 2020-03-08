@@ -36,7 +36,7 @@ public class GameJobComponent extends AbstractComponent
 
         // 每月数据清空
         QuartzComponent.deleteJob("month_refresh");
-        QuartzComponent.addCornJob("month_refresh", MonthRefreshJob.class, GamePropertiesComponent.SUNDAY_REFRESH);
+        QuartzComponent.addCornJob("month_refresh", MonthRefreshJob.class, GamePropertiesComponent.MONTH_REFRESH);
 
         // ping玩家信息
         QuartzComponent.deleteJob("job_ping_player");
