@@ -2,6 +2,6 @@ basetemplate/.metadata/
 basetemplate/.recommenders/
 basetemplate/deploy/
 bin/
-log/
 *.class
 *.class
+*.log
