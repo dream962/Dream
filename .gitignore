@@ -5,3 +5,5 @@ bin/
 *.class
 *.class
 *.log
+basetemplate/ManagerServer/.classpath
+basetemplate/ManagerServer/.settings/org.eclipse.wst.common.project.facet.core.xml

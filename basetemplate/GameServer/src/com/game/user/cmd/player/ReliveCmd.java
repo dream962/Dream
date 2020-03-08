@@ -28,6 +28,9 @@ public class ReliveCmd extends AbstractUserCmd
             int count = proto.getItemCount();
             int itemID = proto.getItemID();
 
+            if (count <= 0)
+                return;
+
             if (!player.checkResource(itemID, count))
             {
                 player.sendErrorCode(ErrorCodeType.Not_Enough_Resource, "资源不足.");
