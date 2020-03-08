@@ -35,15 +35,15 @@ public class UnlockGameCmd extends AbstractUserCmd
             boolean unlockByAD = proto.getUnLockByAD();
 
             UnlockBean bean = UnlockBeanFactory.getUnlockBean(type.getNumber());
+            if (bean == null)
+            {
+                player.sendErrorCode(ErrorCodeType.Config_Error, "解锁关卡配置无效");
+                return;
+            }
+
             // 非金币模式
             if (type != ModeType.Coin)
             {
-                if (bean == null)
-                {
-                    player.sendErrorCode(ErrorCodeType.Config_Error, "解锁关卡配置无效");
-                    return;
-                }
-
                 if (!player.checkResource(bean.getItemID(), bean.getItemCount()))
                 {
                     player.sendErrorCode(ErrorCodeType.Not_Enough_Resource, "资源不足.");
@@ -54,9 +54,17 @@ public class UnlockGameCmd extends AbstractUserCmd
             }
             else
             {
-                // 金币模式可以通过广告解锁
+                // 金币模式可以通过广告解锁,false非广告
                 if (unlockByAD == false)
-                    return;
+                {
+                    if (!player.checkResource(bean.getItemID(), bean.getItemCount()))
+                    {
+                        player.sendErrorCode(ErrorCodeType.Not_Enough_Resource, "资源不足.");
+                        return;
+                    }
+
+                    player.removeResource(bean.getItemID(), bean.getItemCount(), ItemRemoveType.GAME_UNLOCK);
+                }
             }
 
             player.addGameModeType(type.getNumber());
