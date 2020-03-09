@@ -62,10 +62,13 @@ public class GamePropertiesComponent extends AbstractComponent
     @ConfigPropertyAnnotation(key = "line_base_count", defaultValue = "5", description = "每日基础次数", type = Integer.class)
     public static int LINE_BASE_COUNT;
 
-    @ConfigPropertyAnnotation(key = "base_step_time", defaultValue = "500", description = "每一层跳跃时间", type = Integer.class)
+    @ConfigPropertyAnnotation(key = "base_step_time", defaultValue = "280", description = "每一层跳跃时间", type = Integer.class)
     public static int BASE_STEP_TIME;
 
-    @ConfigPropertyAnnotation(key = "base_step_time_rate", defaultValue = "1.5", description = "相差比率", type = Float.class)
+    @ConfigPropertyAnnotation(key = "base_step_time_500", defaultValue = "330", description = "每一层跳跃时间", type = Integer.class)
+    public static int BASE_STEP_TIME_500;
+
+    @ConfigPropertyAnnotation(key = "base_step_time_rate", defaultValue = "1.2", description = "相差比率", type = Float.class)
     public static float BASE_STEP_TIME_RATE;
 
     @ConfigPropertyAnnotation(key = "base_success", defaultValue = "70", description = "每一层成功概率", type = Integer.class)

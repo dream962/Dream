@@ -138,6 +138,7 @@ public class GamePlayerComponent extends AbstractComponent
         });
 
         LogFactory.info("gameplayer disconnect. count" + list.size());
+
         gamePlayerMap.clear();
     }
 
@@ -246,8 +247,8 @@ public class GamePlayerComponent extends AbstractComponent
                 else
                 {
                     if (player2.getNickName().equalsIgnoreCase(name) ||
-                            (player2.getPlayerInfo().getAccountName()!=null && player2.getPlayerInfo().getAccountName().equalsIgnoreCase(name)) ||
-                            (player2.getPlayerInfo().getAccuntGName() !=null && player2.getPlayerInfo().getAccuntGName().equalsIgnoreCase(name)))
+                            (player2.getPlayerInfo().getAccountName() != null && player2.getPlayerInfo().getAccountName().equalsIgnoreCase(name)) ||
+                            (player2.getPlayerInfo().getAccuntGName() != null && player2.getPlayerInfo().getAccuntGName().equalsIgnoreCase(name)))
                     {
                         list.add(player2.getPlayerInfo());
                     }

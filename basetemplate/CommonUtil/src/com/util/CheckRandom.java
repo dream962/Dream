@@ -19,14 +19,21 @@ public class CheckRandom
         init(seed);
     }
 
+    /**
+     * 由一个seed初始化随机数产生器
+     * 首先将传入的seed赋给MT[0]作为初值，然后根据递推式：MT[i] = f × (MT[i-1] ⊕ (MT[i-1] >> (w-2))) + i递推求出梅森旋转链
+     * 
+     * @param seed
+     */
     private void init(int seed)
     {
         int i;
         int p;
         index = 0;
         data[0] = seed;
+        /* loop over each other element */
         for (i = 1; i < 624; ++i)
-        { /* loop over each other element */
+        {
             p = 1812433253 * (data[i - 1] ^ (data[i - 1] >> 30)) + i;
             data[i] = p & 0xffffffff; /* get last 32 bits of p */
         }

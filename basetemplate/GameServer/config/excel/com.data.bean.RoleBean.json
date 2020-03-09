@@ -1,7 +1,7 @@
 [
 	{
 	"objectID":1,
-	"icon":"",
+	"icon":"ic_character_front_1",
 	"count":0,
 	"itemID":0,
 	"detail":"由于扶墙跌入艾尔斯幻境（Ayers），整个鲸都方了！",
@@ -9,7 +9,7 @@
 	},
 	{
 	"objectID":2,
-	"icon":"",
+	"icon":"ic_character_front_2",
 	"count":30,
 	"itemID":102,
 	"detail":"蓝鲸的好朋友，生活在艾尔斯草原。",
@@ -17,7 +17,7 @@
 	},
 	{
 	"objectID":3,
-	"icon":"",
+	"icon":"ic_character_front_3",
 	"count":120,
 	"itemID":102,
 	"detail":"来自神秘的东方！所以大家都叫他小东！",
@@ -25,7 +25,7 @@
 	},
 	{
 	"objectID":4,
-	"icon":"",
+	"icon":"ic_character_front_4",
 	"count":30,
 	"itemID":102,
 	"detail":"森林之王，守护着一方动物。",
@@ -33,7 +33,7 @@
 	},
 	{
 	"objectID":5,
-	"icon":"",
+	"icon":"ic_character_front_5",
 	"count":40,
 	"itemID":102,
 	"detail":"深海守卫统领，天生神力。",
@@ -41,7 +41,7 @@
 	},
 	{
 	"objectID":6,
-	"icon":"",
+	"icon":"ic_character_front_6",
 	"count":30,
 	"itemID":102,
 	"detail":"天才发明家，有人怀疑艾尔斯幻境就是他的发明。",
@@ -49,7 +49,7 @@
 	},
 	{
 	"objectID":7,
-	"icon":"",
+	"icon":"ic_character_front_7",
 	"count":30,
 	"itemID":102,
 	"detail":"收集梦的怪才，至今还无人知道他的目的。",
@@ -57,7 +57,7 @@
 	},
 	{
 	"objectID":8,
-	"icon":"",
+	"icon":"ic_character_front_8",
 	"count":30,
 	"itemID":102,
 	"detail":"拥有无限分裂的能力，大脑欠发达。",
@@ -65,7 +65,7 @@
 	},
 	{
 	"objectID":9,
-	"icon":"",
+	"icon":"ic_character_front_9",
 	"count":50,
 	"itemID":102,
 	"detail":"反派头目，为了收集6颗原石而不择手段。",
@@ -73,9 +73,9 @@
 	},
 	{
 	"objectID":10,
-	"icon":"",
-	"count":3,
-	"itemID":-1,
+	"icon":"ic_character_front_10",
+	"count":2.99,
+	"itemID":7,
 	"detail":"蓝鲸的好朋友，唯一兴趣爱好就是吃！",
 	"objectName":"小猪（安妮）"
 	},

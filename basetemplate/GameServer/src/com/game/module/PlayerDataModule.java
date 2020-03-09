@@ -316,45 +316,70 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
 
     public boolean endGame(ModeType type, int value, int count)
     {
-        int time = (int) (System.currentTimeMillis() - typeBeginTime);
-        if (currentType.getNumber() != type.getNumber() || time <= 0)
+        try
         {
-            LogFactory.error("游戏验证失败.client:{},server:{},", type.name(), currentType.name());
+            int time = (int) (System.currentTimeMillis() - typeBeginTime);
+            if (currentType == null || currentType.getNumber() != type.getNumber() || time <= 0)
+            {
+                LogFactory.error("游戏Type验证失败.client:{},server:{},", type.name(), currentType == null ? "null" : currentType.name());
+                return false;
+            }
+
+            int length = 0;
+            if (type == ModeType.RAC)
+            {
+                length = time / 2;
+                // 时间减半并且小于10秒的判断失败
+                if (value < time / 2 && value < 10000)
+                {
+                    LogFactory.error("游戏时间验证失败.client:{},server:{},mode:{},time:{}", value, time / 2, type.name(), time);
+                    return false;
+                }
+            }
+            else
+            {
+                // 500级以上
+                if (value >= 500)
+                {
+                    length = (int) ((time / GamePropertiesComponent.BASE_STEP_TIME_500) * GamePropertiesComponent.BASE_STEP_TIME_RATE);
+                    // 跳跃值超过500,并且超过1.5倍才算异常
+                    if (value > length)
+                    {
+                        LogFactory.error("游戏长度验证失败.client:{}-{},server:{}-{},mode:{},time:{},coin:{},name:{}",
+                                value, time * 1.0f / value, length, time * 1.0f / length, type.name(), time, count, player.getNickName());
+                        return false;
+                    }
+                }
+                else
+                {
+                    length = (int) ((time / GamePropertiesComponent.BASE_STEP_TIME) * GamePropertiesComponent.BASE_STEP_TIME_RATE);
+                    // 跳跃值超过200,并且超过1.5倍才算异常
+                    if (value > length && value > 200)
+                    {
+                        LogFactory.error("游戏长度验证失败.client:{}-{},server:{}-{},mode:{},time:{},coin:{},name:{}",
+                                value, time * 1.0f / value, length, time * 1.0f / length, type.name(), time, count, player.getNickName());
+                        return false;
+                    }
+                }
+
+                if (count >= length / 2 && count >= 3)
+                {
+                    LogFactory.error("游戏金币验证失败.client:{},server:{},mode:{},time:{},coin:{}", value, length, type.name(), time, count);
+                    return false;
+                }
+            }
+
+            LogFactory.error("单机验证成功.client:{},server:{},mode:{},time:{},coin:{},begin:{},end:{}",
+                    value, length, type.name(), time, count, TimeUtil.getDateFormat(new Date(typeBeginTime)), TimeUtil.getDateFormat(new Date(System.currentTimeMillis())));
+
+            currentType = ModeType.NONE;
+            typeBeginTime = Long.MAX_VALUE;
+            return true;
+        }
+        catch (Exception e)
+        {
+            LogFactory.error("", e);
             return false;
         }
-
-        int length = 0;
-        if (type == ModeType.RAC)
-        {
-            length = time / 2;
-            // 时间减半并且小于10秒的判断失败
-            if (value < time / 2 && value < 10000)
-            {
-                LogFactory.error("游戏验证失败.client:{},server:{},mode:{},time:{}", value, time / 2, type.name(), time);
-                return false;
-            }
-        }
-        else
-        {
-            length = (int) ((time / GamePropertiesComponent.BASE_STEP_TIME) * GamePropertiesComponent.BASE_STEP_TIME_RATE);
-            if (value > length)
-            {
-                LogFactory.error("长度验证失败.client:{},server:{},mode:{},time:{},coin:{}", value, length, type.name(), time, count);
-                return false;
-            }
-
-            if (count >= length / 2 && count > 10)
-            {
-                LogFactory.error("长度验证失败,金币数量不对.client:{},server:{},mode:{},time:{},coin:{}", value, length, type.name(), time, count);
-                return false;
-            }
-        }
-
-        LogFactory.error("长度验证成功.client:{},server:{},mode:{},time:{},coin:{},begin:{},end:{}",
-                value, length, type.name(), time, count, TimeUtil.getDateFormat(new Date(typeBeginTime)), TimeUtil.getDateFormat(new Date(System.currentTimeMillis())));
-
-        currentType = ModeType.NONE;
-        typeBeginTime = Long.MAX_VALUE;
-        return true;
     }
 }

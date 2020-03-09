@@ -3,6 +3,7 @@ package com.game.object.player;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import com.base.net.client.IClientConnection;
 import com.data.bag.ItemAddType;
@@ -372,7 +373,8 @@ public class GamePlayer extends AbstractGamePlayer
 
     public void addGameModeType(int type)
     {
-        if (getPlayerInfo().getModes().indexOf(type + ",") >= 0)
+        Set<Integer> set = StringUtil.splitInt(getPlayerInfo().getModes(), "\\,");
+        if (set.contains(type))
             return;
 
         String modes = getPlayerInfo().getModes() + type + ",";
@@ -388,7 +390,8 @@ public class GamePlayer extends AbstractGamePlayer
 
     public void addRoleType(int type)
     {
-        if (getPlayerInfo().getRoleTypes().indexOf(type + ",") >= 0)
+        Set<Integer> set = StringUtil.splitInt(getPlayerInfo().getRoleTypes(), "\\,");
+        if (set.contains(type))
             return;
 
         String modes = getPlayerInfo().getRoleTypes() + type + ",";
@@ -404,7 +407,8 @@ public class GamePlayer extends AbstractGamePlayer
 
     public void addThemeType(int type)
     {
-        if (getPlayerInfo().getTheme().indexOf(type + ",") >= 0)
+        Set<Integer> set = StringUtil.splitInt(getPlayerInfo().getTheme(), "\\,");
+        if (set.contains(type))
             return;
 
         String modes = getPlayerInfo().getTheme() + type + ",";
@@ -420,7 +424,8 @@ public class GamePlayer extends AbstractGamePlayer
 
     public void addHeader(int headerID)
     {
-        if (getPlayerInfo().getHeaders() != null && getPlayerInfo().getHeaders().indexOf(headerID + ",") >= 0)
+        Set<Integer> set = StringUtil.splitInt(getPlayerInfo().getHeaders(), "\\,");
+        if (set.contains(headerID))
             return;
 
         String modes = getPlayerInfo().getHeaders() + headerID + ",";
