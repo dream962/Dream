@@ -222,7 +222,12 @@ public class ChargeComponent extends AbstractComponent
         }
 
         if (!list2.isEmpty())
-            PlayerBusiness.addOrUpdateChargeList(list2);
+        {
+            if (PlayerBusiness.addOrUpdateChargeList(list2))
+            {
+                
+            }
+        }
     }
 
     public static void addChargeInfo(ChargeInfo info)

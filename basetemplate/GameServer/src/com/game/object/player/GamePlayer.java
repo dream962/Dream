@@ -490,6 +490,8 @@ public class GamePlayer extends AbstractGamePlayer
             }
             break;
         case RandomMatch:
+        case RandomMatch3:
+        case RandomMatch2:
             // 成功加奖励
             if (value == 1)
             {
