@@ -1,5 +1,6 @@
 package com.game.user.cmd.player;
 
+import com.base.code.ErrorCodeType;
 import com.base.command.ICode;
 import com.base.net.CommonMessage;
 import com.data.bag.ItemRemoveType;
@@ -36,7 +37,25 @@ public class DonateCmd extends AbstractUserCmd
             int consumeType = proto.getConsumeType();
 
             if (byad == false)
+            {
+                int playerTotal = player.getPlayerInfo().getMoney();
+                if (playerTotal < count)
+                {
+                    count = playerTotal;
+                }
+
+                if (count <= 0)
+                {
+                    player.sendErrorCode(ErrorCodeType.Not_Enough_Resource, "");
+                    return;
+                }
+
                 player.removeResource(itemID, count, ItemRemoveType.DONATE);
+            }
+            else
+            {
+                count = 1;
+            }
 
             int value = player.getPlayerInfo().getDonateValue() + count;
             player.getPlayerInfo().setDonateValue(value);

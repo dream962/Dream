@@ -280,6 +280,22 @@ public class GamePlayer extends AbstractGamePlayer
         saveTime = System.currentTimeMillis() + GamePropertiesComponent.SAVE_PLAYER_TIME;
     }
 
+    public int getResource(int type)
+    {
+        if (type == ResourceType.COIN.getValue())
+        {
+            return getPlayerInfo().getGold();
+
+        }
+
+        if (type == ResourceType.TTQ.getValue())
+        {
+            return getPlayerInfo().getMoney();
+        }
+
+        return 0;
+    }
+
     public boolean checkResource(int type, int count)
     {
         if (type == ResourceType.COIN.getValue())
@@ -490,6 +506,8 @@ public class GamePlayer extends AbstractGamePlayer
             }
             break;
         case RandomMatch:
+        case RandomMatch2:
+        case RandomMatch3:
             // 成功加奖励
             if (value == 1)
             {
