@@ -115,7 +115,7 @@
 												<div class="txtbox floatL" style="width:255px;">
 													<input type="text" style="width:250px;" placeholder="" id="notice_type">
 												</div>
-												<span style="color:red;font-size:10px">(1:系统公告2:首页公告)</span>
+												<span style="color:red;font-size:10px">(2:剧情公告1:首页公告)</span>
 											</td>
 										</tr>
 										<tr>
@@ -180,8 +180,8 @@
 					var index=0;
 					$.each(data, function(key, value) {
 						index++;
-						if (value.noticeType == 1) {
-							noticeType = "<font color='green'>系统公告</font>";
+						if (value.noticeType == 2) {
+							noticeType = "<font color='green'>剧情公告</font>";
 						} else {
 							noticeType = "<font color='green'>首页公告</font>";
 						}

@@ -30,7 +30,7 @@ public class NoticeServlet extends PlayerHandlerServlet
 
     static class Req
     {
-        public int noticeType;// 1:系统公告2:首页公告
+        public int noticeType;// 类型 2:系统公告1:首页公告
         public String languageType;
     }
 
@@ -43,7 +43,7 @@ public class NoticeServlet extends PlayerHandlerServlet
 
     static class Res
     {
-        public int type;// 类型 1:系统公告2:首页公告
+        public int type;// 类型 2:系统公告1:首页公告
         public List<ResDetail> info = new ArrayList<>();
     }
 
