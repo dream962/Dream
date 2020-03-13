@@ -34,8 +34,7 @@ public class NoticeDeleteServlet extends BaseHandlerServlet
         String[] keys = req.keys.split("\\,");
         for (String key : keys)
         {
-            int id = Integer.valueOf(key);
-            result = DataComponent.removeNotice(id);
+            result = DataComponent.removeNotice(key);
         }
 
         if (result.equalsIgnoreCase("success"))

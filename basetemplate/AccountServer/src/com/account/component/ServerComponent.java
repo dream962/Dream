@@ -182,14 +182,14 @@ public class ServerComponent extends AbstractComponent
         }
     }
 
-    public static String removeNotice(int id)
+    public static String removeNotice(int id, int type, String language)
     {
         noticeLock.writeLock().lock();
         try
         {
             for (CommonData temp : commonDataList)
             {
-                if (id == temp.getID())
+                if (id == temp.getID() && temp.getNoticeType() == type && temp.getLanguageType().equalsIgnoreCase(language))
                 {
                     commonDataList.remove(temp);
                     CommonDataFactory.getDao().delete(temp);

@@ -99,6 +99,7 @@
 												<div class="txtbox floatL" style="width:255px;">
 													<input type="text" style="width:250px;" placeholder="" id="notice_id">
 												</div>
+												<span style="color:red;font-size:10px">(ID唯一,不要重复)</span>
 											</td>
 										</tr>
 										<tr>
@@ -124,6 +125,7 @@
 												<div class="txtbox floatL" style="width:255px;">
 													<input type="text" style="width:250px;" placeholder="" id="notice_language">
 												</div>
+												<span style="color:red;font-size:10px">(en:英文 zh:中文)</span>
 											</td>
 										</tr>
 										<tr>
@@ -186,7 +188,7 @@
 							noticeType = "<font color='green'>首页公告</font>";
 						}
 						$("#datagrid").append("<tr class='dataGrid' id='tr" + index + "'><td><input type='checkbox' id='ci" +
-							index + "' onclick='chooseTr(" + index + ")' class='isChoose' value='" + value.iD +"' />" +
+							index + "' onclick='chooseTr(" + index + ")' class='isChoose' value='" + value.iD+"|"+value.noticeType+"|"+value.languageType +"' />" +
 							"</td><td>" + value.iD +
 							"</td><td>" + value.title +
 							"</td><td>" + noticeType +
@@ -231,12 +233,14 @@
 					alert("请选择公告！");
 					return;
 				}
+				$("#loading").show();
 
 				var serversListUrl = port + "/deleteNotice?params={'keys':'" + keyIDs + "'}";
 				$.getJSON(serversListUrl, null, function(data) {
 					$("#server_table tbody").html("");
 					init();
 					$("#pop").hide();
+					$("#loading").hide();
 				})
 			}
 
@@ -266,6 +270,7 @@
 				var id = $("#notice_id").val();
 
 				$("#pop").show();
+				$("#loading").show();
 				var updateServerUrl = port + "/addNotice?params={'noticeType':" + type 
 				+ ",'languageType':'" + language
 				+ "','iD':" + id
@@ -280,6 +285,7 @@
 						$("#pop").hide();
 						alert(data.json);
 					}
+					$("#loading").hide();
 				})
 			}
 

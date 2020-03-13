@@ -16,6 +16,7 @@ import com.upload.data.data.VersionData;
 import com.upload.util.HttpUtil;
 import com.upload.util.JsonUtil;
 import com.upload.util.LogFactory;
+import com.upload.util.StringSplitUtil;
 
 public class DataComponent extends AbstractComponent
 {
@@ -98,35 +99,6 @@ public class DataComponent extends AbstractComponent
 
     public static String addOrUpdateNotice(NoticeData data)
     {
-        lock.writeLock().lock();
-        try
-        {
-            boolean isContain = false;
-            for (NoticeData temp : noticeList)
-            {
-                if (data.getNoticeType() == temp.getNoticeType() && data.getLanguageType().equalsIgnoreCase(temp.getLanguageType())
-                        && data.getID() == temp.getID())
-                {
-                    temp.setLanguageType(data.getLanguageType());
-                    temp.setNoticeMessage(data.getNoticeMessage());
-                    temp.setNoticeType(data.getNoticeType());
-                    temp.setTitle(data.getTitle());
-
-                    isContain = true;
-                    break;
-                }
-            }
-
-            if (isContain == false)
-            {
-                noticeList.add(data);
-            }
-        }
-        finally
-        {
-            lock.writeLock().unlock();
-        }
-
         String url = GlobalConfigComponent.getConfig().server.serverUrl;
 
         String json = JsonUtil.parseObjectToString(data);
@@ -140,32 +112,79 @@ public class DataComponent extends AbstractComponent
         }
         String reqUrl = url + "/addNotice?params=" + json;
         String result = HttpUtil.doGet(reqUrl, 120000);
+
+        if (result != null && result.equalsIgnoreCase("success"))
+        {
+            lock.writeLock().lock();
+            try
+            {
+                boolean isContain = false;
+                for (NoticeData temp : noticeList)
+                {
+                    if (data.getNoticeType() == temp.getNoticeType() && data.getLanguageType().equalsIgnoreCase(temp.getLanguageType())
+                            && data.getID() == temp.getID())
+                    {
+                        temp.setLanguageType(data.getLanguageType());
+                        temp.setNoticeMessage(data.getNoticeMessage());
+                        temp.setNoticeType(data.getNoticeType());
+                        temp.setTitle(data.getTitle());
+
+                        isContain = true;
+                        break;
+                    }
+                }
+
+                if (isContain == false)
+                {
+                    noticeList.add(data);
+                }
+            }
+            finally
+            {
+                lock.writeLock().unlock();
+            }
+        }
+
         return result;
     }
 
-    public static String removeNotice(int ID)
+    public static String removeNotice(String key)
     {
-        lock.writeLock().lock();
-        try
-        {
-            for (NoticeData data : noticeList)
-            {
-                if (data.getID() == ID)
-                {
-                    noticeList.remove(data);
-                    break;
-                }
-            }
-        }
-        finally
-        {
-            lock.writeLock().unlock();
-        }
+        if (key == null)
+            return "fail";
+
+        List<String> keys = StringSplitUtil.splitToStr(key, "\\|");
+        if (keys.size() < 3)
+            return "fail";
 
         String url = GlobalConfigComponent.getConfig().server.serverUrl;
 
-        String reqUrl = url + "/removeNotice?params={'id':" + ID + "}";
+        String reqUrl = url + "/removeNotice?params={'id':" + keys.get(0) + ",'language':'" + keys.get(2) + "'"
+                + ",'type':" + keys.get(1) + "}";
         String result = HttpUtil.doGet(reqUrl, 120000);
+
+        if (result != null && result.equalsIgnoreCase("success"))
+        {
+            lock.writeLock().lock();
+            try
+            {
+                for (NoticeData data : noticeList)
+                {
+                    if (data.getID() == Integer.valueOf(keys.get(0))
+                            && data.getLanguageType().equalsIgnoreCase(keys.get(2))
+                            && data.getNoticeType() == Integer.valueOf(keys.get(1)))
+                    {
+                        noticeList.remove(data);
+                        break;
+                    }
+                }
+            }
+            finally
+            {
+                lock.writeLock().unlock();
+            }
+        }
+
         return result;
     }
 
