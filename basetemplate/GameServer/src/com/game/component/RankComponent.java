@@ -287,7 +287,7 @@ public class RankComponent extends AbstractComponent
 
                 if (info.getRankType() == RankType.RACE_VALUE)
                 {
-                    if (info.getRankValue() < data.getRankValue())
+                    if (info.getRankValue() < data.getRankValue() || data.getRankValue() == 0)
                     {
                         data.setRankValue(info.getRankValue());
                         data.setUpdateTime(info.getUpdateTime());

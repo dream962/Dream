@@ -155,7 +155,7 @@ public class PlayerDataModule extends AbstractPlayerModule<GamePlayer>
             {
                 if (info.getRankType() == RankType.RACE_VALUE)
                 {
-                    if (value < info.getRankValue() || info.getRankValue() > 0)
+                    if (value < info.getRankValue() || info.getRankValue() == 0)
                     {
                         info.setRankValue(value);
                         info.setHeader(player.getPlayerInfo().getHeaderID());
